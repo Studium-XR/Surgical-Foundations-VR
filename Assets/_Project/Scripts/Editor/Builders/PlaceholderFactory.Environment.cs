@@ -186,6 +186,7 @@ namespace SurgicalFoundations.EditorTools
         /// <summary>Origin = floor under table centre; long axis X, head end at −X. Mattress top at 0.92 m (calibration default).</summary>
         static void ORTable()
         {
+            if (SimReadyORTable()) return;
             var b = new PB("EQ_ORTable");
             b.Box("Base", new Vector3(0, 0.05f, 0), new Vector3(0.75f, 0.1f, 0.48f), "Stainless_Satin");
             b.Box("Column", new Vector3(0, 0.42f, 0), new Vector3(0.3f, 0.64f, 0.22f), "Polymer_White");
@@ -236,7 +237,7 @@ namespace SurgicalFoundations.EditorTools
                 l.spotAngle = 38f;
                 l.innerSpotAngle = 20f;
                 l.range = 3.5f;
-                l.intensity = 7f;
+                l.intensity = 5f; // 7 washed the drapes out on the headset, which runs without tonemapping
                 l.useColorTemperature = true;
                 l.colorTemperature = 4500f;
                 l.color = Color.white;
@@ -262,6 +263,7 @@ namespace SurgicalFoundations.EditorTools
 
         static void LapTower()
         {
+            if (SimReadyLapTower()) return;
             var b = new PB("EQ_LapTower");
             b.Box("Base", new Vector3(0, 0.1f, 0), new Vector3(0.62f, 0.06f, 0.56f), "Polymer_Grey");
             for (int i = 0; i < 4; i++)
@@ -291,6 +293,7 @@ namespace SurgicalFoundations.EditorTools
 
         static void AnaesthesiaMachine()
         {
+            if (SimReadyAnaesthesiaMachine()) return;
             var b = new PB("EQ_AnaesthesiaMachine");
             b.Box("Body", new Vector3(0, 0.6f, 0), new Vector3(0.75f, 1.0f, 0.6f), "Polymer_White");
             b.Box("Worktop", new Vector3(0, 1.12f, 0.05f), new Vector3(0.8f, 0.03f, 0.7f), "Polymer_Grey");
@@ -437,16 +440,21 @@ namespace SurgicalFoundations.EditorTools
         static void InstrumentTray()
         {
             var b = new PB("EQ_InstrumentTray");
-            b.Box("Base", new Vector3(0, 0.003f, 0), new Vector3(0.48f, 0.006f, 0.3f), "Stainless_Brushed");
-            b.Box("Rim_F", new Vector3(0, 0.022f, 0.148f), new Vector3(0.48f, 0.04f, 0.004f), "Stainless_Brushed");
-            b.Box("Rim_B", new Vector3(0, 0.022f, -0.148f), new Vector3(0.48f, 0.04f, 0.004f), "Stainless_Brushed");
-            b.Box("Rim_L", new Vector3(-0.238f, 0.022f, 0), new Vector3(0.004f, 0.04f, 0.3f), "Stainless_Brushed");
-            b.Box("Rim_R", new Vector3(0.238f, 0.022f, 0), new Vector3(0.004f, 0.04f, 0.3f), "Stainless_Brushed");
-            b.Box("Mat", new Vector3(0, 0.0065f, 0), new Vector3(0.46f, 0.002f, 0.28f), "Drape_Teal");
+            // Sized for the laparoscopic set: the instruments lie on their sides with their handles towards −Z and
+            // behind their sockets towards −X, so the tray runs further those ways (rims at z +0.148 / −0.24 and
+            // x −0.30 / +0.238), and the rims are low enough (2.4 cm) that the shafts, resting 3.2 cm up, pass over them.
+            const float front = 0.148f, back = -0.24f, left = -0.30f, right = 0.238f, rimH = 0.024f;
+            float depth = front - back, mid = (front + back) * 0.5f, length = right - left, midX = (right + left) * 0.5f;
+            b.Box("Base", new Vector3(midX, 0.003f, mid), new Vector3(length, 0.006f, depth), "Stainless_Brushed");
+            b.Box("Rim_F", new Vector3(midX, rimH / 2, front), new Vector3(length, rimH, 0.004f), "Stainless_Brushed");
+            b.Box("Rim_B", new Vector3(midX, rimH / 2, back), new Vector3(length, rimH, 0.004f), "Stainless_Brushed");
+            b.Box("Rim_L", new Vector3(left, rimH / 2, mid), new Vector3(0.004f, rimH, depth), "Stainless_Brushed");
+            b.Box("Rim_R", new Vector3(right, rimH / 2, mid), new Vector3(0.004f, rimH, depth), "Stainless_Brushed");
+            b.Box("Mat", new Vector3(midX, 0.0065f, mid), new Vector3(length - 0.02f, 0.002f, depth - 0.02f), "Drape_Teal");
             string[] sockets = { "Trocar12", "Trocar5_A", "Trocar5_B", "Laparoscope", "Grasper_A", "Grasper_B", "Scissors", "ClipApplier" };
             for (int i = 0; i < sockets.Length; i++)
                 b.Pivot($"Socket_{sockets[i]}", new Vector3(-0.19f + (i % 4) * 0.125f, 0.02f, i < 4 ? 0.07f : -0.07f), new Vector3(0, 90, 0));
-            b.Collider(null, new Vector3(0, 0.02f, 0), new Vector3(0.48f, 0.04f, 0.3f));
+            b.Collider(null, new Vector3(midX, rimH / 2, mid), new Vector3(length, rimH, depth));
             b.Info("EQ-08", "Instrument tray", "Equipment", AssetRelease.MVP, 2000, "One XR socket per item for the tray check.");
             b.Save(Folder("Equipment"));
         }

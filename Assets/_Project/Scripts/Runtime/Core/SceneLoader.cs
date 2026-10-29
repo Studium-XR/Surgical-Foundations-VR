@@ -28,6 +28,13 @@ namespace SurgicalFoundations.Core
             Instance = this;
             if (fader == null) fader = GetComponentInChildren<ScreenFader>();
             if (xrOrigin == null) xrOrigin = FindAnyObjectByType<XROrigin>();
+            // The rig ships as "Not Specified", which Quest resolves to Device space: every player gets a fixed
+            // 1.36 m eye height regardless of how tall they are. Floor space uses the player's real height.
+            if (xrOrigin != null)
+            {
+                xrOrigin.RequestedTrackingOriginMode = XROrigin.TrackingOriginMode.Floor;
+                if (!xrOrigin.TryGetComponent<HeightCalibrator>(out _)) xrOrigin.gameObject.AddComponent<HeightCalibrator>();
+            }
         }
 
         void OnDestroy()

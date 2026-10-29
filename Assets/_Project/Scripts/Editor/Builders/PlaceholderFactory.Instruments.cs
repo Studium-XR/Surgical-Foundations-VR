@@ -15,24 +15,62 @@ namespace SurgicalFoundations.EditorTools
 
         enum JawStyle { Grasper, Maryland, Scissors, ClipApplier }
 
+        /// <summary>Rebuilds only the laparoscopic instruments and trocars; the scenes pick them up through the prefabs.</summary>
+        [UnityEditor.MenuItem(SFPaths.MenuRoot + "Build/1f · Laparoscopic Instruments", priority = 3)]
+        public static void BuildLapInstruments()
+        {
+            LapInstrumentSet();
+            UnityEditor.AssetDatabase.SaveAssets();
+        }
+
+        static void LapInstrumentSet()
+        {
+            InstrumentTray(); // sized for this set
+            Trocar("INST_Trocar12", "INST-01", "Trocar 12 mm", 0.012f, 0.04f, "Trocar_Green");
+            Trocar("INST_Trocar5", "INST-02", "Trocar 5 mm", 0.0055f, 0.03f, "Trocar_Blue");
+            Laparoscope();
+            LapInstrument("INST_AtraumaticGrasper", "INST-04", "Atraumatic grasper", JawStyle.Grasper, "Separate jaw meshes, handle ratchet.");
+            LapInstrument("INST_MarylandDissector", "INST-05", "Maryland dissector", JawStyle.Maryland, "Curved jaws, separate meshes.");
+            LapInstrument("INST_LapScissors", "INST-06", "Laparoscopic scissors", JawStyle.Scissors, "Separate blades.");
+            LapInstrument("INST_ClipApplier", "INST-07", "Clip applier", JawStyle.ClipApplier, "Jaws + loaded clip.");
+        }
+
         static void LapInstrument(string prefabName, string id, string display, JawStyle style, string notes)
         {
             var b = new PB(prefabName);
-            float shaftD = style == JawStyle.ClipApplier ? 0.01f : 0.005f;
+            bool clipApplier = style == JawStyle.ClipApplier;
+            float shaftD = clipApplier ? 0.01f : 0.005f;
 
-            // Pistol-grip handle with thumb ring and finger ring
+            // Modern disposable set (reference sheet): white moulded handle, glossy black rotation knob tapering into the
+            // shaft. Hand instruments take an in-line scissor grip with two rings and a cautery post; the clip applier
+            // takes a pistol grip with a black trigger.
             var handle = b.Group("Handle", Vector3.zero);
-            b.Box("Body", new Vector3(0, -0.005f, -0.01f), new Vector3(0.024f, 0.035f, 0.07f), "Instrument_Handle", default, handle);
-            b.Box("Grip", new Vector3(0, -0.06f, -0.03f), new Vector3(0.022f, 0.09f, 0.028f), "Instrument_Handle", new Vector3(-15, 0, 0), handle);
-            b.Cyl("FingerRing", new Vector3(0, -0.105f, -0.045f), 0.036f, 0.01f, "Instrument_Handle", PB.AlongX, handle);
-            b.Box("ThumbLever", new Vector3(0, -0.05f, -0.065f), new Vector3(0.012f, 0.08f, 0.012f), "Instrument_Handle", new Vector3(10, 0, 0), handle);
-            b.Cyl("ThumbRing", new Vector3(0, -0.095f, -0.075f), 0.034f, 0.01f, "Instrument_Handle", PB.AlongX, handle);
-            b.Box("Ratchet", new Vector3(0, -0.03f, 0.012f), new Vector3(0.004f, 0.02f, 0.004f), "Instrument_Steel", default, handle);
-            b.Cyl("RotationKnob", new Vector3(0, 0, 0.022f), 0.02f, 0.016f, "Instrument_Steel", PB.AlongZ, handle);
+            if (clipApplier)
+            {
+                b.CapE("Housing", new Vector3(0, -0.006f, -0.035f), new Vector3(0.032f, 0.09f, 0.046f), "Instrument_HandleWhite", PB.AlongZ, handle);
+                b.CapE("PistolGrip", new Vector3(0, -0.075f, -0.064f), new Vector3(0.03f, 0.13f, 0.04f), "Instrument_HandleWhite", new Vector3(-15, 0, 0), handle);
+                b.CapE("Trigger", new Vector3(0, -0.06f, -0.013f), new Vector3(0.011f, 0.085f, 0.015f), "Instrument_KnobBlack", new Vector3(-26, 0, 0), handle);
+                b.Box("Window", new Vector3(0.0161f, -0.004f, -0.04f), new Vector3(0.001f, 0.01f, 0.018f), "Instrument_KnobBlack", default, handle);
+                b.Sph("KnobBack", new Vector3(0, 0, 0.004f), 0.034f, "Instrument_KnobBlack", handle);
+                b.Frustum("RotationKnob", new Vector3(0, 0, 0.021f), 0.034f, 0.013f, 0.034f, "Instrument_KnobBlack", PB.AlongZ, handle);
+            }
+            else
+            {
+                b.CapE("Housing", new Vector3(0, -0.004f, -0.024f), new Vector3(0.024f, 0.064f, 0.03f), "Instrument_HandleWhite", PB.AlongZ, handle);
+                b.CapE("Grip", new Vector3(0, -0.046f, -0.031f), new Vector3(0.016f, 0.072f, 0.022f), "Instrument_HandleWhite", new Vector3(-18, 0, 0), handle);
+                b.Torus("FingerRing", new Vector3(0, -0.088f, -0.045f), 0.036f, 0.008f, "Instrument_HandleWhite", new Vector3(0, 0, 90), handle);
+                b.CapE("ThumbLever", new Vector3(0, -0.04f, -0.063f), new Vector3(0.011f, 0.07f, 0.013f), "Instrument_HandleWhite", new Vector3(24, 0, 0), handle);
+                b.Torus("ThumbRing", new Vector3(0, -0.079f, -0.084f), 0.032f, 0.008f, "Instrument_HandleWhite", new Vector3(0, 0, 90), handle);
+                b.Box("Ratchet", new Vector3(0, -0.03f, -0.006f), new Vector3(0.004f, 0.02f, 0.004f), "Instrument_Steel", default, handle);
+                b.Cyl("CauteryPost", new Vector3(0, 0.017f, -0.034f), 0.004f, 0.018f, "Instrument_Steel", default, handle);
+                b.Sph("KnobBack", new Vector3(0, 0, 0.004f), 0.028f, "Instrument_KnobBlack", handle);
+                b.Frustum("RotationKnob", new Vector3(0, 0, 0.019f), 0.028f, 0.008f, 0.03f, "Instrument_KnobBlack", PB.AlongZ, handle);
+            }
 
-            b.Cyl("Shaft", new Vector3(0, 0, ShaftStart + ShaftLength / 2), shaftD, ShaftLength, "Instrument_Insulation", PB.AlongZ);
+            b.Cyl("Shaft", new Vector3(0, 0, ShaftStart + ShaftLength / 2), shaftD, ShaftLength, clipApplier ? "Instrument_Steel" : "Instrument_Insulation", PB.AlongZ);
 
             float tipZ = ShaftStart + ShaftLength;
+            b.Cyl("TipCollar", new Vector3(0, 0, tipZ - 0.005f), shaftD * 1.06f, 0.01f, clipApplier ? "Instrument_KnobBlack" : "Instrument_Steel", PB.AlongZ);
             var hinge = b.Group("JawHinge", new Vector3(0, 0, tipZ));
             var upper = b.Group("Jaw_Upper", Vector3.zero, default, hinge);
             var lower = b.Group("Jaw_Lower", Vector3.zero, default, hinge);
@@ -67,22 +105,30 @@ namespace SurgicalFoundations.EditorTools
             b.Pivot("Pivot_Tip", new Vector3(0, 0, tipZ + jawLen));
             b.Pivot("Pivot_Port", new Vector3(0, 0, ShaftStart + ShaftLength * 0.55f));
             b.Info(id, display, "Instrument", AssetRelease.MVP, 4000, notes);
-            b.Grabbable(0.25f, new Vector3(0, -0.055f, -0.03f), Vector3.zero, jaws: true);
+            b.Grabbable(0.25f, clipApplier ? new Vector3(0, -0.07f, -0.06f) : new Vector3(0, -0.055f, -0.03f), Vector3.zero, jaws: true);
             b.Save(Folder("Instruments"));
         }
 
-        static void Trocar(string prefabName, string id, string display, float cannulaD, float housingD)
+        /// <summary>
+        /// Threaded, colour-coded trocar (reference sheet): grey funnel head with a coloured seal ring, side stopcock,
+        /// threaded cannula in the size colour, pointed obturator. <paramref name="colour"/> is a Trocar_* material.
+        /// </summary>
+        static void Trocar(string prefabName, string id, string display, float cannulaD, float housingD, string colour)
         {
             var b = new PB(prefabName);
-            b.Cyl("Housing", Vector3.zero, housingD, 0.045f, "Trocar_Polymer", PB.AlongZ);
-            b.Cyl("ValveCap", new Vector3(0, 0, -0.027f), housingD * 0.75f, 0.01f, "Rubber_Black", PB.AlongZ);
-            b.Cyl("SidePort", new Vector3(housingD * 0.6f, 0, 0), 0.008f, 0.03f, "Trocar_Polymer", PB.AlongX);
-            b.Box("Stopcock", new Vector3(housingD * 0.6f + 0.016f, 0, 0), new Vector3(0.006f, 0.02f, 0.006f), "Indicator_Mint");
-            b.Cyl("Cannula", new Vector3(0, 0, 0.0725f), cannulaD, 0.1f, "Trocar_Polymer", PB.AlongZ);
+            b.Frustum("Housing", new Vector3(0, 0, -0.018f), housingD * 1.35f, housingD * 0.5f, 0.04f, "Trocar_Head", PB.AlongZ);
+            b.Cyl("Collar", new Vector3(0, 0, 0.008f), housingD * 0.5f, 0.016f, "Trocar_Head", PB.AlongZ);
+            b.Torus("ColourRing", new Vector3(0, 0, -0.038f), housingD * 1.42f, 0.006f, colour, new Vector3(90, 0, 0));
+            b.Cyl("ValveCap", new Vector3(0, 0, -0.039f), housingD * 1.25f, 0.003f, colour, PB.AlongZ);
+            b.Cyl("SidePort", new Vector3(housingD * 0.36f, 0, 0.006f), 0.006f, 0.024f, "Instrument_Steel", PB.AlongX);
+            b.Box("Stopcock", new Vector3(housingD * 0.36f + 0.012f, 0.006f, 0.006f), new Vector3(0.004f, 0.014f, 0.004f), "Instrument_Steel");
+            b.Cyl("Cannula", new Vector3(0, 0, 0.0725f), cannulaD, 0.1f, colour, PB.AlongZ);
+            for (int k = 0; k < 8; k++)
+                b.Torus($"Thread_{k}", new Vector3(0, 0, 0.035f + k * 0.0085f), cannulaD * 1.4f, cannulaD * 0.3f, colour, new Vector3(90, 0, 0));
             var obt = b.Group("Obturator", Vector3.zero);
-            b.Sph("Knob", new Vector3(0, 0, -0.045f), housingD * 0.8f, "Polymer_White", obt);
-            b.Cyl("Shaft", new Vector3(0, 0, 0.035f), cannulaD * 0.85f, 0.13f, "Polymer_White", PB.AlongZ, obt);
-            b.Cap("Tip", new Vector3(0, 0, 0.1f), cannulaD * 0.85f, 0.03f, "Polymer_White", PB.AlongZ, obt);
+            b.Sph("Knob", new Vector3(0, 0, -0.043f), housingD * 0.5f, colour, obt);
+            b.Cyl("Shaft", new Vector3(0, 0, 0.06f), cannulaD * 0.85f, 0.12f, "Instrument_Steel", PB.AlongZ, obt);
+            b.Frustum("Tip", new Vector3(0, 0, 0.1325f), cannulaD * 0.9f, 0f, 0.025f, "Instrument_Steel", PB.AlongZ, obt);
             b.Pivot("Pivot_Tip", new Vector3(0, 0, 0.13f));
             b.Pivot("Pivot_Port", new Vector3(0, 0, 0.09f));
             b.Info(id, display, "Instrument", AssetRelease.MVP, 3000, "Cannula + obturator as 2 parts; valve cap. Obturator withdraws on port placement.");
@@ -93,13 +139,14 @@ namespace SurgicalFoundations.EditorTools
         static void Laparoscope()
         {
             var b = new PB("INST_Laparoscope30");
-            b.Cyl("CameraHead", new Vector3(0, 0, -0.07f), 0.045f, 0.08f, "Polymer_Dark", PB.AlongZ);
-            b.Cyl("CameraCable", new Vector3(0, 0, -0.26f), 0.007f, 0.3f, "Rubber_Black", PB.AlongZ);
-            b.Box("CameraButtons", new Vector3(0, 0.024f, -0.07f), new Vector3(0.02f, 0.006f, 0.04f), "Polymer_Grey");
-            b.Cyl("Coupler", new Vector3(0, 0, -0.015f), 0.03f, 0.03f, "Instrument_Steel", PB.AlongZ);
-            b.Cyl("Eyepiece", new Vector3(0, 0, 0.008f), 0.022f, 0.016f, "Instrument_Steel", PB.AlongZ);
-            b.Cyl("LightPost", new Vector3(0, 0.018f, 0.025f), 0.008f, 0.03f, "Instrument_Steel");
-            b.Cyl("LightCable", new Vector3(0, 0.1f, 0.025f), 0.006f, 0.14f, "Rubber_Black");
+            // Rigid scope (reference sheet): steel body with turned rings, black eyepiece cup, light post under the body.
+            b.Frustum("Eyepiece", new Vector3(0, 0, -0.046f), 0.052f, 0.022f, 0.028f, "Instrument_KnobBlack", PB.AlongZ);
+            b.Torus("EyepieceRim", new Vector3(0, 0, -0.06f), 0.054f, 0.005f, "Instrument_KnobBlack", new Vector3(90, 0, 0));
+            b.Cyl("Coupler", new Vector3(0, 0, -0.022f), 0.026f, 0.022f, "Instrument_Steel", PB.AlongZ);
+            b.Cyl("Body", new Vector3(0, 0, 0.0f), 0.02f, 0.03f, "Stainless_Satin", PB.AlongZ);
+            b.Cyl("BodyRing", new Vector3(0, 0, 0.012f), 0.024f, 0.005f, "Instrument_Steel", PB.AlongZ);
+            b.Cyl("LightPost", new Vector3(0, -0.02f, 0.002f), 0.008f, 0.03f, "Instrument_Steel");
+            b.Cyl("LightConnector", new Vector3(0, -0.038f, 0.002f), 0.011f, 0.012f, "Instrument_Steel");
             b.Cyl("Shaft", new Vector3(0, 0, 0.018f + ShaftLength / 2), 0.01f, ShaftLength, "Instrument_Steel", PB.AlongZ);
             float tip = 0.018f + ShaftLength;
             b.Cyl("Lens", new Vector3(0, 0, tip), 0.008f, 0.001f, "Screen_Off", new Vector3(120, 0, 0));
@@ -107,7 +154,7 @@ namespace SurgicalFoundations.EditorTools
             b.Pivot("Pivot_Port", new Vector3(0, 0, 0.2f));
             b.Pivot("CameraSocket", new Vector3(0, 0, tip), new Vector3(30, 0, 0));
             b.Info("INST-03", "Laparoscope 30°", "Instrument", AssetRelease.MVP, 4000, "Scope, camera head, light cable; camera socket at tip, 30° offset.");
-            b.Grabbable(0.45f, new Vector3(0, 0, -0.07f), Vector3.zero);
+            b.Grabbable(0.3f, new Vector3(0, 0, -0.01f), Vector3.zero);
             b.Save(Folder("Instruments"));
         }
 
@@ -123,6 +170,7 @@ namespace SurgicalFoundations.EditorTools
 
         static void Scalpel()
         {
+            if (SimReadyScalpel()) return; // NVIDIA SimReady handle when it is imported
             var b = new PB("INST_Scalpel");
             b.Box("Handle", new Vector3(0, 0, 0.065f), new Vector3(0.009f, 0.003f, 0.13f), "Instrument_Steel");
             b.Box("Grip", new Vector3(0, 0, 0.05f), new Vector3(0.0092f, 0.0032f, 0.05f), "Stainless_Satin");

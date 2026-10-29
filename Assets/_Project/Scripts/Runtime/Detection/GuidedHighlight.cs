@@ -32,7 +32,7 @@ namespace SurgicalFoundations.Detection
 
             // The same pulse the port-site landmarks use; a plain mint disc if the shader isn't in the build.
             var pulse = Shader.Find("SF/FX/Target Pulse");
-            if (pulse != null) markerRenderer.material = new Material(pulse);
+            markerRenderer.material = pulse != null ? new Material(pulse) : Rendering.RuntimeMaterials.Lit(new Color(0.36f, 0.88f, 0.78f, 0.9f));
             markerRenderer.material.color = new Color(0.36f, 0.88f, 0.78f, 0.9f);
             if (markerRenderer.material.HasProperty("_Color")) markerRenderer.material.SetColor("_Color", new Color(0.36f, 0.88f, 0.78f, 1f));
             go.SetActive(false);

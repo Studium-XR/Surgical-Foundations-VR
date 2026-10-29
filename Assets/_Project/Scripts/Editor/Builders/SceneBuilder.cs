@@ -524,12 +524,14 @@ namespace SurgicalFoundations.EditorTools
             Inst("Equipment/EQ_ORTable", eq, Vector3.zero);
             Inst("Equipment/EQ_SurgicalLights", eq, Vector3.zero);
             Inst("Equipment/EQ_LapTower", eq, new Vector3(0.25f, 0, 1.25f), 180f);
-            Inst("Equipment/EQ_AnaesthesiaMachine", eq, new Vector3(-1.8f, 0, 0.5f), 110f);
+            // Head end, towards −Z: its swing-arm monitor reaches ~0.8 m sideways and would sit in the anaesthetist's face.
+            Inst("Equipment/EQ_AnaesthesiaMachine", eq, new Vector3(-1.85f, 0, -0.35f), 110f);
             Inst("Equipment/EQ_MayoStand", eq, new Vector3(0.8f, 0, -0.7f), 0f);
             Inst("Equipment/EQ_BackTable", eq, new Vector3(2.0f, 0, -1.3f), 90f);
             TryInst("Equipment/EQ_HeartLungMachine", eq, new Vector3(2.75f, 0, 2.55f), 225f);
+            TryInst("Equipment/EQ_SurgeryLamp", eq, new Vector3(1.1f, 0, 0.6f), -90f);
             TryInst("Equipment/EQ_PatientMonitor", eq, new Vector3(-1.05f, 0, 1.1f), 150f);
-            TryInst("Equipment/EQ_IVStand", eq, new Vector3(-1.0f, 0, -0.6f), 30f);
+            TryInst("Equipment/EQ_IVStand", eq, new Vector3(-1.05f, 0, -1.05f), 30f); // clear of the anaesthesia machine
             TryInst("Equipment/EQ_OxygenCylinder", eq, new Vector3(-3.1f, 0, -0.45f), 90f);
             TryInst("Equipment/EQ_SupplyCabinet", eq, new Vector3(-3.2f, 0, -2.35f), 90f);
             TryInst("Equipment/EQ_StorageCabinet", eq, new Vector3(3.2f, 0, -2.6f), -90f);

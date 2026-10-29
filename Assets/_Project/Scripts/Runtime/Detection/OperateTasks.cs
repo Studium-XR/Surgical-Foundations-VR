@@ -127,13 +127,10 @@ namespace SurgicalFoundations.Detection
             {
                 dissectLocal[i] = new Vector3(Mathf.Lerp(-0.02f, 0.02f, i / (DissectionPoints - 1f)), 0.011f, 0f);
                 if (!guided) continue; // the points are marked in Guided mode only (FR-19)
-                var marker = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-                marker.name = "DissectPoint_" + (i + 1);
-                UnityEngine.Object.Destroy(marker.GetComponent<Collider>());
+                var marker = Rendering.RuntimeMaterials.Primitive(PrimitiveType.Sphere, new Color(0.36f, 0.88f, 0.78f), "DissectPoint_" + (i + 1));
                 marker.transform.SetParent(tissue, false);
                 marker.transform.localPosition = dissectLocal[i];
                 marker.transform.localScale = Vector3.one * 0.005f;
-                marker.GetComponent<Renderer>().material.color = new Color(0.36f, 0.88f, 0.78f);
                 marker.SetActive(false);
                 dissectMarkers[i] = marker;
             }

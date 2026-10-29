@@ -29,7 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Project/Scenes/Theatre/14_Stage_Close.unity
     guid: df03e856067b1414d808db798101e82b
-  - enabled: 0
+  - enabled: 1
     path: Assets/_Project/Scenes/Tools/90_ReplayViewer.unity
     guid: 19ad9c5f0beb6ab49bce14ad5914d7c1
   m_configObjects:

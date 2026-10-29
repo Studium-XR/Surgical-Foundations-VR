@@ -243,6 +243,7 @@ namespace SurgicalFoundations.EditorTools
 
         static void ImportedProps()
         {
+            BuildGloveModels();
             if (ImportedAssets.Exists(ImportedAssets.HeartLung))
             {
                 var b = new PB("EQ_HeartLungMachine");
@@ -260,7 +261,15 @@ namespace SurgicalFoundations.EditorTools
                 b.Info("EQ-X2", "Microscope", "Equipment", AssetRelease.MVP, 11600, "Imported model (skills-lab dressing).").isPlaceholder = false;
                 b.Save(Folder("Equipment"));
             }
-            if (ImportedAssets.Exists(ImportedAssets.Monitor))
+            if (ImportedAssets.Exists(ImportedAssets.SurgeryLamp))
+            {
+                var b = new PB("EQ_SurgeryLamp");
+                TryModel(b, ImportedAssets.SurgeryLamp, Fit.Height, 1.9f);
+                b.FitColliderFromRenderers();
+                b.Info("EQ-X3", "Surgery lamp", "Equipment", AssetRelease.MVP, 0, "Imported model (floor-standing lamp beside the OR table).").isPlaceholder = false;
+                b.Save(Folder("Equipment"));
+            }
+            if (!SimReadyPatientMonitor() && ImportedAssets.Exists(ImportedAssets.Monitor))
             {
                 var b = new PB("EQ_PatientMonitor");
                 b.Cyl("Stand_Base", new Vector3(0, 0.02f, 0), 0.5f, 0.04f, "Polymer_Grey");
@@ -291,6 +300,47 @@ namespace SurgicalFoundations.EditorTools
                 b.Save(Folder("TrainingProps"));
             }
             HospitalRoomProps();
+        }
+
+        /// <summary>
+        /// One glove per hand from the imported pair, for HandAppearance to put on the controllers once gloved:
+        /// wrist at the prefab origin, fingers along +Z, palm down, latex material. Saved under Resources so the rig in
+        /// 00_Bootstrap can load them without a serialized reference.
+        /// </summary>
+        [MenuItem(SFPaths.MenuRoot + "Build/1c · Glove Models", priority = 3)]
+        public static void BuildGloveModels()
+        {
+            var model = AssetDatabase.LoadAssetAtPath<GameObject>(ImportedAssets.Gloves);
+            if (model == null) return;
+            const string folder = SFPaths.Root + "/Resources/Gloves";
+            System.IO.Directory.CreateDirectory(folder);
+            var latex = MaterialLibrary.Get("Glove_Latex");
+
+            var tmp = (GameObject)Object.Instantiate(model);
+            foreach (var (mesh, name) in new[] { ("glove_left", "Glove_Left"), ("gloves", "Glove_Right") })
+            {
+                var src = mesh == "gloves" ? tmp.transform : tmp.transform.Find(mesh);
+                var srcFilter = src != null ? src.GetComponent<MeshFilter>() : null;
+                if (srcFilter == null || srcFilter.sharedMesh == null) { Debug.LogWarning($"[Gloves] No mesh '{mesh}' in {ImportedAssets.Gloves}"); continue; }
+
+                var root = new GameObject(name);
+                var visual = new GameObject("Mesh");
+                visual.transform.SetParent(root.transform, false);
+                visual.AddComponent<MeshFilter>().sharedMesh = srcFilter.sharedMesh;
+                var r = visual.AddComponent<MeshRenderer>();
+                r.sharedMaterial = latex;
+                r.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+
+                // Same world orientation and scale as in the file, then the wrist edge (min Z) moved to the origin.
+                visual.transform.rotation = src.rotation;
+                visual.transform.localScale = src.lossyScale;
+                var b = r.bounds;
+                visual.transform.position -= new Vector3(b.center.x, b.center.y, b.min.z);
+
+                PrefabUtility.SaveAsPrefabAsset(root, $"{folder}/{name}.prefab");
+                Object.DestroyImmediate(root);
+            }
+            Object.DestroyImmediate(tmp);
         }
     }
 }

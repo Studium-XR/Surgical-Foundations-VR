@@ -1,0 +1,19 @@
+# ninja log v5
+76	4406	8130820885934559	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	81ed1fff3d034043
+87	4681	8130820889167095	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	87b59f3046660455
+1	4418	8130820885984970	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	6f0b8680802a7778
+41	4421	8130820885934559	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	cbfb6ce54f4591ba
+4911	5266	8130820894930744	C:/Users/don360/Desktop/Studium XR Projects/My Surgical Foundations VR/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/6g3y6x3w/obj/arm64-v8a/libgame.so	27f12d18f8084e6f
+107	4427	8130820886444851	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	96f61d909f48e6a5
+27	4424	8130820886444851	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	53c2e80bb0b5f8e5
+61	4754	8130820889861274	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	c98ffd301abc4a94
+16	4911	8130820891411217	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	6950c40ac4bbab3b
+166	17243	8136047370907411	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	81ed1fff3d034043
+125	17250	8136047370907411	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	cbfb6ce54f4591ba
+110	17256	8136047371124526	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	6f0b8680802a7778
+154	17280	8136047371442371	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	96f61d909f48e6a5
+96	17327	8136047371766341	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	53c2e80bb0b5f8e5
+141	17813	8136047376784621	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	c98ffd301abc4a94
+177	17858	8136047377253738	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	87b59f3046660455
+53	18050	8136047379038100	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	6950c40ac4bbab3b
+18051	18625	8136047384924667	C:/Users/don360/Desktop/Studium XR Projects/My Surgical Foundations VR/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/6g3y6x3w/obj/arm64-v8a/libgame.so	27f12d18f8084e6f

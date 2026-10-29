@@ -32,6 +32,26 @@ namespace SurgicalFoundations.Detection
             return controller[i] != null ? controller[i] : handPose[i];
         }
 
+        /// <summary>
+        /// Where this hand's pointing ray starts, aimed the way it points: the cast origin of the hand's Near-Far
+        /// interactor, i.e. the ray the learner sees. The grip pose (<see cref="Hand"/>) points 30–40° off that ray on
+        /// Quest controllers, so aiming along it put port marks and counted items somewhere other than where the
+        /// visible ray was. Falls back to the hand itself.
+        /// </summary>
+        public static Transform Aim(bool left)
+        {
+            var hand = Hand(left);
+            if (hand == null) return null;
+            var root = hand == controller[left ? 0 : 1] || hand.parent == null ? hand : hand.parent;
+            foreach (var caster in root.GetComponentsInChildren<UnityEngine.XR.Interaction.Toolkit.Interactors.Casters.CurveInteractionCaster>())
+            {
+                if (!caster.isActiveAndEnabled) continue;
+                var origin = caster.effectiveCastOrigin != null ? caster.effectiveCastOrigin : caster.castOrigin;
+                if (origin != null) return origin;
+            }
+            return hand;
+        }
+
         static readonly Vector3?[] firstSeen = new Vector3?[2];
         static readonly bool[] moved = new bool[2];
 
@@ -91,12 +111,26 @@ namespace SurgicalFoundations.Detection
 
             var audio = Audio.AudioManager.Instance;
             if (audio == null) return;
+            var guided = SessionManager.Instance == null || SessionManager.Instance.Settings.mode == TrainingMode.Guided;
             var cue = Cue(code);
+            // Guided mode: every event without a cue of its own still sounds right or wrong, so the learner hears at
+            // once whether what they just did was on protocol. Assessment keeps only the specific cues above.
+            if (cue == Audio.SoundId.None && guided) cue = ClassCue(eventClass);
             if (cue != Audio.SoundId.None) audio.Play(cue);
             // Coaching lines are a Guided-mode aid; Assessment only logs.
             var voice = Voice(code);
-            var guided = SessionManager.Instance == null || SessionManager.Instance.Settings.mode == TrainingMode.Guided;
             if (voice != Audio.SoundId.None && guided) audio.Play(voice);
+        }
+
+        static Audio.SoundId ClassCue(EventClass eventClass)
+        {
+            switch (eventClass)
+            {
+                case EventClass.OnProtocol: return Audio.SoundId.FB_OnProtocol;
+                case EventClass.Delayed: return Audio.SoundId.FB_Delayed;
+                case EventClass.Deviation: return Audio.SoundId.FB_Deviation;
+                default: return Audio.SoundId.None;
+            }
         }
 
         static Audio.SoundId Voice(string code)
@@ -141,6 +175,8 @@ namespace SurgicalFoundations.Detection
 
         protected StepSequence Sequence { get; private set; }
         protected int Step => Sequence != null ? Sequence.Index : -1;
+        /// <summary>The step being played, for components outside the stage (−1 before the sequence starts).</summary>
+        public int CurrentStep => Step;
         protected static bool Guided => SessionManager.Instance == null || SessionManager.Instance.Settings.mode == TrainingMode.Guided;
 
         protected virtual void OnEnable() => Current = this;
@@ -221,7 +257,7 @@ namespace SurgicalFoundations.Detection
         {
             switch (scene.name)
             {
-                case SceneIds.OperatingTheatre: Ensure<SterilityMonitor>(scene); Ensure<GuidedHighlight>(scene); Ensure<ScrubNurse>(scene); break;
+                case SceneIds.OperatingTheatre: Ensure<SterilityMonitor>(scene); Ensure<GuidedHighlight>(scene); Ensure<GuidedCoach>(scene); Ensure<ScrubNurse>(scene); break;
                 // The muted steps had a voice line scripted for the old click-through demo ("sterility broken", "angle too
                 // shallow", "a swab is missing"); those now play when detection sees the event itself.
                 case SceneIds.StagePrep: Ensure<PrepController>(scene); MuteVoice(scene, PrepController.GloveStepIndex); break;

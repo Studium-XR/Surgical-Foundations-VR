@@ -18,16 +18,10 @@ namespace SurgicalFoundations.EditorTools
             // Environment
             OperatingTheatre(); ScrubAlcove(); Lobby(); SkillsLab();
             // Equipment
-            ORTable(); SurgicalLights(); LapTower(); AnaesthesiaMachine(); ScrubSink(); BackTable(); MayoStand(); InstrumentTray(); KickBucket();
+            ORTable(); SurgicalLights(); LapTower(); AnaesthesiaMachine(); ScrubSink(); BackTable(); MayoStand(); KickBucket(); // InstrumentTray: built with the laparoscopic set
 
             // Instruments
-            Trocar("INST_Trocar12", "INST-01", "Trocar 12 mm", 0.012f, 0.04f);
-            Trocar("INST_Trocar5", "INST-02", "Trocar 5 mm", 0.0055f, 0.03f);
-            Laparoscope();
-            LapInstrument("INST_AtraumaticGrasper", "INST-04", "Atraumatic grasper", JawStyle.Grasper, "Separate jaw meshes, handle ratchet.");
-            LapInstrument("INST_MarylandDissector", "INST-05", "Maryland dissector", JawStyle.Maryland, "Curved jaws, separate meshes.");
-            LapInstrument("INST_LapScissors", "INST-06", "Laparoscopic scissors", JawStyle.Scissors, "Separate blades.");
-            LapInstrument("INST_ClipApplier", "INST-07", "Clip applier", JawStyle.ClipApplier, "Jaws + loaded clip.");
+            LapInstrumentSet();
             SurgicalClip(); Scalpel(); NeedleHolder(); Swab();
             // PPE
             SurgeonHands(); Gown(); GlovesPacket(); DrapeSet();
@@ -126,17 +120,25 @@ namespace SurgicalFoundations.EditorTools
             b.Save(Folder("PPE"));
         }
 
+        /// <summary>Rebuilds only the patient drape (PPE_DrapeSet); the scenes pick it up through the prefab.</summary>
+        [MenuItem(SFPaths.MenuRoot + "Build/1e · Patient Drape", priority = 3)]
+        public static void BuildDrapeOnly()
+        {
+            DrapeSet();
+            AssetDatabase.SaveAssets();
+        }
+
         /// <summary>Fenestrated laparotomy drape. Origin = centre of the fenestration (place over the umbilicus).</summary>
         static void DrapeSet()
         {
             var b = new PB("PPE_DrapeSet");
             const float L = 2.6f, Wd = 1.7f, th = 0.004f, holeX = 0.3f, holeZ = 0.25f;
-            if (ConformingDrape(b, L, Wd, holeX, holeZ))
+            // The window must clear all three port sites (umbilicus, working ports 9 cm either side and 10 cm across)
+            // with room to spare, or marks and trocars land under the frame.
+            if (ConformingDrape(b, 2.5f, 2.3f, 0.34f, 0.32f))
             {
-                b.Box("Drop_North", new Vector3(0, -0.28f, Wd / 2), new Vector3(L, 0.56f, th), "Drape_Teal");
-                b.Box("Drop_South", new Vector3(0, -0.28f, -Wd / 2), new Vector3(L, 0.56f, th), "Drape_Teal");
                 b.Info("PPE-04", "Patient drape set", "PPE", AssetRelease.MVP, 6000,
-                    "Fenestrated drape shaped over the imported patient (height field, static); window + adhesive frame at the umbilicus.").isPlaceholder = false;
+                    "Fenestrated drape resting on the imported patient and mattress, hanging over the table sides, ends and arm boards (height field, static); window + adhesive frame at the umbilicus.").isPlaceholder = false;
                 b.Save(Folder("PPE"));
                 return;
             }
@@ -162,20 +164,48 @@ namespace SurgicalFoundations.EditorTools
         static bool ConformingDrape(PB b, float L, float Wd, float holeX, float holeZ)
         {
             const float cell = 0.02f, clearance = 0.008f, frame = 0.03f;
+            // How the sheet leaves a support: metres of drop per metre past its edge (a steep fall, like cloth), down to
+            // a hem this far above the floor. Grid cells already at the hem away from every support are trimmed.
+            const float hangSlope = 3.2f, hemHeight = 0.45f;
             var body = PatientHeightField(cell);
             if (body == null) return false;
 
-            // Uniform field in drape space: body height (relative to the window level), dilated so the sheet tents
-            // just past the body's outline, then blurred with a smaller radius so it still clears every peak.
+            // What the sheet rests on, in patient space (y = 0 is the mattress top, as for the body field): the
+            // mattress with the patient on it, and the arm boards. Read from the table prefab so they match the scene.
+            var supports = TableSupports();
+
+            // Field relative to the window level: the highest of the patient's surface, the mattress and the arm boards,
+            // each support falling away past its edges like cloth (the old field clamped everything below the window up
+            // to it, which made the sheet a flat board floating over the legs). The body is sampled everywhere: the
+            // feet reach past the end of the mattress and the hands lie just past its sides, and the sheet must cover
+            // them. Dilated so the sheet tents just past every outline, then blurred with a smaller radius so it still
+            // clears every peak. Never below the hem.
+            float hem = hemHeight - 0.92f - DrapeInPatient.y; // the patient (and so the mattress top) sits at y = 0.92
             int nx = Mathf.CeilToInt(L / cell) + 1, nz = Mathf.CeilToInt(Wd / cell) + 1;
             var raw = new float[nx, nz];
             for (int i = 0; i < nx; i++)
             for (int j = 0; j < nz; j++)
             {
-                float x = -L / 2 + i * cell + DrapeInPatient.x, z = -Wd / 2 + j * cell + DrapeInPatient.z;
-                raw[i, j] = Mathf.Max(0f, body(x, z) - DrapeInPatient.y + clearance);
+                float px = -L / 2 + i * cell + DrapeInPatient.x, pz = -Wd / 2 + j * cell + DrapeInPatient.z;
+                float b0 = body(px, pz);
+                float top = b0 > 0f ? b0 : float.NegativeInfinity;
+                foreach (var s in supports) top = Mathf.Max(top, s.height - hangSlope * OutsideDistance(s, px, pz));
+                raw[i, j] = Mathf.Max(top - DrapeInPatient.y + clearance, hem);
             }
             var h = Blur(Dilate(raw, 3), 2);
+
+            // Round the window the sheet must lie flush with the prepped-skin patch (window level), or the patch's
+            // edge shows as a raised block inside the frame: raised over the window and frame, easing back to the
+            // body over a 6 cm apron.
+            const float apron = 0.06f;
+            for (int i = 0; i < nx; i++)
+            for (int j = 0; j < nz; j++)
+            {
+                float dx = Mathf.Max(Mathf.Abs(-L / 2 + i * cell) - (holeX / 2 + frame), 0f);
+                float dz = Mathf.Max(Mathf.Abs(-Wd / 2 + j * cell) - (holeZ / 2 + frame), 0f);
+                float w = 1f - Mathf.Clamp01(Mathf.Sqrt(dx * dx + dz * dz) / apron);
+                if (w > 0f && h[i, j] < clearance) h[i, j] = Mathf.Lerp(h[i, j], clearance, Mathf.SmoothStep(0f, 1f, w));
+            }
 
             float Height(float x, float z)
             {
@@ -185,10 +215,10 @@ namespace SurgicalFoundations.EditorTools
                 return Mathf.Lerp(Mathf.Lerp(h[i, j], h[i + 1, j], u), Mathf.Lerp(h[i, j + 1], h[i + 1, j + 1], u), v);
             }
 
-            // Grid lines every 5 cm, plus the window and frame edges so the cut-outs are exact.
+            // Grid lines every 4 cm (the falls are steep), plus the window and frame edges so the cut-outs are exact.
             float hx = holeX / 2, hz = holeZ / 2;
-            var xs = Lines(-L / 2, L / 2, 0.05f, -hx - frame, -hx, hx, hx + frame);
-            var zs = Lines(-Wd / 2, Wd / 2, 0.05f, -hz - frame, -hz, hz, hz + frame);
+            var xs = Lines(-L / 2, L / 2, 0.04f, -hx - frame, -hx, hx, hx + frame);
+            var zs = Lines(-Wd / 2, Wd / 2, 0.04f, -hz - frame, -hz, hz, hz + frame);
             var verts = new List<Vector3>();
             var uvs = new List<Vector2>();
             foreach (var z in zs)
@@ -204,8 +234,11 @@ namespace SurgicalFoundations.EditorTools
             {
                 float cx = Mathf.Abs((xs[i] + xs[i + 1]) / 2), cz = Mathf.Abs((zs[j] + zs[j + 1]) / 2);
                 if (cx < hx && cz < hz) continue; // the window
-                var list = cx < hx + frame && cz < hz + frame ? rim : sheet;
                 int a = j * xs.Count + i, c = a + xs.Count;
+                // Off every support and already down at the hem: no cloth there, so the sheet doesn't become a flat
+                // shelf at hem height beside the table.
+                if (verts[a].y <= hem + 1e-4f && verts[a + 1].y <= hem + 1e-4f && verts[c].y <= hem + 1e-4f && verts[c + 1].y <= hem + 1e-4f) continue;
+                var list = cx < hx + frame && cz < hz + frame ? rim : sheet;
                 list.AddRange(new[] { a, c, a + 1, a + 1, c, c + 1 });
             }
 
@@ -274,6 +307,46 @@ namespace SurgicalFoundations.EditorTools
             r.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
         }
 
+        /// <summary>A rectangle the drape rests on, in patient space (x along the table; yMin/yMax span z), with its top height.</summary>
+        struct Support
+        {
+            public float xMin, xMax, yMin, yMax, height;
+        }
+
+        /// <summary>
+        /// The mattress (first) and the arm boards of EQ_ORTable, in patient space. The table stands at the origin and
+        /// the patient at y = 0.92, so patient space is the table's minus 0.92 in y. Falls back to the 2 x 0.52 m mattress.
+        /// </summary>
+        static List<Support> TableSupports()
+        {
+            var list = new List<Support>();
+            var prefab = AssetDatabase.LoadAssetAtPath<GameObject>($"{SFPaths.Prefabs}/Equipment/EQ_ORTable.prefab");
+            if (prefab != null)
+            {
+                var inst = (GameObject)Object.Instantiate(prefab);
+                try
+                {
+                    foreach (var r in inst.GetComponentsInChildren<Renderer>())
+                    {
+                        if (r.name != "Mattress" && !r.name.StartsWith("ArmBoard")) continue;
+                        var bb = r.bounds;
+                        var s = new Support { xMin = bb.min.x, xMax = bb.max.x, yMin = bb.min.z, yMax = bb.max.z, height = bb.max.y - 0.92f };
+                        if (r.name == "Mattress") list.Insert(0, s); else list.Add(s);
+                    }
+                }
+                finally { Object.DestroyImmediate(inst); }
+            }
+            if (list.Count == 0 || list[0].xMax - list[0].xMin < 1f)
+                list.Insert(0, new Support { xMin = -0.99f, xMax = 0.99f, yMin = -0.26f, yMax = 0.26f, height = 0f });
+            return list;
+        }
+
+        static float OutsideDistance(Support s, float x, float z)
+        {
+            float dx = Mathf.Max(s.xMin - x, 0f, x - s.xMax), dz = Mathf.Max(s.yMin - z, 0f, z - s.yMax);
+            return Mathf.Sqrt(dx * dx + dz * dz);
+        }
+
         static List<float> Lines(float from, float to, float step, params float[] extra)
         {
             var l = new List<float>();
@@ -291,7 +364,7 @@ namespace SurgicalFoundations.EditorTools
             for (int i = 0; i < nx; i++)
             for (int j = 0; j < nz; j++)
             {
-                float m = 0f;
+                float m = float.NegativeInfinity; // not 0: the drape field goes negative where the sheet falls off the table
                 for (int di = -r; di <= r; di++)
                 for (int dj = -r; dj <= r; dj++)
                 {

@@ -18,14 +18,15 @@ namespace SurgicalFoundations.Detection
         public const int ScrubStepIndex = 0, GloveStepIndex = 1, TrayStepIndex = 2;
 
         // Sensor tuning, in metres / metres per second.
-        const float HandsTogetherDistance = 0.16f;
-        const float RubSpeed = 0.12f;
-        const float WaterZoneRadius = 0.22f;
-        const float WaterZoneDepth = 0.45f;
-        const float TowelZoneRadius = 0.28f;
-        const float InspectDistance = 0.6f;
+        // Sized for tracked hands on a real headset: the hand pose sits ~10 cm off the palm and jitters a few cm.
+        const float HandsTogetherDistance = 0.22f;
+        const float RubSpeed = 0.08f;
+        const float WaterZoneRadius = 0.32f;
+        const float WaterZoneDepth = 0.6f;
+        const float TowelZoneRadius = 0.35f;
+        const float InspectDistance = 0.75f;
         const float InspectMinDistance = 0.12f;
-        const float InspectAngle = 40f;
+        const float InspectAngle = 55f;
         /// <summary>How far off the pointing ray an item may be and still be the one pointed at.</summary>
         const float PointRadius = 0.07f;
         const float PointRange = 2.5f;
@@ -49,6 +50,7 @@ namespace SurgicalFoundations.Detection
         InputAction[] trigger;
 
         Transform tap;
+        readonly List<Transform> taps = new List<Transform>();
         Transform towels;
         Vector3 lastOffset;
         float rubSmoothed;
@@ -95,7 +97,10 @@ namespace SurgicalFoundations.Detection
             foreach (var cue in FindObjectsByType<HandLookCue>(FindObjectsInactive.Include))
                 if (cue.gameObject.scene == gameObject.scene) Destroy(cue);
 
-            tap = FindWhere(t => t.name.StartsWith("WaterSocket_") && t.gameObject.activeInHierarchy);
+            // The sink has several spouts; the learner may use any of them, so the water zone follows the nearest one.
+            taps.AddRange(gameObject.scene.GetRootGameObjects().SelectMany(r => r.GetComponentsInChildren<Transform>())
+                .Where(t => t.name.StartsWith("WaterSocket_")));
+            tap = taps.FirstOrDefault(t => t.name == "WaterSocket_C") ?? taps.FirstOrDefault();
             towels = Find("PROP_SterileTowels");
             if (towels == null) towels = CreateTowels();
 
@@ -145,7 +150,7 @@ namespace SurgicalFoundations.Detection
             for (int h = 0; h < 2; h++)
             {
                 if (!trigger[h].WasPressedThisFrame()) continue;
-                var hand = LearnerRig.Hand(h == 0);
+                var hand = LearnerRig.Aim(h == 0); // the visible ray, not the grip pose
                 if (hand != null) ConfirmAlongRay(hand.position, hand.forward);
             }
         }
@@ -184,14 +189,11 @@ namespace SurgicalFoundations.Detection
             item.confirmed = true;
 
             // A mint tick above the item, so the learner can see what has been counted.
-            var tick = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-            tick.name = "Counted_" + item.transform.name;
-            Destroy(tick.GetComponent<Collider>());
+            var tick = Rendering.RuntimeMaterials.Primitive(PrimitiveType.Sphere, new Color(0.36f, 0.88f, 0.78f), "Counted_" + item.transform.name);
             tick.transform.SetParent(item.transform, false);
             tick.transform.position = item.transform.position + Vector3.up * 0.04f;
             var s = item.transform.lossyScale;
             tick.transform.localScale = new Vector3(0.014f / Mathf.Max(s.x, 1e-4f), 0.014f / Mathf.Max(s.y, 1e-4f), 0.014f / Mathf.Max(s.z, 1e-4f));
-            tick.GetComponent<Renderer>().material.color = new Color(0.36f, 0.88f, 0.78f);
             return true;
         }
 
@@ -209,6 +211,11 @@ namespace SurgicalFoundations.Detection
         /// <summary>Turns hand poses into "what are the hands doing": the only place that knows about distances and angles.</summary>
         public ScrubSample Sample(Transform left, Transform right, Transform head, float dt)
         {
+            if (taps.Count > 1)
+            {
+                var mid = (left.position + right.position) * 0.5f;
+                tap = taps.OrderBy(t => (t.position - mid).sqrMagnitude).First();
+            }
             var offset = right.position - left.position;
             // Rubbing = the hands moving relative to each other, whatever the body is doing.
             var relativeSpeed = dt > 0f ? (offset - lastOffset).magnitude / dt : 0f;
@@ -221,7 +228,7 @@ namespace SurgicalFoundations.Detection
                 inWater = tap != null && InWater(left.position) && InWater(right.position),
                 handsTogether = offset.magnitude <= HandsTogetherDistance,
                 rubbing = rubSmoothed >= RubSpeed,
-                fingertipsUp = left.forward.y > 0.5f && right.forward.y > 0.5f,
+                fingertipsUp = left.forward.y > 0.35f && right.forward.y > 0.35f,
                 atTowel = towels != null && Near(left.position, towels.position, TowelZoneRadius) && Near(right.position, towels.position, TowelZoneRadius),
                 inspecting = InView(left.position, head) && InView(right.position, head),
                 handsDropped = left.position.y < tableTop || right.position.y < tableTop
@@ -240,7 +247,7 @@ namespace SurgicalFoundations.Detection
         {
             var to = hand - head.position;
             // An untracked controller reports the head's own position; a real hand is never closer than this.
-            return to.magnitude >= InspectMinDistance && to.magnitude <= InspectDistance && Vector3.Angle(head.forward, to) <= InspectAngle && hand.y > head.position.y - 0.35f;
+            return to.magnitude >= InspectMinDistance && to.magnitude <= InspectDistance && Vector3.Angle(head.forward, to) <= InspectAngle && hand.y > head.position.y - 0.6f;
         }
 
         void FinishScrub()
@@ -298,9 +305,7 @@ namespace SurgicalFoundations.Detection
         Transform CreateTowels()
         {
             if (tap == null) return null;
-            var go = GameObject.CreatePrimitive(PrimitiveType.Cube);
-            go.name = "PROP_SterileTowels";
-            Destroy(go.GetComponent<Collider>());
+            var go = Rendering.RuntimeMaterials.Primitive(PrimitiveType.Cube, new Color(0.35f, 0.62f, 0.78f), "PROP_SterileTowels");
             UnityEngine.SceneManagement.SceneManager.MoveGameObjectToScene(go, gameObject.scene);
             // To the learner's right of the tap, at chest height, clear of the splash zone.
             go.transform.position = tap.position + new Vector3(-0.55f, -0.1f, 0.25f);

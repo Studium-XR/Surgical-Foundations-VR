@@ -141,7 +141,7 @@ namespace SurgicalFoundations.Detection
             for (int h = 0; h < 2; h++)
             {
                 if (trigger == null || !trigger[h].WasPressedThisFrame()) continue;
-                var hand = LearnerRig.Hand(h == 0);
+                var hand = LearnerRig.Aim(h == 0); // the visible ray, not the grip pose
                 if (hand != null && PointOnSkin(hand, out var point)) MarkAt(point);
             }
 
@@ -177,9 +177,7 @@ namespace SurgicalFoundations.Detection
             while (markVisuals.Count <= index) markVisuals.Add(null);
             if (markVisuals[index] == null)
             {
-                var go = GameObject.CreatePrimitive(PrimitiveType.Cylinder);
-                go.name = "PortMark_" + site.name;
-                Destroy(go.GetComponent<Collider>());
+                var go = Rendering.RuntimeMaterials.Primitive(PrimitiveType.Cylinder, new Color(0.35f, 0.2f, 0.6f), "PortMark_" + site.name);
                 UnityEngine.SceneManagement.SceneManager.MoveGameObjectToScene(go, gameObject.scene);
                 go.transform.localScale = new Vector3(0.014f, 0.0008f, 0.014f);
                 markVisuals[index] = go;

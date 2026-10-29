@@ -108,12 +108,25 @@ namespace SurgicalFoundations.EditorTools
             Def("Instrument_Steel", "Instruments", "C3C9CC", 1f, 0.8f);
             Def("Instrument_Titanium", "Instruments", "A9A39A", 1f, 0.7f);
             Def("Trocar_Polymer", "Instruments", "8A9499", 0f, 0.55f);
+            // Modern laparoscopic set: white moulded handles, glossy black knobs, colour-coded threaded trocars.
+            Def("Instrument_HandleWhite", "Instruments", "EEF1F2", 0f, 0.72f);
+            Def("Instrument_KnobBlack", "Instruments", "0C0E10", 0.1f, 0.85f);
+            Def("Trocar_Head", "Instruments", "A8AFB3", 0.1f, 0.55f);
+            Def("Trocar_Green", "Instruments", "2FB59A", 0.05f, 0.75f);
+            Def("Trocar_Blue", "Instruments", "4E5FC9", 0.05f, 0.75f);
+            Def("Trocar_Clear", "Instruments", "D6E4EA", 0.1f, 0.88f);
             Def("Suture_Violet", "Instruments", "5B3E8C", 0f, 0.4f);
             Def("Swab_White", "Instruments", "F2F2EE", 0f, 0.05f);
             Def("Swab_Stripe", "Instruments", "2F63C9", 0f, 0.1f);
 
             // PPE
-            Def("Drape_Teal", "PPE", "2F6F73", 0f, 0.12f);
+            // Surgical drapes (patient, back table, Mayo tray): the NVIDIA SimReady drape_surgical_a02 fabric, i.e. its
+            // measured colour and a seamless tile of its crinkle normal map (CC BY 4.0). The key keeps its old name so
+            // every prefab using M_Drape_Teal picks it up; the drape UVs span 0–1 over ~2.4 m, so 12 repeats ≈ 20 cm.
+            Def("Drape_Teal", "PPE", "5F83AB", 0f, 0.1f);
+            Specs["Drape_Teal"].normal = SFPaths.Textures + "/SimReady/T_SimReadyDrape_Normal.png";
+            Specs["Drape_Teal"].normalScale = 1.2f;
+            Specs["Drape_Teal"].tiling = new Vector2(12, 12);
             Def("Gown_Blue", "PPE", "4A7FA8", 0f, 0.15f);
             Def("Glove_Latex", "PPE", "D8C79E", 0f, 0.55f);
             Def("Glove_Contaminated", "PPE", "C8866F", 0f, 0.5f);
@@ -207,7 +220,6 @@ namespace SurgicalFoundations.EditorTools
             Custom("Stainless_Brushed", "Equipment", Steel, Cols(("_BaseColor", "B7BEC2")), Flt(("_Smoothness", 0.72f), ("_BrushAxis", 0f), ("_BrushDensity", 500f)));
             Custom("Stainless_Satin", "Equipment", Steel, Cols(("_BaseColor", "9CA3A7")), Flt(("_Smoothness", 0.55f), ("_BrushAxis", 1f), ("_BrushStrength", 0.5f)));
             // 03 Drape, gown and scrubs fabric
-            Custom("Drape_Teal", "PPE", Drape, Cols(("_BaseColor", "2F6F73"), ("_SheenColor", "8CC8C8")));
             Custom("Gown_Blue", "PPE", Drape, Cols(("_BaseColor", "4A7FA8"), ("_SheenColor", "A8C8E8")), Flt(("_FoldScale", 5f)));
             Custom("Scrubs_Teal", "PPE", Drape, Cols(("_BaseColor", "3E8A86"), ("_SheenColor", "90C8C0")), Flt(("_WeaveScale", 800f)));
             Custom("Scrubs_Green", "PPE", Drape, Cols(("_BaseColor", "4E7F5B"), ("_SheenColor", "98C0A0")), Flt(("_WeaveScale", 800f)));

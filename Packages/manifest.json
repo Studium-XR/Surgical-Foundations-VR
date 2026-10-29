@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.studiumxr.surgicalfoundations.contracts": "file:../../Studium XR Backend/src/SurgicalFoundations.Contracts",
+    "com.studiumxr.surgicalfoundations.contracts": "file:../../Studium-XR-Backend/src/SurgicalFoundations.Contracts",
     "com.unity.nuget.newtonsoft-json": "3.2.1",
     "com.unity.ai.assistant": "2.20.0-pre.1",
     "com.unity.ai.inference": "2.6.1",

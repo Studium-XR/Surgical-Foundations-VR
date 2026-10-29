@@ -24,6 +24,10 @@ namespace SurgicalFoundations.EditorTools
         public const string Monitor = Root + "/monitor-computer-realistic-computer-monitor/source/Monitor.fbx";
         public const string SurgeryTools = Root + "/surgery-tools-height-rez/source/Surgery Tools.fbx";
         public const string Patient = Root + "/patient/source/Patient.fbx";
+        /// <summary>Floor-standing examination lamp. Ships without its texture, so it renders with the default material.</summary>
+        public const string SurgeryLamp = Root + "/surgery-lamp/source/SurgeryLamp.fbx";
+        /// <summary>A flat pair of surgical gloves (static meshes "gloves" = right, "glove_left"), fingers along +Z.</summary>
+        public const string Gloves = Root + "/surgical-gloves/source/gloves.fbx";
         /// <summary>glTF binary: needs the glTFast package (com.unity.cloud.gltfast) to import.</summary>
         public const string ScrubSink = Root + "/scrubbing-sink/source/OT-sink.glb";
         /// <summary>A whole furnished ward room (Sketchfab) in one FBX; PlaceholderFactory picks the equipment out of it.</summary>

@@ -109,7 +109,7 @@ namespace SurgicalFoundations.EditorTools
             switch (p)
             {
                 case Profile.Theatre: // clinical: slightly cool, crisp, restrained highlights
-                    ca.postExposure.Override(0.15f); ca.contrast.Override(10f); ca.saturation.Override(-6f);
+                    ca.postExposure.Override(-0.25f); ca.contrast.Override(10f); ca.saturation.Override(-6f);
                     wb.temperature.Override(-6f); wb.tint.Override(-2f);
                     bloom.intensity.Override(0.12f); bloom.threshold.Override(1.2f); bloom.scatter.Override(0.5f);
                     break;
@@ -234,17 +234,21 @@ namespace SurgicalFoundations.EditorTools
 
         // ───────────── room rigs ─────────────
 
+        // Theatre baked light levels. Post-processing (and so tonemapping) is off on the headset, so these set what the
+        // learner sees directly; at 4.5 / 5 the white walls and drapes clipped.
+        public const float TheatreLaminarIntensity = 3f, TheatreRoomIntensity = 3.5f;
+
         /// <summary>Theatre: 8 baked area lights matching the ceiling panels, table-focused probes and reflections.</summary>
         public static void TheatreRig(Transform parent)
         {
             const float H = 3f;
             for (int ix = -1; ix <= 1; ix += 2)
             for (int iz = -1; iz <= 1; iz += 2)
-                Area(parent, $"Area_Laminar_{(ix < 0 ? "W" : "E")}{(iz < 0 ? "S" : "N")}", new Vector3(ix * 0.78f, H - 0.06f, iz * 0.78f), new Vector2(1.45f, 1.45f), 4.5f, 5000f);
+                Area(parent, $"Area_Laminar_{(ix < 0 ? "W" : "E")}{(iz < 0 ? "S" : "N")}", new Vector3(ix * 0.78f, H - 0.06f, iz * 0.78f), new Vector2(1.45f, 1.45f), TheatreLaminarIntensity, 5000f);
             for (int ix = -1; ix <= 1; ix += 2)
             for (int iz = -1; iz <= 1; iz += 2)
-                Area(parent, $"Area_Room_{(ix < 0 ? "W" : "E")}{(iz < 0 ? "S" : "N")}", new Vector3(ix * 2.5f, H - 0.03f, iz * 2.5f), new Vector2(1.2f, 0.6f), 5f, 5000f);
-            Area(parent, "Area_ScrubAlcove", new Vector3(-2f, H - 0.03f, -4.82f), new Vector2(1.2f, 0.6f), 5f, 4800f);
+                Area(parent, $"Area_Room_{(ix < 0 ? "W" : "E")}{(iz < 0 ? "S" : "N")}", new Vector3(ix * 2.5f, H - 0.03f, iz * 2.5f), new Vector2(1.2f, 0.6f), TheatreRoomIntensity, 5000f);
+            Area(parent, "Area_ScrubAlcove", new Vector3(-2f, H - 0.03f, -4.82f), new Vector2(1.2f, 0.6f), TheatreRoomIntensity, 4800f);
 
             Probes(parent, "LightProbes", new Bounds(new Vector3(-0.0f, 1.5f, -0.9f), new Vector3(7f, 3f, 8.8f)), 1.0f, new[] { 0.3f, 1.1f, 1.8f, 2.6f },
                 new Bounds(new Vector3(0, 1.25f, 0), new Vector3(2.4f, 0.7f, 1.4f)), 0.35f);

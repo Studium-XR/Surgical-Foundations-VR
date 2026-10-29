@@ -272,27 +272,21 @@ namespace SurgicalFoundations.Detection
             if (!Guided) return; // where to place the stitch is marked in Guided mode only (FR-19)
             for (int side = 0; side < 2; side++)
             {
-                var marker = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-                marker.name = $"BitePoint_{index}_{side}";
-                Destroy(marker.GetComponent<Collider>());
+                var marker = Rendering.RuntimeMaterials.Primitive(PrimitiveType.Sphere, new Color(0.36f, 0.88f, 0.78f), $"BitePoint_{index}_{side}");
                 UnityEngine.SceneManagement.SceneManager.MoveGameObjectToScene(marker, gameObject.scene);
                 marker.transform.position = BitePoint(index, side) + Vector3.up * 0.003f;
                 marker.transform.localScale = Vector3.one * 0.006f;
-                marker.GetComponent<Renderer>().material.color = new Color(0.36f, 0.88f, 0.78f);
                 sites[index].markers[side] = marker;
             }
         }
 
         void ShowStitch(int index)
         {
-            var stitch = GameObject.CreatePrimitive(PrimitiveType.Cylinder);
-            stitch.name = "Stitch_" + index;
-            Destroy(stitch.GetComponent<Collider>());
+            var stitch = Rendering.RuntimeMaterials.Primitive(PrimitiveType.Cylinder, new Color(0.45f, 0.3f, 0.7f), "Stitch_" + index); // suture violet
             UnityEngine.SceneManagement.SceneManager.MoveGameObjectToScene(stitch, gameObject.scene);
             stitch.transform.position = sites[index].skin + Vector3.up * 0.002f;
             stitch.transform.rotation = Quaternion.Euler(0f, 0f, 90f); // lying across the wound
             stitch.transform.localScale = new Vector3(0.0015f, BiteOffset, 0.0015f);
-            stitch.GetComponent<Renderer>().material.color = new Color(0.45f, 0.3f, 0.7f); // suture violet
         }
 
         public override void SkipStep()

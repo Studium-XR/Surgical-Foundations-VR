@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "com.studiumxr.surgicalfoundations.contracts": {
-      "version": "file:../../Studium XR Backend/src/SurgicalFoundations.Contracts",
+      "version": "file:../../Studium-XR-Backend/src/SurgicalFoundations.Contracts",
       "depth": 0,
       "source": "local",
       "dependencies": {}

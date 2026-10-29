@@ -8,6 +8,7 @@
         "Unity.InputSystem",
         "Unity.XR.Interaction.Toolkit",
         "Unity.XR.CoreUtils",
+        "Unity.XR.Hands",
         "Unity.RenderPipelines.Core.Runtime",
         "Unity.RenderPipelines.Universal.Runtime"
     ],

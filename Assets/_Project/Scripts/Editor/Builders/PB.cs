@@ -73,6 +73,38 @@ namespace SurgicalFoundations.EditorTools
             return t;
         }
 
+        /// <summary>
+        /// Cone frustum along local Y, like <see cref="Cyl"/>: <paramref name="d0"/> across at −Y (start), <paramref name="d1"/>
+        /// at +Y (end). Use d1 = 0 for a point.
+        /// </summary>
+        public Transform Frustum(string name, Vector3 center, float d0, float d1, float length, string mat, Vector3 euler = default, Transform parent = null)
+        {
+            var big = Mathf.Max(d0, d1, 1e-5f);
+            float k = Mathf.Round(Mathf.Min(d0, d1) / big * 20f) / 20f; // ratio, quantised so meshes are shared
+            var t = Mesh(name, ProcMesh.Frustum(k, d0 < d1), center, new Vector3(big, length, big), mat, euler, parent);
+            return t;
+        }
+
+        /// <summary>Ring in the local XZ plane (axis along Y): <paramref name="outerD"/> across, tube <paramref name="tubeD"/> thick.</summary>
+        public Transform Torus(string name, Vector3 center, float outerD, float tubeD, string mat, Vector3 euler = default, Transform parent = null)
+        {
+            float major = (outerD - tubeD) * 0.5f;
+            float m = Mathf.Round(tubeD * 0.5f / Mathf.Max(major, 1e-5f) * 50f) / 50f; // tube radius / ring radius
+            return Mesh(name, ProcMesh.Torus(m), center, Vector3.one * (major * 2f), mat, euler, parent);
+        }
+
+        Transform Mesh(string name, Mesh mesh, Vector3 pos, Vector3 scale, string mat, Vector3 euler, Transform parent)
+        {
+            var go = new GameObject(name, typeof(MeshFilter), typeof(MeshRenderer));
+            go.transform.SetParent(parent != null ? parent : Visual, false);
+            go.transform.localPosition = pos;
+            go.transform.localEulerAngles = euler;
+            go.transform.localScale = scale;
+            go.GetComponent<MeshFilter>().sharedMesh = mesh;
+            go.GetComponent<MeshRenderer>().sharedMaterial = MaterialLibrary.Get(mat);
+            return go.transform;
+        }
+
         /// <summary>Empty transform under Visual (a hinge or sub-assembly that artists keep by name).</summary>
         public Transform Group(string name, Vector3 pos, Vector3 euler = default, Transform parent = null)
         {

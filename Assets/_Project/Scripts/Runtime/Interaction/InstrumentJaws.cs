@@ -65,15 +65,25 @@ namespace SurgicalFoundations.Interaction
         public float Squeeze => 1f - target;
         public bool IsClosed => openness <= ClosedBelow;
 
+        /// <summary>
+        /// Held shut whatever the trigger says (a haemostat's ratchet). <see cref="RatchetLock"/> sets it; the jaws spring
+        /// open again once it is cleared.
+        /// </summary>
+        public bool Locked { get; set; }
+
+        /// <summary>The trigger value while held (0 when not held), for mechanisms that react to a firm squeeze.</summary>
+        public float Trigger { get; private set; }
+
         const float ClosedBelow = 0.25f;
         const float OpenAbove = 0.6f;
 
         void Update()
         {
             var hand = grab != null && grab.isSelected ? grab.firstInteractorSelecting as XRBaseInputInteractor : null;
+            Trigger = hand != null ? Mathf.Clamp01(hand.activateInput.ReadValue()) : 0f;
             if (hand != null)
             {
-                target = 1f - Mathf.Clamp01(hand.activateInput.ReadValue());
+                target = 1f - Trigger;
                 wasHeld = true;
             }
             else if (wasHeld)
@@ -82,6 +92,7 @@ namespace SurgicalFoundations.Interaction
                 target = 1f; // let go: the handle springs open
             }
 
+            if (Locked) target = 0f;
             openness = Mathf.MoveTowards(openness, target, speed * Time.deltaTime);
             // One click as the jaws shut and one as they open, not a sound per frame of trigger travel.
             if (!closedCue && openness <= ClosedBelow)

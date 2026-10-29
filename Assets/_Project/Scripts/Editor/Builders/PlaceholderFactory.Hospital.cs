@@ -84,6 +84,7 @@ namespace SurgicalFoundations.EditorTools
             };
             foreach (var it in items)
             {
+                if (it.prefab == "EQ_IVStand" && SimReadyIVStand()) continue;
                 var b = new PB(it.prefab);
                 var inst = TryParts(b, ImportedAssets.HospitalRoom, HospitalScale, HospitalYaw, it.parts);
                 var mesh = BakeSurfaces(b, inst, it.prefab, it.surface, out int tris);
