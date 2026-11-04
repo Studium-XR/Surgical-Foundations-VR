@@ -12,6 +12,9 @@ namespace SurgicalFoundations.Detection
     /// against its landmark. Step 1: insert a trocar at each site; angle, depth through the wall layers and a force
     /// estimate are judged live. Going too deep takes the vessel-injury branch (step 2): draw the trocar back, hold
     /// pressure on the site, watch it stay dry. Then entry carries on with the remaining ports.
+    /// Heights come from the real skin surface (SkinSurface), not one flat plane. A held trocar whose tip touches the
+    /// skin at a site is seated there (TrocarSeat): the hand sets angle and depth, the tip stays on the site. In Guided
+    /// mode a guide line and readout at the port show the axis to follow (TrocarGuide).
     /// </summary>
     public class AccessController : StageController
     {
@@ -19,6 +22,8 @@ namespace SurgicalFoundations.Detection
 
         /// <summary>How close (on the skin) a trocar tip must be to a port site to count as entering there.</summary>
         const float EntryRadius = 0.05f;
+        /// <summary>A held trocar whose tip touches the skin this close to the site is seated on it.</summary>
+        const float SeatRadius = 0.03f;
         const float MarkRayLength = 1.2f;
         /// <summary>A hand this close to the bleeding site is pressing on it.</summary>
         const float PressRadius = 0.07f;
@@ -32,6 +37,9 @@ namespace SurgicalFoundations.Detection
 
         readonly List<Transform> trocars = new List<Transform>();
         readonly Dictionary<Transform, Transform> tips = new Dictionary<Transform, Transform>();
+        readonly Dictionary<Transform, Interaction.TrocarSeat> seats = new Dictionary<Transform, Interaction.TrocarSeat>();
+        SkinSurface skin;
+        TrocarGuide guide;
         readonly List<GameObject> markVisuals = new List<GameObject>();
         readonly TrocarLimits limits = new TrocarLimits();
         InputAction[] trigger;
@@ -59,12 +67,12 @@ namespace SurgicalFoundations.Detection
                 if (Step == PortsStepIndex)
                 {
                     foreach (var site in Plan.Sites)
-                        if (!site.marked || !site.onTarget) return site.target;
+                        if (!site.marked || !site.onTarget) return OnSkin(site.target);
                 }
                 else if (Step == EntryStepIndex && portIndex < Plan.Sites.Count)
                 {
                     var site = Plan.Sites[portIndex];
-                    return site.marked ? site.mark : site.target;
+                    return OnSkin(site.marked ? site.mark : site.target);
                 }
                 else if (Step == BranchStepIndex && Bleed != null && !Bleed.Controlled) return BleedPoint;
                 return null;
@@ -93,11 +101,23 @@ namespace SurgicalFoundations.Detection
             limits.safeDepth = DetectionThresholds.Get(ThresholdKeys.TrocarSafeDepthMm, limits.safeDepth * 1000f) / 1000f;
             limits.unsafeDepth = DetectionThresholds.Get(ThresholdKeys.TrocarUnsafeDepthMm, limits.unsafeDepth * 1000f) / 1000f;
 
+            // The visible skin: the prepped area and the wall-layer skin over the port sites (in this stage or the base).
+            var skinMeshes = UnityEngine.SceneManagement.SceneManager.GetActiveScene().GetRootGameObjects()
+                .Concat(gameObject.scene.GetRootGameObjects()).Distinct()
+                .SelectMany(r => r.GetComponentsInChildren<MeshFilter>(true))
+                .Where(m => m.name == "PrepArea" || m.name == "Layer_Skin");
+            skin = SkinSurface.Build(skinMeshes, skinY);
+
             // Landmark rings are a Guided-mode aid only (FR-19): in Assessment the learner finds the sites unaided.
+            // They sit on the skin, tilted with it, so a bulge in the abdomen can't hide them.
             markersRoot = FindWhere(t => t.name.StartsWith("PROP_PortSiteMarkers"));
             if (markersRoot != null)
                 foreach (var marker in markersRoot.GetComponentsInChildren<Transform>(true).Where(t => t.name.StartsWith("Marker_")))
+                {
+                    marker.position = OnSkin(marker.position) + skin.NormalAt(marker.position) * 0.002f;
+                    marker.rotation = Quaternion.FromToRotation(marker.up, skin.NormalAt(marker.position)) * marker.rotation;
                     marker.gameObject.SetActive(Guided);
+                }
 
             foreach (var root in gameObject.scene.GetRootGameObjects())
             foreach (var trocar in root.GetComponentsInChildren<Transform>(true).Where(t => t.name.StartsWith("INST_Trocar")))
@@ -106,7 +126,10 @@ namespace SurgicalFoundations.Detection
                 if (tip == null) continue;
                 trocars.Add(trocar);
                 tips[trocar] = tip;
+                var grab = trocar.GetComponent<XRGrabInteractable>();
+                if (grab != null) seats[trocar] = Interaction.TrocarSeat.Install(grab, tip);
             }
+            if (Guided) guide = new TrocarGuide(gameObject.scene);
 
             trigger = new[] { TriggerAction("LeftHand"), TriggerAction("RightHand") };
         }
@@ -124,7 +147,13 @@ namespace SurgicalFoundations.Detection
         {
             base.OnDestroy();
             if (trigger != null) foreach (var a in trigger) a.Dispose();
+            guide?.Destroy();
         }
+
+        /// <summary>Height of the skin under a point (the flat umbilicus plane until the surface is built).</summary>
+        float SkinAt(Vector3 p) => skin != null ? skin.HeightAt(p) : skinY;
+
+        Vector3 OnSkin(Vector3 p) => new Vector3(p.x, SkinAt(p), p.z);
 
         void Update()
         {
@@ -132,6 +161,7 @@ namespace SurgicalFoundations.Detection
             if (Step == PortsStepIndex) TickMarking();
             else if (Step == EntryStepIndex) TickEntry();
             else if (Step == BranchStepIndex) TickBleed();
+            if (Step != EntryStepIndex) guide?.Hide();
         }
 
         // ───────────── Step 0: port sites ─────────────
@@ -154,12 +184,8 @@ namespace SurgicalFoundations.Detection
         bool PointOnSkin(Transform hand, out Vector3 point)
         {
             point = default;
-            var direction = hand.forward;
-            if (direction.y > -0.05f) return false; // not pointing down at the patient
-            var distance = (skinY - hand.position.y) / direction.y;
-            if (distance < 0f || distance > MarkRayLength) return false;
-            point = hand.position + direction * distance;
-            return true;
+            if (hand.forward.y > -0.05f) return false; // not pointing down at the patient
+            return skin != null ? skin.Raycast(new Ray(hand.position, hand.forward), MarkRayLength, out point) : false;
         }
 
         /// <summary>Marks a port site at a point on the skin. Public so input other than the trigger (and tests) can mark.</summary>
@@ -182,7 +208,9 @@ namespace SurgicalFoundations.Detection
                 go.transform.localScale = new Vector3(0.014f, 0.0008f, 0.014f);
                 markVisuals[index] = go;
             }
-            markVisuals[index].transform.position = site.mark + Vector3.up * 0.004f;
+            var normal = skin != null ? skin.NormalAt(site.mark) : Vector3.up;
+            markVisuals[index].transform.position = OnSkin(site.mark) + normal * 0.002f;
+            markVisuals[index].transform.rotation = Quaternion.FromToRotation(Vector3.up, normal);
             // Skin-marker violet; in Guided mode an off-target mark turns amber so the learner knows to re-mark.
             var colour = Guided && !site.onTarget ? new Color(0.96f, 0.71f, 0.29f) : new Color(0.35f, 0.2f, 0.6f);
             markVisuals[index].GetComponent<Renderer>().material.color = colour;
@@ -200,19 +228,40 @@ namespace SurgicalFoundations.Detection
                 RaiseChanged();
             }
 
-            var entryPoint = site.marked ? site.mark : site.target;
+            var entryPoint = OnSkin(site.marked ? site.mark : site.target);
+            // Working ports aim at the operative field under the umbilicus; the camera port goes straight in.
+            var ideal = portIndex == 0 ? Vector3.down : (cavityCentre - entryPoint).normalized;
             if (!NearestTrocar(entryPoint, out var tip, out var axis))
             {
                 Entry.Tick(0f, 0f, Time.deltaTime);
+                guide?.Show(entryPoint, ideal, null, null, limits, site.name);
                 return;
             }
 
-            var ideal = portIndex == 0 ? Vector3.down : (cavityCentre - entryPoint).normalized;
-            Entry.Tick(skinY - tip.position.y, Vector3.Angle(axis, ideal), Time.deltaTime);
+            Seat(tip, entryPoint);
+            var depth = SkinAt(tip.position) - tip.position.y;
+            Entry.Tick(depth, Vector3.Angle(axis, ideal), Time.deltaTime);
+            guide?.Show(entryPoint, ideal, axis, Entry, limits, site.name);
             RaiseChanged();
 
             if (Entry.Phase == TrocarPhase.Placed) PortPlaced(tip);
             else if (Entry.Phase == TrocarPhase.Unsafe) StartBleed(tip, entryPoint);
+        }
+
+        /// <summary>
+        /// A held trocar whose tip reaches the skin near the site is seated where it touched; let go of it before it is
+        /// placed and the seat lets go too (it drops, as before).
+        /// </summary>
+        void Seat(Transform tip, Vector3 entryPoint)
+        {
+            var trocar = trocars.FirstOrDefault(t => t != null && tip.IsChildOf(t));
+            if (trocar == null || !seats.TryGetValue(trocar, out var seat)) return;
+            var held = trocar.GetComponent<XRGrabInteractable>() is var grab && grab != null && grab.isSelected;
+            if (!held) { seat.Release(); return; }
+            if (seat.Seated) return;
+            var flat = new Vector2(tip.position.x - entryPoint.x, tip.position.z - entryPoint.z).magnitude;
+            if (flat <= SeatRadius && tip.position.y <= SkinAt(tip.position) + 0.003f)
+                seat.Seat(OnSkin(tip.position));
         }
 
         /// <summary>The trocar whose tip is over (or in) the entry site, with its long axis.</summary>
@@ -226,7 +275,7 @@ namespace SurgicalFoundations.Detection
                 if (trocar == null || !trocar.gameObject.activeInHierarchy) continue;
                 var t = tips[trocar];
                 var flat = new Vector2(t.position.x - entryPoint.x, t.position.z - entryPoint.z).magnitude;
-                if (flat > best || t.position.y > skinY + 0.05f) continue;
+                if (flat > best || t.position.y > entryPoint.y + 0.05f) continue;
                 best = flat;
                 tip = t;
                 axis = trocar.forward; // instruments are built long-axis +Z, tip at +Z
@@ -240,6 +289,7 @@ namespace SurgicalFoundations.Detection
             var trocar = tip != null ? trocars.FirstOrDefault(t => t != null && tip.IsChildOf(t)) : null;
             if (trocar != null)
             {
+                if (seats.TryGetValue(trocar, out var seat)) seat.Release();
                 var grab = trocar.GetComponent<XRGrabInteractable>();
                 if (grab != null) grab.enabled = false;
                 var body = trocar.GetComponent<Rigidbody>();
@@ -274,7 +324,7 @@ namespace SurgicalFoundations.Detection
         {
             if (Bleed == null || Bleed.Controlled || Bleed.Skipped) return;
             // Gone from the scene counts as drawn back: there is nothing left in the wound.
-            var withdrawn = bleedTip == null || skinY - bleedTip.position.y <= limits.safeDepth;
+            var withdrawn = bleedTip == null || SkinAt(bleedTip.position) - bleedTip.position.y <= limits.safeDepth;
             var head = LearnerRig.Head;
             var watching = head != null && Vector3.Angle(head.forward, BleedPoint - head.position) <= WatchAngle;
             Bleed.Tick(withdrawn, HandOnSite(true) || HandOnSite(false), watching, Time.deltaTime);

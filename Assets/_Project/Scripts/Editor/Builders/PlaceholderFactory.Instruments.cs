@@ -132,7 +132,8 @@ namespace SurgicalFoundations.EditorTools
             b.Pivot("Pivot_Tip", new Vector3(0, 0, 0.13f));
             b.Pivot("Pivot_Port", new Vector3(0, 0, 0.09f));
             b.Info(id, display, "Instrument", AssetRelease.MVP, 3000, "Cannula + obturator as 2 parts; valve cap. Obturator withdraws on port placement.");
-            b.Grabbable(0.08f, new Vector3(0, 0, -0.03f), Vector3.zero, grabSound: SoundId.INST_TrocarValve);
+            // Palm on the head, shaft pointing down out of the fist, as a trocar is pushed in (not forward like a pen).
+            b.Grabbable(0.08f, new Vector3(0, 0, -0.03f), new Vector3(-90f, 0f, 0f), grabSound: SoundId.INST_TrocarValve);
             b.Save(Folder("Instruments"));
         }
 

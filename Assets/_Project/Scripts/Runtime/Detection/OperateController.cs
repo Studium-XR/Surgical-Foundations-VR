@@ -8,7 +8,8 @@ namespace SurgicalFoundations.Detection
 {
     /// <summary>
     /// Operate stage. Runs the three tasks in order (<see cref="OperateTasks"/>) and watches every inserted
-    /// instrument's tip in the laparoscope's view: out of view for longer than the threshold is a drift (FR-13). While
+    /// instrument's tip in the laparoscope's view: once it has been on the monitor, out of view for longer than the
+    /// threshold is a drift (FR-13). While
     /// something is drifting the stage shows its drift panel and monitor arrow (step 1); once it is back in view the
     /// task panel (step 0) returns. The stage ends when the last task is done.
     /// </summary>
@@ -24,7 +25,13 @@ namespace SurgicalFoundations.Detection
         {
             public string label;
             public Transform tip;
+            /// <summary>On the monitor at least once since it last came into the abdomen.</summary>
+            public bool seen;
+            public float insideFor;
         }
+
+        /// <summary>Inside this long without ever being brought into view, it counts as out of view anyway.</summary>
+        const float FindItSeconds = 6f;
 
         readonly List<Tracked> instruments = new List<Tracked>();
         Camera scope;
@@ -92,7 +99,14 @@ namespace SurgicalFoundations.Detection
             foreach (var i in instruments)
             {
                 if (i.tip == null) continue;
-                Drift.Tick(i.label, !Inserted(i.tip.position) || InView(i.tip.position), Time.deltaTime);
+                var inserted = Inserted(i.tip.position);
+                var inView = InView(i.tip.position);
+                // Going in through a port, the tip passes under the abdominal wall where the scope can't see it: that
+                // is the way in, not a drift. Only an instrument that has been on the monitor can drift off it.
+                i.insideFor = inserted ? i.insideFor + Time.deltaTime : 0f;
+                if (!inserted) i.seen = false;
+                else if (inView || i.insideFor >= FindItSeconds) i.seen = true;
+                Drift.Tick(i.label, !inserted || inView || !i.seen, Time.deltaTime);
             }
         }
 

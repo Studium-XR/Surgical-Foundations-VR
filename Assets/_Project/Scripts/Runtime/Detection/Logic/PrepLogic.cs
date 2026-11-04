@@ -20,6 +20,8 @@ namespace SurgicalFoundations.Detection
         /// <summary>Both hands under the running tap.</summary>
         public bool inWater;
         public bool handsTogether;
+        /// <summary>One hand on the other forearm (wrist to elbow), as when scrubbing up the arms.</summary>
+        public bool onForearm;
         /// <summary>Hands moving against each other.</summary>
         public bool rubbing;
         /// <summary>Fingers pointing up, so water runs from fingertips to elbows.</summary>
@@ -122,6 +124,9 @@ namespace SurgicalFoundations.Detection
         public static int Classify(ScrubSample s, int expected)
         {
             if (s.atTowel) return (int)ScrubStep.Dry;
+            // Scrubbing hands or forearms counts with the tap still running, as it is usually done.
+            var scrubbing = s.rubbing && (s.handsTogether || s.onForearm);
+            if (scrubbing && expected == (int)ScrubStep.Scrub) return (int)ScrubStep.Scrub;
             if (s.inWater)
             {
                 // Before scrubbing, water means washing; after it, fingertips-up under the tap is the rinse.
@@ -130,7 +135,7 @@ namespace SurgicalFoundations.Detection
                 if (s.fingertipsUp) return (int)ScrubStep.Rinse;
                 return s.handsTogether ? (int)ScrubStep.CleanNails : (int)ScrubStep.PreWash;
             }
-            if (s.handsTogether && s.rubbing) return (int)ScrubStep.Scrub;
+            if (scrubbing) return (int)ScrubStep.Scrub;
             if (s.inspecting) return (int)ScrubStep.Inspect;
             return -1;
         }

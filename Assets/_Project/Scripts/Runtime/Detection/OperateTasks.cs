@@ -20,7 +20,7 @@ namespace SurgicalFoundations.Detection
         // Reach of the jaws, in metres.
         const float GraspRadius = 0.02f;
         const float PegSnapRadius = 0.014f;
-        const float PointRadius = 0.012f;
+        const float PointRadius = 0.018f; // 12 mm was finer than a tracked hand holds a tip still at arm's length
         const float SiteRadius = 0.01f;
         const float DuctRadius = 0.035f;
         const float JawOpenAbove = 0.6f;
@@ -200,6 +200,12 @@ namespace SurgicalFoundations.Detection
                 ring.heldBy = tool;
                 tool.ring = ring;
             }
+            else if (Current == OperateTask.Dissection && name.Contains("Maryland"))
+            {
+                // Closing the tips into the plane works too: learners reach the point and squeeze, and waiting for
+                // the spread that follows left the task looking dead.
+                OpenDissectionAt(tip);
+            }
             else if (Current == OperateTask.ClipAndCut && name.Contains("ClipApplier"))
             {
                 var site = Nearest(clipPoints.Select(p => p.position).ToList(), tip, SiteRadius, i => !Clip.IsClipped(i));
@@ -240,11 +246,14 @@ namespace SurgicalFoundations.Detection
             }
             // Spreading the dissector's jaws in the plane is what opens it; a grasper's jaws would tear it.
             if (Current == OperateTask.Dissection && tool.instrument.name.Contains("Maryland"))
-            {
-                var points = dissectLocal.Select(p => tissue.TransformPoint(p)).ToList();
-                var point = Nearest(points, tip, PointRadius, i => !Dissect.IsOpen(i));
-                if (point >= 0 && Dissect.Open(point)) ShowDissection();
-            }
+                OpenDissectionAt(tip);
+        }
+
+        void OpenDissectionAt(Vector3 tip)
+        {
+            var points = dissectLocal.Select(p => tissue.TransformPoint(p)).ToList();
+            var point = Nearest(points, tip, PointRadius, i => !Dissect.IsOpen(i));
+            if (point >= 0 && Dissect.Open(point)) ShowDissection();
         }
 
         void Release(Tool tool, Vector3 p)

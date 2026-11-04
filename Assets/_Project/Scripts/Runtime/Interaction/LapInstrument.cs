@@ -21,6 +21,8 @@ namespace SurgicalFoundations.Interaction
         const float WithdrawSlack = 0.05f; // more than EngageRadius, so going in and coming out can never overlap
         /// <summary>The handle stops this far above the port.</summary>
         const float HandleClearance = 0.05f;
+        /// <summary>The scope's starting depth past its port: the instruments' tips and the task area lie ahead of the lens.</summary>
+        const float ScopeWorkingInsertion = 0.09f;
 
         XRGrabInteractable grab;
         Transform tip;
@@ -95,12 +97,20 @@ namespace SurgicalFoundations.Interaction
                 break;
             }
 
-            // The picture comes from the scope: once it is in a port, the camera rides on it.
+            // The picture comes from the scope: once it is in a port, the camera rides on it, at its tip. The scope is
+            // drawn back to a working distance first: built in to the full depth, its tip sat past the instrument
+            // tips, so they were behind the camera and could never be brought into view.
             if (InPort && name.Contains("Laparoscope"))
             {
                 CanWithdraw = false;
+                Aim(transform.forward, Mathf.Min(Insertion, ScopeWorkingInsertion));
                 foreach (var feed in FindObjectsByType<LaparoscopeFeed>(FindObjectsInactive.Include))
-                    if (feed.gameObject.scene == gameObject.scene) feed.transform.SetParent(transform, true);
+                {
+                    if (feed.gameObject.scene != gameObject.scene) continue;
+                    // At the lens; the rig keeps the direction it was built with, ~30° off the shaft like a 30° scope.
+                    if (tip != null) feed.transform.position = tip.position + transform.forward * 0.002f;
+                    feed.transform.SetParent(transform, true);
+                }
             }
         }
 

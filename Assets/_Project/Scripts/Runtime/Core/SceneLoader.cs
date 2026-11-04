@@ -40,6 +40,35 @@ namespace SurgicalFoundations.Core
         void OnDestroy()
         {
             if (Instance == this) Instance = null;
+            foreach (var s in inputSubsystems) s.trackingOriginUpdated -= OnTrackingOriginUpdated;
+        }
+
+        // ───────────── keeping the learner at the work ─────────────
+
+        /// <summary>Where the learner was last put (stage spawn or step spot).</summary>
+        Transform workSpot;
+        readonly List<UnityEngine.XR.XRInputSubsystem> inputSubsystems = new List<UnityEngine.XR.XRInputSubsystem>();
+        bool replaceQueued;
+
+        void Start()
+        {
+            // A headset recenter (holding the Meta button) or a guardian reset moves the tracking origin and with it
+            // the learner, away from the table: put them back at the work instead of making them walk to it.
+            SubsystemManager.GetSubsystems(inputSubsystems);
+            foreach (var s in inputSubsystems) s.trackingOriginUpdated += OnTrackingOriginUpdated;
+        }
+
+        void OnTrackingOriginUpdated(UnityEngine.XR.XRInputSubsystem _)
+        {
+            if (workSpot != null && !replaceQueued) StartCoroutine(ReplaceNextFrame());
+        }
+
+        IEnumerator ReplaceNextFrame()
+        {
+            replaceQueued = true;
+            yield return null; // the new origin's camera pose arrives a frame later
+            replaceQueued = false;
+            if (workSpot != null && !IsBusy) PlaceRigAt(workSpot);
         }
 
         public ScreenFader Fader => fader;
@@ -106,6 +135,7 @@ namespace SurgicalFoundations.Core
         {
             if (xrOrigin == null) xrOrigin = FindAnyObjectByType<XROrigin>();
             if (xrOrigin == null || t == null) return;
+            workSpot = t;
             xrOrigin.MatchOriginUpCameraForward(Vector3.up, Vector3.ProjectOnPlane(t.forward, Vector3.up).normalized);
             var cameraHeight = xrOrigin.CameraInOriginSpaceHeight;
             xrOrigin.MoveCameraToWorldLocation(t.position + Vector3.up * cameraHeight);

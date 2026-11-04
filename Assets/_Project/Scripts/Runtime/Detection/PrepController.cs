@@ -20,6 +20,8 @@ namespace SurgicalFoundations.Detection
         // Sensor tuning, in metres / metres per second.
         // Sized for tracked hands on a real headset: the hand pose sits ~10 cm off the palm and jitters a few cm.
         const float HandsTogetherDistance = 0.22f;
+        /// <summary>Wrist to elbow, and how far from that line a scrubbing hand can be (forearm thickness + controller).</summary>
+        const float ForearmLength = 0.28f, ForearmReach = 0.1f;
         const float RubSpeed = 0.08f;
         const float WaterZoneRadius = 0.32f;
         const float WaterZoneDepth = 0.6f;
@@ -227,12 +229,27 @@ namespace SurgicalFoundations.Detection
             {
                 inWater = tap != null && InWater(left.position) && InWater(right.position),
                 handsTogether = offset.magnitude <= HandsTogetherDistance,
+                onForearm = OnForearm(left.position, right) || OnForearm(right.position, left),
                 rubbing = rubSmoothed >= RubSpeed,
                 fingertipsUp = left.forward.y > 0.35f && right.forward.y > 0.35f,
                 atTowel = towels != null && Near(left.position, towels.position, TowelZoneRadius) && Near(right.position, towels.position, TowelZoneRadius),
                 inspecting = InView(left.position, head) && InView(right.position, head),
                 handsDropped = left.position.y < tableTop || right.position.y < tableTop
             };
+        }
+
+        /// <summary>
+        /// Whether a hand is on the other arm's forearm. The forearm isn't tracked, so it is taken to run back from the
+        /// wrist (just behind the hand pose) along the hand's backward direction for a forearm's length.
+        /// </summary>
+        static bool OnForearm(Vector3 hand, Transform arm)
+        {
+            var wrist = arm.position - arm.forward * 0.05f;
+            var elbow = wrist - arm.forward * ForearmLength;
+            var along = Vector3.Dot(hand - wrist, elbow - wrist) / (ForearmLength * ForearmLength);
+            if (along < 0.15f || along > 1.05f) return false; // at the hand itself counts as hands together instead
+            var closest = Vector3.Lerp(wrist, elbow, Mathf.Clamp01(along));
+            return (hand - closest).magnitude <= ForearmReach;
         }
 
         bool InWater(Vector3 p)

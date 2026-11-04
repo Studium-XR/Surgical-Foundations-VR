@@ -30,11 +30,7 @@ namespace SurgicalFoundations.EditorTools
             // Training props
             PegBoard(); TransferObjects(); PortSiteMarkers(); ControllerDiagram();
             // Characters
-            Mannequin("CHR_ScrubNurse", "CHR-01", "Scrub nurse / assistant", AssetRelease.MVP, 20000, "Gown_Blue", "Scrubs_Teal", true,
-                "Rigged humanoid; helps with gowning; holds the camera in R2 (US-OP-03). ~12 keyframed clips.",
-                ImportedAssets.Nurse, 1.70f, SterileHands);
-            Mannequin("CHR_Anaesthetist", "CHR-02", "Anaesthetist", AssetRelease.R2, 15000, "Scrubs_Green", "Scrubs_Green", false,
-                "Background, idle loop only.", ImportedAssets.Doctor, 1.78f, RelaxedArms);
+            Mannequins();
             CameraAssistantHands();
 
             // Background dressing from Assets/_Project/Imports (skipped if the models are missing)
@@ -625,6 +621,16 @@ namespace SurgicalFoundations.EditorTools
         // ───────────────────────────── Characters ─────────────────────────────
 
         /// <summary>Primitive mannequin (1.68 m) with humanoid-named transforms so the real rig can map onto it. Origin at the feet, facing +Z.</summary>
+        /// <summary>The theatre staff (animated by HY-Motion clips where those are imported, see StaffAnimationKit).</summary>
+        static void Mannequins()
+        {
+            Mannequin("CHR_ScrubNurse", "CHR-01", "Scrub nurse / assistant", AssetRelease.MVP, 20000, "Gown_Blue", "Scrubs_Teal", true,
+                "Rigged humanoid; helps with gowning; holds the camera in R2 (US-OP-03). Idle + hand-over motion (HY-Motion).",
+                ImportedAssets.Nurse, 1.70f, SterileHands);
+            Mannequin("CHR_Anaesthetist", "CHR-02", "Anaesthetist", AssetRelease.R2, 15000, "Scrubs_Green", "Scrubs_Green", false,
+                "Background: idle + checks the monitor (HY-Motion).", ImportedAssets.Doctor, 1.78f, RelaxedArms);
+        }
+
         static void Mannequin(string prefabName, string id, string display, AssetRelease rel, int tris, string topMat, string legMat, bool gloved, string notes,
             string importedModel = null, float importedHeight = 1.7f, Vector3[] importedPose = null)
         {

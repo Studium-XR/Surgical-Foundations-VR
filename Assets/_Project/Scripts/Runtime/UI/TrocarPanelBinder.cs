@@ -41,7 +41,8 @@ namespace SurgicalFoundations.UI
             Fill(angleFill, angle / 45f, angleOff ? Warn : Ok);
             Fill(depthFill, depth / limits.unsafeDepth, tooDeep ? Danger : Ok);
             Fill(forceFill, force / (limits.maxForceN * 1.3f), tooHard ? Danger : Ok);
-            Set(angleValue, $"<mspace=0.62em>{angle:0}°</mspace>  {(angleOff ? "off axis" : "on axis")}", angleOff ? Warn : Ok);
+            // The number is how far off the axis the trocar is ("23° on axis" read as if 23° were the target).
+            Set(angleValue, $"<mspace=0.62em>{angle:0}°</mspace>  {(angleOff ? "off the axis" : "aligned")}", angleOff ? Warn : Ok);
             Set(depthValue, $"<mspace=0.62em>{depth * 1000f:0}</mspace> mm" + (tooDeep ? "  too deep" : depth >= limits.entryDepth ? "  through" : ""), tooDeep ? Danger : Ok);
             Set(forceValue, tooHard ? "Too hard" : "OK", tooHard ? Danger : Ok);
 

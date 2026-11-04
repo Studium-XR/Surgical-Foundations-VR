@@ -5,11 +5,12 @@ using UnityEngine.XR.Interaction.Toolkit.Interactables;
 namespace SurgicalFoundations.Interaction
 {
     /// <summary>
-    /// Makes hand-held props easy to turn over. The prefabs snap to a fixed attach point and accept one hand, so an
-    /// instrument jumped into a set pose and could only be turned by twisting the wrist. On every scene load, each
-    /// grabbable instrument and prop gets:
-    ///  • dynamic attach: it is held where it was picked up, in the pose it was in, and turns with the hand from there;
-    ///  • two hands: grab with the second hand to turn it with both (the default grab transformer handles the rotation).
+    /// How things sit in the hand. On every scene load:
+    ///  • instruments (INST_) go into their working grip: the prefab's "Attach" point on the handle, tip pointing
+    ///    forward out of the fist (a trocar points down, palm on its head). Held wherever they were touched, a scalpel
+    ///    could end up by the blade or sideways and had to be re-gripped before it was any use;
+    ///  • props (PROP_, PPE_) have no working grip, so they are held where they were picked up, in the pose they were in;
+    ///  • both accept a second hand, to turn them with two (the default grab transformer handles the rotation).
     /// Laparoscopic instruments in a port keep their setup: their pose comes from the port (fulcrum), not the hand.
     /// </summary>
     public static class GrabTuning
@@ -31,7 +32,8 @@ namespace SurgicalFoundations.Interaction
                 // InstrumentInstaller turns shafted instruments into LapInstruments on this same event, possibly after us.
                 if (grab.GetComponent<LapInstrument>() != null || HasChild(grab.transform, "Pivot_Port")) continue;
 
-                grab.useDynamicAttach = true;
+                var instrument = n.StartsWith("INST_") && grab.attachTransform != null;
+                grab.useDynamicAttach = !instrument;
                 grab.matchAttachPosition = true;
                 grab.matchAttachRotation = true;
                 grab.snapToColliderVolume = false;

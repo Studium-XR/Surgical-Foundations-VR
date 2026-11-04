@@ -192,7 +192,7 @@ namespace SurgicalFoundations.EditorTools
             var tip = SimReadyStatic(b, parts, ModelToInstrument(Vector3.left, Vector3.forward));
             b.Pivot("Pivot_Tip", tip);
             b.Info("INST-16", "Suction tip", "Instrument", AssetRelease.MVP, 15800, "NVIDIA SimReady instrument_suction_a01 (CC BY 4.0).").isPlaceholder = false;
-            b.Grabbable(0.05f, new Vector3(0, 0, tip.z * 0.75f), Vector3.zero, impact: SoundId.INST_PlaceOnTray);
+            b.Grabbable(0.05f, new Vector3(0, 0, tip.z * 0.2f), Vector3.zero, impact: SoundId.INST_PlaceOnTray); // the handle, away from the tip
             b.Save(Folder("Instruments"));
             return true;
         }

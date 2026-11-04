@@ -23,6 +23,8 @@ namespace SurgicalFoundations.Detection
         const float BiteRadius = 0.02f;
         const float BiteOffset = 0.008f;
         const float ViewMargin = 0.04f;
+        /// <summary>The bucket catches a swab let go up to this far above its rim, and this far outside its opening.</summary>
+        const float CatchHeight = 0.8f, CatchMargin = 0.05f;
 
         /// <summary>Where the missed swab can be: on the floor around the table and on the drapes. The session seed picks one.</summary>
         static readonly Vector3[] HiddenSpots =
@@ -110,6 +112,13 @@ namespace SurgicalFoundations.Detection
             bucket = target != null ? target.GetComponent<Collider>() : null;
             if (bucket == null) Debug.LogWarning("[CloseController] No kick bucket DropTarget in the scene; swabs can't be counted in.");
 
+            foreach (var swab in swabs)
+            {
+                var grab = swab.GetComponent<XRGrabInteractable>();
+                var s = swab;
+                if (grab != null) grab.selectExited.AddListener(_ => OnSwabReleased(s));
+            }
+
             Count = new SwabCount(OpeningCount, Log);
             Count.Changed += RaiseChanged;
             stepStarted = Time.time;
@@ -172,11 +181,34 @@ namespace SurgicalFoundations.Detection
                     var grab = swab.GetComponent<XRGrabInteractable>();
                     // Counted when it is let go inside the bucket, not while it is still in the hand.
                     if (grab != null && grab.isSelected) continue;
-                    if (bucket.bounds.Contains(swab.position)) CountSwab(swab);
+                    if (InCatch(swab.position)) CountSwab(swab);
                 }
 
             completeTime = Count.Complete ? completeTime + Time.deltaTime : 0f;
             if (completeTime >= 1f) { completeTime = 0f; Sequence.Next(); }
+        }
+
+        /// <summary>
+        /// Over the bucket's opening, from its rim up to waist height. The drop target alone is a 14 cm slab at knee
+        /// height, so a swab let go from a standing position above the bucket never counted.
+        /// </summary>
+        bool InCatch(Vector3 p)
+        {
+            if (bucket == null) return false;
+            var b = bucket.bounds;
+            var flat = new Vector2(p.x - b.center.x, p.z - b.center.z);
+            return Mathf.Abs(flat.x) <= b.extents.x + CatchMargin && Mathf.Abs(flat.y) <= b.extents.z + CatchMargin
+                && p.y >= b.min.y - 0.35f && p.y <= b.max.y + CatchHeight;
+        }
+
+        /// <summary>Let go over the bucket it goes in; let go anywhere else it falls, as a dropped swab would, instead of
+        /// hanging where the hand left it (the swabs start kinematic so they lie still on the table).</summary>
+        void OnSwabReleased(Transform swab)
+        {
+            if (swab == null || !swabs.Contains(swab)) return;
+            if (Step == CountStepIndex && InCatch(swab.position)) { CountSwab(swab); return; }
+            var body = swab.GetComponent<Rigidbody>();
+            if (body != null) { body.isKinematic = false; body.useGravity = true; }
         }
 
         /// <summary>Counts a swab into the bucket. Public so a test (or another drop detector) can count one.</summary>
@@ -185,6 +217,8 @@ namespace SurgicalFoundations.Detection
             if (!swabs.Remove(swab)) return;
             var grab = swab.GetComponent<XRGrabInteractable>();
             if (grab != null) grab.enabled = false;
+            var body = swab.GetComponent<Rigidbody>();
+            if (body != null) { body.isKinematic = true; body.useGravity = false; }
             // Rest it at the bottom of the bucket.
             if (bucket != null) swab.position = new Vector3(bucket.bounds.center.x, bucket.bounds.min.y - 0.2f, bucket.bounds.center.z);
             Count.Count(swab == hidden, Time.time - stepStarted);

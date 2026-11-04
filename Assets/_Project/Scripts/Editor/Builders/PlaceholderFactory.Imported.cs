@@ -118,7 +118,8 @@ namespace SurgicalFoundations.EditorTools
         {
             var inst = TryModel(b, model, Fit.Height, height, faceForward: true);
             if (inst == null) return false;
-            PoseArms(inst, pose[0], pose[1], pose[2], pose[3]);
+            PoseArms(inst, pose[0], pose[1], pose[2], pose[3]); // the still pose, until (or unless) the animator takes over
+            StaffAnimator(inst, b.Root.name);
             return true;
         }
 
