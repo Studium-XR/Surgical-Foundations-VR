@@ -1,0 +1,266 @@
+{
+ "asset": "unit_electrosurgical_a01",
+ "category": "Equipment",
+ "trianglesSource": 136013,
+ "size": [
+  0.974,
+  0.244,
+  0.968
+ ],
+ "joints": [
+  {
+   "name": "button_01",
+   "kind": "press",
+   "node": "J_button_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.2268,
+    0.0211,
+    0.1577
+   ],
+   "parts": [
+    "button_01_mesh_00"
+   ],
+   "clip": "button_01_operate"
+  },
+  {
+   "name": "button_03",
+   "kind": "press",
+   "node": "J_button_03",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.2288,
+    0.1141,
+    -0.1556
+   ],
+   "parts": [
+    "button_03_mesh_00"
+   ],
+   "clip": "button_03_operate"
+  },
+  {
+   "name": "button_04",
+   "kind": "press",
+   "node": "J_button_04",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.5347,
+    0.0132,
+    0.3515
+   ],
+   "parts": [
+    "button_04_mesh_00"
+   ],
+   "clip": "button_04_operate"
+  },
+  {
+   "name": "button_05",
+   "kind": "press",
+   "node": "J_button_05",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.5085,
+    0.0132,
+    0.3408
+   ],
+   "parts": [
+    "button_05_mesh_00"
+   ],
+   "clip": "button_05_operate"
+  },
+  {
+   "name": "button_06",
+   "kind": "press",
+   "node": "J_button_06",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.5085,
+    0.0132,
+    0.3623
+   ],
+   "parts": [
+    "button_06_mesh_00"
+   ],
+   "clip": "button_06_operate"
+  },
+  {
+   "name": "button_07",
+   "kind": "press",
+   "node": "J_button_07",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.4781,
+    0.0132,
+    0.3408
+   ],
+   "parts": [
+    "button_07_mesh_00"
+   ],
+   "clip": "button_07_operate"
+  },
+  {
+   "name": "button_08",
+   "kind": "press",
+   "node": "J_button_08",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.4781,
+    0.0132,
+    0.3623
+   ],
+   "parts": [
+    "button_08_mesh_00"
+   ],
+   "clip": "button_08_operate"
+  },
+  {
+   "name": "button_09",
+   "kind": "press",
+   "node": "J_button_09",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.448,
+    0.0132,
+    0.3408
+   ],
+   "parts": [
+    "button_09_mesh_00"
+   ],
+   "clip": "button_09_operate"
+  },
+  {
+   "name": "button_10",
+   "kind": "press",
+   "node": "J_button_10",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.448,
+    0.0132,
+    0.3623
+   ],
+   "parts": [
+    "button_10_mesh_00"
+   ],
+   "clip": "button_10_operate"
+  },
+  {
+   "name": "lever_01",
+   "kind": "lever",
+   "node": "J_lever_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -20,
+   "max": 0,
+   "pivot": [
+    -0.5538,
+    0.0404,
+    -0.3945
+   ],
+   "parts": [
+    "lever_01_mesh_00"
+   ],
+   "clip": "lever_01_operate"
+  },
+  {
+   "name": "monitor_01",
+   "kind": "tilt",
+   "node": "J_monitor_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -25,
+   "max": 25,
+   "pivot": [
+    0.0,
+    0.1223,
+    -0.0
+   ],
+   "parts": [
+    "monitor_01_mesh_00"
+   ],
+   "clip": "monitor_01_operate"
+  }
+ ],
+ "showcaseClip": "Showcase"
+}

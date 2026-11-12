@@ -1,0 +1,312 @@
+{
+ "asset": "blood_line_a01",
+ "category": "Consumables",
+ "trianglesSource": 521313,
+ "size": [
+  0.722,
+  1.819,
+  0.571
+ ],
+ "joints": [
+  {
+   "name": "button_01",
+   "kind": "press",
+   "node": "J_button_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1561,
+    0.8342,
+    0.001
+   ],
+   "parts": [
+    "button_01_mesh_00"
+   ],
+   "clip": "button_01_operate"
+  },
+  {
+   "name": "button_02",
+   "kind": "press",
+   "node": "J_button_02",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.158,
+    0.8272,
+    -0.014
+   ],
+   "parts": [
+    "button_02_mesh_00"
+   ],
+   "clip": "button_02_operate"
+  },
+  {
+   "name": "button_03",
+   "kind": "press",
+   "node": "J_button_03",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1561,
+    0.8342,
+    -0.0289
+   ],
+   "parts": [
+    "button_03_mesh_00"
+   ],
+   "clip": "button_03_operate"
+  },
+  {
+   "name": "button_04",
+   "kind": "press",
+   "node": "J_button_04",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1511,
+    0.8546,
+    0.0002
+   ],
+   "parts": [
+    "button_04_mesh_00"
+   ],
+   "clip": "button_04_operate"
+  },
+  {
+   "name": "button_05",
+   "kind": "press",
+   "node": "J_button_05",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1511,
+    0.8546,
+    -0.014
+   ],
+   "parts": [
+    "button_05_mesh_00"
+   ],
+   "clip": "button_05_operate"
+  },
+  {
+   "name": "button_06",
+   "kind": "press",
+   "node": "J_button_06",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1511,
+    0.8546,
+    -0.0281
+   ],
+   "parts": [
+    "button_06_mesh_00"
+   ],
+   "clip": "button_06_operate"
+  },
+  {
+   "name": "buttonswitch_01",
+   "kind": "press",
+   "node": "J_buttonswitch_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.0223,
+    0.8493,
+    -0.042
+   ],
+   "parts": [
+    "buttonSwitch_01_mesh_00"
+   ],
+   "clip": "buttonswitch_01_operate"
+  },
+  {
+   "name": "wheel_01",
+   "kind": "spin",
+   "node": "J_wheel_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -360,
+   "max": 0,
+   "pivot": [
+    -0.1265,
+    0.0383,
+    0.2629
+   ],
+   "parts": [
+    "wheel_01_mesh_00"
+   ],
+   "clip": "wheel_01_operate"
+  },
+  {
+   "name": "wheel_02",
+   "kind": "spin",
+   "node": "J_wheel_02",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -360,
+   "max": 0,
+   "pivot": [
+    0.1767,
+    0.0383,
+    0.2629
+   ],
+   "parts": [
+    "wheel_02_mesh_00"
+   ],
+   "clip": "wheel_02_operate"
+  },
+  {
+   "name": "wheel_03",
+   "kind": "spin",
+   "node": "J_wheel_03",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -360,
+   "max": 0,
+   "pivot": [
+    0.3285,
+    0.0383,
+    0.0002
+   ],
+   "parts": [
+    "wheel_03_mesh_00"
+   ],
+   "clip": "wheel_03_operate"
+  },
+  {
+   "name": "wheel_04",
+   "kind": "spin",
+   "node": "J_wheel_04",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -360,
+   "max": 0,
+   "pivot": [
+    0.177,
+    0.0383,
+    -0.2626
+   ],
+   "parts": [
+    "wheel_04_mesh_00"
+   ],
+   "clip": "wheel_04_operate"
+  },
+  {
+   "name": "wheel_05",
+   "kind": "spin",
+   "node": "J_wheel_05",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -360,
+   "max": 0,
+   "pivot": [
+    -0.1264,
+    0.0383,
+    -0.2628
+   ],
+   "parts": [
+    "wheel_05_mesh_00"
+   ],
+   "clip": "wheel_05_operate"
+  },
+  {
+   "name": "wheel_06",
+   "kind": "spin",
+   "node": "J_wheel_06",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -360,
+   "max": 0,
+   "pivot": [
+    -0.2783,
+    0.0383,
+    0.0002
+   ],
+   "parts": [
+    "wheel_06_mesh_00"
+   ],
+   "clip": "wheel_06_operate"
+  }
+ ],
+ "showcaseClip": "Showcase"
+}

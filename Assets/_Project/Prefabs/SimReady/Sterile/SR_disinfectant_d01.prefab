@@ -1,0 +1,142 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4469439364588440901
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3257084976238537551}
+  - component: {fileID: 8674913227793455858}
+  - component: {fileID: 4728444043479984737}
+  m_Layer: 0
+  m_Name: SR_disinfectant_d01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3257084976238537551
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4469439364588440901}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8118062043290791462}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8674913227793455858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4469439364588440901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1702acc6fce3f94088a58037765ed3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: SurgicalFoundations.Runtime::SurgicalFoundations.Interaction.ArticulatedDevice
+  manifest: {fileID: 4900000, guid: 8f811c986d310704189a8254210ca256, type: 3}
+  easeSpeed: 4
+  interactive: 1
+--- !u!65 &4728444043479984737
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4469439364588440901}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.10351391, y: 0.37045807, z: 0.15297875}
+  m_Center: {x: 0, y: 0.18522903, z: 0}
+--- !u!1001 &4111919276700198498
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3257084976238537551}
+    m_Modifications:
+    - target: {fileID: -4748361991329772099, guid: c5381994577d8284e94c615fe7a1544c, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: a6777be89632fa944a8225cad5ad75a4, type: 2}
+    - target: {fileID: -4748361991329772099, guid: c5381994577d8284e94c615fe7a1544c, type: 3}
+      propertyPath: m_CullingMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -3910990755373119420, guid: c5381994577d8284e94c615fe7a1544c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.00025569275
+      objectReference: {fileID: 0}
+    - target: {fileID: -3910990755373119420, guid: c5381994577d8284e94c615fe7a1544c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0000030249357
+      objectReference: {fileID: 0}
+    - target: {fileID: -3910990755373119420, guid: c5381994577d8284e94c615fe7a1544c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0000055506825
+      objectReference: {fileID: 0}
+    - target: {fileID: -3910990755373119420, guid: c5381994577d8284e94c615fe7a1544c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3910990755373119420, guid: c5381994577d8284e94c615fe7a1544c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3910990755373119420, guid: c5381994577d8284e94c615fe7a1544c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3910990755373119420, guid: c5381994577d8284e94c615fe7a1544c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3910990755373119420, guid: c5381994577d8284e94c615fe7a1544c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3910990755373119420, guid: c5381994577d8284e94c615fe7a1544c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3910990755373119420, guid: c5381994577d8284e94c615fe7a1544c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8771091787928289351, guid: c5381994577d8284e94c615fe7a1544c, type: 3}
+      propertyPath: m_Name
+      value: disinfectant_d01
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: -4161369568681901532, guid: c5381994577d8284e94c615fe7a1544c, type: 3}
+--- !u!4 &8118062043290791462 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -3910990755373119420, guid: c5381994577d8284e94c615fe7a1544c, type: 3}
+  m_PrefabInstance: {fileID: 4111919276700198498}
+  m_PrefabAsset: {fileID: 0}

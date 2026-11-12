@@ -1,0 +1,220 @@
+{
+ "asset": "robot_surgical_c01",
+ "category": "Equipment",
+ "trianglesSource": 798513,
+ "size": [
+  1.481,
+  1.412,
+  0.676
+ ],
+ "joints": [
+  {
+   "name": "arm_02",
+   "kind": "swing",
+   "node": "J_arm_02",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -60,
+   "max": 60,
+   "pivot": [
+    0.1253,
+    1.0811,
+    -0.1933
+   ],
+   "parts": [
+    "arm_02_mesh_00"
+   ],
+   "clip": "arm_02_operate"
+  },
+  {
+   "name": "arm_01",
+   "kind": "swing",
+   "node": "J_arm_01",
+   "parent": "J_arm_02",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -60,
+   "max": 60,
+   "pivot": [
+    0.1253,
+    1.0811,
+    0.2029
+   ],
+   "parts": [
+    "arm_01_mesh_00"
+   ],
+   "clip": "arm_01_operate"
+  },
+  {
+   "name": "button_01",
+   "kind": "press",
+   "node": "J_button_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.2759,
+    1.0596,
+    -0.0
+   ],
+   "parts": [
+    "button_01_mesh_00"
+   ],
+   "clip": "button_01_operate"
+  },
+  {
+   "name": "button_02",
+   "kind": "press",
+   "node": "J_button_02",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.354,
+    0.4931,
+    0.1179
+   ],
+   "parts": [
+    "button_02_mesh_00"
+   ],
+   "clip": "button_02_operate"
+  },
+  {
+   "name": "monitor_01",
+   "kind": "tilt",
+   "node": "J_monitor_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -25,
+   "max": 25,
+   "pivot": [
+    -0.1768,
+    1.2688,
+    0.0
+   ],
+   "parts": [
+    "monitor_01_mesh_00"
+   ],
+   "clip": "monitor_01_operate"
+  },
+  {
+   "name": "tire_03",
+   "kind": "spin",
+   "node": "J_tire_03",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -360,
+   "max": 0,
+   "pivot": [
+    0.2362,
+    0.0751,
+    -0.1305
+   ],
+   "parts": [
+    "tire_03_mesh_00"
+   ],
+   "clip": "tire_03_operate"
+  },
+  {
+   "name": "tire_04",
+   "kind": "spin",
+   "node": "J_tire_04",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -360,
+   "max": 0,
+   "pivot": [
+    -0.2178,
+    0.0751,
+    -0.1305
+   ],
+   "parts": [
+    "tire_04_mesh_00"
+   ],
+   "clip": "tire_04_operate"
+  },
+  {
+   "name": "wheel_03",
+   "kind": "spin",
+   "node": "J_wheel_03",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -360,
+   "max": 0,
+   "pivot": [
+    0.2362,
+    0.0806,
+    -0.133
+   ],
+   "parts": [
+    "wheel_03_mesh_00"
+   ],
+   "clip": "wheel_03_operate"
+  },
+  {
+   "name": "wheel_04",
+   "kind": "spin",
+   "node": "J_wheel_04",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -360,
+   "max": 0,
+   "pivot": [
+    -0.2178,
+    0.0806,
+    -0.133
+   ],
+   "parts": [
+    "wheel_04_mesh_00"
+   ],
+   "clip": "wheel_04_operate"
+  }
+ ],
+ "showcaseClip": "Showcase"
+}

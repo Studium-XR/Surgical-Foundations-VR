@@ -1,0 +1,82 @@
+{
+ "asset": "catheter_system_a01",
+ "category": "Consumables",
+ "trianglesSource": 92540,
+ "size": [
+  0.503,
+  0.061,
+  0.207
+ ],
+ "joints": [
+  {
+   "name": "knob_01",
+   "kind": "turn",
+   "node": "J_knob_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -270,
+   "max": 0,
+   "pivot": [
+    0.052,
+    0.031,
+    -0.0
+   ],
+   "parts": [
+    "knob_01_mesh_00"
+   ],
+   "clip": "knob_01_operate"
+  },
+  {
+   "name": "knob_02",
+   "kind": "turn",
+   "node": "J_knob_02",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -270,
+   "max": 0,
+   "pivot": [
+    0.0686,
+    0.0309,
+    -0.0
+   ],
+   "parts": [
+    "knob_02_mesh_00"
+   ],
+   "clip": "knob_02_operate"
+  },
+  {
+   "name": "knob_03",
+   "kind": "turn",
+   "node": "J_knob_03",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -270,
+   "max": 0,
+   "pivot": [
+    0.0887,
+    0.0309,
+    -0.0
+   ],
+   "parts": [
+    "knob_03_mesh_00"
+   ],
+   "clip": "knob_03_operate"
+  }
+ ],
+ "showcaseClip": "Showcase"
+}

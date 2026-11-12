@@ -1,0 +1,12 @@
+{
+ "asset": "facemask_medical_a01",
+ "category": "Consumables",
+ "trianglesSource": 621,
+ "size": [
+  0.181,
+  0.07,
+  0.1
+ ],
+ "joints": [],
+ "showcaseClip": null
+}

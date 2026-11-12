@@ -1,0 +1,174 @@
+{
+ "asset": "Xray_machine_HVgenerator_a01",
+ "category": "Imaging",
+ "trianglesSource": 550176,
+ "size": [
+  0.62,
+  0.931,
+  0.972
+ ],
+ "joints": [
+  {
+   "name": "wheelattachment_01",
+   "kind": "swivel",
+   "node": "J_wheelattachment_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -180,
+   "max": 180,
+   "pivot": [
+    -0.2391,
+    0.0995,
+    0.4076
+   ],
+   "parts": [
+    "wheelAttachment_01_mesh_00"
+   ],
+   "clip": "wheelattachment_01_operate"
+  },
+  {
+   "name": "wheel_01",
+   "kind": "spin",
+   "node": "J_wheel_01",
+   "parent": "J_wheelattachment_01",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -360,
+   "max": 0,
+   "pivot": [
+    -0.2391,
+    0.038,
+    0.3873
+   ],
+   "parts": [
+    "wheel_01_mesh_00"
+   ],
+   "clip": "wheel_01_operate"
+  },
+  {
+   "name": "wheelattachment_02",
+   "kind": "swivel",
+   "node": "J_wheelattachment_02",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -180,
+   "max": 180,
+   "pivot": [
+    -0.2391,
+    0.0995,
+    -0.4169
+   ],
+   "parts": [
+    "wheelAttachment_02_mesh_00"
+   ],
+   "clip": "wheelattachment_02_operate"
+  },
+  {
+   "name": "wheel_02",
+   "kind": "spin",
+   "node": "J_wheel_02",
+   "parent": "J_wheelattachment_02",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -360,
+   "max": 0,
+   "pivot": [
+    -0.2391,
+    0.038,
+    -0.4372
+   ],
+   "parts": [
+    "wheel_02_mesh_00"
+   ],
+   "clip": "wheel_02_operate"
+  },
+  {
+   "name": "wheelattachment_03",
+   "kind": "swivel",
+   "node": "J_wheelattachment_03",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -180,
+   "max": 180,
+   "pivot": [
+    0.2394,
+    0.0995,
+    -0.4169
+   ],
+   "parts": [
+    "wheelAttachment_03_mesh_00"
+   ],
+   "clip": "wheelattachment_03_operate"
+  },
+  {
+   "name": "wheel_03",
+   "kind": "spin",
+   "node": "J_wheel_03",
+   "parent": "J_wheelattachment_03",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -360,
+   "max": 0,
+   "pivot": [
+    0.2394,
+    0.038,
+    -0.4372
+   ],
+   "parts": [
+    "wheel_03_mesh_00"
+   ],
+   "clip": "wheel_03_operate"
+  },
+  {
+   "name": "wheelattachment_04",
+   "kind": "swivel",
+   "node": "J_wheelattachment_04",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -180,
+   "max": 180,
+   "pivot": [
+    0.2394,
+    0.0995,
+    0.4076
+   ],
+   "parts": [
+    "wheelAttachment_04_mesh_00"
+   ],
+   "clip": "wheelattachment_04_operate"
+  }
+ ],
+ "showcaseClip": "Showcase"
+}

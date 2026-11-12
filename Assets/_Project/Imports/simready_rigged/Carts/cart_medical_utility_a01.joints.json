@@ -1,0 +1,220 @@
+{
+ "asset": "cart_medical_utility_a01",
+ "category": "Carts",
+ "trianglesSource": 317308,
+ "size": [
+  0.753,
+  1.457,
+  0.906
+ ],
+ "joints": [
+  {
+   "name": "drawer_01",
+   "kind": "slide",
+   "node": "J_drawer_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.2514,
+   "pivot": [
+    -0.0805,
+    0.8853,
+    0.0
+   ],
+   "parts": [
+    "drawer_01_mesh_00"
+   ],
+   "clip": "drawer_01_operate"
+  },
+  {
+   "name": "drawer_02",
+   "kind": "slide",
+   "node": "J_drawer_02",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.2359,
+   "pivot": [
+    -0.0806,
+    0.8539,
+    -0.0343
+   ],
+   "parts": [
+    "drawer_02_mesh_00"
+   ],
+   "clip": "drawer_02_operate"
+  },
+  {
+   "name": "drawer_03",
+   "kind": "slide",
+   "node": "J_drawer_03",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.2247,
+   "pivot": [
+    -0.086,
+    0.7627,
+    -0.0363
+   ],
+   "parts": [
+    "drawer_03_mesh_00"
+   ],
+   "clip": "drawer_03_operate"
+  },
+  {
+   "name": "leftarm_01",
+   "kind": "swing",
+   "node": "J_leftarm_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -60,
+   "max": 60,
+   "pivot": [
+    0.1545,
+    1.1916,
+    -0.0116
+   ],
+   "parts": [
+    "leftarm_01_mesh_00"
+   ],
+   "clip": "leftarm_01_operate"
+  },
+  {
+   "name": "rightarm_01",
+   "kind": "swing",
+   "node": "J_rightarm_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -60,
+   "max": 60,
+   "pivot": [
+    0.1577,
+    1.1916,
+    0.0126
+   ],
+   "parts": [
+    "rightarm_01_mesh_00"
+   ],
+   "clip": "rightarm_01_operate"
+  },
+  {
+   "name": "tire_02",
+   "kind": "spin",
+   "node": "J_tire_02",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -360,
+   "max": 0,
+   "pivot": [
+    0.3205,
+    0.0364,
+    -0.1846
+   ],
+   "parts": [
+    "tire_02_mesh_00"
+   ],
+   "clip": "tire_02_operate"
+  },
+  {
+   "name": "tire_04",
+   "kind": "spin",
+   "node": "J_tire_04",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -360,
+   "max": 0,
+   "pivot": [
+    -0.2911,
+    0.0364,
+    -0.2187
+   ],
+   "parts": [
+    "tire_04_mesh_00"
+   ],
+   "clip": "tire_04_operate"
+  },
+  {
+   "name": "wheel_01",
+   "kind": "spin",
+   "node": "J_wheel_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -360,
+   "max": 0,
+   "pivot": [
+    0.328,
+    0.0513,
+    -0.1846
+   ],
+   "parts": [
+    "wheel_01_mesh_00"
+   ],
+   "clip": "wheel_01_operate"
+  },
+  {
+   "name": "wheel_04",
+   "kind": "spin",
+   "node": "J_wheel_04",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -360,
+   "max": 0,
+   "pivot": [
+    -0.2985,
+    0.0513,
+    -0.2187
+   ],
+   "parts": [
+    "wheel_04_mesh_00"
+   ],
+   "clip": "wheel_04_operate"
+  }
+ ],
+ "showcaseClip": "Showcase"
+}

@@ -1,0 +1,243 @@
+{
+ "asset": "chair_hospital_a01",
+ "category": "Furniture",
+ "trianglesSource": 915752,
+ "size": [
+  0.734,
+  1.324,
+  0.744
+ ],
+ "joints": [
+  {
+   "name": "tire_01",
+   "kind": "spin",
+   "node": "J_tire_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -360,
+   "max": 0,
+   "pivot": [
+    -0.3144,
+    0.0368,
+    -0.2148
+   ],
+   "parts": [
+    "tire_01_mesh_00"
+   ],
+   "clip": "tire_01_operate"
+  },
+  {
+   "name": "tire_02",
+   "kind": "spin",
+   "node": "J_tire_02",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -360,
+   "max": 0,
+   "pivot": [
+    0.0934,
+    0.0368,
+    -0.3478
+   ],
+   "parts": [
+    "tire_02_mesh_00"
+   ],
+   "clip": "tire_02_operate"
+  },
+  {
+   "name": "tire_03",
+   "kind": "spin",
+   "node": "J_tire_03",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -360,
+   "max": 0,
+   "pivot": [
+    -0.314,
+    0.0368,
+    0.2139
+   ],
+   "parts": [
+    "tire_03_mesh_00"
+   ],
+   "clip": "tire_03_operate"
+  },
+  {
+   "name": "tire_04",
+   "kind": "spin",
+   "node": "J_tire_04",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -360,
+   "max": 0,
+   "pivot": [
+    0.346,
+    0.0368,
+    -0.0002
+   ],
+   "parts": [
+    "tire_04_mesh_00"
+   ],
+   "clip": "tire_04_operate"
+  },
+  {
+   "name": "tire_05",
+   "kind": "spin",
+   "node": "J_tire_05",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -360,
+   "max": 0,
+   "pivot": [
+    0.0934,
+    0.0368,
+    0.3473
+   ],
+   "parts": [
+    "tire_05_mesh_00"
+   ],
+   "clip": "tire_05_operate"
+  },
+  {
+   "name": "wheel_01",
+   "kind": "spin",
+   "node": "J_wheel_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -360,
+   "max": 0,
+   "pivot": [
+    -0.3143,
+    0.0558,
+    -0.2148
+   ],
+   "parts": [
+    "wheel_01_mesh_00"
+   ],
+   "clip": "wheel_01_operate"
+  },
+  {
+   "name": "wheel_02",
+   "kind": "spin",
+   "node": "J_wheel_02",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -360,
+   "max": 0,
+   "pivot": [
+    0.0934,
+    0.0558,
+    -0.3478
+   ],
+   "parts": [
+    "wheel_02_mesh_00"
+   ],
+   "clip": "wheel_02_operate"
+  },
+  {
+   "name": "wheel_03",
+   "kind": "spin",
+   "node": "J_wheel_03",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -360,
+   "max": 0,
+   "pivot": [
+    -0.314,
+    0.0558,
+    0.2139
+   ],
+   "parts": [
+    "wheel_03_mesh_00"
+   ],
+   "clip": "wheel_03_operate"
+  },
+  {
+   "name": "wheel_04",
+   "kind": "spin",
+   "node": "J_wheel_04",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -360,
+   "max": 0,
+   "pivot": [
+    0.346,
+    0.0558,
+    -0.0002
+   ],
+   "parts": [
+    "wheel_04_mesh_00"
+   ],
+   "clip": "wheel_04_operate"
+  },
+  {
+   "name": "wheel_05",
+   "kind": "spin",
+   "node": "J_wheel_05",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -360,
+   "max": 0,
+   "pivot": [
+    0.0934,
+    0.0558,
+    0.3473
+   ],
+   "parts": [
+    "wheel_05_mesh_00"
+   ],
+   "clip": "wheel_05_operate"
+  }
+ ],
+ "showcaseClip": "Showcase"
+}

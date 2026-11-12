@@ -60,3 +60,21 @@ wherever these images are published.
 
 The `60_` images are copies of `Docs/Images` (the README links those originals). Re-render them with
 **Surgical Foundations → Tools → Render README Screenshots**.
+
+## Gallery (multi-angle)
+
+The multi-angle pictures live in `Docs/Images/Gallery` and are shown on [Docs/Gallery.md](../../Gallery.md):
+
+| Folder | Shows |
+|---|---|
+| `Gallery/Lobby` | The lobby and the Studium XR course browser. |
+| `Gallery/Theatre` | The operating theatre from the door, head end, foot end, surgeon's position and above. |
+| `Gallery/Stages` | Prep, Access, Operate and Close, two views each. |
+| `Gallery/ProcedureLab` | A procedure lab: learner's view, step panel, instrument trolley, wide view. |
+| `Gallery/SkillsLab`, `Gallery/EquipmentLab` | The skills lab from three sides; an "Explore in 3D" lesson's equipment. |
+| `Gallery/Equipment` | 24 rigged SimReady models, four angles each (the last with every moving part open). |
+| `Gallery/Rigging` | Blender renders of rigged models at rest and fully open. |
+
+Re-render with **Surgical Foundations → Tools → Render Simulation Gallery** (play mode for the rooms, a preview scene for
+the equipment; unsaved scene changes are kept).
+

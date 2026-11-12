@@ -1,0 +1,36 @@
+{
+ "asset": "device_otoscope_a01",
+ "category": "Devices",
+ "trianglesSource": 28034,
+ "size": [
+  0.073,
+  0.191,
+  0.049
+ ],
+ "joints": [
+  {
+   "name": "button_01",
+   "kind": "press",
+   "node": "J_button_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    0.0152,
+    0.1409,
+    -0.0
+   ],
+   "parts": [
+    "button_01_mesh_00"
+   ],
+   "clip": "button_01_operate"
+  }
+ ],
+ "showcaseClip": "Showcase"
+}

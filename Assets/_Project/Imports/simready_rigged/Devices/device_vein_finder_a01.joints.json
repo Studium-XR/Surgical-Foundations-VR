@@ -1,0 +1,12 @@
+{
+ "asset": "device_vein_finder_a01",
+ "category": "Devices",
+ "trianglesSource": 41713,
+ "size": [
+  0.221,
+  0.06,
+  0.064
+ ],
+ "joints": [],
+ "showcaseClip": null
+}

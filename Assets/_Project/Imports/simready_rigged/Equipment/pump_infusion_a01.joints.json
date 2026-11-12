@@ -1,0 +1,59 @@
+{
+ "asset": "pump_infusion_a01",
+ "category": "Equipment",
+ "trianglesSource": 287335,
+ "size": [
+  0.207,
+  0.144,
+  0.352
+ ],
+ "joints": [
+  {
+   "name": "button_01",
+   "kind": "press",
+   "node": "J_button_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    0.0732,
+    0.1228,
+    0.0756
+   ],
+   "parts": [
+    "button_01_mesh_00"
+   ],
+   "clip": "button_01_operate"
+  },
+  {
+   "name": "screen_01",
+   "kind": "tilt",
+   "node": "J_screen_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -25,
+   "max": 25,
+   "pivot": [
+    -0.0884,
+    0.0905,
+    0.094
+   ],
+   "parts": [
+    "screen_01_mesh_00"
+   ],
+   "clip": "screen_01_operate"
+  }
+ ],
+ "showcaseClip": "Showcase"
+}

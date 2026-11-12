@@ -1,0 +1,12 @@
+{
+ "asset": "instrument_ligature_needle_a01",
+ "category": "Instruments",
+ "trianglesSource": 5883,
+ "size": [
+  0.219,
+  0.022,
+  0.024
+ ],
+ "joints": [],
+ "showcaseClip": null
+}

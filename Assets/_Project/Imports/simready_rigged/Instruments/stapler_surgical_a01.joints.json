@@ -1,0 +1,36 @@
+{
+ "asset": "stapler_surgical_a01",
+ "category": "Instruments",
+ "trianglesSource": 74879,
+ "size": [
+  0.46,
+  0.031,
+  0.166
+ ],
+ "joints": [
+  {
+   "name": "hand_01",
+   "kind": "lever",
+   "node": "J_hand_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -20,
+   "max": 0,
+   "pivot": [
+    -0.0699,
+    0.0169,
+    0.0612
+   ],
+   "parts": [
+    "hand_01_mesh_00"
+   ],
+   "clip": "hand_01_operate"
+  }
+ ],
+ "showcaseClip": "Showcase"
+}

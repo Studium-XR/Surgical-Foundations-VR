@@ -1,0 +1,243 @@
+{
+ "asset": "Xray_machine_XrayArmRack_a01",
+ "category": "Imaging",
+ "trianglesSource": 607214,
+ "size": [
+  1.354,
+  2.265,
+  2.727
+ ],
+ "joints": [
+  {
+   "name": "button_01",
+   "kind": "press",
+   "node": "J_button_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.9778,
+    1.5331,
+    0.0
+   ],
+   "parts": [
+    "button_01_mesh_00"
+   ],
+   "clip": "button_01_operate"
+  },
+  {
+   "name": "display_01",
+   "kind": "tilt",
+   "node": "J_display_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -25,
+   "max": 25,
+   "pivot": [
+    -0.5812,
+    1.6994,
+    0.0005
+   ],
+   "parts": [
+    "display_01_mesh_00"
+   ],
+   "clip": "display_01_operate"
+  },
+  {
+   "name": "displaybutton_01",
+   "kind": "press",
+   "node": "J_displaybutton_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -1.1103,
+    1.7953,
+    0.168
+   ],
+   "parts": [
+    "displayButton_01_mesh_00"
+   ],
+   "clip": "displaybutton_01_operate"
+  },
+  {
+   "name": "displaybutton_02",
+   "kind": "press",
+   "node": "J_displaybutton_02",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -1.1103,
+    1.7675,
+    0.168
+   ],
+   "parts": [
+    "displayButton_02_mesh_00"
+   ],
+   "clip": "displaybutton_02_operate"
+  },
+  {
+   "name": "displaybutton_03",
+   "kind": "press",
+   "node": "J_displaybutton_03",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -1.1103,
+    1.7395,
+    0.168
+   ],
+   "parts": [
+    "displayButton_03_mesh_00"
+   ],
+   "clip": "displaybutton_03_operate"
+  },
+  {
+   "name": "displaybutton_04",
+   "kind": "press",
+   "node": "J_displaybutton_04",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -1.1103,
+    1.7953,
+    -0.168
+   ],
+   "parts": [
+    "displayButton_04_mesh_00"
+   ],
+   "clip": "displaybutton_04_operate"
+  },
+  {
+   "name": "displaybutton_05",
+   "kind": "press",
+   "node": "J_displaybutton_05",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -1.1103,
+    1.7675,
+    -0.168
+   ],
+   "parts": [
+    "displayButton_05_mesh_00"
+   ],
+   "clip": "displaybutton_05_operate"
+  },
+  {
+   "name": "displaybutton_06",
+   "kind": "press",
+   "node": "J_displaybutton_06",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -1.1103,
+    1.7395,
+    -0.168
+   ],
+   "parts": [
+    "displayButton_06_mesh_00"
+   ],
+   "clip": "displaybutton_06_operate"
+  },
+  {
+   "name": "knob_01",
+   "kind": "turn",
+   "node": "J_knob_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -270,
+   "max": 0,
+   "pivot": [
+    -0.98,
+    1.5274,
+    0.0566
+   ],
+   "parts": [
+    "knob_01_mesh_00"
+   ],
+   "clip": "knob_01_operate"
+  },
+  {
+   "name": "knob_02",
+   "kind": "turn",
+   "node": "J_knob_02",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -270,
+   "max": 0,
+   "pivot": [
+    -0.98,
+    1.5274,
+    -0.0566
+   ],
+   "parts": [
+    "knob_02_mesh_00"
+   ],
+   "clip": "knob_02_operate"
+  }
+ ],
+ "showcaseClip": "Showcase"
+}

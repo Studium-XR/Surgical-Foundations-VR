@@ -1,0 +1,289 @@
+{
+ "asset": "defibrillator_a01",
+ "category": "Devices",
+ "trianglesSource": 112953,
+ "size": [
+  0.204,
+  0.267,
+  0.444
+ ],
+ "joints": [
+  {
+   "name": "button_01",
+   "kind": "press",
+   "node": "J_button_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.054,
+    0.1456,
+    -0.1
+   ],
+   "parts": [
+    "button_01_mesh_00"
+   ],
+   "clip": "button_01_operate"
+  },
+  {
+   "name": "button_02",
+   "kind": "press",
+   "node": "J_button_02",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.0604,
+    0.1214,
+    -0.1
+   ],
+   "parts": [
+    "button_02_mesh_00"
+   ],
+   "clip": "button_02_operate"
+  },
+  {
+   "name": "button_03",
+   "kind": "press",
+   "node": "J_button_03",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.0429,
+    0.187,
+    -0.1
+   ],
+   "parts": [
+    "button_03_mesh_00"
+   ],
+   "clip": "button_03_operate"
+  },
+  {
+   "name": "button_04",
+   "kind": "press",
+   "node": "J_button_04",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.0481,
+    0.1673,
+    -0.088
+   ],
+   "parts": [
+    "button_04_mesh_00"
+   ],
+   "clip": "button_04_operate"
+  },
+  {
+   "name": "button_05",
+   "kind": "press",
+   "node": "J_button_05",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.0481,
+    0.1673,
+    -0.112
+   ],
+   "parts": [
+    "button_05_mesh_00"
+   ],
+   "clip": "button_05_operate"
+  },
+  {
+   "name": "button_06",
+   "kind": "press",
+   "node": "J_button_06",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.0663,
+    0.0996,
+    -0.088
+   ],
+   "parts": [
+    "button_06_mesh_00"
+   ],
+   "clip": "button_06_operate"
+  },
+  {
+   "name": "button_07",
+   "kind": "press",
+   "node": "J_button_07",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.0663,
+    0.0996,
+    -0.112
+   ],
+   "parts": [
+    "button_07_mesh_00"
+   ],
+   "clip": "button_07_operate"
+  },
+  {
+   "name": "button_08",
+   "kind": "press",
+   "node": "J_button_08",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    0.0758,
+    0.2265,
+    -0.0174
+   ],
+   "parts": [
+    "button_08_mesh_00"
+   ],
+   "clip": "button_08_operate"
+  },
+  {
+   "name": "button_09",
+   "kind": "press",
+   "node": "J_button_09",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    0.0628,
+    0.2415,
+    -0.033
+   ],
+   "parts": [
+    "button_09_mesh_00"
+   ],
+   "clip": "button_09_operate"
+  },
+  {
+   "name": "button_10",
+   "kind": "press",
+   "node": "J_button_10",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    0.0758,
+    0.2265,
+    0.0174
+   ],
+   "parts": [
+    "button_10_mesh_00"
+   ],
+   "clip": "button_10_operate"
+  },
+  {
+   "name": "button_11",
+   "kind": "press",
+   "node": "J_button_11",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    0.0597,
+    0.2299,
+    0.0296
+   ],
+   "parts": [
+    "button_11_mesh_00"
+   ],
+   "clip": "button_11_operate"
+  },
+  {
+   "name": "knob_01",
+   "kind": "turn",
+   "node": "J_knob_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -270,
+   "max": 0,
+   "pivot": [
+    -0.0722,
+    0.0642,
+    -0.1
+   ],
+   "parts": [
+    "knob_01_mesh_00"
+   ],
+   "clip": "knob_01_operate"
+  }
+ ],
+ "showcaseClip": "Showcase"
+}

@@ -1,0 +1,183 @@
+{
+ "id": "catheterisation",
+ "title": "Male urethral catheterisation",
+ "summary": "Aseptic catheterisation for acute urinary retention.",
+ "patientState": "awake",
+ "patientName": "Mr Daniel Okafor",
+ "equipment": [
+  {
+   "id": "box_glove_a01",
+   "place": "tray",
+   "key": "box_glove_a01"
+  },
+  {
+   "id": "disinfectant_b01",
+   "place": "tray",
+   "key": "disinfectant_b01"
+  },
+  {
+   "id": "syringe_a04",
+   "place": "tray",
+   "key": "syringe_a04"
+  },
+  {
+   "id": "catheter_system_a01",
+   "place": "tray",
+   "key": "catheter_system_a01"
+  },
+  {
+   "id": "drainage_a01",
+   "place": "tray",
+   "key": "drainage_a01"
+  },
+  {
+   "id": "bandage_medical_a01",
+   "place": "tray",
+   "key": "bandage_medical_a01"
+  }
+ ],
+ "anchors": [
+  {
+   "name": "perineum",
+   "label": "urethral meatus",
+   "cranial": -0.27,
+   "right": 0.0,
+   "anterior": -0.08,
+   "radius": 0.06
+  },
+  {
+   "name": "suprapubic",
+   "label": "suprapubic skin crease",
+   "cranial": -0.2,
+   "right": 0.0,
+   "anterior": -0.03,
+   "radius": 0.07
+  }
+ ],
+ "cables": [],
+ "steps": [
+  {
+   "type": "talk",
+   "title": "Consent",
+   "prompt": "It hurts down there. I haven't passed water since last night.",
+   "choices": [
+    {
+     "text": "I'm sorry, that's painful. A tube into the bladder will relieve it straight away. It's uncomfortable but quick. Is that alright?",
+     "correct": true,
+     "reply": "Yes, please, anything to stop this.",
+     "feedback": ""
+    },
+    {
+     "text": "We'll just get on with it.",
+     "correct": false,
+     "feedback": "Explain and ask for consent.",
+     "reply": "Uh… what are you doing?"
+    }
+   ],
+   "hint": "",
+   "id": "catheterisation-s1"
+  },
+  {
+   "type": "apply",
+   "title": "Feel for the enlarged bladder",
+   "item": "",
+   "target": "suprapubic",
+   "hint": "A tender, dull suprapubic mass.",
+   "hold": 1.5,
+   "id": "catheterisation-s2"
+  },
+  {
+   "type": "pick",
+   "title": "Put on sterile gloves",
+   "item": "box_glove_a01",
+   "hint": "Aseptic non-touch technique.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "catheterisation-s3"
+  },
+  {
+   "type": "pick",
+   "title": "Clean the meatus",
+   "item": "disinfectant_b01",
+   "hint": "",
+   "wrongItems": [],
+   "critical": false,
+   "id": "catheterisation-s4"
+  },
+  {
+   "type": "apply",
+   "title": "Clean the urethral meatus",
+   "item": "disinfectant_b01",
+   "target": "perineum",
+   "hint": "Retract the foreskin; clean away from the meatus.",
+   "hold": 1.5,
+   "critical": false,
+   "id": "catheterisation-s5"
+  },
+  {
+   "type": "pick",
+   "title": "Instil anaesthetic gel",
+   "item": "syringe_a04",
+   "hint": "Lidocaine gel; wait a few minutes.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "catheterisation-s6"
+  },
+  {
+   "type": "pick",
+   "title": "Take the catheter",
+   "item": "catheter_system_a01",
+   "hint": "Hold the penis upright to straighten the urethra.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "catheterisation-s7"
+  },
+  {
+   "type": "apply",
+   "title": "Advance the catheter",
+   "item": "catheter_system_a01",
+   "target": "perineum",
+   "hint": "Advance to the hilt.",
+   "hold": 2.0,
+   "critical": false,
+   "id": "catheterisation-s8"
+  },
+  {
+   "type": "choose",
+   "title": "Balloon",
+   "prompt": "When do you inflate the balloon?",
+   "choices": [
+    {
+     "text": "Only once urine drains, and the catheter is fully inserted",
+     "correct": true,
+     "feedback": "Correct."
+    },
+    {
+     "text": "As soon as you feel resistance",
+     "correct": false,
+     "feedback": "Inflating in the urethra causes serious injury.",
+     "critical": true
+    },
+    {
+     "text": "Before inserting",
+     "correct": false,
+     "feedback": "Impossible and dangerous.",
+     "critical": false
+    }
+   ],
+   "hint": "",
+   "id": "catheterisation-s9"
+  },
+  {
+   "type": "pick",
+   "title": "Connect the drainage bag",
+   "item": "drainage_a01",
+   "hint": "Record the residual volume; replace the foreskin.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "catheterisation-s10"
+  }
+ ],
+ "errorPenalty": 10,
+ "hintPenalty": 3
+}

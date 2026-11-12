@@ -1,0 +1,404 @@
+{
+ "asset": "cart_equipment_diagnostic_a01",
+ "category": "Carts",
+ "trianglesSource": 413678,
+ "size": [
+  1.152,
+  1.222,
+  0.569
+ ],
+ "joints": [
+  {
+   "name": "button_01",
+   "kind": "press",
+   "node": "J_button_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.3568,
+    1.2142,
+    0.0499
+   ],
+   "parts": [
+    "button_01_mesh_00"
+   ],
+   "clip": "button_01_operate"
+  },
+  {
+   "name": "button_02",
+   "kind": "press",
+   "node": "J_button_02",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.3568,
+    1.2142,
+    -0.0499
+   ],
+   "parts": [
+    "button_02_mesh_00"
+   ],
+   "clip": "button_02_operate"
+  },
+  {
+   "name": "locker_01",
+   "kind": "door",
+   "node": "J_locker_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -100,
+   "max": 0,
+   "pivot": [
+    0.556,
+    0.9033,
+    -0.2732
+   ],
+   "parts": [
+    "locker_01_mesh_00"
+   ],
+   "clip": "locker_01_operate"
+  },
+  {
+   "name": "locker_02",
+   "kind": "door",
+   "node": "J_locker_02",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -100,
+   "max": 0,
+   "pivot": [
+    0.556,
+    0.9033,
+    0.2732
+   ],
+   "parts": [
+    "locker_02_mesh_00"
+   ],
+   "clip": "locker_02_operate"
+  },
+  {
+   "name": "locker_03",
+   "kind": "door",
+   "node": "J_locker_03",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -100,
+   "max": 0,
+   "pivot": [
+    0.556,
+    0.7661,
+    -0.2732
+   ],
+   "parts": [
+    "locker_03_mesh_00"
+   ],
+   "clip": "locker_03_operate"
+  },
+  {
+   "name": "locker_04",
+   "kind": "door",
+   "node": "J_locker_04",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -100,
+   "max": 0,
+   "pivot": [
+    0.556,
+    0.7661,
+    0.2732
+   ],
+   "parts": [
+    "locker_04_mesh_00"
+   ],
+   "clip": "locker_04_operate"
+  },
+  {
+   "name": "locker_05",
+   "kind": "door",
+   "node": "J_locker_05",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -100,
+   "max": 0,
+   "pivot": [
+    0.556,
+    0.6289,
+    -0.2732
+   ],
+   "parts": [
+    "locker_05_mesh_00"
+   ],
+   "clip": "locker_05_operate"
+  },
+  {
+   "name": "locker_06",
+   "kind": "door",
+   "node": "J_locker_06",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -100,
+   "max": 0,
+   "pivot": [
+    0.556,
+    0.6289,
+    0.2732
+   ],
+   "parts": [
+    "locker_06_mesh_00"
+   ],
+   "clip": "locker_06_operate"
+  },
+  {
+   "name": "locker_07",
+   "kind": "door",
+   "node": "J_locker_07",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -100,
+   "max": 0,
+   "pivot": [
+    0.556,
+    0.4917,
+    -0.2732
+   ],
+   "parts": [
+    "locker_07_mesh_00"
+   ],
+   "clip": "locker_07_operate"
+  },
+  {
+   "name": "locker_08",
+   "kind": "door",
+   "node": "J_locker_08",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -100,
+   "max": 0,
+   "pivot": [
+    0.556,
+    0.4917,
+    0.2732
+   ],
+   "parts": [
+    "locker_08_mesh_00"
+   ],
+   "clip": "locker_08_operate"
+  },
+  {
+   "name": "locker_09",
+   "kind": "door",
+   "node": "J_locker_09",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -100,
+   "max": 0,
+   "pivot": [
+    0.556,
+    0.3544,
+    -0.2732
+   ],
+   "parts": [
+    "locker_09_mesh_00"
+   ],
+   "clip": "locker_09_operate"
+  },
+  {
+   "name": "locker_10",
+   "kind": "door",
+   "node": "J_locker_10",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -100,
+   "max": 0,
+   "pivot": [
+    0.556,
+    0.3544,
+    0.2732
+   ],
+   "parts": [
+    "locker_10_mesh_00"
+   ],
+   "clip": "locker_10_operate"
+  },
+  {
+   "name": "mainlocker_01",
+   "kind": "door",
+   "node": "J_mainlocker_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -100,
+   "max": 0,
+   "pivot": [
+    0.5559,
+    1.0406,
+    -0.2732
+   ],
+   "parts": [
+    "mainLocker_01_mesh_00"
+   ],
+   "clip": "mainlocker_01_operate"
+  },
+  {
+   "name": "wheel_01",
+   "kind": "spin",
+   "node": "J_wheel_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -360,
+   "max": 0,
+   "pivot": [
+    0.4369,
+    0.083,
+    0.1801
+   ],
+   "parts": [
+    "wheel_01_mesh_00"
+   ],
+   "clip": "wheel_01_operate"
+  },
+  {
+   "name": "wheel_02",
+   "kind": "spin",
+   "node": "J_wheel_02",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -360,
+   "max": 0,
+   "pivot": [
+    0.4369,
+    0.083,
+    -0.1801
+   ],
+   "parts": [
+    "wheel_02_mesh_00"
+   ],
+   "clip": "wheel_02_operate"
+  },
+  {
+   "name": "wheel_03",
+   "kind": "spin",
+   "node": "J_wheel_03",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -360,
+   "max": 0,
+   "pivot": [
+    -0.2267,
+    0.0662,
+    0.2166
+   ],
+   "parts": [
+    "wheel_03_mesh_00"
+   ],
+   "clip": "wheel_03_operate"
+  },
+  {
+   "name": "wheel_04",
+   "kind": "spin",
+   "node": "J_wheel_04",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -360,
+   "max": 0,
+   "pivot": [
+    -0.2267,
+    0.0662,
+    -0.2166
+   ],
+   "parts": [
+    "wheel_04_mesh_00"
+   ],
+   "clip": "wheel_04_operate"
+  }
+ ],
+ "showcaseClip": "Showcase"
+}

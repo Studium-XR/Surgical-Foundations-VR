@@ -1,0 +1,142 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2151434572949383226
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4690669990435024969}
+  - component: {fileID: 5483685538550067952}
+  - component: {fileID: 934625312970451371}
+  m_Layer: 0
+  m_Name: SR_trolley_instrument_b05
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4690669990435024969
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2151434572949383226}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4195937443753992680}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5483685538550067952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2151434572949383226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1702acc6fce3f94088a58037765ed3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: SurgicalFoundations.Runtime::SurgicalFoundations.Interaction.ArticulatedDevice
+  manifest: {fileID: 4900000, guid: 7aa2738821009ab41b3b111de91e3ab5, type: 3}
+  easeSpeed: 4
+  interactive: 1
+--- !u!65 &934625312970451371
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2151434572949383226}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.70564175, y: 0.94419754, z: 0.5056019}
+  m_Center: {x: 0, y: 0.47209877, z: 0}
+--- !u!1001 &8323681799063579052
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4690669990435024969}
+    m_Modifications:
+    - target: {fileID: -4748361991329772099, guid: 4d551e0dcbcb7d84cbca7185270f17fb, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 13e39f5c856cefe4d9ec5104591ddee0, type: 2}
+    - target: {fileID: -4748361991329772099, guid: 4d551e0dcbcb7d84cbca7185270f17fb, type: 3}
+      propertyPath: m_CullingMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -3910990755373119420, guid: 4d551e0dcbcb7d84cbca7185270f17fb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0065209568
+      objectReference: {fileID: 0}
+    - target: {fileID: -3910990755373119420, guid: 4d551e0dcbcb7d84cbca7185270f17fb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.000000029802322
+      objectReference: {fileID: 0}
+    - target: {fileID: -3910990755373119420, guid: 4d551e0dcbcb7d84cbca7185270f17fb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0011169612
+      objectReference: {fileID: 0}
+    - target: {fileID: -3910990755373119420, guid: 4d551e0dcbcb7d84cbca7185270f17fb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3910990755373119420, guid: 4d551e0dcbcb7d84cbca7185270f17fb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3910990755373119420, guid: 4d551e0dcbcb7d84cbca7185270f17fb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3910990755373119420, guid: 4d551e0dcbcb7d84cbca7185270f17fb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3910990755373119420, guid: 4d551e0dcbcb7d84cbca7185270f17fb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3910990755373119420, guid: 4d551e0dcbcb7d84cbca7185270f17fb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3910990755373119420, guid: 4d551e0dcbcb7d84cbca7185270f17fb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8771091787928289351, guid: 4d551e0dcbcb7d84cbca7185270f17fb, type: 3}
+      propertyPath: m_Name
+      value: trolley_instrument_b05
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: -4161369568681901532, guid: 4d551e0dcbcb7d84cbca7185270f17fb, type: 3}
+--- !u!4 &4195937443753992680 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -3910990755373119420, guid: 4d551e0dcbcb7d84cbca7185270f17fb, type: 3}
+  m_PrefabInstance: {fileID: 8323681799063579052}
+  m_PrefabAsset: {fileID: 0}

@@ -1,0 +1,36 @@
+{
+ "asset": "instrument_selfretaining_retractor_a01",
+ "category": "Instruments",
+ "trianglesSource": 26935,
+ "size": [
+  0.191,
+  0.024,
+  0.09
+ ],
+ "joints": [
+  {
+   "name": "jaw",
+   "kind": "jaw",
+   "node": "J_jaw",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -30,
+   "max": 0,
+   "pivot": [
+    0.0491,
+    0.0023,
+    -0.0019
+   ],
+   "parts": [
+    "retractor_02_mesh_00"
+   ],
+   "clip": "jaw_operate"
+  }
+ ],
+ "showcaseClip": "Showcase"
+}

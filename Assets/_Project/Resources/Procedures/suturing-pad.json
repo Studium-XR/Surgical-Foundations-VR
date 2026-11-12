@@ -1,0 +1,260 @@
+{
+ "id": "suturing-pad",
+ "title": "Closing a skin wound",
+ "summary": "Close a 5 cm forearm laceration under local anaesthetic with interrupted sutures.",
+ "patientState": "awake",
+ "patientName": "Mr Daniel Okafor",
+ "equipment": [
+  {
+   "id": "disinfectant_a01",
+   "place": "tray",
+   "key": "disinfectant_a01"
+  },
+  {
+   "id": "syringe_a02",
+   "place": "tray",
+   "key": "syringe_a02"
+  },
+  {
+   "id": "needle_surgical_a01",
+   "place": "tray",
+   "key": "needle_surgical_a01"
+  },
+  {
+   "id": "instrument_forceps_a01",
+   "place": "tray",
+   "key": "instrument_forceps_a01"
+  },
+  {
+   "id": "instrument_scissors_a01",
+   "place": "tray",
+   "key": "instrument_scissors_a01"
+  },
+  {
+   "id": "instrument_artery_forceps_b01",
+   "place": "tray",
+   "key": "instrument_artery_forceps_b01"
+  },
+  {
+   "id": "bandage_medical_a01",
+   "place": "tray",
+   "key": "bandage_medical_a01"
+  },
+  {
+   "id": "box_glove_a01",
+   "place": "tray",
+   "key": "box_glove_a01"
+  },
+  {
+   "id": "monitor_patient_a01",
+   "place": "head",
+   "key": "monitor_patient_a01"
+  }
+ ],
+ "anchors": [
+  {
+   "name": "right_forearm",
+   "label": "right forearm lesion",
+   "cranial": -0.06,
+   "right": 0.27,
+   "anterior": -0.05,
+   "radius": 0.05
+  }
+ ],
+ "cables": [],
+ "steps": [
+  {
+   "type": "talk",
+   "title": "Introduce yourself and check identity",
+   "prompt": "Hello… are you the doctor doing my operation?",
+   "choices": [
+    {
+     "text": "Hello, I'm one of the surgical team. Can you tell me your full name and date of birth?",
+     "correct": true,
+     "reply": "Daniel Okafor, fourteenth of March 1968.",
+     "feedback": ""
+    },
+    {
+     "text": "Yes. Let's get started straight away.",
+     "correct": false,
+     "feedback": "Introduce yourself and confirm identity first.",
+     "reply": "Oh… okay, I suppose."
+    }
+   ],
+   "hint": "Name, role, then two identifiers from the patient, checked against the wristband.",
+   "id": "suturing-pad-s1"
+  },
+  {
+   "type": "pick",
+   "title": "Pick up the skin preparation",
+   "item": "disinfectant_a01",
+   "hint": "Alcoholic chlorhexidine, applied from the incision site outwards.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "suturing-pad-s2"
+  },
+  {
+   "type": "apply",
+   "title": "Prepare the skin over the laceration",
+   "item": "disinfectant_a01",
+   "target": "right_forearm",
+   "hint": "Centre outwards, wider than the incision; let it dry fully before drapes and diathermy (it is flammable).",
+   "hold": 2.0,
+   "critical": false,
+   "id": "suturing-pad-s3"
+  },
+  {
+   "type": "pick",
+   "title": "Draw up local anaesthetic",
+   "item": "syringe_a02",
+   "hint": "1 % lidocaine; check the maximum safe dose for the patient's weight first.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "suturing-pad-s4"
+  },
+  {
+   "type": "choose",
+   "title": "Safe dose",
+   "prompt": "The patient weighs 70 kg. What is the maximum dose of plain 1 % lidocaine?",
+   "choices": [
+    {
+     "text": "21 ml (3 mg/kg = 210 mg; 1 % = 10 mg/ml)",
+     "correct": true,
+     "feedback": "Correct."
+    },
+    {
+     "text": "49 ml",
+     "correct": false,
+     "feedback": "That is the dose with adrenaline (7 mg/kg).",
+     "critical": false
+    },
+    {
+     "text": "70 ml",
+     "correct": false,
+     "feedback": "That exceeds the safe dose: risk of toxicity.",
+     "critical": true
+    }
+   ],
+   "hint": "3 mg/kg plain, 7 mg/kg with adrenaline; 1 % = 10 mg per ml.",
+   "id": "suturing-pad-s5"
+  },
+  {
+   "type": "apply",
+   "title": "Infiltrate the wound edges",
+   "item": "syringe_a02",
+   "target": "right_forearm",
+   "hint": "Aspirate before injecting; wait for the anaesthetic to work.",
+   "hold": 1.5,
+   "critical": false,
+   "id": "suturing-pad-s6"
+  },
+  {
+   "type": "choose",
+   "title": "Choose the suture",
+   "prompt": "Which suture suits skin on the forearm?",
+   "choices": [
+    {
+     "text": "4-0 non-absorbable monofilament on a cutting needle",
+     "correct": true,
+     "feedback": "Correct: fine, low reactivity, cutting needle for dermis."
+    },
+    {
+     "text": "1 braided absorbable on a round-bodied needle",
+     "correct": false,
+     "feedback": "Too thick, and round needles are for soft tissue.",
+     "critical": false
+    },
+    {
+     "text": "6-0 on a taper needle",
+     "correct": false,
+     "feedback": "Too fine and the wrong needle for skin.",
+     "critical": false
+    }
+   ],
+   "hint": "",
+   "id": "suturing-pad-s7"
+  },
+  {
+   "type": "pick",
+   "title": "Load the needle",
+   "item": "needle_surgical_a01",
+   "hint": "Grip the needle two thirds from the point, in the tip of the needle holder.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "suturing-pad-s8"
+  },
+  {
+   "type": "pick",
+   "title": "Take the toothed forceps",
+   "item": "instrument_forceps_a01",
+   "hint": "Toothed forceps for skin; hold them like a pen.",
+   "wrongItems": [
+    "instrument_artery_forceps_b01"
+   ],
+   "critical": false,
+   "id": "suturing-pad-s9"
+  },
+  {
+   "type": "apply",
+   "title": "Place the first suture in the middle of the wound",
+   "item": "needle_surgical_a01",
+   "target": "right_forearm",
+   "hint": "Enter at 90°, bites as far from the edge as the skin is thick, evert the edges.",
+   "hold": 1.5,
+   "critical": false,
+   "id": "suturing-pad-s10"
+  },
+  {
+   "type": "confirm",
+   "title": "Halve the remaining gaps with interrupted sutures, about 5 mm apart",
+   "hint": "Instrument ties, three throws, knots to one side.",
+   "id": "suturing-pad-s11"
+  },
+  {
+   "type": "pick",
+   "title": "Cut the ends",
+   "item": "instrument_scissors_a01",
+   "hint": "Leave 5 mm tails so they can be removed.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "suturing-pad-s12"
+  },
+  {
+   "type": "choose",
+   "title": "Aftercare",
+   "prompt": "When should forearm sutures usually come out?",
+   "choices": [
+    {
+     "text": "About 10 days",
+     "correct": true,
+     "feedback": "Correct: 7–10 days on the limbs."
+    },
+    {
+     "text": "2 days",
+     "correct": false,
+     "feedback": "Too early: the wound would open.",
+     "critical": false
+    },
+    {
+     "text": "4 weeks",
+     "correct": false,
+     "feedback": "Too late: suture marks and infection.",
+     "critical": false
+    }
+   ],
+   "hint": "",
+   "id": "suturing-pad-s13"
+  },
+  {
+   "type": "pick",
+   "title": "Dress the wound",
+   "item": "bandage_medical_a01",
+   "hint": "A simple dry dressing.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "suturing-pad-s14"
+  }
+ ],
+ "errorPenalty": 10,
+ "hintPenalty": 3
+}

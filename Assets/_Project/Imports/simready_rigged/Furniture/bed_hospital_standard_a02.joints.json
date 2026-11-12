@@ -1,0 +1,197 @@
+{
+ "asset": "bed_hospital_standard_a02",
+ "category": "Furniture",
+ "trianglesSource": 1036561,
+ "size": [
+  2.358,
+  0.886,
+  1.028
+ ],
+ "joints": [
+  {
+   "name": "wheelpin_01",
+   "kind": "swivel",
+   "node": "J_wheelpin_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -180,
+   "max": 180,
+   "pivot": [
+    0.8802,
+    0.146,
+    0.2956
+   ],
+   "parts": [
+    "wheelPin_01_mesh_00"
+   ],
+   "clip": "wheelpin_01_operate"
+  },
+  {
+   "name": "wheel_01",
+   "kind": "spin",
+   "node": "J_wheel_01",
+   "parent": "J_wheelpin_01",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -360,
+   "max": 0,
+   "pivot": [
+    0.8715,
+    0.0724,
+    0.2956
+   ],
+   "parts": [
+    "wheel_01_mesh_00"
+   ],
+   "clip": "wheel_01_operate"
+  },
+  {
+   "name": "wheelpin_02",
+   "kind": "swivel",
+   "node": "J_wheelpin_02",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -180,
+   "max": 180,
+   "pivot": [
+    0.8802,
+    0.146,
+    -0.2955
+   ],
+   "parts": [
+    "wheelPin_02_mesh_00"
+   ],
+   "clip": "wheelpin_02_operate"
+  },
+  {
+   "name": "wheel_02",
+   "kind": "spin",
+   "node": "J_wheel_02",
+   "parent": "J_wheelpin_02",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -360,
+   "max": 0,
+   "pivot": [
+    0.8715,
+    0.0724,
+    -0.2955
+   ],
+   "parts": [
+    "wheel_02_mesh_00"
+   ],
+   "clip": "wheel_02_operate"
+  },
+  {
+   "name": "wheelpin_03",
+   "kind": "swivel",
+   "node": "J_wheelpin_03",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -180,
+   "max": 180,
+   "pivot": [
+    -0.9681,
+    0.146,
+    -0.2955
+   ],
+   "parts": [
+    "wheelPin_03_mesh_00"
+   ],
+   "clip": "wheelpin_03_operate"
+  },
+  {
+   "name": "wheel_03",
+   "kind": "spin",
+   "node": "J_wheel_03",
+   "parent": "J_wheelpin_03",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -360,
+   "max": 0,
+   "pivot": [
+    -0.9769,
+    0.0724,
+    -0.2955
+   ],
+   "parts": [
+    "wheel_03_mesh_00"
+   ],
+   "clip": "wheel_03_operate"
+  },
+  {
+   "name": "wheelpin_04",
+   "kind": "swivel",
+   "node": "J_wheelpin_04",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -180,
+   "max": 180,
+   "pivot": [
+    -0.9681,
+    0.146,
+    0.2956
+   ],
+   "parts": [
+    "wheelPin_04_mesh_00"
+   ],
+   "clip": "wheelpin_04_operate"
+  },
+  {
+   "name": "wheel_04",
+   "kind": "spin",
+   "node": "J_wheel_04",
+   "parent": "J_wheelpin_04",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -360,
+   "max": 0,
+   "pivot": [
+    -0.9769,
+    0.0724,
+    0.2956
+   ],
+   "parts": [
+    "wheel_04_mesh_00"
+   ],
+   "clip": "wheel_04_operate"
+  }
+ ],
+ "showcaseClip": "Showcase"
+}

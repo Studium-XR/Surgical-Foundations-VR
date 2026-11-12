@@ -1,0 +1,82 @@
+{
+ "asset": "container_system_sterilising_a03",
+ "category": "Sterile",
+ "trianglesSource": 54298,
+ "size": [
+  0.328,
+  0.21,
+  0.301
+ ],
+ "joints": [
+  {
+   "name": "lid_01",
+   "kind": "lid",
+   "node": "J_lid_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -100,
+   "max": 0,
+   "pivot": [
+    0.0,
+    0.2106,
+    -0.1507
+   ],
+   "parts": [
+    "lid_01_mesh_00"
+   ],
+   "clip": "lid_01_operate"
+  },
+  {
+   "name": "lock_01",
+   "kind": "lever",
+   "node": "J_lock_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -20,
+   "max": 0,
+   "pivot": [
+    -0.1575,
+    0.1627,
+    0.0001
+   ],
+   "parts": [
+    "lock_01_mesh_00"
+   ],
+   "clip": "lock_01_operate"
+  },
+  {
+   "name": "lock_02",
+   "kind": "lever",
+   "node": "J_lock_02",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -20,
+   "max": 0,
+   "pivot": [
+    0.1575,
+    0.1627,
+    0.0001
+   ],
+   "parts": [
+    "lock_02_mesh_00"
+   ],
+   "clip": "lock_02_operate"
+  }
+ ],
+ "showcaseClip": "Showcase"
+}

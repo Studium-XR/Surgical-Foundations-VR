@@ -41,6 +41,8 @@ namespace SurgicalFoundations.Backend
             public const string Events = "session.events";
             public const string CompleteSession = "session.complete";
             public const string Replay = "replay.upload";
+            public const string LessonAttempt = "lesson.attempt";
+            public const string Enroll = "course.enroll";
         }
 
         // One small request a minute while offline is cheap; a longer wait would delay results reaching the LMS once back online.
@@ -162,6 +164,10 @@ namespace SurgicalFoundations.Backend
                     return await api.SendJsonAsync("POST", ApiRoutes.CompleteSession(job.sessionId), job.body, token, ct);
                 case Kinds.Replay:
                     return await UploadReplayAsync(job, token, ct);
+                case Kinds.LessonAttempt:
+                    return await api.SendJsonAsync("POST", ApiRoutes.LessonAttempts, job.body, token, ct);
+                case Kinds.Enroll:
+                    return await api.SendJsonAsync("PUT", ApiRoutes.Enroll(job.sessionId), job.body ?? "{}", token, ct);
                 default:
                     return new ApiResponse(ApiOutcome.Rejected, 0, null, "Unknown job kind " + job.kind);
             }

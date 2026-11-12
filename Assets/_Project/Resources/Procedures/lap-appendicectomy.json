@@ -1,0 +1,400 @@
+{
+ "id": "lap-appendicectomy",
+ "title": "Laparoscopic appendicectomy",
+ "summary": "Port placement, base control and safe extraction.",
+ "patientState": "anaesthetised",
+ "patientName": "Mr Daniel Okafor",
+ "equipment": [
+  {
+   "id": "unit_electrosurgical_a01",
+   "place": "bedside",
+   "key": "unit_electrosurgical_a01"
+  },
+  {
+   "id": "pendant_medical_a01",
+   "place": "head",
+   "key": "pendant_medical_a01"
+  },
+  {
+   "id": "video_system_a01",
+   "place": "head",
+   "key": "video_system_a01"
+  },
+  {
+   "id": "disinfectant_a01",
+   "place": "tray",
+   "key": "disinfectant_a01"
+  },
+  {
+   "id": "tool_pen_surgical_marking_a01",
+   "place": "tray",
+   "key": "tool_pen_surgical_marking_a01"
+  },
+  {
+   "id": "instrument_scalpel_handle_a01",
+   "place": "tray",
+   "key": "instrument_scalpel_handle_a01"
+  },
+  {
+   "id": "medical_sample_bag_a01",
+   "place": "tray",
+   "key": "medical_sample_bag_a01"
+  },
+  {
+   "id": "needle_surgical_a01",
+   "place": "tray",
+   "key": "needle_surgical_a01"
+  }
+ ],
+ "anchors": [
+  {
+   "name": "umbilicus",
+   "label": "umbilicus",
+   "cranial": 0.0,
+   "right": 0.0,
+   "anterior": 0.0,
+   "radius": 0.05
+  },
+  {
+   "name": "lif",
+   "label": "left iliac fossa",
+   "cranial": -0.09,
+   "right": -0.08,
+   "anterior": -0.01,
+   "radius": 0.06
+  },
+  {
+   "name": "suprapubic",
+   "label": "suprapubic skin crease",
+   "cranial": -0.2,
+   "right": 0.0,
+   "anterior": -0.03,
+   "radius": 0.07
+  },
+  {
+   "name": "rif",
+   "label": "right iliac fossa (McBurney's point)",
+   "cranial": -0.09,
+   "right": 0.08,
+   "anterior": -0.01,
+   "radius": 0.06
+  },
+  {
+   "name": "pad_site",
+   "label": "right thigh, patient plate site",
+   "cranial": -0.36,
+   "right": 0.1,
+   "anterior": -0.03,
+   "radius": 0.08
+  }
+ ],
+ "cables": [
+  {
+   "key": "esu_power",
+   "label": "Diathermy mains lead",
+   "from": "unit_electrosurgical_a01",
+   "fromHeight": 0.3,
+   "fromSide": -0.25,
+   "to": "pendant_medical_a01",
+   "toHeight": 0.45,
+   "toSide": -0.3,
+   "toAnchor": "",
+   "color": "#3A3D44",
+   "length": 4.0
+  },
+  {
+   "key": "return_pad",
+   "label": "Return electrode (patient plate)",
+   "from": "unit_electrosurgical_a01",
+   "fromHeight": 0.55,
+   "fromSide": 0.25,
+   "to": "",
+   "toHeight": 0.5,
+   "toSide": 0.25,
+   "toAnchor": "pad_site",
+   "color": "#2E7BD6",
+   "length": 3.2
+  },
+  {
+   "key": "tower_power",
+   "label": "Tower mains lead",
+   "from": "video_system_a01",
+   "fromHeight": 0.2,
+   "fromSide": -0.25,
+   "to": "pendant_medical_a01",
+   "toHeight": 0.45,
+   "toSide": -0.1,
+   "toAnchor": "",
+   "color": "#3A3D44",
+   "length": 4.0
+  },
+  {
+   "key": "co2",
+   "label": "CO2 insufflation tubing",
+   "from": "video_system_a01",
+   "fromHeight": 0.45,
+   "fromSide": -0.3,
+   "to": "",
+   "toHeight": 0.5,
+   "toSide": 0.25,
+   "toAnchor": "umbilicus",
+   "color": "#9BD3F2",
+   "length": 3.5
+  },
+  {
+   "key": "light",
+   "label": "Light cable to the laparoscope",
+   "from": "video_system_a01",
+   "fromHeight": 0.5,
+   "fromSide": 0.0,
+   "to": "",
+   "toHeight": 0.5,
+   "toSide": 0.25,
+   "toAnchor": "umbilicus",
+   "color": "#202020",
+   "length": 3.5
+  },
+  {
+   "key": "camera",
+   "label": "Camera head cable",
+   "from": "video_system_a01",
+   "fromHeight": 0.55,
+   "fromSide": 0.3,
+   "to": "",
+   "toHeight": 0.5,
+   "toSide": 0.25,
+   "toAnchor": "umbilicus",
+   "color": "#606870",
+   "length": 3.5
+  }
+ ],
+ "steps": [
+  {
+   "type": "plug",
+   "title": "Plug the diathermy generator into the pendant",
+   "item": "esu_power",
+   "hint": "Mains lead from the generator into a socket on the ceiling pendant.",
+   "id": "lap-appendicectomy-s1"
+  },
+  {
+   "type": "choose",
+   "title": "Where does the patient plate go?",
+   "prompt": "Where should the return electrode (patient plate) be placed?",
+   "choices": [
+    {
+     "text": "On a well-perfused muscle mass close to the operation, such as the thigh, on dry hair-free skin",
+     "correct": true,
+     "feedback": "Correct: a large, well-perfused contact area keeps the current density low."
+    },
+    {
+     "text": "Over a bony prominence",
+     "correct": false,
+     "feedback": "Poor contact: a burn risk at the plate.",
+     "critical": false
+    },
+    {
+     "text": "Over a metal implant",
+     "correct": false,
+     "feedback": "Current concentrates in the metal.",
+     "critical": true
+    },
+    {
+     "text": "Anywhere on the patient",
+     "correct": false,
+     "feedback": "Distance and contact both matter.",
+     "critical": false
+    }
+   ],
+   "hint": "",
+   "id": "lap-appendicectomy-s2"
+  },
+  {
+   "type": "plug",
+   "title": "Apply the patient plate to the thigh",
+   "item": "return_pad",
+   "hint": "Full, flat contact on the thigh; check the generator's contact alarm clears.",
+   "id": "lap-appendicectomy-s3"
+  },
+  {
+   "type": "plug",
+   "title": "Plug in the laparoscopic tower",
+   "item": "tower_power",
+   "hint": "",
+   "id": "lap-appendicectomy-s4"
+  },
+  {
+   "type": "plug",
+   "title": "Connect the light cable to the laparoscope",
+   "item": "light",
+   "hint": "Light lead to the scope's light post at the camera port.",
+   "id": "lap-appendicectomy-s5"
+  },
+  {
+   "type": "plug",
+   "title": "Connect the camera head",
+   "item": "camera",
+   "hint": "White balance before inserting the scope.",
+   "id": "lap-appendicectomy-s6"
+  },
+  {
+   "type": "plug",
+   "title": "Connect the CO2 tubing to the camera port",
+   "item": "co2",
+   "hint": "Insufflation at 12-15 mmHg once the port is in the peritoneal cavity.",
+   "id": "lap-appendicectomy-s7"
+  },
+  {
+   "type": "choose",
+   "title": "WHO Time Out",
+   "prompt": "Before skin incision for a laparoscopic appendicectomy, the team pauses. What must be confirmed aloud?",
+   "choices": [
+    {
+     "text": "Patient identity, the procedure, the site and side, and antibiotics given in the last 60 minutes",
+     "correct": true,
+     "feedback": "Correct: the Time Out confirms who, what and where, and that prophylaxis is in."
+    },
+    {
+     "text": "Only that the consent form is signed",
+     "correct": false,
+     "feedback": "The signature alone does not prevent wrong-site surgery.",
+     "critical": false
+    },
+    {
+     "text": "Nothing: the site was marked on the ward",
+     "correct": false,
+     "feedback": "Marking does not replace the Time Out.",
+     "critical": true
+    }
+   ],
+   "hint": "The site is the abdomen, right iliac fossa. All three phases of the WHO checklist are mandatory.",
+   "id": "lap-appendicectomy-s8"
+  },
+  {
+   "type": "pick",
+   "title": "Pick up the skin preparation",
+   "item": "disinfectant_a01",
+   "hint": "Alcoholic chlorhexidine, applied from the incision site outwards.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "lap-appendicectomy-s9"
+  },
+  {
+   "type": "apply",
+   "title": "Prepare the skin over the abdomen",
+   "item": "disinfectant_a01",
+   "target": "umbilicus",
+   "hint": "Centre outwards, wider than the incision; let it dry fully before drapes and diathermy (it is flammable).",
+   "hold": 2.0,
+   "critical": false,
+   "id": "lap-appendicectomy-s10"
+  },
+  {
+   "type": "pick",
+   "title": "Mark the port sites",
+   "item": "tool_pen_surgical_marking_a01",
+   "hint": "",
+   "wrongItems": [],
+   "critical": false,
+   "id": "lap-appendicectomy-s11"
+  },
+  {
+   "type": "apply",
+   "title": "Camera port: umbilicus (open Hasson entry)",
+   "item": "tool_pen_surgical_marking_a01",
+   "target": "umbilicus",
+   "hint": "Open entry under vision.",
+   "hold": 1.0,
+   "critical": false,
+   "id": "lap-appendicectomy-s12"
+  },
+  {
+   "type": "apply",
+   "title": "Working port: left iliac fossa",
+   "item": "tool_pen_surgical_marking_a01",
+   "target": "lif",
+   "hint": "Lateral to the rectus, away from the epigastric vessels.",
+   "hold": 1.0,
+   "critical": false,
+   "id": "lap-appendicectomy-s13"
+  },
+  {
+   "type": "apply",
+   "title": "Working port: suprapubic",
+   "item": "tool_pen_surgical_marking_a01",
+   "target": "suprapubic",
+   "hint": "Bladder emptied first.",
+   "hold": 1.0,
+   "critical": false,
+   "id": "lap-appendicectomy-s14"
+  },
+  {
+   "type": "choose",
+   "title": "Pressure",
+   "prompt": "Insufflation pressure for an adult?",
+   "choices": [
+    {
+     "text": "12–15 mmHg",
+     "correct": true,
+     "feedback": "Correct."
+    },
+    {
+     "text": "30 mmHg",
+     "correct": false,
+     "feedback": "Impairs venous return.",
+     "critical": true
+    },
+    {
+     "text": "3 mmHg",
+     "correct": false,
+     "feedback": "No working space.",
+     "critical": false
+    }
+   ],
+   "hint": "",
+   "id": "lap-appendicectomy-s15"
+  },
+  {
+   "type": "choose",
+   "title": "The base",
+   "prompt": "How is the appendix base secured?",
+   "choices": [
+    {
+     "text": "Two endoloops or a stapler at the base",
+     "correct": true,
+     "feedback": "Correct."
+    },
+    {
+     "text": "Diathermy only",
+     "correct": false,
+     "feedback": "Risk of stump leak.",
+     "critical": false
+    },
+    {
+     "text": "Leave it open",
+     "correct": false,
+     "feedback": "Faecal fistula.",
+     "critical": true
+    }
+   ],
+   "hint": "",
+   "id": "lap-appendicectomy-s16"
+  },
+  {
+   "type": "pick",
+   "title": "Bag the appendix",
+   "item": "medical_sample_bag_a01",
+   "hint": "Extract in a bag to avoid port-site infection.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "lap-appendicectomy-s17"
+  },
+  {
+   "type": "confirm",
+   "title": "Remove the ports under vision and close the umbilical fascia",
+   "hint": "Camera port last; check each site for bleeding.",
+   "id": "lap-appendicectomy-s18"
+  }
+ ],
+ "errorPenalty": 10,
+ "hintPenalty": 3
+}

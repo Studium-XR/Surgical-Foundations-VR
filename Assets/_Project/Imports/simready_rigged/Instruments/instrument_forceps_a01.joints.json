@@ -1,0 +1,12 @@
+{
+ "asset": "instrument_forceps_a01",
+ "category": "Instruments",
+ "trianglesSource": 19155,
+ "size": [
+  0.18,
+  0.015,
+  0.01
+ ],
+ "joints": [],
+ "showcaseClip": null
+}

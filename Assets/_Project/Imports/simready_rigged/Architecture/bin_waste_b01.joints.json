@@ -1,0 +1,59 @@
+{
+ "asset": "bin_waste_b01",
+ "category": "Architecture",
+ "trianglesSource": 11188,
+ "size": [
+  0.44,
+  0.467,
+  0.254
+ ],
+ "joints": [
+  {
+   "name": "display_01",
+   "kind": "tilt",
+   "node": "J_display_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -25,
+   "max": 25,
+   "pivot": [
+    -0.18,
+    0.4479,
+    -0.0
+   ],
+   "parts": [
+    "display_01_mesh_00"
+   ],
+   "clip": "display_01_operate"
+  },
+  {
+   "name": "lid_01",
+   "kind": "lid",
+   "node": "J_lid_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -100,
+   "max": 0,
+   "pivot": [
+    0.0328,
+    0.4671,
+    -0.1267
+   ],
+   "parts": [
+    "lid_01_mesh_00"
+   ],
+   "clip": "lid_01_operate"
+  }
+ ],
+ "showcaseClip": "Showcase"
+}

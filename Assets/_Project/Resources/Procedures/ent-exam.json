@@ -1,0 +1,186 @@
+{
+ "id": "ent-exam",
+ "title": "ENT examination and epistaxis",
+ "summary": "Examine the ear, then manage an anterior nosebleed.",
+ "patientState": "awake",
+ "patientName": "Mr Daniel Okafor",
+ "equipment": [
+  {
+   "id": "device_otoscope_a01",
+   "place": "tray",
+   "key": "device_otoscope_a01"
+  },
+  {
+   "id": "headlight_surgical_a01",
+   "place": "tray",
+   "key": "headlight_surgical_a01"
+  },
+  {
+   "id": "instrument_nasal_forceps_b01",
+   "place": "tray",
+   "key": "instrument_nasal_forceps_b01"
+  },
+  {
+   "id": "bandage_medical_a01",
+   "place": "tray",
+   "key": "bandage_medical_a01"
+  },
+  {
+   "id": "instrument_mirror_a01",
+   "place": "tray",
+   "key": "instrument_mirror_a01"
+  }
+ ],
+ "anchors": [
+  {
+   "name": "right_ear",
+   "label": "right ear",
+   "cranial": 0.68,
+   "right": 0.08,
+   "anterior": -0.05,
+   "radius": 0.05
+  },
+  {
+   "name": "nose",
+   "label": "nose",
+   "cranial": 0.66,
+   "right": 0.0,
+   "anterior": 0.07,
+   "radius": 0.04
+  }
+ ],
+ "cables": [],
+ "steps": [
+  {
+   "type": "talk",
+   "title": "History",
+   "prompt": "My ear has been aching for three days, and now my nose keeps bleeding.",
+   "choices": [
+    {
+     "text": "Let's look at your ear first, then I'll sort out the nosebleed. Sit forward and pinch the soft part of your nose for me.",
+     "correct": true,
+     "reply": "Like this? Okay.",
+     "feedback": ""
+    },
+    {
+     "text": "Tilt your head back.",
+     "correct": false,
+     "feedback": "Tilting back makes the patient swallow blood.",
+     "reply": "*coughs*"
+    }
+   ],
+   "hint": "",
+   "id": "ent-exam-s1"
+  },
+  {
+   "type": "pick",
+   "title": "Pick up the otoscope",
+   "item": "device_otoscope_a01",
+   "hint": "Largest speculum that fits comfortably.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "ent-exam-s2"
+  },
+  {
+   "type": "apply",
+   "title": "Examine the right ear",
+   "item": "device_otoscope_a01",
+   "target": "right_ear",
+   "hint": "Adults: pull the pinna up and back to straighten the canal.",
+   "hold": 2.0,
+   "critical": false,
+   "id": "ent-exam-s3"
+  },
+  {
+   "type": "choose",
+   "title": "Findings",
+   "prompt": "The drum is red and bulging. This is most likely…",
+   "choices": [
+    {
+     "text": "Acute otitis media",
+     "correct": true,
+     "feedback": "Correct."
+    },
+    {
+     "text": "Wax",
+     "correct": false,
+     "feedback": "Wax would hide the drum.",
+     "critical": false
+    },
+    {
+     "text": "Normal",
+     "correct": false,
+     "feedback": "A normal drum is pearly grey.",
+     "critical": false
+    }
+   ],
+   "hint": "",
+   "id": "ent-exam-s4"
+  },
+  {
+   "type": "pick",
+   "title": "Put on the headlight",
+   "item": "headlight_surgical_a01",
+   "hint": "Both hands free.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "ent-exam-s5"
+  },
+  {
+   "type": "choose",
+   "title": "Epistaxis",
+   "prompt": "Where does most epistaxis come from?",
+   "choices": [
+    {
+     "text": "Little's area on the anterior septum",
+     "correct": true,
+     "feedback": "Correct."
+    },
+    {
+     "text": "The posterior nasal cavity",
+     "correct": false,
+     "feedback": "Less common, more serious.",
+     "critical": false
+    },
+    {
+     "text": "The sinuses",
+     "correct": false,
+     "feedback": "No.",
+     "critical": false
+    }
+   ],
+   "hint": "",
+   "id": "ent-exam-s6"
+  },
+  {
+   "type": "apply",
+   "title": "Firm pressure on the soft nose for 15 minutes",
+   "item": "",
+   "target": "nose",
+   "hint": "Pinch the soft part, sitting forward.",
+   "hold": 3.0,
+   "id": "ent-exam-s7"
+  },
+  {
+   "type": "pick",
+   "title": "Nasal forceps for packing if pressure fails",
+   "item": "instrument_nasal_forceps_b01",
+   "hint": "Cautery or packing next.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "ent-exam-s8"
+  },
+  {
+   "type": "apply",
+   "title": "Insert the nasal pack",
+   "item": "instrument_nasal_forceps_b01",
+   "target": "nose",
+   "hint": "Along the floor of the nose, not upwards.",
+   "hold": 1.5,
+   "critical": false,
+   "id": "ent-exam-s9"
+  }
+ ],
+ "errorPenalty": 10,
+ "hintPenalty": 3
+}

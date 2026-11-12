@@ -11,6 +11,8 @@ namespace SurgicalFoundations.Core
         public const string StageAccess = "12_Stage_Access";
         public const string StageOperate = "13_Stage_Operate";
         public const string StageClose = "14_Stage_Close";
+        /// <summary>Generic VR procedure lab (Procedures/ProcedureRunner), loaded on top of 10_OR_Base.</summary>
+        public const string ProcedureLab = "15_Stage_Procedure";
         public const string ReplayViewer = "90_ReplayViewer";
 
         public static readonly string[] Stages = { StagePrep, StageAccess, StageOperate, StageClose };

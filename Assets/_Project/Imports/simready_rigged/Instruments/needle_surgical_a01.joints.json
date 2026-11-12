@@ -1,0 +1,36 @@
+{
+ "asset": "needle_surgical_a01",
+ "category": "Instruments",
+ "trianglesSource": 19737,
+ "size": [
+  0.121,
+  0.06,
+  0.06
+ ],
+ "joints": [
+  {
+   "name": "jaw",
+   "kind": "jaw",
+   "node": "J_jaw",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -30,
+   "max": 0,
+   "pivot": [
+    0.0002,
+    0.0262,
+    0.0
+   ],
+   "parts": [
+    "outsideBox_01_mesh_00"
+   ],
+   "clip": "jaw_operate"
+  }
+ ],
+ "showcaseClip": "Showcase"
+}

@@ -1,0 +1,266 @@
+{
+ "asset": "light_surgical_ceiling_arm_a01",
+ "category": "Lighting",
+ "trianglesSource": 829391,
+ "size": [
+  1.494,
+  2.046,
+  3.96
+ ],
+ "joints": [
+  {
+   "name": "arm_05",
+   "kind": "swing",
+   "node": "J_arm_05",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -60,
+   "max": 60,
+   "pivot": [
+    -0.0723,
+    1.4322,
+    -1.0123
+   ],
+   "parts": [
+    "arm_05_mesh_00"
+   ],
+   "clip": "arm_05_operate"
+  },
+  {
+   "name": "arm_01",
+   "kind": "swing",
+   "node": "J_arm_01",
+   "parent": "J_arm_05",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -60,
+   "max": 60,
+   "pivot": [
+    0.0714,
+    1.7029,
+    -1.1923
+   ],
+   "parts": [
+    "arm_01_mesh_00"
+   ],
+   "clip": "arm_01_operate"
+  },
+  {
+   "name": "arm_02",
+   "kind": "swing",
+   "node": "J_arm_02",
+   "parent": "J_arm_01",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -60,
+   "max": 60,
+   "pivot": [
+    1.1095,
+    1.598,
+    -1.1434
+   ],
+   "parts": [
+    "arm_02_mesh_00"
+   ],
+   "clip": "arm_02_operate"
+  },
+  {
+   "name": "arm_08",
+   "kind": "swing",
+   "node": "J_arm_08",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -60,
+   "max": 60,
+   "pivot": [
+    -0.0738,
+    1.1929,
+    -0.0759
+   ],
+   "parts": [
+    "arm_08_mesh_00"
+   ],
+   "clip": "arm_08_operate"
+  },
+  {
+   "name": "arm_07",
+   "kind": "swing",
+   "node": "J_arm_07",
+   "parent": "J_arm_08",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -60,
+   "max": 60,
+   "pivot": [
+    -0.0724,
+    1.2976,
+    -0.0495
+   ],
+   "parts": [
+    "arm_07_mesh_00"
+   ],
+   "clip": "arm_07_operate"
+  },
+  {
+   "name": "arm_03",
+   "kind": "swing",
+   "node": "J_arm_03",
+   "parent": "J_arm_07",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -60,
+   "max": 60,
+   "pivot": [
+    -0.0723,
+    1.5668,
+    -0.049
+   ],
+   "parts": [
+    "arm_03_mesh_00"
+   ],
+   "clip": "arm_03_operate"
+  },
+  {
+   "name": "arm_04",
+   "kind": "swing",
+   "node": "J_arm_04",
+   "parent": "J_arm_03",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -60,
+   "max": 60,
+   "pivot": [
+    0.9653,
+    1.4645,
+    1.1416
+   ],
+   "parts": [
+    "arm_04_mesh_00"
+   ],
+   "clip": "arm_04_operate"
+  },
+  {
+   "name": "arm_06",
+   "kind": "swing",
+   "node": "J_arm_06",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -60,
+   "max": 60,
+   "pivot": [
+    -0.0738,
+    1.3267,
+    -0.9596
+   ],
+   "parts": [
+    "arm_06_mesh_00"
+   ],
+   "clip": "arm_06_operate"
+  },
+  {
+   "name": "display_01",
+   "kind": "tilt",
+   "node": "J_display_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -25,
+   "max": 25,
+   "pivot": [
+    0.88,
+    0.8163,
+    1.1415
+   ],
+   "parts": [
+    "display_01_mesh_00"
+   ],
+   "clip": "display_01_operate"
+  },
+  {
+   "name": "display_02",
+   "kind": "tilt",
+   "node": "J_display_02",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -25,
+   "max": 25,
+   "pivot": [
+    1.0237,
+    0.8169,
+    -0.7988
+   ],
+   "parts": [
+    "display_02_mesh_00"
+   ],
+   "clip": "display_02_operate"
+  },
+  {
+   "name": "display_03",
+   "kind": "tilt",
+   "node": "J_display_03",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -25,
+   "max": 25,
+   "pivot": [
+    1.0237,
+    0.8169,
+    -1.4866
+   ],
+   "parts": [
+    "display_03_mesh_00"
+   ],
+   "clip": "display_03_operate"
+  }
+ ],
+ "showcaseClip": "Showcase"
+}

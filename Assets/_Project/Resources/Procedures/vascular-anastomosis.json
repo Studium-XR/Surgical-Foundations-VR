@@ -1,0 +1,192 @@
+{
+ "id": "vascular-anastomosis",
+ "title": "Vascular anastomosis",
+ "summary": "Control a vessel and perform an end-to-side anastomosis.",
+ "patientState": "anaesthetised",
+ "patientName": "Mr Daniel Okafor",
+ "equipment": [
+  {
+   "id": "instrument_clamp_a01",
+   "place": "tray",
+   "key": "instrument_clamp_a01"
+  },
+  {
+   "id": "instrument_forceps_a01",
+   "place": "tray",
+   "key": "instrument_forceps_a01"
+  },
+  {
+   "id": "instrument_dilator_a01",
+   "place": "tray",
+   "key": "instrument_dilator_a01"
+  },
+  {
+   "id": "instrument_scalpel_handle_a01",
+   "place": "tray",
+   "key": "instrument_scalpel_handle_a01"
+  },
+  {
+   "id": "needle_surgical_a01",
+   "place": "tray",
+   "key": "needle_surgical_a01"
+  },
+  {
+   "id": "syringe_a05",
+   "place": "tray",
+   "key": "syringe_a05"
+  }
+ ],
+ "anchors": [
+  {
+   "name": "right_groin",
+   "label": "right groin, above the inguinal ligament",
+   "cranial": -0.17,
+   "right": 0.08,
+   "anterior": -0.03,
+   "radius": 0.06
+  },
+  {
+   "name": "right_leg_medial",
+   "label": "medial right thigh, along the great saphenous vein",
+   "cranial": -0.42,
+   "right": 0.05,
+   "anterior": -0.05,
+   "radius": 0.07
+  }
+ ],
+ "cables": [],
+ "steps": [
+  {
+   "type": "choose",
+   "title": "WHO Time Out",
+   "prompt": "Before skin incision for a right femoral exposure, the team pauses. What must be confirmed aloud?",
+   "choices": [
+    {
+     "text": "Patient identity, the procedure, the site and side, and antibiotics given in the last 60 minutes",
+     "correct": true,
+     "feedback": "Correct: the Time Out confirms who, what and where, and that prophylaxis is in."
+    },
+    {
+     "text": "Only that the consent form is signed",
+     "correct": false,
+     "feedback": "The signature alone does not prevent wrong-site surgery.",
+     "critical": false
+    },
+    {
+     "text": "Nothing: the site was marked on the ward",
+     "correct": false,
+     "feedback": "Marking does not replace the Time Out.",
+     "critical": true
+    }
+   ],
+   "hint": "The site is the right groin. All three phases of the WHO checklist are mandatory.",
+   "id": "vascular-anastomosis-s1"
+  },
+  {
+   "type": "choose",
+   "title": "Control",
+   "prompt": "Before opening the artery you must have…",
+   "choices": [
+    {
+     "text": "Proximal and distal control",
+     "correct": true,
+     "feedback": "Correct."
+    },
+    {
+     "text": "Only proximal control",
+     "correct": false,
+     "feedback": "Back-bleeding will flood the field.",
+     "critical": false
+    },
+    {
+     "text": "No clamps, to avoid injury",
+     "correct": false,
+     "feedback": "Uncontrolled bleeding.",
+     "critical": true
+    }
+   ],
+   "hint": "",
+   "id": "vascular-anastomosis-s2"
+  },
+  {
+   "type": "pick",
+   "title": "Give heparin before clamping",
+   "item": "syringe_a05",
+   "hint": "Systemic heparin, then wait before clamping.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "vascular-anastomosis-s3"
+  },
+  {
+   "type": "pick",
+   "title": "Apply the vascular clamps",
+   "item": "instrument_clamp_a01",
+   "hint": "",
+   "wrongItems": [],
+   "critical": false,
+   "id": "vascular-anastomosis-s4"
+  },
+  {
+   "type": "apply",
+   "title": "Clamp above and below",
+   "item": "instrument_clamp_a01",
+   "target": "right_groin",
+   "hint": "Atraumatic vascular clamps.",
+   "hold": 1.5,
+   "critical": false,
+   "id": "vascular-anastomosis-s5"
+  },
+  {
+   "type": "pick",
+   "title": "Arteriotomy",
+   "item": "instrument_scalpel_handle_a01",
+   "hint": "No. 11 blade, then Potts scissors.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "vascular-anastomosis-s6"
+  },
+  {
+   "type": "choose",
+   "title": "Suture direction",
+   "prompt": "On the arterial side, the needle passes…",
+   "choices": [
+    {
+     "text": "Inside to outside",
+     "correct": true,
+     "feedback": "Correct: tacks down the intima."
+    },
+    {
+     "text": "Outside to inside",
+     "correct": false,
+     "feedback": "Can lift an intimal flap.",
+     "critical": false
+    },
+    {
+     "text": "Either way",
+     "correct": false,
+     "feedback": "The direction matters.",
+     "critical": false
+    }
+   ],
+   "hint": "",
+   "id": "vascular-anastomosis-s7"
+  },
+  {
+   "type": "pick",
+   "title": "Run the anastomosis",
+   "item": "needle_surgical_a01",
+   "hint": "Fine polypropylene, heel and toe first.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "vascular-anastomosis-s8"
+  },
+  {
+   "type": "confirm",
+   "title": "Flush, release the clamps in order and check for bleeding and a distal pulse",
+   "hint": "",
+   "id": "vascular-anastomosis-s9"
+  }
+ ],
+ "errorPenalty": 10,
+ "hintPenalty": 3
+}

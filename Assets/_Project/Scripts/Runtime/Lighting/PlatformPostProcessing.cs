@@ -15,6 +15,8 @@ namespace SurgicalFoundations.Lighting
 
         void Start()
         {
+            // The headset quality profile decides when it is installed (it knows the headset, not just the OS).
+            if (Rendering.DeviceQuality.Instance != null) return;
             var data = GetComponent<Camera>().GetUniversalAdditionalCameraData();
             bool mobile = Application.platform == RuntimePlatform.Android;
             data.renderPostProcessing = !mobile || enableOnMobileXR;

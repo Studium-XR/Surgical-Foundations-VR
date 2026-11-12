@@ -101,6 +101,13 @@ In **Guided** mode this feedback appears in the moment, like a mentor at your sh
 
 <sub>The people and equipment of the simulation: scrub nurse, anaesthetist, the patient on the operating table, scrub sink, hospital bed, IV stand, oxygen, heart-lung machine, anaesthesia cart, monitors and furniture.</sub>
 
+**More angles:** every area, stage, lab and piece of equipment from several sides in the **[Gallery](Docs/Gallery.md)**.
+
+| | | |
+|---|---|---|
+| ![Theatre from the head end](Docs/Images/Gallery/Theatre/theatre_2_head_end.png) | ![Course browser](Docs/Images/Gallery/Lobby/lobby_2_course_browser.png) | ![A procedure lab](Docs/Images/Gallery/ProcedureLab/procedure_lab_2_panel.png) |
+| ![Theatre from above](Docs/Images/Gallery/Theatre/theatre_5_above.png) | ![Operating through the ports](Docs/Images/Gallery/Stages/stage_3_operate_tower.png) | ![Anaesthesia workstation, four angles](Docs/Images/Gallery/Equipment/anesthesia_machine_a01.png) |
+
 ---
 
 ## What makes it different
@@ -131,6 +138,8 @@ In **Guided** mode this feedback appears in the moment, like a mentor at your sh
 **A camera assistant holds the scope.** While operating, the learner asks for the view to be moved (left, right, up, down, closer, further) and the assistant moves the scope, leaving both hands free for instruments. They can also take the camera themselves. *Why this matters:* in a real operation someone else usually holds the camera, and directing them so the instruments stay in view is a skill of its own. The requests are recorded so an educator can see how the trainee managed their view.
 
 **Guided mode coaches, Assessment mode watches.** In Guided mode a single highlight shows what to reach for next and moves on as each step is recognised, and the scrub nurse turns to the learner and says a short line when something needs a word. In Assessment mode all of that is switched off; the same rules still judge the run. *Why this matters:* learners need help while a skill is new and none when they are being tested, and both modes must measure the same thing for the score to mean anything.
+
+**A course platform around it.** The lobby now holds a Studium XR course catalogue: 6 programs and 32 courses from theatre essentials and suturing to laparoscopy, trauma and eight surgical specialties, with readings, quizzes, VR labs, 3D equipment exploration, progress, prerequisites and certificates that anyone can verify online. About 250 NVIDIA SimReady medical models are rigged in Blender so their drawers, doors, knobs, arms, wheels and instrument jaws really move. Settings live on the palm of your hand, nothing floats in front of your face, and graphics quality adapts to the headset. Details: [Studium XR platform](Docs/StudiumXR_Platform.md).
 
 **Coming next:**
 

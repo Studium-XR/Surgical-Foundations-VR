@@ -1,0 +1,12 @@
+{
+ "asset": "instrument_spatula_a01",
+ "category": "Instruments",
+ "trianglesSource": 6320,
+ "size": [
+  0.243,
+  0.013,
+  0.026
+ ],
+ "joints": [],
+ "showcaseClip": null
+}

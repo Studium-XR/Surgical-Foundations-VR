@@ -1,0 +1,161 @@
+{
+ "id": "burr-hole",
+ "title": "Emergency burr hole",
+ "summary": "Recognise an extradural haematoma and plan an emergency decompression.",
+ "patientState": "anaesthetised",
+ "patientName": "Mr Daniel Okafor",
+ "equipment": [
+  {
+   "id": "instrument_hand_drill_b01",
+   "place": "tray",
+   "key": "instrument_hand_drill_b01"
+  },
+  {
+   "id": "instrument_scalpel_handle_a01",
+   "place": "tray",
+   "key": "instrument_scalpel_handle_a01"
+  },
+  {
+   "id": "instrument_raspatory_a01",
+   "place": "tray",
+   "key": "instrument_raspatory_a01"
+  },
+  {
+   "id": "instrument_punche_a01",
+   "place": "tray",
+   "key": "instrument_punche_a01"
+  },
+  {
+   "id": "instrument_suction_a01",
+   "place": "tray",
+   "key": "instrument_suction_a01"
+  },
+  {
+   "id": "monitor_patient_a01",
+   "place": "head",
+   "key": "monitor_patient_a01"
+  }
+ ],
+ "anchors": [
+  {
+   "name": "right_temporal",
+   "label": "right temporal region",
+   "cranial": 0.72,
+   "right": 0.07,
+   "anterior": -0.02,
+   "radius": 0.05
+  }
+ ],
+ "cables": [],
+ "steps": [
+  {
+   "type": "choose",
+   "title": "Diagnosis",
+   "prompt": "Lucid interval after a blow to the temple; CT shows a lens-shaped collection. This is…",
+   "choices": [
+    {
+     "text": "Extradural haematoma",
+     "correct": true,
+     "feedback": "Correct."
+    },
+    {
+     "text": "Subdural haematoma",
+     "correct": false,
+     "feedback": "Subdurals are crescent-shaped.",
+     "critical": false
+    },
+    {
+     "text": "Subarachnoid haemorrhage",
+     "correct": false,
+     "feedback": "Blood in the cisterns, not a lens.",
+     "critical": false
+    }
+   ],
+   "hint": "",
+   "id": "burr-hole-s1"
+  },
+  {
+   "type": "choose",
+   "title": "Who operates?",
+   "prompt": "What is the definitive treatment?",
+   "choices": [
+    {
+     "text": "Craniotomy by a neurosurgeon; an emergency burr hole only if transfer is impossible",
+     "correct": true,
+     "feedback": "Correct."
+    },
+    {
+     "text": "Burr hole by anyone, always",
+     "correct": false,
+     "feedback": "Last resort only.",
+     "critical": false
+    },
+    {
+     "text": "Observe",
+     "correct": false,
+     "feedback": "An expanding extradural is fatal.",
+     "critical": false
+    }
+   ],
+   "hint": "",
+   "id": "burr-hole-s2"
+  },
+  {
+   "type": "apply",
+   "title": "Locate the site: above the zygoma, in front of the ear, on the side of the clot",
+   "item": "",
+   "target": "right_temporal",
+   "hint": "Check the side on the scan.",
+   "hold": 1.5,
+   "id": "burr-hole-s3"
+  },
+  {
+   "type": "pick",
+   "title": "Incise the scalp",
+   "item": "instrument_scalpel_handle_a01",
+   "hint": "",
+   "wrongItems": [],
+   "critical": false,
+   "id": "burr-hole-s4"
+  },
+  {
+   "type": "pick",
+   "title": "Elevate the periosteum",
+   "item": "instrument_raspatory_a01",
+   "hint": "",
+   "wrongItems": [],
+   "critical": false,
+   "id": "burr-hole-s5"
+  },
+  {
+   "type": "pick",
+   "title": "Make the burr hole with the hand drill",
+   "item": "instrument_hand_drill_b01",
+   "hint": "Perforator, then burr; perpendicular to the skull.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "burr-hole-s6"
+  },
+  {
+   "type": "apply",
+   "title": "Drill over the clot",
+   "item": "instrument_hand_drill_b01",
+   "target": "right_temporal",
+   "hint": "Stop when the inner table gives.",
+   "hold": 3.0,
+   "critical": true,
+   "id": "burr-hole-s7"
+  },
+  {
+   "type": "pick",
+   "title": "Evacuate with suction",
+   "item": "instrument_suction_a01",
+   "hint": "",
+   "wrongItems": [],
+   "critical": false,
+   "id": "burr-hole-s8"
+  }
+ ],
+ "errorPenalty": 10,
+ "hintPenalty": 3
+}

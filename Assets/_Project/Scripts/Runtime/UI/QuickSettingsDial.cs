@@ -17,12 +17,13 @@ using UnityEngine.XR.Interaction.Toolkit.UI;
 namespace SurgicalFoundations.UI
 {
     /// <summary>
-    /// In-headset quick settings, laid out as a dial: six settings round a ring (eye height, posture, text size, mode,
+    /// In-headset quick settings, laid out as a dial: seven settings round a ring (eye height, posture, text size, mode, graphics,
     /// subtitles, recenter), the chosen one's value on the centre knob, and its options in a fading list beside the dial
     /// joined to the segment by a leader line, with up/down steppers. Changes apply at once so the learner can feel them
     /// (eye height especially); Save keeps them for next time, Cancel puts back what was there when the dial opened.
-    /// Opens with Y on the left controller, the menu button that appears over the left palm when it is turned towards
-    /// the learner, or F2 at the desk. Built in code and installed by itself, so no scene has to change.
+    /// Lives on the learner's left palm (see <see cref="PalmDock"/>): it opens there from the palm hub, Y on the left
+    /// controller or F2 at the desk, rides on the hand while the palm is up and stays put in the room when the hand is
+    /// lowered; it never follows the head. Built in code and installed by itself, so no scene has to change.
     /// </summary>
     public class QuickSettingsDial : MonoBehaviour
     {
@@ -72,8 +73,7 @@ namespace SurgicalFoundations.UI
         Snapshot snapshot;
         bool prefsApplied;
 
-        // Wrist opener for hand tracking.
-        RectTransform wrist;
+        PalmDock dock;
 
         struct Snapshot
         {
@@ -81,6 +81,7 @@ namespace SurgicalFoundations.UI
             public Posture posture;
             public TrainingMode mode;
             public bool subtitles;
+            public int quality;
         }
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
@@ -97,7 +98,8 @@ namespace SurgicalFoundations.UI
             Instance = this;
             DefineSettings();
             Build();
-            BuildWristButton();
+            dock = root.gameObject.AddComponent<PalmDock>();
+            dock.handScale = 0.55f;
             root.gameObject.SetActive(false);
 
             toggle = new InputAction("QuickSettings", InputActionType.Button);
@@ -172,6 +174,15 @@ namespace SurgicalFoundations.UI
             });
             settings.Add(new Setting
             {
+                name = "Graphics",
+                hint = "Auto matches this headset. Performance trades detail for a steadier frame rate; Fidelity the reverse.",
+                count = 3,
+                current = () => Rendering.DeviceQuality.Instance != null ? (int)Rendering.DeviceQuality.Instance.Preference : 0,
+                label = i => Rendering.DeviceQuality.Label((Rendering.QualityPreference)i),
+                choose = i => Rendering.DeviceQuality.Instance?.SetPreference((Rendering.QualityPreference)i),
+            });
+            settings.Add(new Setting
+            {
                 name = "Recenter",
                 hint = "Put yourself back at this step's standing spot, facing the work.",
                 count = 1,
@@ -216,13 +227,9 @@ namespace SurgicalFoundations.UI
             if (head == null) return;
 
             snapshot = Take();
-            var fwd = Vector3.ProjectOnPlane(head.forward, Vector3.up).normalized;
-            if (fwd.sqrMagnitude < 0.01f) fwd = Vector3.forward;
-            var pos = head.position + fwd * 0.55f + Vector3.down * 0.14f;
-            root.SetPositionAndRotation(pos, Quaternion.LookRotation(pos - head.position, Vector3.up));
             canvas.worldCamera = Camera.main;
             root.gameObject.SetActive(true);
-            PanelClearance.ClearCanvas(root, head.position);
+            dock.Dock(); // on the palm; in front of the view only when there are no hands or controllers
             Select(selected);
             AudioManager.Instance?.Play(SoundId.UI_PanelOpen);
         }
@@ -244,11 +251,14 @@ namespace SurgicalFoundations.UI
             posture = Session != null ? Session.Settings.posture : Posture.Standing,
             mode = Session != null ? Session.Settings.mode : TrainingMode.Guided,
             subtitles = Session == null || Session.Settings.subtitles,
+            quality = Rendering.DeviceQuality.Instance != null ? (int)Rendering.DeviceQuality.Instance.Preference : 0,
         };
 
         static void Restore(Snapshot s)
         {
             HeightCalibrator.SetUserOffset(s.offset);
+            var q = Rendering.DeviceQuality.Instance;
+            if (q != null && (int)q.Preference != s.quality) q.SetPreference((Rendering.QualityPreference)s.quality);
             var session = Session;
             if (session == null) return;
             if (session.Settings.posture != s.posture) session.SetPosture(s.posture);
@@ -281,7 +291,6 @@ namespace SurgicalFoundations.UI
         void Update()
         {
             if (!prefsApplied && Session != null) { ApplySaved(Session); prefsApplied = true; }
-            UpdateWristButton();
         }
 
         // ─────────────────────────────── selection ───────────────────────────────
@@ -501,93 +510,6 @@ namespace SurgicalFoundations.UI
 
             // Button tints multiply the graphic's colour: white leaves it as drawn, the mint wash marks hover.
             foreach (var b in root.GetComponentsInChildren<Button>(true)) Tint(b, Color.white, Hex("C8F2EA"));
-        }
-
-        void BuildWristButton()
-        {
-            var go = new GameObject("QuickSettings_WristButton", typeof(RectTransform));
-            go.transform.SetParent(transform, false);
-            wrist = (RectTransform)go.transform;
-            wrist.sizeDelta = new Vector2(100, 100);
-            wrist.localScale = Vector3.one * PxToMetres;
-            var c = go.AddComponent<Canvas>();
-            c.renderMode = RenderMode.WorldSpace;
-            c.sortingOrder = 40;
-            go.AddComponent<TrackedDeviceGraphicRaycaster>();
-            var disc = Img(wrist, "Disc", UISprites.Circle, Hex("1E2024", 0.95f), Vector2.zero, new Vector2(96, 96));
-            Img(wrist, "Rim", UISprites.Ring(0.9f), Hex("4A4F57"), Vector2.zero, new Vector2(96, 96)).raycastTarget = false;
-            for (int i = -1; i <= 1; i++)
-                Img(wrist, "Line", null, Text, new Vector2(0, i * 13), new Vector2(38, 4)).raycastTarget = false; // ≡ as on the reference knob
-            disc.gameObject.AddComponent<Button>().onClick.AddListener(Toggle);
-        }
-
-        // Palm-facing test: shown above this (cosine of ~49°), hidden again below the lower one, and only after the
-        // state has held for a moment, so it doesn't flicker as the wrist turns through the boundary.
-        const float PalmShowDot = 0.65f, PalmHideDot = 0.4f, PalmHoldSeconds = 0.15f, PalmMaxReach = 0.75f;
-        bool palmShowing;
-        float palmPendingSince = -1f;
-
-        /// <summary>
-        /// The wrist opener appears only while the left palm is turned towards the learner (the "look at your hand"
-        /// gesture), floating just off the palm; it hides while the dial is open.
-        /// </summary>
-        void UpdateWristButton()
-        {
-            var head = LearnerRig.Head;
-            bool facing = false;
-            Vector3 centre = default, normal = default;
-            if (!IsOpen && head != null && TryLeftPalm(out centre, out normal))
-            {
-                var toHead = head.position - centre;
-                float dot = toHead.sqrMagnitude > 1e-4f ? Vector3.Dot(normal, toHead.normalized) : 0f;
-                facing = toHead.magnitude < PalmMaxReach && dot > (palmShowing ? PalmHideDot : PalmShowDot);
-            }
-
-            if (facing != palmShowing)
-            {
-                if (palmPendingSince < 0f) palmPendingSince = Time.unscaledTime;
-                if (Time.unscaledTime - palmPendingSince >= PalmHoldSeconds || IsOpen) { palmShowing = facing; palmPendingSince = -1f; }
-            }
-            else palmPendingSince = -1f;
-
-            if (wrist.gameObject.activeSelf != palmShowing) wrist.gameObject.SetActive(palmShowing);
-            if (!palmShowing || head == null) return;
-            var pos = centre + normal * 0.06f + Vector3.up * 0.02f;
-            wrist.SetPositionAndRotation(pos, Quaternion.LookRotation(pos - head.position, Vector3.up));
-            var c = wrist.GetComponent<Canvas>();
-            if (c.worldCamera == null) c.worldCamera = Camera.main;
-        }
-
-        static readonly List<XRHandSubsystem> handSubsystems = new List<XRHandSubsystem>();
-        XROrigin origin;
-
-        /// <summary>
-        /// Centre of the left palm and the direction it faces, in world space. Tracked hands: the XR Hands palm joint,
-        /// whose +Y points out of the back of the hand, so the palm faces −Y. Controllers: the side of the grip the
-        /// palm wraps round, which for the left hand is the controller's +X.
-        /// </summary>
-        bool TryLeftPalm(out Vector3 centre, out Vector3 normal)
-        {
-            centre = normal = default;
-            if (origin == null) origin = FindAnyObjectByType<XROrigin>();
-            var space = origin != null && origin.CameraFloorOffsetObject != null ? origin.CameraFloorOffsetObject.transform : null;
-
-            handSubsystems.Clear();
-            SubsystemManager.GetSubsystems(handSubsystems);
-            foreach (var hs in handSubsystems)
-            {
-                if (!hs.running || !hs.leftHand.isTracked || space == null) continue;
-                if (!hs.leftHand.GetJoint(XRHandJointID.Palm).TryGetPose(out var pose)) continue;
-                centre = space.TransformPoint(pose.position);
-                normal = -space.TransformDirection(pose.rotation * Vector3.up);
-                return true;
-            }
-
-            var controller = LearnerRig.Hand(true);
-            if (controller == null || !LearnerRig.Tracked(true)) return false;
-            centre = controller.position;
-            normal = controller.right;
-            return true;
         }
 
         // ─────────────────────────────── helpers ───────────────────────────────

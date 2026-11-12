@@ -1,0 +1,12 @@
+{
+ "asset": "thermometer_fever_a01",
+ "category": "Devices",
+ "trianglesSource": 34359,
+ "size": [
+  0.15,
+  0.049,
+  0.038
+ ],
+ "joints": [],
+ "showcaseClip": null
+}

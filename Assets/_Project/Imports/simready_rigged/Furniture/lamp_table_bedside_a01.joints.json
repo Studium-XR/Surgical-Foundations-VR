@@ -1,0 +1,36 @@
+{
+ "asset": "lamp_table_bedside_a01",
+ "category": "Furniture",
+ "trianglesSource": 30134,
+ "size": [
+  0.198,
+  0.372,
+  0.199
+ ],
+ "joints": [
+  {
+   "name": "powerbutton_01",
+   "kind": "press",
+   "node": "J_powerbutton_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.0648,
+    0.0155,
+    -0.0
+   ],
+   "parts": [
+    "powerButton_01_mesh_00"
+   ],
+   "clip": "powerbutton_01_operate"
+  }
+ ],
+ "showcaseClip": "Showcase"
+}

@@ -1,0 +1,363 @@
+{
+ "id": "trauma-bay",
+ "title": "Trauma primary survey",
+ "summary": "A motorcyclist with a bleeding thigh wound and falling blood pressure.",
+ "patientState": "awake",
+ "patientName": "Mr Daniel Okafor",
+ "equipment": [
+  {
+   "id": "monitor_patient_a01",
+   "place": "head",
+   "key": "monitor_patient_a01"
+  },
+  {
+   "id": "pendant_medical_a01",
+   "place": "head",
+   "key": "pendant_medical_a01"
+  },
+  {
+   "id": "cannulae_nasal_a01",
+   "place": "tray",
+   "key": "cannulae_nasal_a01"
+  },
+  {
+   "id": "bandage_medical_a03",
+   "place": "tray",
+   "key": "bandage_medical_a03"
+  },
+  {
+   "id": "oximeter_pulse_a01",
+   "place": "tray",
+   "key": "oximeter_pulse_a01"
+  },
+  {
+   "id": "blood_bag_a01",
+   "place": "tray",
+   "key": "blood_bag_a01"
+  },
+  {
+   "id": "warmer_infusion_a01",
+   "place": "bedside",
+   "key": "warmer_infusion_a01"
+  },
+  {
+   "id": "IV_pole_a01",
+   "place": "head",
+   "key": "IV_pole_a01"
+  },
+  {
+   "id": "syringe_a03",
+   "place": "tray",
+   "key": "syringe_a03"
+  },
+  {
+   "id": "trolley_emergency_a01",
+   "place": "foot",
+   "key": "trolley_emergency_a01"
+  },
+  {
+   "id": "ultrasound_b01",
+   "place": "bedside",
+   "key": "ultrasound_b01"
+  }
+ ],
+ "anchors": [
+  {
+   "name": "right_thigh",
+   "label": "right anterolateral thigh (donor site)",
+   "cranial": -0.4,
+   "right": 0.11,
+   "anterior": -0.03,
+   "radius": 0.07
+  },
+  {
+   "name": "ruq",
+   "label": "right upper quadrant (hepatorenal view)",
+   "cranial": 0.17,
+   "right": 0.14,
+   "anterior": -0.04,
+   "radius": 0.07
+  },
+  {
+   "name": "right_antecubital",
+   "label": "right antecubital fossa",
+   "cranial": 0.05,
+   "right": 0.26,
+   "anterior": -0.06,
+   "radius": 0.06
+  },
+  {
+   "name": "nose",
+   "label": "nose",
+   "cranial": 0.66,
+   "right": 0.0,
+   "anterior": 0.07,
+   "radius": 0.04
+  },
+  {
+   "name": "sternum",
+   "label": "sternum",
+   "cranial": 0.38,
+   "right": 0.0,
+   "anterior": 0.02,
+   "radius": 0.07
+  },
+  {
+   "name": "right_hand",
+   "label": "right hand",
+   "cranial": -0.12,
+   "right": 0.29,
+   "anterior": -0.08,
+   "radius": 0.06
+  }
+ ],
+ "cables": [
+  {
+   "key": "mon_power",
+   "label": "Monitor mains lead",
+   "from": "monitor_patient_a01",
+   "fromHeight": 0.3,
+   "fromSide": -0.25,
+   "to": "pendant_medical_a01",
+   "toHeight": 0.45,
+   "toSide": 0.0,
+   "toAnchor": "",
+   "color": "#3A3D44",
+   "length": 3.5
+  },
+  {
+   "key": "spo2",
+   "label": "Pulse oximeter probe",
+   "from": "monitor_patient_a01",
+   "fromHeight": 0.78,
+   "fromSide": -0.3,
+   "to": "",
+   "toHeight": 0.5,
+   "toSide": 0.25,
+   "toAnchor": "right_hand",
+   "color": "#4A90D9",
+   "length": 3.0
+  },
+  {
+   "key": "ecg",
+   "label": "ECG leads",
+   "from": "monitor_patient_a01",
+   "fromHeight": 0.78,
+   "fromSide": 0.0,
+   "to": "",
+   "toHeight": 0.5,
+   "toSide": 0.25,
+   "toAnchor": "sternum",
+   "color": "#D9D9D9",
+   "length": 3.0
+  },
+  {
+   "key": "nibp",
+   "label": "Blood pressure cuff",
+   "from": "monitor_patient_a01",
+   "fromHeight": 0.78,
+   "fromSide": 0.3,
+   "to": "",
+   "toHeight": 0.5,
+   "toSide": 0.25,
+   "toAnchor": "right_antecubital",
+   "color": "#7A4FD6",
+   "length": 3.0
+  },
+  {
+   "key": "oxygen",
+   "label": "Oxygen tubing",
+   "from": "pendant_medical_a01",
+   "fromHeight": 0.55,
+   "fromSide": 0.0,
+   "to": "",
+   "toHeight": 0.5,
+   "toSide": 0.25,
+   "toAnchor": "nose",
+   "color": "#E8E8E8",
+   "length": 3.5
+  }
+ ],
+ "steps": [
+  {
+   "type": "plug",
+   "title": "Plug in the patient monitor",
+   "item": "mon_power",
+   "hint": "",
+   "id": "trauma-bay-s1"
+  },
+  {
+   "type": "plug",
+   "title": "Clip the oximeter probe on a finger",
+   "item": "spo2",
+   "hint": "Pulse oximetry first: it is part of the WHO Sign In.",
+   "id": "trauma-bay-s2"
+  },
+  {
+   "type": "plug",
+   "title": "Attach the ECG leads to the chest",
+   "item": "ecg",
+   "hint": "Electrodes on the chest wall, away from the operative field.",
+   "id": "trauma-bay-s3"
+  },
+  {
+   "type": "plug",
+   "title": "Put the blood pressure cuff on the arm",
+   "item": "nibp",
+   "hint": "Right arm, cuff 2 cm above the elbow; not on the arm with the drip.",
+   "id": "trauma-bay-s4"
+  },
+  {
+   "type": "plug",
+   "title": "Give oxygen: tubing from the oxygen outlet to the patient's face",
+   "item": "oxygen",
+   "hint": "White oxygen outlet on the pendant; high-flow mask or nasal cannula.",
+   "id": "trauma-bay-s5"
+  },
+  {
+   "type": "choose",
+   "title": "First priority",
+   "prompt": "The patient is bleeding heavily from the right thigh. What comes first?",
+   "choices": [
+    {
+     "text": "Control the catastrophic haemorrhage",
+     "correct": true,
+     "feedback": "Correct: <C>ABCDE."
+    },
+    {
+     "text": "Airway assessment",
+     "correct": false,
+     "feedback": "Catastrophic bleeding comes first.",
+     "critical": false
+    },
+    {
+     "text": "Full secondary survey",
+     "correct": false,
+     "feedback": "Not now.",
+     "critical": true
+    }
+   ],
+   "hint": "",
+   "id": "trauma-bay-s6"
+  },
+  {
+   "type": "pick",
+   "title": "Take a pressure dressing",
+   "item": "bandage_medical_a03",
+   "hint": "Direct pressure, then packing; a tourniquet if that fails.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "trauma-bay-s7"
+  },
+  {
+   "type": "apply",
+   "title": "Apply firm pressure to the wound",
+   "item": "bandage_medical_a03",
+   "target": "right_thigh",
+   "hint": "Hold firm pressure.",
+   "hold": 3.0,
+   "critical": false,
+   "id": "trauma-bay-s8"
+  },
+  {
+   "type": "talk",
+   "title": "Airway: is he talking?",
+   "prompt": "Uh… my leg… it hurts…",
+   "choices": [
+    {
+     "text": "Sir, you're in hospital. What's your name? Can you tell me where it hurts?",
+     "correct": true,
+     "reply": "Daniel… my leg, and my chest hurts when I breathe.",
+     "feedback": ""
+    },
+    {
+     "text": "Don't talk, just lie still.",
+     "correct": false,
+     "feedback": "Speech tells you the airway is patent and the brain perfused.",
+     "reply": "…"
+    }
+   ],
+   "hint": "",
+   "id": "trauma-bay-s9"
+  },
+  {
+   "type": "pick",
+   "title": "Put on the pulse oximeter",
+   "item": "oximeter_pulse_a01",
+   "hint": "Monitoring: SpO2, ECG, blood pressure.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "trauma-bay-s10"
+  },
+  {
+   "type": "apply",
+   "title": "Assess breathing: listen to the chest",
+   "item": "",
+   "target": "ruq",
+   "hint": "Look, feel, listen; percuss both sides.",
+   "hold": 1.5,
+   "id": "trauma-bay-s11"
+  },
+  {
+   "type": "choose",
+   "title": "Circulation",
+   "prompt": "HR 128, BP 88/50, cool peripheries. Which fluid?",
+   "choices": [
+    {
+     "text": "Blood products early, warmed, with tranexamic acid within 3 hours",
+     "correct": true,
+     "feedback": "Correct: haemostatic resuscitation."
+    },
+    {
+     "text": "Several litres of crystalloid",
+     "correct": false,
+     "feedback": "Dilutes clotting factors and worsens bleeding.",
+     "critical": true
+    },
+    {
+     "text": "No fluids",
+     "correct": false,
+     "feedback": "He is shocked and bleeding.",
+     "critical": false
+    }
+   ],
+   "hint": "",
+   "id": "trauma-bay-s12"
+  },
+  {
+   "type": "operate",
+   "title": "Open the blood warmer",
+   "item": "warmer_infusion_a01",
+   "joint": "",
+   "open": true,
+   "hint": "Warm all blood products.",
+   "id": "trauma-bay-s13"
+  },
+  {
+   "type": "apply",
+   "title": "Two large-bore cannulas: right antecubital fossa",
+   "item": "",
+   "target": "right_antecubital",
+   "hint": "14–16 G, take bloods and a crossmatch.",
+   "hold": 1.5,
+   "id": "trauma-bay-s14"
+  },
+  {
+   "type": "pick",
+   "title": "Bedside ultrasound (eFAST)",
+   "item": "ultrasound_b01",
+   "hint": "Look for free fluid and pneumothorax.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "trauma-bay-s15"
+  },
+  {
+   "type": "confirm",
+   "title": "Disability and Exposure: GCS, pupils, glucose, full exposure, keep warm",
+   "hint": "",
+   "id": "trauma-bay-s16"
+  }
+ ],
+ "errorPenalty": 10,
+ "hintPenalty": 3
+}

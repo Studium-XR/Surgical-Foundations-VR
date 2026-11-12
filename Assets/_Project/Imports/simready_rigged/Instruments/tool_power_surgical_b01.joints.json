@@ -1,0 +1,82 @@
+{
+ "asset": "tool_power_surgical_b01",
+ "category": "Instruments",
+ "trianglesSource": 83819,
+ "size": [
+  0.253,
+  0.221,
+  0.075
+ ],
+ "joints": [
+  {
+   "name": "button_01",
+   "kind": "press",
+   "node": "J_button_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.0488,
+    0.158,
+    0.0
+   ],
+   "parts": [
+    "button_01_mesh_00"
+   ],
+   "clip": "button_01_operate"
+  },
+  {
+   "name": "button_02",
+   "kind": "press",
+   "node": "J_button_02",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.0522,
+    0.134,
+    0.0
+   ],
+   "parts": [
+    "button_02_mesh_00"
+   ],
+   "clip": "button_02_operate"
+  },
+  {
+   "name": "button_03",
+   "kind": "press",
+   "node": "J_button_03",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.0571,
+    0.0219,
+    -0.0365
+   ],
+   "parts": [
+    "button_03_mesh_00"
+   ],
+   "clip": "button_03_operate"
+  }
+ ],
+ "showcaseClip": "Showcase"
+}

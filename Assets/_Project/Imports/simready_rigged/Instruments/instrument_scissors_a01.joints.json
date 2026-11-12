@@ -1,0 +1,36 @@
+{
+ "asset": "instrument_scissors_a01",
+ "category": "Instruments",
+ "trianglesSource": 9775,
+ "size": [
+  0.172,
+  0.005,
+  0.049
+ ],
+ "joints": [
+  {
+   "name": "jaw",
+   "kind": "jaw",
+   "node": "J_jaw",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -30,
+   "max": 0,
+   "pivot": [
+    -0.0094,
+    -0.0004,
+    0.0023
+   ],
+   "parts": [
+    "scissors_02_mesh_00"
+   ],
+   "clip": "jaw_operate"
+  }
+ ],
+ "showcaseClip": "Showcase"
+}

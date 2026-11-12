@@ -43,6 +43,10 @@ namespace SurgicalFoundations.Scenario
 
             if (!SessionManager.Instance.IsRunning) SessionManager.Instance.BeginSession();
 
+            // A procedure lab runs its own steps in this theatre: no Prep → Close sequence.
+            for (int i = 0; i < UnityEngine.SceneManagement.SceneManager.sceneCount; i++)
+                if (UnityEngine.SceneManagement.SceneManager.GetSceneAt(i).name == SceneIds.ProcedureLab) yield break;
+
             // A stage already loaded (normal flow, or opened directly in the editor)? Adopt it.
             for (int i = 0; i < UnityEngine.SceneManagement.SceneManager.sceneCount; i++)
             {
@@ -65,7 +69,8 @@ namespace SurgicalFoundations.Scenario
         {
             AudioManager.Instance?.Play(SoundId.FB_StageComplete);
             EventLogger.Instance?.Log(EventClass.Info, "stage.complete", $"{Stage} complete");
-            GoTo(Stage + 1);
+            // A course lesson that is one stage of the scenario ends with that stage's result.
+            GoTo(Curriculum.CourseSession.SingleStage ? ScenarioStage.Summary : Stage + 1);
         }
 
         public void RetryStage(int stage) => GoTo((ScenarioStage)stage);

@@ -1,0 +1,58 @@
+{
+ "table_surgical_a01": {
+  "parts": {
+   "bed_01": "lift",
+   "spring_01": "lift"
+  }
+ },
+ "stapler_surgical_a01": {
+  "parts": {
+   "hand_01": "lever"
+  }
+ },
+ "instrument_hand_drill_b01": {
+  "parts": {
+   "handle_01": "turn"
+  }
+ },
+ "instrument_bone_clamp_b01": {
+  "parts": {
+   "slide_01": "plunge"
+  }
+ },
+ "instrument_caliper_a01": {
+  "parts": {
+   "depthblade_01": "plunge"
+  }
+ },
+ "instrument_nasal_forceps_b01": {
+  "parts": {
+   "actuator_01": "plunge"
+  }
+ },
+ "instrument_storage_a01": {
+  "parts": {
+   "lid_01": "lid"
+  }
+ },
+ "syringe_insulin_a01": {
+  "parts": {
+   "batcher_01": "plunge"
+  }
+ },
+ "syringe_insulin_a02": {
+  "parts": {
+   "batcher_01": "plunge"
+  }
+ },
+ "syringe_insulin_b01": {
+  "parts": {
+   "batched_01": "plunge"
+  }
+ },
+ "pump_infusion_a01": {
+  "parts": {
+   "pump_01": "door"
+  }
+ }
+}

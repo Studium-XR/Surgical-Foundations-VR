@@ -1,0 +1,82 @@
+{
+ "asset": "light_surgical_ceiling_arm_b01",
+ "category": "Lighting",
+ "trianglesSource": 306691,
+ "size": [
+  1.159,
+  0.611,
+  0.456
+ ],
+ "joints": [
+  {
+   "name": "arm_02",
+   "kind": "swing",
+   "node": "J_arm_02",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -60,
+   "max": 60,
+   "pivot": [
+    -0.1109,
+    0.2264,
+    -0.023
+   ],
+   "parts": [
+    "arm_02_mesh_00"
+   ],
+   "clip": "arm_02_operate"
+  },
+  {
+   "name": "arm_01",
+   "kind": "swing",
+   "node": "J_arm_01",
+   "parent": "J_arm_02",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -60,
+   "max": 60,
+   "pivot": [
+    -0.108,
+    0.397,
+    0.0
+   ],
+   "parts": [
+    "arm_01_mesh_00"
+   ],
+   "clip": "arm_01_operate"
+  },
+  {
+   "name": "arm_03",
+   "kind": "swing",
+   "node": "J_arm_03",
+   "parent": "J_arm_02",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -60,
+   "max": 60,
+   "pivot": [
+    0.1428,
+    0.2013,
+    0.0712
+   ],
+   "parts": [
+    "arm_03_mesh_00"
+   ],
+   "clip": "arm_03_operate"
+  }
+ ],
+ "showcaseClip": "Showcase"
+}

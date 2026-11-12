@@ -1,0 +1,36 @@
+{
+ "asset": "container_system_sterilising_e01",
+ "category": "Sterile",
+ "trianglesSource": 85414,
+ "size": [
+  0.508,
+  0.147,
+  0.313
+ ],
+ "joints": [
+  {
+   "name": "lid_01",
+   "kind": "lid",
+   "node": "J_lid_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -100,
+   "max": 0,
+   "pivot": [
+    -0.0,
+    0.1468,
+    -0.1565
+   ],
+   "parts": [
+    "lid_01_mesh_00"
+   ],
+   "clip": "lid_01_operate"
+  }
+ ],
+ "showcaseClip": "Showcase"
+}

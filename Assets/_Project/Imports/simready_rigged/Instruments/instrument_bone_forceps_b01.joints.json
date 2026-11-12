@@ -1,0 +1,36 @@
+{
+ "asset": "instrument_bone_forceps_b01",
+ "category": "Instruments",
+ "trianglesSource": 12336,
+ "size": [
+  0.173,
+  0.023,
+  0.104
+ ],
+ "joints": [
+  {
+   "name": "jaw",
+   "kind": "jaw",
+   "node": "J_jaw",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -30,
+   "max": 0,
+   "pivot": [
+    -0.0448,
+    0.004,
+    0.0058
+   ],
+   "parts": [
+    "handleRight_01_mesh_00"
+   ],
+   "clip": "jaw_operate"
+  }
+ ],
+ "showcaseClip": "Showcase"
+}

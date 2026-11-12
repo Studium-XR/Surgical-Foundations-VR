@@ -117,3 +117,20 @@ SoundBanksInfo.xml/[Ll]ibrary/
 *.bin
 
 # Claude Code
+# SimReady raw downloads (re-fetch with Tools/SimReady/download_simready.py)
+Tools/SimReady/_raw/
+Tools/SimReady/_work/
+
+# Node / Husky
+node_modules/
+npm-debug.log*
+
+# Plastic SCM
+.plastic/
+
+# Unity Crash/Recovery
+Assets/_Recovery/
+
+# Modern Solution format
+*.slnx
+

@@ -1,0 +1,128 @@
+{
+ "asset": "tool_power_surgical_c01",
+ "category": "Instruments",
+ "trianglesSource": 78602,
+ "size": [
+  0.285,
+  0.305,
+  0.087
+ ],
+ "joints": [
+  {
+   "name": "button_01",
+   "kind": "press",
+   "node": "J_button_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.0334,
+    0.1852,
+    0.0002
+   ],
+   "parts": [
+    "button_01_mesh_00"
+   ],
+   "clip": "button_01_operate"
+  },
+  {
+   "name": "button_02",
+   "kind": "press",
+   "node": "J_button_02",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    0.0076,
+    0.1573,
+    0.0166
+   ],
+   "parts": [
+    "button_02_mesh_00"
+   ],
+   "clip": "button_02_operate"
+  },
+  {
+   "name": "button_03",
+   "kind": "press",
+   "node": "J_button_03",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    0.0076,
+    0.1573,
+    -0.0166
+   ],
+   "parts": [
+    "button_03_mesh_00"
+   ],
+   "clip": "button_03_operate"
+  },
+  {
+   "name": "button_04",
+   "kind": "press",
+   "node": "J_button_04",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.0167,
+    0.0261,
+    0.0339
+   ],
+   "parts": [
+    "button_04_mesh_00"
+   ],
+   "clip": "button_04_operate"
+  },
+  {
+   "name": "button_05",
+   "kind": "press",
+   "node": "J_button_05",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.0167,
+    0.0261,
+    -0.0339
+   ],
+   "parts": [
+    "button_05_mesh_00"
+   ],
+   "clip": "button_05_operate"
+  }
+ ],
+ "showcaseClip": "Showcase"
+}

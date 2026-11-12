@@ -1,0 +1,500 @@
+{
+ "id": "open-appendicectomy",
+ "title": "Open appendicectomy",
+ "summary": "A gridiron/Lanz approach to an inflamed appendix.",
+ "patientState": "anaesthetised",
+ "patientName": "Mr Daniel Okafor",
+ "equipment": [
+  {
+   "id": "monitor_patient_a01",
+   "place": "head",
+   "key": "monitor_patient_a01"
+  },
+  {
+   "id": "pendant_medical_a01",
+   "place": "head",
+   "key": "pendant_medical_a01"
+  },
+  {
+   "id": "unit_electrosurgical_a01",
+   "place": "bedside",
+   "key": "unit_electrosurgical_a01"
+  },
+  {
+   "id": "pump_suction_surgical_a01",
+   "place": "head",
+   "key": "pump_suction_surgical_a01"
+  },
+  {
+   "id": "disinfectant_a01",
+   "place": "tray",
+   "key": "disinfectant_a01"
+  },
+  {
+   "id": "tool_pen_surgical_marking_a01",
+   "place": "tray",
+   "key": "tool_pen_surgical_marking_a01"
+  },
+  {
+   "id": "instrument_scalpel_handle_a01",
+   "place": "tray",
+   "key": "instrument_scalpel_handle_a01"
+  },
+  {
+   "id": "instrument_forceps_a01",
+   "place": "tray",
+   "key": "instrument_forceps_a01"
+  },
+  {
+   "id": "instrument_artery_forceps_b01",
+   "place": "tray",
+   "key": "instrument_artery_forceps_b01"
+  },
+  {
+   "id": "instrument_retractor_a01",
+   "place": "tray",
+   "key": "instrument_retractor_a01"
+  },
+  {
+   "id": "instrument_scissors_a01",
+   "place": "tray",
+   "key": "instrument_scissors_a01"
+  },
+  {
+   "id": "instrument_suction_a01",
+   "place": "tray",
+   "key": "instrument_suction_a01"
+  },
+  {
+   "id": "needle_surgical_a01",
+   "place": "tray",
+   "key": "needle_surgical_a01"
+  },
+  {
+   "id": "medical_sample_bag_a01",
+   "place": "tray",
+   "key": "medical_sample_bag_a01"
+  }
+ ],
+ "anchors": [
+  {
+   "name": "rif",
+   "label": "right iliac fossa (McBurney's point)",
+   "cranial": -0.09,
+   "right": 0.08,
+   "anterior": -0.01,
+   "radius": 0.06
+  },
+  {
+   "name": "lif",
+   "label": "left iliac fossa",
+   "cranial": -0.09,
+   "right": -0.08,
+   "anterior": -0.01,
+   "radius": 0.06
+  },
+  {
+   "name": "umbilicus",
+   "label": "umbilicus",
+   "cranial": 0.0,
+   "right": 0.0,
+   "anterior": 0.0,
+   "radius": 0.05
+  },
+  {
+   "name": "pad_site",
+   "label": "right thigh, patient plate site",
+   "cranial": -0.36,
+   "right": 0.1,
+   "anterior": -0.03,
+   "radius": 0.08
+  },
+  {
+   "name": "right_hand",
+   "label": "right hand",
+   "cranial": -0.12,
+   "right": 0.29,
+   "anterior": -0.08,
+   "radius": 0.06
+  },
+  {
+   "name": "sternum",
+   "label": "sternum",
+   "cranial": 0.38,
+   "right": 0.0,
+   "anterior": 0.02,
+   "radius": 0.07
+  },
+  {
+   "name": "right_antecubital",
+   "label": "right antecubital fossa",
+   "cranial": 0.05,
+   "right": 0.26,
+   "anterior": -0.06,
+   "radius": 0.06
+  }
+ ],
+ "cables": [
+  {
+   "key": "mon_power",
+   "label": "Monitor mains lead",
+   "from": "monitor_patient_a01",
+   "fromHeight": 0.3,
+   "fromSide": -0.25,
+   "to": "pendant_medical_a01",
+   "toHeight": 0.45,
+   "toSide": 0.0,
+   "toAnchor": "",
+   "color": "#3A3D44",
+   "length": 3.5
+  },
+  {
+   "key": "spo2",
+   "label": "Pulse oximeter probe",
+   "from": "monitor_patient_a01",
+   "fromHeight": 0.78,
+   "fromSide": -0.3,
+   "to": "",
+   "toHeight": 0.5,
+   "toSide": 0.25,
+   "toAnchor": "right_hand",
+   "color": "#4A90D9",
+   "length": 3.0
+  },
+  {
+   "key": "ecg",
+   "label": "ECG leads",
+   "from": "monitor_patient_a01",
+   "fromHeight": 0.78,
+   "fromSide": 0.0,
+   "to": "",
+   "toHeight": 0.5,
+   "toSide": 0.25,
+   "toAnchor": "sternum",
+   "color": "#D9D9D9",
+   "length": 3.0
+  },
+  {
+   "key": "nibp",
+   "label": "Blood pressure cuff",
+   "from": "monitor_patient_a01",
+   "fromHeight": 0.78,
+   "fromSide": 0.3,
+   "to": "",
+   "toHeight": 0.5,
+   "toSide": 0.25,
+   "toAnchor": "right_antecubital",
+   "color": "#7A4FD6",
+   "length": 3.0
+  },
+  {
+   "key": "esu_power",
+   "label": "Diathermy mains lead",
+   "from": "unit_electrosurgical_a01",
+   "fromHeight": 0.3,
+   "fromSide": -0.25,
+   "to": "pendant_medical_a01",
+   "toHeight": 0.45,
+   "toSide": -0.3,
+   "toAnchor": "",
+   "color": "#3A3D44",
+   "length": 4.0
+  },
+  {
+   "key": "return_pad",
+   "label": "Return electrode (patient plate)",
+   "from": "unit_electrosurgical_a01",
+   "fromHeight": 0.55,
+   "fromSide": 0.25,
+   "to": "",
+   "toHeight": 0.5,
+   "toSide": 0.25,
+   "toAnchor": "pad_site",
+   "color": "#2E7BD6",
+   "length": 3.2
+  },
+  {
+   "key": "suction_vacuum",
+   "label": "Suction line to the wall vacuum",
+   "from": "pump_suction_surgical_a01",
+   "fromHeight": 0.75,
+   "fromSide": -0.25,
+   "to": "pendant_medical_a01",
+   "toHeight": 0.6,
+   "toSide": 0.0,
+   "toAnchor": "",
+   "color": "#F2C230",
+   "length": 3.5
+  },
+  {
+   "key": "suction_power",
+   "label": "Suction unit mains lead",
+   "from": "pump_suction_surgical_a01",
+   "fromHeight": 0.25,
+   "fromSide": -0.25,
+   "to": "pendant_medical_a01",
+   "toHeight": 0.45,
+   "toSide": 0.3,
+   "toAnchor": "",
+   "color": "#3A3D44",
+   "length": 3.5
+  }
+ ],
+ "steps": [
+  {
+   "type": "plug",
+   "title": "Plug in the patient monitor",
+   "item": "mon_power",
+   "hint": "",
+   "id": "open-appendicectomy-s1"
+  },
+  {
+   "type": "plug",
+   "title": "Clip the oximeter probe on a finger",
+   "item": "spo2",
+   "hint": "Pulse oximetry first: it is part of the WHO Sign In.",
+   "id": "open-appendicectomy-s2"
+  },
+  {
+   "type": "plug",
+   "title": "Attach the ECG leads to the chest",
+   "item": "ecg",
+   "hint": "Electrodes on the chest wall, away from the operative field.",
+   "id": "open-appendicectomy-s3"
+  },
+  {
+   "type": "plug",
+   "title": "Put the blood pressure cuff on the arm",
+   "item": "nibp",
+   "hint": "Right arm, cuff 2 cm above the elbow; not on the arm with the drip.",
+   "id": "open-appendicectomy-s4"
+  },
+  {
+   "type": "plug",
+   "title": "Plug the diathermy generator into the pendant",
+   "item": "esu_power",
+   "hint": "Mains lead from the generator into a socket on the ceiling pendant.",
+   "id": "open-appendicectomy-s5"
+  },
+  {
+   "type": "choose",
+   "title": "Where does the patient plate go?",
+   "prompt": "Where should the return electrode (patient plate) be placed?",
+   "choices": [
+    {
+     "text": "On a well-perfused muscle mass close to the operation, such as the thigh, on dry hair-free skin",
+     "correct": true,
+     "feedback": "Correct: a large, well-perfused contact area keeps the current density low."
+    },
+    {
+     "text": "Over a bony prominence",
+     "correct": false,
+     "feedback": "Poor contact: a burn risk at the plate.",
+     "critical": false
+    },
+    {
+     "text": "Over a metal implant",
+     "correct": false,
+     "feedback": "Current concentrates in the metal.",
+     "critical": true
+    },
+    {
+     "text": "Anywhere on the patient",
+     "correct": false,
+     "feedback": "Distance and contact both matter.",
+     "critical": false
+    }
+   ],
+   "hint": "",
+   "id": "open-appendicectomy-s6"
+  },
+  {
+   "type": "plug",
+   "title": "Apply the patient plate to the thigh",
+   "item": "return_pad",
+   "hint": "Full, flat contact on the thigh; check the generator's contact alarm clears.",
+   "id": "open-appendicectomy-s7"
+  },
+  {
+   "type": "plug",
+   "title": "Connect the suction to the wall vacuum",
+   "item": "suction_vacuum",
+   "hint": "Canister tubing to the yellow vacuum outlet on the pendant.",
+   "id": "open-appendicectomy-s8"
+  },
+  {
+   "type": "plug",
+   "title": "Plug in the suction unit",
+   "item": "suction_power",
+   "hint": "",
+   "id": "open-appendicectomy-s9"
+  },
+  {
+   "type": "choose",
+   "title": "WHO Time Out",
+   "prompt": "Before skin incision for an appendicectomy, the team pauses. What must be confirmed aloud?",
+   "choices": [
+    {
+     "text": "Patient identity, the procedure, the site and side, and antibiotics given in the last 60 minutes",
+     "correct": true,
+     "feedback": "Correct: the Time Out confirms who, what and where, and that prophylaxis is in."
+    },
+    {
+     "text": "Only that the consent form is signed",
+     "correct": false,
+     "feedback": "The signature alone does not prevent wrong-site surgery.",
+     "critical": false
+    },
+    {
+     "text": "Nothing: the site was marked on the ward",
+     "correct": false,
+     "feedback": "Marking does not replace the Time Out.",
+     "critical": true
+    }
+   ],
+   "hint": "The site is the right iliac fossa. All three phases of the WHO checklist are mandatory.",
+   "id": "open-appendicectomy-s10"
+  },
+  {
+   "type": "pick",
+   "title": "Pick up the skin preparation",
+   "item": "disinfectant_a01",
+   "hint": "Alcoholic chlorhexidine, applied from the incision site outwards.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "open-appendicectomy-s11"
+  },
+  {
+   "type": "apply",
+   "title": "Prepare the skin over the right iliac fossa",
+   "item": "disinfectant_a01",
+   "target": "rif",
+   "hint": "Centre outwards, wider than the incision; let it dry fully before drapes and diathermy (it is flammable).",
+   "hold": 2.0,
+   "critical": false,
+   "id": "open-appendicectomy-s12"
+  },
+  {
+   "type": "pick",
+   "title": "Take the scalpel",
+   "item": "instrument_scalpel_handle_a01",
+   "hint": "No. 10 blade.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "open-appendicectomy-s13"
+  },
+  {
+   "type": "apply",
+   "title": "Incise over McBurney's point",
+   "item": "instrument_scalpel_handle_a01",
+   "target": "rif",
+   "hint": "One third of the way from the anterior superior iliac spine to the umbilicus.",
+   "hold": 1.5,
+   "critical": true,
+   "id": "open-appendicectomy-s14"
+  },
+  {
+   "type": "choose",
+   "title": "The muscle layers",
+   "prompt": "How are the abdominal wall muscles opened in a gridiron incision?",
+   "choices": [
+    {
+     "text": "Split in the line of their fibres",
+     "correct": true,
+     "feedback": "Correct: splitting preserves strength and nerves."
+    },
+    {
+     "text": "Cut across with diathermy",
+     "correct": false,
+     "feedback": "Cutting across weakens the wall and risks hernia.",
+     "critical": false
+    },
+    {
+     "text": "Retracted without opening",
+     "correct": false,
+     "feedback": "You can't reach the peritoneum that way.",
+     "critical": false
+    }
+   ],
+   "hint": "",
+   "id": "open-appendicectomy-s15"
+  },
+  {
+   "type": "pick",
+   "title": "Insert the retractor",
+   "item": "instrument_retractor_a01",
+   "hint": "Langenbeck or rake retractors hold the split muscle.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "open-appendicectomy-s16"
+  },
+  {
+   "type": "apply",
+   "title": "Retract the wound",
+   "item": "instrument_retractor_a01",
+   "target": "rif",
+   "hint": "Gentle, even traction.",
+   "hold": 1.5,
+   "critical": false,
+   "id": "open-appendicectomy-s17"
+  },
+  {
+   "type": "choose",
+   "title": "Find the appendix",
+   "prompt": "The caecum is delivered. How do you find the appendix base?",
+   "choices": [
+    {
+     "text": "Follow the taeniae coli to where they converge",
+     "correct": true,
+     "feedback": "Correct."
+    },
+    {
+     "text": "Feel for the hardest loop",
+     "correct": false,
+     "feedback": "Unreliable.",
+     "critical": false
+    },
+    {
+     "text": "Look for the ileocaecal valve",
+     "correct": false,
+     "feedback": "Not a reliable landmark.",
+     "critical": false
+    }
+   ],
+   "hint": "",
+   "id": "open-appendicectomy-s18"
+  },
+  {
+   "type": "pick",
+   "title": "Clamp the mesoappendix",
+   "item": "instrument_artery_forceps_b01",
+   "hint": "Artery forceps on the mesoappendix, then ligate.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "open-appendicectomy-s19"
+  },
+  {
+   "type": "confirm",
+   "title": "Crush, ligate and divide the appendix base",
+   "hint": "Ligate at the base; check for bleeding.",
+   "id": "open-appendicectomy-s20"
+  },
+  {
+   "type": "pick",
+   "title": "Send the appendix for histology",
+   "item": "medical_sample_bag_a01",
+   "hint": "Label at once.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "open-appendicectomy-s21"
+  },
+  {
+   "type": "confirm",
+   "title": "Close in layers and count",
+   "hint": "The closing count must be correct before skin closure.",
+   "id": "open-appendicectomy-s22"
+  }
+ ],
+ "errorPenalty": 10,
+ "hintPenalty": 3
+}

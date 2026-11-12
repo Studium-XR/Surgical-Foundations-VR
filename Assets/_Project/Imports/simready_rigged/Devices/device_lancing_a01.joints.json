@@ -1,0 +1,59 @@
+{
+ "asset": "device_lancing_a01",
+ "category": "Devices",
+ "trianglesSource": 29512,
+ "size": [
+  0.147,
+  0.018,
+  0.017
+ ],
+ "joints": [
+  {
+   "name": "button_01",
+   "kind": "press",
+   "node": "J_button_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.0169,
+    0.0161,
+    0.0
+   ],
+   "parts": [
+    "button_01_mesh_01"
+   ],
+   "clip": "button_01_operate"
+  },
+  {
+   "name": "button_02",
+   "kind": "press",
+   "node": "J_button_02",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    0.0561,
+    0.0087,
+    0.0
+   ],
+   "parts": [
+    "button_02_mesh_01"
+   ],
+   "clip": "button_02_operate"
+  }
+ ],
+ "showcaseClip": "Showcase"
+}

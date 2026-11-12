@@ -1,0 +1,31 @@
+{
+  "name": "surgical-foundations-vr",
+  "version": "1.0.0",
+  "description": "Virtual-reality laparoscopic operating theatre simulation for Meta Quest 3",
+  "scripts": {
+    "prepare": "husky",
+    "check:meta": "node scripts/check-meta.js",
+    "check:filesize": "node scripts/check-filesize.js",
+    "check:hygiene": "node scripts/check-hygiene.js",
+    "check:compile": "node scripts/check-compile.js",
+    "pre-commit": "npm run check:hygiene && npm run check:filesize && npm run check:meta",
+    "pre-push": "npm run check:compile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Studium-XR/Surgical-Foundations-VR.git"
+  },
+  "keywords": [
+    "unity",
+    "vr",
+    "quest-3",
+    "medical-simulation",
+    "openxr",
+    "csharp"
+  ],
+  "author": "Studium XR",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "husky": "^9.1.7"
+  }
+}

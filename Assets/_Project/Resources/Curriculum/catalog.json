@@ -1,0 +1,3911 @@
+{
+ "version": 2,
+ "programs": [
+  {
+   "id": "surgical-foundations",
+   "title": "Surgical Foundations",
+   "summary": "Everything a medical student or new trainee needs before their first theatre list.",
+   "courseIds": [
+    "sf-101",
+    "sf-102",
+    "sf-103",
+    "sf-104",
+    "sf-105",
+    "sf-106",
+    "sf-107",
+    "sf-108"
+   ]
+  },
+  {
+   "id": "minimally-invasive-surgery",
+   "title": "Minimally Invasive Surgery",
+   "summary": "From the laparoscopic tower to a complete cholecystectomy, mapped to FLS.",
+   "courseIds": [
+    "mis-201",
+    "mis-202",
+    "mis-203",
+    "mis-204",
+    "mis-205"
+   ]
+  },
+  {
+   "id": "general-surgery-procedures",
+   "title": "General Surgery Procedures",
+   "summary": "The core open operations of general surgical training.",
+   "courseIds": [
+    "gs-301",
+    "gs-302",
+    "gs-303",
+    "gs-304",
+    "gs-305"
+   ]
+  },
+  {
+   "id": "trauma-and-emergency-surgery",
+   "title": "Trauma and Emergency Surgery",
+   "summary": "Life-saving procedures for the injured and acutely unwell patient.",
+   "courseIds": [
+    "tr-401",
+    "tr-402",
+    "tr-403",
+    "tr-404"
+   ]
+  },
+  {
+   "id": "surgical-specialties",
+   "title": "Surgical Specialties",
+   "summary": "First steps into orthopaedics, vascular, plastics, ENT, urology, cardiothoracic, neurosurgery and obstetrics.",
+   "courseIds": [
+    "or-501",
+    "vs-502",
+    "pl-503",
+    "en-504",
+    "ur-505",
+    "ct-506",
+    "ns-507",
+    "og-508"
+   ]
+  },
+  {
+   "id": "perioperative-practice",
+   "title": "Perioperative Practice",
+   "summary": "For scrub practitioners, theatre nurses and ODPs.",
+   "courseIds": [
+    "pp-601",
+    "pp-602",
+    "sf-101",
+    "sf-104"
+   ]
+  }
+ ],
+ "courses": [
+  {
+   "id": "sf-101",
+   "code": "SF-101",
+   "title": "Operating Theatre Essentials",
+   "subtitle": "Find your way round theatre, work safely in the team and keep the field sterile.",
+   "specialty": "Surgical Foundations",
+   "level": "Foundation",
+   "description": "Find your way round theatre, work safely in the team and keep the field sterile.",
+   "outcomes": [
+    "Describe the layout of an operating theatre and the role of each team member",
+    "Run the three phases of the WHO Surgical Safety Checklist",
+    "Perform a surgical hand scrub, closed gowning and gloving",
+    "Set up and maintain a sterile field and recognise when it is breached",
+    "Agree an opening count and complete a closing count"
+   ],
+   "prerequisites": [],
+   "skills": [
+    "Surgical scrub",
+    "Closed gloving",
+    "Sterile field",
+    "Counts",
+    "WHO checklist"
+   ],
+   "frameworks": [
+    "ACS/APDS/ASE Resident Prep",
+    "ISCP Core Surgical Training",
+    "WHO Surgical Safety Checklist"
+   ],
+   "hours": 6,
+   "cmeCredits": 6,
+   "modules": [
+    {
+     "title": "The theatre and the team",
+     "summary": "Who does what, where, and why it matters to the patient.",
+     "lessons": [
+      {
+       "title": "Theatre layout and zones",
+       "kind": "Reading",
+       "minutes": 8,
+       "summary": "An operating suite is divided into unrestricted, semi-restricted and restricted zones.",
+       "content": "An operating suite is divided into unrestricted, semi-restricted and restricted zones. Theatre attire is worn in the semi-restricted zone; masks are added in the restricted zone, where the sterile field is open. Air flows from the cleanest area (over the table) outwards, so doors stay closed and traffic is kept to a minimum. Learn where the scrub sink, anaesthetic room, sterile store and dirty utility sit in your own hospital: on day one you should be able to reach each without crossing the sterile field.",
+       "id": "sf-101-m1-l1"
+      },
+      {
+       "title": "Roles in the theatre team",
+       "kind": "Reading",
+       "minutes": 8,
+       "summary": "The operating surgeon and assistant are scrubbed; the scrub practitioner owns the instruments, the sterile field and the counts; the circulating practitioner is unscrubbed and fetches, opens and records; the anaesthetist and anaesthetic practitioner own the airway, drugs and monitoring.",
+       "content": "The operating surgeon and assistant are scrubbed; the scrub practitioner owns the instruments, the sterile field and the counts; the circulating practitioner is unscrubbed and fetches, opens and records; the anaesthetist and anaesthetic practitioner own the airway, drugs and monitoring. Anyone, including a student, may and must speak up about a sterility breach or a safety concern.",
+       "id": "sf-101-m1-l2"
+      },
+      {
+       "title": "Meet the theatre equipment",
+       "kind": "Explore",
+       "minutes": 10,
+       "summary": "Walk round the core equipment of a theatre; open, raise and move each working part.",
+       "equipment": [
+        "table_surgical_a01",
+        "light_surgical_ceiling_arm_a01",
+        "anesthesia_machine_a01",
+        "monitor_patient_a01",
+        "video_system_a01",
+        "trolley_instrument_b01",
+        "pendant_medical_a01",
+        "pump_suction_surgical_a01",
+        "unit_electrosurgical_a01"
+       ],
+       "id": "sf-101-m1-l3"
+      },
+      {
+       "title": "Set up the theatre equipment",
+       "kind": "VrLab",
+       "minutes": 15,
+       "summary": "Plug in the generator, monitor, suction and tower; put the monitoring and the diathermy plate on the patient.",
+       "simulationId": "theatre-setup",
+       "passScore": 70,
+       "id": "sf-101-m1-l4"
+      },
+      {
+       "title": "Check: theatre and team",
+       "kind": "Quiz",
+       "minutes": 6,
+       "summary": "2 questions with feedback.",
+       "questions": [
+        {
+         "prompt": "Who is primarily responsible for the instrument and swab count?",
+         "options": [
+          {
+           "text": "The scrub practitioner, with the circulator",
+           "correct": true,
+           "feedback": "The scrub and circulating practitioners count aloud together and record it; the surgeon is told and confirms."
+          },
+          {
+           "text": "The anaesthetist",
+           "correct": false,
+           "feedback": "Not quite: The scrub and circulating practitioners count aloud together and record it; the surgeon is told and confirms."
+          },
+          {
+           "text": "The operating surgeon alone",
+           "correct": false,
+           "feedback": "The surgeon confirms, but the count is run by the scrub and circulating practitioners."
+          }
+         ],
+         "id": "sf-101-m1-l5-q1"
+        },
+        {
+         "prompt": "A student notices a gloved assistant touch the unsterile light handle. What should they do?",
+         "options": [
+          {
+           "text": "Say so immediately",
+           "correct": true,
+           "feedback": "Any breach is called out at once so the glove can be changed before it touches the field."
+          },
+          {
+           "text": "Say nothing; students should not interrupt",
+           "correct": false,
+           "feedback": "Everyone in theatre has a duty to speak up about a breach."
+          },
+          {
+           "text": "Mention it at the end of the case",
+           "correct": false,
+           "feedback": "By then the contamination may have reached the wound."
+          }
+         ],
+         "id": "sf-101-m1-l5-q2"
+        }
+       ],
+       "passScore": 70,
+       "id": "sf-101-m1-l5"
+      }
+     ],
+     "id": "sf-101-m1"
+    },
+    {
+     "title": "Safety checklist",
+     "summary": "Sign in, time out, sign out.",
+     "lessons": [
+      {
+       "title": "The WHO Surgical Safety Checklist",
+       "kind": "Reading",
+       "minutes": 10,
+       "summary": "Sign In happens before induction: identity, site, procedure and consent are confirmed, the site is marked, the anaesthesia machine and pulse oximeter are checked, and allergies, airway risk and expected blood loss are reviewed.",
+       "content": "Sign In happens before induction: identity, site, procedure and consent are confirmed, the site is marked, the anaesthesia machine and pulse oximeter are checked, and allergies, airway risk and expected blood loss are reviewed. Time Out happens before skin incision: the whole team introduces itself, confirms patient, site and procedure, antibiotic prophylaxis within the last 60 minutes, anticipated critical events and imaging. Sign Out happens before the patient leaves: the procedure recorded, counts correct, specimens labelled, equipment problems and recovery concerns handed over.",
+       "id": "sf-101-m2-l1"
+      },
+      {
+       "title": "Check: the checklist",
+       "kind": "Quiz",
+       "minutes": 6,
+       "summary": "2 questions with feedback.",
+       "questions": [
+        {
+         "prompt": "When is the Time Out performed?",
+         "options": [
+          {
+           "text": "Immediately before skin incision",
+           "correct": true,
+           "feedback": "Time Out is the last pause before the knife touches skin."
+          },
+          {
+           "text": "Before induction of anaesthesia",
+           "correct": false,
+           "feedback": "That is the Sign In."
+          },
+          {
+           "text": "Before the patient leaves theatre",
+           "correct": false,
+           "feedback": "That is the Sign Out."
+          }
+         ],
+         "id": "sf-101-m2-l2-q1"
+        },
+        {
+         "prompt": "Antibiotic prophylaxis for most clean-contaminated cases is ideally given…",
+         "options": [
+          {
+           "text": "Within 60 minutes before incision",
+           "correct": true,
+           "feedback": "Tissue levels must be adequate at the moment of incision; most agents are given within 60 minutes before it."
+          },
+          {
+           "text": "After closure",
+           "correct": false,
+           "feedback": "Too late to be in the tissues when contamination happens."
+          },
+          {
+           "text": "The evening before surgery",
+           "correct": false,
+           "feedback": "Not quite: Tissue levels must be adequate at the moment of incision; most agents are given within 60 minutes before it."
+          }
+         ],
+         "id": "sf-101-m2-l2-q2"
+        }
+       ],
+       "passScore": 70,
+       "id": "sf-101-m2-l2"
+      }
+     ],
+     "id": "sf-101-m2"
+    },
+    {
+     "title": "Scrubbing in",
+     "summary": "Hand antisepsis, gown and gloves.",
+     "lessons": [
+      {
+       "title": "Surgical hand antisepsis",
+       "kind": "Reading",
+       "minutes": 8,
+       "summary": "Remove jewellery, keep nails short and unvarnished.",
+       "content": "Remove jewellery, keep nails short and unvarnished. A first scrub of the day starts with a wash to remove debris, cleaning under the nails. With an antiseptic scrub (chlorhexidine or povidone-iodine) scrub hands then forearms to 2 cm above the elbow for the time in your local policy (typically 2–5 minutes), keeping hands above elbows so water runs off the elbows. Alcohol-based surgical hand rubs are an accepted alternative on clean, dry hands. Dry with a sterile towel from fingertips to elbow, one side of the towel per arm.",
+       "id": "sf-101-m3-l1"
+      },
+      {
+       "title": "Scrub at the sink",
+       "kind": "VrLab",
+       "minutes": 15,
+       "summary": "Scrub with the demonstration hands; each step is recognised from your hand movement.",
+       "simulationId": "lap-prep",
+       "passScore": 70,
+       "id": "sf-101-m3-l2"
+      },
+      {
+       "title": "Closed gowning and gloving",
+       "kind": "Reading",
+       "minutes": 8,
+       "summary": "Pick up the gown by the inside of the neckband, let it unfold away from you, slide your arms in without letting your hands leave the cuffs.",
+       "content": "Pick up the gown by the inside of the neckband, let it unfold away from you, slide your arms in without letting your hands leave the cuffs. Glove through the gown sleeve (closed technique), then tie the gown with a sterile turn. Your sterile area is the front of the gown from chest to table level and the sleeves from 5 cm above the elbow to the cuff: hands stay in it, clasped in front.",
+       "id": "sf-101-m3-l3"
+      },
+      {
+       "title": "Check: scrubbing",
+       "kind": "Quiz",
+       "minutes": 6,
+       "summary": "2 questions with feedback.",
+       "questions": [
+        {
+         "prompt": "Which part of a sterile gown is considered sterile?",
+         "options": [
+          {
+           "text": "Front from chest to table level, and the sleeves",
+           "correct": true,
+           "feedback": "Front chest-to-table and sleeves to just above the elbow are the sterile zone."
+          },
+          {
+           "text": "The whole gown including the back",
+           "correct": false,
+           "feedback": "The back cannot be watched and is not sterile."
+          },
+          {
+           "text": "Only the cuffs",
+           "correct": false,
+           "feedback": "Not quite: Front chest-to-table and sleeves to just above the elbow are the sterile zone."
+          }
+         ],
+         "id": "sf-101-m3-l4-q1"
+        },
+        {
+         "prompt": "During the scrub, hands are held…",
+         "options": [
+          {
+           "text": "Above the elbows",
+           "correct": true,
+           "feedback": "Water must drain from the clean hands towards the elbows."
+          },
+          {
+           "text": "Below the elbows",
+           "correct": false,
+           "feedback": "Water would run from the unscrubbed arm onto the hands."
+          },
+          {
+           "text": "At any height as long as the brush is used",
+           "correct": false,
+           "feedback": "Not quite: Water must drain from the clean hands towards the elbows."
+          }
+         ],
+         "id": "sf-101-m3-l4-q2"
+        }
+       ],
+       "passScore": 70,
+       "id": "sf-101-m3-l4"
+      }
+     ],
+     "id": "sf-101-m3"
+    },
+    {
+     "title": "Sterile field and counts",
+     "summary": "Back table, drapes and counts.",
+     "lessons": [
+      {
+       "title": "Maintaining the sterile field",
+       "kind": "Reading",
+       "minutes": 8,
+       "summary": "Only sterile items touch sterile items.",
+       "content": "Only sterile items touch sterile items. Sterile tables are sterile only at table height; anything that drops below the waist or the table edge is contaminated. Never turn your back on the field, never reach across an unsterile area, and keep two sterile people front-to-front or back-to-back when passing. If in doubt, consider it contaminated and replace it.",
+       "id": "sf-101-m4-l1"
+      },
+      {
+       "title": "Counts",
+       "kind": "Reading",
+       "minutes": 8,
+       "summary": "Swabs, sharps and instruments are counted aloud by two people before the procedure (the opening count), before closing a cavity, before skin closure and at the end.",
+       "content": "Swabs, sharps and instruments are counted aloud by two people before the procedure (the opening count), before closing a cavity, before skin closure and at the end. Swabs are counted in their packs of five, separated, with the radio-opaque marker visible. A discrepancy stops closure until the item is found or an X-ray is taken.",
+       "id": "sf-101-m4-l2"
+      },
+      {
+       "title": "Back table check and opening count",
+       "kind": "VrLab",
+       "minutes": 15,
+       "summary": "Check the sterile back table, count instruments and swabs, then drape the patient.",
+       "simulationId": "lap-prep",
+       "passScore": 70,
+       "id": "sf-101-m4-l3"
+      },
+      {
+       "title": "Assessment: prepare for surgery",
+       "kind": "VrAssessment",
+       "minutes": 20,
+       "summary": "Scrub, gown, glove, count and drape with no guidance.",
+       "simulationId": "lap-prep",
+       "passScore": 75,
+       "id": "sf-101-m4-l4"
+      }
+     ],
+     "id": "sf-101-m4"
+    }
+   ]
+  },
+  {
+   "id": "sf-102",
+   "code": "SF-102",
+   "title": "Surgical Instruments and Handling",
+   "subtitle": "Know every instrument on the tray, hold it properly and pass it safely.",
+   "specialty": "Surgical Foundations",
+   "level": "Foundation",
+   "description": "Know every instrument on the tray, hold it properly and pass it safely.",
+   "outcomes": [
+    "Name the instrument families and give examples of each",
+    "Hold a scalpel, forceps, scissors and needle holder correctly",
+    "Pass and receive instruments safely, including sharps",
+    "Choose an instrument for a task and explain why"
+   ],
+   "prerequisites": [
+    "sf-101"
+   ],
+   "skills": [
+    "Instrument recognition",
+    "Instrument grips",
+    "Sharps safety"
+   ],
+   "frameworks": [
+    "ACS/APDS/ASE Resident Prep",
+    "ISCP Core Surgical Training"
+   ],
+   "hours": 5,
+   "cmeCredits": 5,
+   "modules": [
+    {
+     "title": "Instrument families",
+     "summary": "Cutting, grasping, clamping, retracting and suction.",
+     "lessons": [
+      {
+       "title": "The five families",
+       "kind": "Reading",
+       "minutes": 8,
+       "summary": "Cutting: scalpels, scissors (Mayo for tougher tissue and sutures, Metzenbaum for delicate dissection), bone saws and rongeurs.",
+       "content": "Cutting: scalpels, scissors (Mayo for tougher tissue and sutures, Metzenbaum for delicate dissection), bone saws and rongeurs. Grasping: toothed forceps for skin and fascia, non-toothed (atraumatic) forceps for bowel and vessels. Clamping: artery forceps (haemostats) with a ratchet, Kocher clamps with teeth, bowel clamps. Retracting: hand-held (Langenbeck, Deaver, rake) and self-retaining (Weitlaner, Balfour). Suction: Yankauer for open fields, Poole for the abdomen, fine suction for small spaces.",
+       "id": "sf-102-m1-l1"
+      },
+      {
+       "title": "The instrument tray",
+       "kind": "Explore",
+       "minutes": 10,
+       "summary": "Pick up each instrument, open its jaws and lock the ratchets; its name and use appear as you hold it.",
+       "equipment": [
+        "instrument_scalpel_handle_a01",
+        "instrument_scissors_a01",
+        "instrument_forceps_a01",
+        "instrument_artery_forceps_b01",
+        "instrument_artery_forceps_curved_b01",
+        "instrument_clamp_a01",
+        "instrument_retractor_a01",
+        "instrument_selfretaining_retractor_a01",
+        "instrument_suction_a01",
+        "instrument_bipolar_dissecting_scissors_a01",
+        "needle_surgical_a01",
+        "tray_sterilization_instrument_c02"
+       ],
+       "id": "sf-102-m1-l2"
+      },
+      {
+       "title": "Check: name the family",
+       "kind": "Quiz",
+       "minutes": 6,
+       "summary": "2 questions with feedback.",
+       "questions": [
+        {
+         "prompt": "Which forceps should be used to hold bowel wall?",
+         "options": [
+          {
+           "text": "Non-toothed (atraumatic) forceps",
+           "correct": true,
+           "feedback": "Bowel and vessels are handled with atraumatic instruments."
+          },
+          {
+           "text": "Toothed forceps",
+           "correct": false,
+           "feedback": "Teeth puncture bowel."
+          },
+          {
+           "text": "A Kocher clamp",
+           "correct": false,
+           "feedback": "Kochers have teeth and crush tissue."
+          }
+         ],
+         "id": "sf-102-m1-l3-q1"
+        },
+        {
+         "prompt": "A self-retaining retractor is chosen when…",
+         "options": [
+          {
+           "text": "The assistant's hands are needed for other tasks",
+           "correct": true,
+           "feedback": "Self-retaining retractors hold the wound open without an assistant."
+          },
+          {
+           "text": "The wound is being closed",
+           "correct": false,
+           "feedback": "Not quite: Self-retaining retractors hold the wound open without an assistant."
+          },
+          {
+           "text": "Suction is required",
+           "correct": false,
+           "feedback": "Not quite: Self-retaining retractors hold the wound open without an assistant."
+          }
+         ],
+         "id": "sf-102-m1-l3-q2"
+        }
+       ],
+       "passScore": 70,
+       "id": "sf-102-m1-l3"
+      }
+     ],
+     "id": "sf-102-m1"
+    },
+    {
+     "title": "Handling",
+     "summary": "Grips, passing and sharps.",
+     "lessons": [
+      {
+       "title": "Grips",
+       "kind": "Reading",
+       "minutes": 8,
+       "summary": "Scalpel: the 'dinner knife' grip for long skin incisions with a No.",
+       "content": "Scalpel: the 'dinner knife' grip for long skin incisions with a No. 10 blade; the pen grip for fine work with a No. 15. Forceps: held like a pen, never in the palm. Scissors and needle holders: tripod grip with thumb and ring finger in the rings and the index finger on the shaft for stability; cut with the tips. Never use the fingers to pick up needles.",
+       "id": "sf-102-m2-l1"
+      },
+      {
+       "title": "Passing instruments and sharps safety",
+       "kind": "Reading",
+       "minutes": 8,
+       "summary": "Instruments are passed handle first into the surgeon's palm, curved instruments with the curve matching the surgeon's hand.",
+       "content": "Instruments are passed handle first into the surgeon's palm, curved instruments with the curve matching the surgeon's hand. Sharps are passed in a neutral zone (a kidney dish) rather than hand to hand, scalpels are loaded and unloaded with a needle holder, and every needle is accounted for at the end of the count.",
+       "id": "sf-102-m2-l2"
+      },
+      {
+       "title": "Instrument handling at the skills station",
+       "kind": "VrLab",
+       "minutes": 15,
+       "summary": "Pick, grip and pass the open-surgery instruments at the skills-lab station.",
+       "simulationId": "skills-lab",
+       "passScore": 70,
+       "id": "sf-102-m2-l3"
+      },
+      {
+       "title": "Check: handling",
+       "kind": "Quiz",
+       "minutes": 6,
+       "summary": "1 questions with feedback.",
+       "questions": [
+        {
+         "prompt": "Scalpel blades should be loaded…",
+         "options": [
+          {
+           "text": "With a needle holder, never with fingers",
+           "correct": true,
+           "feedback": "Using a needle holder keeps fingers away from the edge."
+          },
+          {
+           "text": "With the fingers, carefully",
+           "correct": false,
+           "feedback": "Not quite: Using a needle holder keeps fingers away from the edge."
+          },
+          {
+           "text": "By the circulating practitioner",
+           "correct": false,
+           "feedback": "Not quite: Using a needle holder keeps fingers away from the edge."
+          }
+         ],
+         "id": "sf-102-m2-l4-q1"
+        }
+       ],
+       "passScore": 70,
+       "id": "sf-102-m2-l4"
+      }
+     ],
+     "id": "sf-102-m2"
+    }
+   ]
+  },
+  {
+   "id": "sf-103",
+   "code": "SF-103",
+   "title": "Wound Closure and Suturing",
+   "subtitle": "Choose the right suture and needle, tie secure knots and close skin neatly.",
+   "specialty": "Surgical Foundations",
+   "level": "Foundation",
+   "description": "Choose the right suture and needle, tie secure knots and close skin neatly.",
+   "outcomes": [
+    "Choose suture material and needle for a given tissue",
+    "Tie a two-handed reef knot and an instrument tie",
+    "Place simple interrupted, mattress and subcuticular sutures",
+    "Describe the alternatives: staples, adhesive strips and tissue glue"
+   ],
+   "prerequisites": [
+    "sf-102"
+   ],
+   "skills": [
+    "Knot tying",
+    "Interrupted sutures",
+    "Mattress sutures",
+    "Subcuticular closure"
+   ],
+   "frameworks": [
+    "ACS/APDS/ASE Resident Prep",
+    "ISCP Core Surgical Training"
+   ],
+   "hours": 8,
+   "cmeCredits": 8,
+   "modules": [
+    {
+     "title": "Sutures and needles",
+     "summary": "Materials and their uses.",
+     "lessons": [
+      {
+       "title": "Choosing a suture",
+       "kind": "Reading",
+       "minutes": 8,
+       "summary": "Absorbable sutures (e.g.",
+       "content": "Absorbable sutures (e.g. polyglactin, poliglecaprone, PDS) lose strength over weeks and suit deep layers and subcuticular skin. Non-absorbable sutures (nylon, polypropylene) keep strength and suit skin sutures that will be removed and vascular anastomoses. Monofilaments slide and resist infection but need more throws; braided sutures handle well but can harbour bacteria. Sizes run from 0 (thick) to 10-0 (finest): 3-0 or 4-0 for most skin, 5-0/6-0 on the face. Cutting needles go through skin; round-bodied needles through bowel and soft tissue.",
+       "id": "sf-103-m1-l1"
+      },
+      {
+       "title": "Needles, holders and closure devices",
+       "kind": "Explore",
+       "minutes": 10,
+       "summary": "Look at needle shapes and sizes, a ligature needle and a skin stapler.",
+       "equipment": [
+        "needle_surgical_a01",
+        "needle_48mm_a01",
+        "needle_68mm_a01",
+        "instrument_ligature_needle_a01",
+        "instrument_forceps_a01",
+        "instrument_scissors_a01",
+        "stapler_surgical_a01",
+        "bandage_medical_a01"
+       ],
+       "id": "sf-103-m1-l2"
+      },
+      {
+       "title": "Check: materials",
+       "kind": "Quiz",
+       "minutes": 6,
+       "summary": "2 questions with feedback.",
+       "questions": [
+        {
+         "prompt": "Which needle is used for skin?",
+         "options": [
+          {
+           "text": "Cutting (triangular) needle",
+           "correct": true,
+           "feedback": "A cutting edge passes through tough dermis."
+          },
+          {
+           "text": "Round-bodied needle",
+           "correct": false,
+           "feedback": "Round-bodied needles are for soft tissue and bowel."
+          },
+          {
+           "text": "Blunt needle",
+           "correct": false,
+           "feedback": "Not quite: A cutting edge passes through tough dermis."
+          }
+         ],
+         "id": "sf-103-m1-l3-q1"
+        },
+        {
+         "prompt": "A monofilament suture needs…",
+         "options": [
+          {
+           "text": "More throws to be secure",
+           "correct": true,
+           "feedback": "Monofilaments are slippery, so knots need extra throws."
+          },
+          {
+           "text": "Fewer throws than braided",
+           "correct": false,
+           "feedback": "Not quite: Monofilaments are slippery, so knots need extra throws."
+          },
+          {
+           "text": "No knot",
+           "correct": false,
+           "feedback": "Not quite: Monofilaments are slippery, so knots need extra throws."
+          }
+         ],
+         "id": "sf-103-m1-l3-q2"
+        }
+       ],
+       "passScore": 70,
+       "id": "sf-103-m1-l3"
+      }
+     ],
+     "id": "sf-103-m1"
+    },
+    {
+     "title": "Knots and stitches",
+     "summary": "From the reef knot to subcuticular closure.",
+     "lessons": [
+      {
+       "title": "Knot tying",
+       "kind": "Reading",
+       "minutes": 8,
+       "summary": "A square (reef) knot is two throws in opposite directions laid flat; a surgeon's knot adds a double first throw so the first tie holds under tension.",
+       "content": "A square (reef) knot is two throws in opposite directions laid flat; a surgeon's knot adds a double first throw so the first tie holds under tension. Instrument ties save suture and are quick for skin. Tension each throw by moving the hands in the plane of the knot and beyond it; never saw the suture or lift the tissue.",
+       "id": "sf-103-m2-l1"
+      },
+      {
+       "title": "Stitches",
+       "kind": "Reading",
+       "minutes": 8,
+       "summary": "Simple interrupted: enter at 90°, equal bites either side (about as far from the edge as the skin is thick), evert the edges.",
+       "content": "Simple interrupted: enter at 90°, equal bites either side (about as far from the edge as the skin is thick), evert the edges. Vertical mattress: far-far then near-near for eversion in thin or lax skin. Horizontal mattress: spreads tension. Subcuticular: continuous in the dermis for the best cosmetic result. Approximate, don't strangulate: tissue swells after closure.",
+       "id": "sf-103-m2-l2"
+      },
+      {
+       "title": "Suturing practice pad",
+       "kind": "VrLab",
+       "minutes": 15,
+       "summary": "Place interrupted and mattress sutures on a skin pad and tie instrument knots.",
+       "simulationId": "suturing-pad",
+       "passScore": 70,
+       "id": "sf-103-m2-l3"
+      },
+      {
+       "title": "Assessment: close the wound",
+       "kind": "VrAssessment",
+       "minutes": 20,
+       "summary": "Close a 5 cm wound with interrupted sutures, scored on spacing, eversion and knot security.",
+       "simulationId": "suturing-pad",
+       "passScore": 75,
+       "id": "sf-103-m2-l4"
+      }
+     ],
+     "id": "sf-103-m2"
+    }
+   ]
+  },
+  {
+   "id": "sf-104",
+   "code": "SF-104",
+   "title": "Asepsis and Infection Prevention",
+   "subtitle": "Prevent surgical site infection from the ward to the wound.",
+   "specialty": "Surgical Foundations",
+   "level": "Foundation",
+   "description": "Prevent surgical site infection from the ward to the wound.",
+   "outcomes": [
+    "Explain how surgical site infection develops and is classified",
+    "Apply the SSI prevention bundle: skin prep, hair removal, normothermia, glucose, antibiotics",
+    "Decontaminate and sterilise instruments and explain the sterile-processing cycle"
+   ],
+   "prerequisites": [
+    "sf-101"
+   ],
+   "skills": [
+    "Skin preparation",
+    "Draping",
+    "Sterile processing"
+   ],
+   "frameworks": [
+    "WHO Global Guidelines for SSI Prevention",
+    "NICE NG125"
+   ],
+   "hours": 3,
+   "cmeCredits": 3,
+   "modules": [
+    {
+     "title": "Surgical site infection",
+     "summary": "Classification and the prevention bundle.",
+     "lessons": [
+      {
+       "title": "Wound classes and SSI",
+       "kind": "Reading",
+       "minutes": 8,
+       "summary": "Wounds are classed clean, clean-contaminated, contaminated or dirty, and the risk of infection rises with each.",
+       "content": "Wounds are classed clean, clean-contaminated, contaminated or dirty, and the risk of infection rises with each. SSIs are superficial, deep or organ/space and are counted up to 30 days after surgery (90 with an implant). The prevention bundle: no routine hair removal (clippers, not razors, if needed), alcohol-based chlorhexidine skin preparation allowed to dry, prophylactic antibiotics within 60 minutes before incision, normothermia, glucose control and minimal theatre traffic.",
+       "id": "sf-104-m1-l1"
+      },
+      {
+       "title": "Skin preparation and draping",
+       "kind": "Reading",
+       "minutes": 8,
+       "summary": "Prepare from the incision site outwards in widening areas, never back towards the centre, covering enough skin for drains and an extended incision.",
+       "content": "Prepare from the incision site outwards in widening areas, never back towards the centre, covering enough skin for drains and an extended incision. Alcohol-based preparations are flammable: let them dry fully before diathermy and drapes. Drapes are placed from the incision outwards and never moved towards it once placed.",
+       "id": "sf-104-m1-l2"
+      },
+      {
+       "title": "Sterile processing",
+       "kind": "Explore",
+       "minutes": 10,
+       "summary": "Open sterilising containers and trays and see how a tray is assembled.",
+       "equipment": [
+        "container_system_sterilising_a02",
+        "container_system_sterilising_e01",
+        "tray_sterilization_instrument_c03",
+        "disinfectant_a01",
+        "disinfectant_d01",
+        "sink_surgical_a01",
+        "cleaning_soapDispenser_a01"
+       ],
+       "id": "sf-104-m1-l3"
+      },
+      {
+       "title": "Check: SSI",
+       "kind": "Quiz",
+       "minutes": 6,
+       "summary": "2 questions with feedback.",
+       "questions": [
+        {
+         "prompt": "If hair must be removed, it should be removed with…",
+         "options": [
+          {
+           "text": "Clippers, close to the time of surgery",
+           "correct": true,
+           "feedback": "Clipping avoids skin trauma; shaving increases SSI."
+          },
+          {
+           "text": "A razor the night before",
+           "correct": false,
+           "feedback": "Razors cause micro-abrasions that raise infection risk."
+          },
+          {
+           "text": "Depilatory cream in theatre",
+           "correct": false,
+           "feedback": "Not quite: Clipping avoids skin trauma; shaving increases SSI."
+          }
+         ],
+         "id": "sf-104-m1-l4-q1"
+        },
+        {
+         "prompt": "Why must alcoholic skin prep dry before diathermy?",
+         "options": [
+          {
+           "text": "It is flammable",
+           "correct": true,
+           "feedback": "Pooled alcohol can ignite and cause a burn."
+          },
+          {
+           "text": "It inactivates diathermy",
+           "correct": false,
+           "feedback": "Not quite: Pooled alcohol can ignite and cause a burn."
+          },
+          {
+           "text": "Wet skin cannot be draped",
+           "correct": false,
+           "feedback": "Not quite: Pooled alcohol can ignite and cause a burn."
+          }
+         ],
+         "id": "sf-104-m1-l4-q2"
+        }
+       ],
+       "passScore": 70,
+       "id": "sf-104-m1-l4"
+      }
+     ],
+     "id": "sf-104-m1"
+    }
+   ]
+  },
+  {
+   "id": "sf-105",
+   "code": "SF-105",
+   "title": "Perioperative Patient Safety",
+   "subtitle": "Consent, marking, VTE, anticoagulation, fasting and handover.",
+   "specialty": "Surgical Foundations",
+   "level": "Foundation",
+   "description": "Consent, marking, VTE, anticoagulation, fasting and handover.",
+   "outcomes": [
+    "Take valid informed consent and know when you may not",
+    "Prescribe VTE prophylaxis and manage anticoagulants around surgery",
+    "Apply fasting guidance and hand over safely using SBAR"
+   ],
+   "prerequisites": [
+    "sf-101"
+   ],
+   "skills": [
+    "Consent",
+    "VTE prophylaxis",
+    "SBAR handover"
+   ],
+   "frameworks": [
+    "ISCP Core Surgical Training",
+    "GMC Decision making and consent"
+   ],
+   "hours": 4,
+   "cmeCredits": 4,
+   "modules": [
+    {
+     "title": "Before the operation",
+     "summary": "Consent and preparation.",
+     "lessons": [
+      {
+       "title": "Informed consent",
+       "kind": "Reading",
+       "minutes": 8,
+       "summary": "Consent is valid when the patient has capacity, is informed (the nature of the procedure, its purpose, material risks, alternatives including doing nothing) and decides voluntarily.",
+       "content": "Consent is valid when the patient has capacity, is informed (the nature of the procedure, its purpose, material risks, alternatives including doing nothing) and decides voluntarily. The person taking consent must be able to perform the procedure or be trained to consent for it. Material risks are those a reasonable person in the patient's position would want to know, or this patient would.",
+       "id": "sf-105-m1-l1"
+      },
+      {
+       "title": "VTE, anticoagulants and fasting",
+       "kind": "Reading",
+       "minutes": 8,
+       "summary": "Assess every patient for venous thromboembolism and bleeding risk; offer mechanical and/or pharmacological prophylaxis by risk.",
+       "content": "Assess every patient for venous thromboembolism and bleeding risk; offer mechanical and/or pharmacological prophylaxis by risk. Plan anticoagulant and antiplatelet interruption with the prescriber, weighing thrombotic against bleeding risk. Typical elective fasting: food until 6 hours, clear fluids until 2 hours before anaesthesia (check your local policy).",
+       "id": "sf-105-m1-l2"
+      },
+      {
+       "title": "Check: consent and safety",
+       "kind": "Quiz",
+       "minutes": 6,
+       "summary": "2 questions with feedback.",
+       "questions": [
+        {
+         "prompt": "Which of these is required for valid consent?",
+         "options": [
+          {
+           "text": "Capacity, information and voluntariness",
+           "correct": true,
+           "feedback": "Consent is a process: capacity, information, voluntary choice."
+          },
+          {
+           "text": "A signature only",
+           "correct": false,
+           "feedback": "The signature is evidence, not consent itself."
+          },
+          {
+           "text": "Agreement of the next of kin",
+           "correct": false,
+           "feedback": "Adults with capacity decide for themselves."
+          }
+         ],
+         "id": "sf-105-m1-l3-q1"
+        },
+        {
+         "prompt": "SBAR stands for…",
+         "options": [
+          {
+           "text": "Situation, Background, Assessment, Recommendation",
+           "correct": true,
+           "feedback": "SBAR structures a handover or a call for help."
+          },
+          {
+           "text": "Safety, Bleeding, Airway, Response",
+           "correct": false,
+           "feedback": "Not quite: SBAR structures a handover or a call for help."
+          },
+          {
+           "text": "Sign, Brief, Act, Review",
+           "correct": false,
+           "feedback": "Not quite: SBAR structures a handover or a call for help."
+          }
+         ],
+         "id": "sf-105-m1-l3-q2"
+        }
+       ],
+       "passScore": 70,
+       "id": "sf-105-m1-l3"
+      }
+     ],
+     "id": "sf-105-m1"
+    }
+   ]
+  },
+  {
+   "id": "sf-106",
+   "code": "SF-106",
+   "title": "Energy Devices in Surgery",
+   "subtitle": "Use monopolar, bipolar and advanced energy safely.",
+   "specialty": "Surgical Foundations",
+   "level": "Intermediate",
+   "description": "Use monopolar, bipolar and advanced energy safely.",
+   "outcomes": [
+    "Explain how monopolar and bipolar diathermy work",
+    "Prevent burns: return electrode, alcohol prep, insulation failure and capacitive coupling",
+    "Choose cut, coagulation or advanced bipolar/ultrasonic energy for a task"
+   ],
+   "prerequisites": [
+    "sf-101"
+   ],
+   "skills": [
+    "Diathermy",
+    "Energy safety"
+   ],
+   "frameworks": [
+    "SAGES FUSE"
+   ],
+   "hours": 3,
+   "cmeCredits": 3,
+   "modules": [
+    {
+     "title": "Electrosurgery",
+     "summary": "Principles and safety.",
+     "lessons": [
+      {
+       "title": "Monopolar and bipolar",
+       "kind": "Reading",
+       "minutes": 8,
+       "summary": "In monopolar diathermy current flows from the active electrode through the patient to a return pad; in bipolar it flows only between the two tips.",
+       "content": "In monopolar diathermy current flows from the active electrode through the patient to a return pad; in bipolar it flows only between the two tips. Cut uses a continuous low-voltage waveform that vaporises cells; coagulation uses an interrupted high-voltage waveform. Burns occur at a poorly applied return pad, through pooled alcohol, by direct coupling to another instrument, through insulation failure or by capacitive coupling in laparoscopy. Bipolar is preferred near nerves, in fingers and penis, and around pacemakers.",
+       "id": "sf-106-m1-l1"
+      },
+      {
+       "title": "The electrosurgical unit",
+       "kind": "Explore",
+       "minutes": 10,
+       "summary": "Explore the generator, its leads and a bipolar instrument.",
+       "equipment": [
+        "unit_electrosurgical_a01",
+        "instrument_bipolar_dissecting_scissors_a01",
+        "pump_suction_surgical_a01"
+       ],
+       "id": "sf-106-m1-l2"
+      },
+      {
+       "title": "Check: energy",
+       "kind": "Quiz",
+       "minutes": 6,
+       "summary": "2 questions with feedback.",
+       "questions": [
+        {
+         "prompt": "Which current path does bipolar diathermy use?",
+         "options": [
+          {
+           "text": "Only between the two tips of the instrument",
+           "correct": true,
+           "feedback": "Bipolar does not need a return electrode."
+          },
+          {
+           "text": "Through the patient to a return pad",
+           "correct": false,
+           "feedback": "That is monopolar."
+          },
+          {
+           "text": "Through the operating table",
+           "correct": false,
+           "feedback": "Not quite: Bipolar does not need a return electrode."
+          }
+         ],
+         "id": "sf-106-m1-l3-q1"
+        },
+        {
+         "prompt": "A laparoscopic burn away from the field can be caused by…",
+         "options": [
+          {
+           "text": "Capacitive coupling or insulation failure",
+           "correct": true,
+           "feedback": "Stray current can leak through damaged insulation or by capacitance."
+          },
+          {
+           "text": "Using too low a power",
+           "correct": false,
+           "feedback": "Not quite: Stray current can leak through damaged insulation or by capacitance."
+          },
+          {
+           "text": "Bipolar forceps",
+           "correct": false,
+           "feedback": "Not quite: Stray current can leak through damaged insulation or by capacitance."
+          }
+         ],
+         "id": "sf-106-m1-l3-q2"
+        }
+       ],
+       "passScore": 70,
+       "id": "sf-106-m1-l3"
+      }
+     ],
+     "id": "sf-106-m1"
+    }
+   ]
+  },
+  {
+   "id": "sf-107",
+   "code": "SF-107",
+   "title": "Anaesthesia and Monitoring for Surgeons",
+   "subtitle": "What the anaesthetist is doing, and what the numbers on the monitor mean.",
+   "specialty": "Surgical Foundations",
+   "level": "Foundation",
+   "description": "What the anaesthetist is doing, and what the numbers on the monitor mean.",
+   "outcomes": [
+    "Read a patient monitor: ECG, SpO2, blood pressure, capnography",
+    "Calculate safe local anaesthetic doses and recognise toxicity",
+    "Recognise the deteriorating patient in theatre"
+   ],
+   "prerequisites": [],
+   "skills": [
+    "Monitoring",
+    "Local anaesthesia",
+    "ASA grading"
+   ],
+   "frameworks": [
+    "ISCP Core Surgical Training"
+   ],
+   "hours": 4,
+   "cmeCredits": 4,
+   "modules": [
+    {
+     "title": "The anaesthetic side of the screen",
+     "summary": "Machines, monitors and drugs.",
+     "lessons": [
+      {
+       "title": "Monitoring",
+       "kind": "Reading",
+       "minutes": 8,
+       "summary": "Minimum monitoring during anaesthesia: ECG, pulse oximetry, non-invasive blood pressure, capnography and anaesthetic gas analysis, with temperature for longer cases.",
+       "content": "Minimum monitoring during anaesthesia: ECG, pulse oximetry, non-invasive blood pressure, capnography and anaesthetic gas analysis, with temperature for longer cases. A falling end-tidal CO2 can mean a disconnection, a pulmonary embolism or low cardiac output; a rising heart rate with falling blood pressure in surgery is bleeding until proven otherwise.",
+       "id": "sf-107-m1-l1"
+      },
+      {
+       "title": "Local anaesthetic doses",
+       "kind": "Reading",
+       "minutes": 8,
+       "summary": "Commonly quoted maximum doses: lidocaine 3 mg/kg plain and 7 mg/kg with adrenaline; bupivacaine 2 mg/kg.",
+       "content": "Commonly quoted maximum doses: lidocaine 3 mg/kg plain and 7 mg/kg with adrenaline; bupivacaine 2 mg/kg. A 1 % solution contains 10 mg/ml. Toxicity starts with perioral tingling, tinnitus and agitation, then seizures and cardiovascular collapse; treat with airway support and intravenous lipid emulsion. Always check your local formulary.",
+       "id": "sf-107-m1-l2"
+      },
+      {
+       "title": "The anaesthetic workstation",
+       "kind": "Explore",
+       "minutes": 10,
+       "summary": "Explore the anaesthetic machine, ventilator, infusion pumps and monitoring.",
+       "equipment": [
+        "anesthesia_machine_a01",
+        "lung_ventilation_artificial_a01",
+        "monitor_patient_a01",
+        "pump_infusion_a01",
+        "pump_system_infusion_a01",
+        "oximeter_pulse_a01",
+        "anesthesia_mask_a01",
+        "defibrillator_a01",
+        "device_blood_pressure_monitor_a01"
+       ],
+       "id": "sf-107-m1-l3"
+      },
+      {
+       "title": "Check: monitoring and drugs",
+       "kind": "Quiz",
+       "minutes": 6,
+       "summary": "2 questions with feedback.",
+       "questions": [
+        {
+         "prompt": "What is the maximum dose of plain lidocaine for a 70 kg adult (3 mg/kg)?",
+         "options": [
+          {
+           "text": "210 mg (21 ml of 1 %)",
+           "correct": true,
+           "feedback": "3 mg/kg × 70 kg = 210 mg; 1 % = 10 mg/ml, so 21 ml."
+          },
+          {
+           "text": "490 mg",
+           "correct": false,
+           "feedback": "That is the dose with adrenaline."
+          },
+          {
+           "text": "70 mg",
+           "correct": false,
+           "feedback": "Not quite: 3 mg/kg × 70 kg = 210 mg; 1 % = 10 mg/ml, so 21 ml."
+          }
+         ],
+         "id": "sf-107-m1-l4-q1"
+        },
+        {
+         "prompt": "Sudden loss of the capnography trace most commonly means…",
+         "options": [
+          {
+           "text": "Disconnection or airway problem",
+           "correct": true,
+           "feedback": "Always check the circuit and the airway first."
+          },
+          {
+           "text": "The patient is waking up",
+           "correct": false,
+           "feedback": "Not quite: Always check the circuit and the airway first."
+          },
+          {
+           "text": "A normal finding during laparoscopy",
+           "correct": false,
+           "feedback": "Not quite: Always check the circuit and the airway first."
+          }
+         ],
+         "id": "sf-107-m1-l4-q2"
+        }
+       ],
+       "passScore": 70,
+       "id": "sf-107-m1-l4"
+      }
+     ],
+     "id": "sf-107-m1"
+    }
+   ]
+  },
+  {
+   "id": "sf-108",
+   "code": "SF-108",
+   "title": "Human Factors and Non-Technical Skills",
+   "subtitle": "Situational awareness, decision making, communication and leadership in theatre.",
+   "specialty": "Surgical Foundations",
+   "level": "Foundation",
+   "description": "Situational awareness, decision making, communication and leadership in theatre.",
+   "outcomes": [
+    "Describe the NOTSS categories and give an example of each",
+    "Use closed-loop communication and speak up with graded assertiveness",
+    "Run a structured debrief after a critical event"
+   ],
+   "prerequisites": [],
+   "skills": [
+    "NOTSS",
+    "Communication",
+    "Crisis resource management"
+   ],
+   "frameworks": [
+    "NOTSS (RCSEd)"
+   ],
+   "hours": 3,
+   "cmeCredits": 3,
+   "modules": [
+    {
+     "title": "Non-technical skills",
+     "summary": "Why good surgeons are good team members.",
+     "lessons": [
+      {
+       "title": "NOTSS",
+       "kind": "Reading",
+       "minutes": 8,
+       "summary": "The Non-Technical Skills for Surgeons framework has four categories: situation awareness (gather, understand, anticipate), decision making (consider options, select and communicate, review), communication and teamwork (exchange information, establish shared understanding, coordinate), and leadership (set standards, support others, cope with pressure)..",
+       "content": "The Non-Technical Skills for Surgeons framework has four categories: situation awareness (gather, understand, anticipate), decision making (consider options, select and communicate, review), communication and teamwork (exchange information, establish shared understanding, coordinate), and leadership (set standards, support others, cope with pressure).",
+       "id": "sf-108-m1-l1"
+      },
+      {
+       "title": "Speaking up",
+       "kind": "Reading",
+       "minutes": 8,
+       "summary": "Use closed-loop communication: the instruction, the read-back, the confirmation.",
+       "content": "Use closed-loop communication: the instruction, the read-back, the confirmation. When concerned, escalate with graded assertiveness, for example the PACE steps: Probe, Alert, Challenge, Emergency. A stop word agreed at the briefing lets anyone halt the procedure.",
+       "id": "sf-108-m1-l2"
+      },
+      {
+       "title": "Check: NOTSS",
+       "kind": "Quiz",
+       "minutes": 6,
+       "summary": "1 questions with feedback.",
+       "questions": [
+        {
+         "prompt": "Closed-loop communication means…",
+         "options": [
+          {
+           "text": "The receiver repeats the instruction and the sender confirms it",
+           "correct": true,
+           "feedback": "Read-back catches errors before they are acted on."
+          },
+          {
+           "text": "Only the team leader speaks",
+           "correct": false,
+           "feedback": "Not quite: Read-back catches errors before they are acted on."
+          },
+          {
+           "text": "Instructions are written down",
+           "correct": false,
+           "feedback": "Not quite: Read-back catches errors before they are acted on."
+          }
+         ],
+         "id": "sf-108-m1-l3-q1"
+        }
+       ],
+       "passScore": 70,
+       "id": "sf-108-m1-l3"
+      }
+     ],
+     "id": "sf-108-m1"
+    }
+   ]
+  },
+  {
+   "id": "mis-201",
+   "code": "MIS-201",
+   "title": "Laparoscopic Fundamentals",
+   "subtitle": "Equipment, pneumoperitoneum, safe entry and port placement.",
+   "specialty": "Minimally Invasive Surgery",
+   "level": "Intermediate",
+   "description": "Equipment, pneumoperitoneum, safe entry and port placement.",
+   "outcomes": [
+    "Set up a laparoscopic tower and troubleshoot the image",
+    "Explain the physiology of pneumoperitoneum",
+    "Choose and perform a safe entry technique and place ports by triangulation",
+    "Recognise and manage a port-site bleed"
+   ],
+   "prerequisites": [
+    "sf-101",
+    "sf-102"
+   ],
+   "skills": [
+    "Laparoscopic entry",
+    "Port placement",
+    "Camera navigation"
+   ],
+   "frameworks": [
+    "SAGES FLS",
+    "ISCP Core Surgical Training"
+   ],
+   "hours": 6,
+   "cmeCredits": 6,
+   "modules": [
+    {
+     "title": "The tower",
+     "summary": "Light, camera, insufflation.",
+     "lessons": [
+      {
+       "title": "The laparoscopic stack",
+       "kind": "Reading",
+       "minutes": 8,
+       "summary": "The stack holds the camera control unit, light source, insufflator, recorder and monitor.",
+       "content": "The stack holds the camera control unit, light source, insufflator, recorder and monitor. A poor image is usually a dirty or fogged lens, white balance not done, a loose light cable or blood in the field. The insufflator delivers CO2, typically to 12–15 mmHg in adults; higher pressure reduces venous return and splints the diaphragm.",
+       "id": "mis-201-m1-l1"
+      },
+      {
+       "title": "Laparoscopic equipment",
+       "kind": "Explore",
+       "minutes": 10,
+       "summary": "Explore the video system, monitor and endoscopy stack.",
+       "equipment": [
+        "video_system_a01",
+        "monitor_surgical_a01",
+        "device_endoscopy_system_b01",
+        "device_endoscope_a01",
+        "unit_electrosurgical_a01"
+       ],
+       "id": "mis-201-m1-l2"
+      },
+      {
+       "title": "Connect the tower",
+       "kind": "VrLab",
+       "minutes": 15,
+       "summary": "Light cable, camera head, CO2 tubing and power, then check the image.",
+       "simulationId": "theatre-setup",
+       "passScore": 70,
+       "id": "mis-201-m1-l3"
+      },
+      {
+       "title": "Check: the tower",
+       "kind": "Quiz",
+       "minutes": 6,
+       "summary": "1 questions with feedback.",
+       "questions": [
+        {
+         "prompt": "A typical adult intra-abdominal pressure for laparoscopy is…",
+         "options": [
+          {
+           "text": "12–15 mmHg",
+           "correct": true,
+           "feedback": "12–15 mmHg balances working space against cardiorespiratory effects."
+          },
+          {
+           "text": "30–40 mmHg",
+           "correct": false,
+           "feedback": "Dangerous: it would impair venous return."
+          },
+          {
+           "text": "2–4 mmHg",
+           "correct": false,
+           "feedback": "Not quite: 12–15 mmHg balances working space against cardiorespiratory effects."
+          }
+         ],
+         "id": "mis-201-m1-l4-q1"
+        }
+       ],
+       "passScore": 70,
+       "id": "mis-201-m1-l4"
+      }
+     ],
+     "id": "mis-201-m1"
+    },
+    {
+     "title": "Access",
+     "summary": "Entry and ports.",
+     "lessons": [
+      {
+       "title": "Entry and port placement",
+       "kind": "Reading",
+       "minutes": 8,
+       "summary": "Open (Hasson) entry at the umbilicus is preferred by many guidelines; Veress needle and optical entry are alternatives with their own precautions.",
+       "content": "Open (Hasson) entry at the umbilicus is preferred by many guidelines; Veress needle and optical entry are alternatives with their own precautions. Working ports are placed under vision, away from the epigastric vessels, triangulated so the instruments meet the target at about 60° and the camera sits between them. Insert trocars perpendicular to the skin and then angle towards the target, with controlled force.",
+       "id": "mis-201-m2-l1"
+      },
+      {
+       "title": "Place the ports",
+       "kind": "VrLab",
+       "minutes": 15,
+       "summary": "Mark the port sites and insert the trocars; angle, depth and force are measured.",
+       "simulationId": "lap-access",
+       "passScore": 70,
+       "id": "mis-201-m2-l2"
+      },
+      {
+       "title": "Assessment: safe access",
+       "kind": "VrAssessment",
+       "minutes": 20,
+       "summary": "Mark and place all ports with no guidance; a deep trocar triggers a port-site bleed to manage.",
+       "simulationId": "lap-access",
+       "passScore": 75,
+       "id": "mis-201-m2-l3"
+      }
+     ],
+     "id": "mis-201-m2"
+    }
+   ]
+  },
+  {
+   "id": "mis-202",
+   "code": "MIS-202",
+   "title": "Laparoscopic Manual Skills",
+   "subtitle": "Peg transfer, precision cutting, ligating loop and knot tying.",
+   "specialty": "Minimally Invasive Surgery",
+   "level": "Intermediate",
+   "description": "Peg transfer, precision cutting, ligating loop and knot tying.",
+   "outcomes": [
+    "Transfer objects between hands through ports with the fulcrum effect",
+    "Dissect and clip structures under the scope",
+    "Direct a camera assistant to keep instruments in view"
+   ],
+   "prerequisites": [
+    "mis-201"
+   ],
+   "skills": [
+    "Peg transfer",
+    "Fulcrum effect",
+    "Clip and divide"
+   ],
+   "frameworks": [
+    "SAGES FLS manual skills"
+   ],
+   "hours": 8,
+   "cmeCredits": 8,
+   "modules": [
+    {
+     "title": "Hand–eye skills",
+     "summary": "The fulcrum effect and depth perception on a flat screen.",
+     "lessons": [
+      {
+       "title": "The fulcrum effect",
+       "kind": "Reading",
+       "minutes": 8,
+       "summary": "A laparoscopic instrument pivots at the abdominal wall: move the hand left and the tip goes right, move it up and the tip goes down.",
+       "content": "A laparoscopic instrument pivots at the abdominal wall: move the hand left and the tip goes right, move it up and the tip goes down. The ratio of inside to outside length scales tip movement. Depth comes from cues on a 2D screen: shadows, size and instrument contact. Deliberate practice of standard tasks (peg transfer, precision cutting, ligating loop, intra- and extracorporeal knots) builds these skills measurably.",
+       "id": "mis-202-m1-l1"
+      },
+      {
+       "title": "Peg transfer, dissection and clipping",
+       "kind": "VrLab",
+       "minutes": 15,
+       "summary": "Move six rings, open a tissue plane, then clip and divide a duct.",
+       "simulationId": "lap-operate",
+       "passScore": 70,
+       "id": "mis-202-m1-l2"
+      },
+      {
+       "title": "Assessment: laparoscopic tasks",
+       "kind": "VrAssessment",
+       "minutes": 20,
+       "summary": "Complete the tasks unaided; time, path length and errors are scored.",
+       "simulationId": "lap-operate",
+       "passScore": 75,
+       "id": "mis-202-m1-l3"
+      }
+     ],
+     "id": "mis-202-m1"
+    }
+   ]
+  },
+  {
+   "id": "mis-203",
+   "code": "MIS-203",
+   "title": "Laparoscopic Cholecystectomy: Full Procedure",
+   "subtitle": "From the scrub sink to closing, the complete operation.",
+   "specialty": "Minimally Invasive Surgery",
+   "level": "Advanced",
+   "description": "From the scrub sink to closing, the complete operation.",
+   "outcomes": [
+    "Achieve the critical view of safety before clipping",
+    "Clip and divide the cystic duct and artery safely",
+    "Remove ports under vision and complete the closing count"
+   ],
+   "prerequisites": [
+    "mis-202",
+    "sf-103"
+   ],
+   "skills": [
+    "Critical view of safety",
+    "Clip and divide",
+    "Port closure"
+   ],
+   "frameworks": [
+    "SAGES Safe Cholecystectomy",
+    "ISCP General Surgery"
+   ],
+   "hours": 10,
+   "cmeCredits": 10,
+   "modules": [
+    {
+     "title": "Safe cholecystectomy",
+     "summary": "The critical view of safety.",
+     "lessons": [
+      {
+       "title": "The critical view of safety",
+       "kind": "Reading",
+       "minutes": 8,
+       "summary": "Before any structure is clipped: the hepatocystic triangle is cleared of fat and fibrous tissue, the lower third of the gallbladder is separated from the liver bed, and exactly two structures are seen entering the gallbladder.",
+       "content": "Before any structure is clipped: the hepatocystic triangle is cleared of fat and fibrous tissue, the lower third of the gallbladder is separated from the liver bed, and exactly two structures are seen entering the gallbladder. If it cannot be achieved, stop and consider a bail-out: subtotal cholecystectomy, cholangiography or calling for help.",
+       "id": "mis-203-m1-l1"
+      },
+      {
+       "title": "Check: CVS",
+       "kind": "Quiz",
+       "minutes": 6,
+       "summary": "2 questions with feedback.",
+       "questions": [
+        {
+         "prompt": "How many structures should be seen entering the gallbladder for the critical view of safety?",
+         "options": [
+          {
+           "text": "Two",
+           "correct": true,
+           "feedback": "Cystic duct and cystic artery: two structures only."
+          },
+          {
+           "text": "Three",
+           "correct": false,
+           "feedback": "Not quite: Cystic duct and cystic artery: two structures only."
+          },
+          {
+           "text": "One",
+           "correct": false,
+           "feedback": "Not quite: Cystic duct and cystic artery: two structures only."
+          }
+         ],
+         "id": "mis-203-m1-l2-q1"
+        },
+        {
+         "prompt": "If the critical view cannot be achieved you should…",
+         "options": [
+          {
+           "text": "Consider a bail-out strategy or call for help",
+           "correct": true,
+           "feedback": "Never clip without the CVS; bail-out options exist."
+          },
+          {
+           "text": "Clip the most likely duct",
+           "correct": false,
+           "feedback": "Not quite: Never clip without the CVS; bail-out options exist."
+          },
+          {
+           "text": "Convert to open immediately in every case",
+           "correct": false,
+           "feedback": "Conversion is one option, not the only one."
+          }
+         ],
+         "id": "mis-203-m1-l2-q2"
+        }
+       ],
+       "passScore": 70,
+       "id": "mis-203-m1-l2"
+      }
+     ],
+     "id": "mis-203-m1"
+    },
+    {
+     "title": "The whole operation",
+     "summary": "Prep, access, operate and close in one session.",
+     "lessons": [
+      {
+       "title": "Closing: count and remove the ports",
+       "kind": "VrLab",
+       "minutes": 15,
+       "summary": "Count every swab and instrument and remove the ports under vision, camera last.",
+       "simulationId": "lap-close",
+       "passScore": 70,
+       "id": "mis-203-m3-l1"
+      },
+      {
+       "title": "Assessment: full procedure",
+       "kind": "VrAssessment",
+       "minutes": 25,
+       "summary": "The whole scenario in Assessment mode, scored per stage.",
+       "simulationId": "lap-foundations",
+       "passScore": 75,
+       "id": "mis-203-m3-l2"
+      }
+     ],
+     "id": "mis-203-m3"
+    }
+   ]
+  },
+  {
+   "id": "mis-204",
+   "code": "MIS-204",
+   "title": "Laparoscopic Appendicectomy",
+   "subtitle": "Diagnose, operate and manage the complicated appendix.",
+   "specialty": "Minimally Invasive Surgery",
+   "level": "Advanced",
+   "description": "Diagnose, operate and manage the complicated appendix.",
+   "outcomes": [
+    "Assess suspected appendicitis using clinical scores and imaging",
+    "Describe port positions and steps of laparoscopic appendicectomy",
+    "Manage the base of a gangrenous appendix and an abscess"
+   ],
+   "prerequisites": [
+    "mis-202"
+   ],
+   "skills": [
+    "Diagnostic laparoscopy",
+    "Appendix base ligation"
+   ],
+   "frameworks": [
+    "ISCP General Surgery"
+   ],
+   "hours": 6,
+   "cmeCredits": 6,
+   "modules": [
+    {
+     "title": "Appendicitis",
+     "summary": "From diagnosis to operation.",
+     "lessons": [
+      {
+       "title": "Diagnosis",
+       "kind": "Reading",
+       "minutes": 8,
+       "summary": "Classic migration of pain to the right iliac fossa, anorexia, fever and localised peritonism; scores such as Alvarado or AIR stratify risk.",
+       "content": "Classic migration of pain to the right iliac fossa, anorexia, fever and localised peritonism; scores such as Alvarado or AIR stratify risk. Ultrasound is first line in children and pregnancy; CT in adults when the diagnosis is unclear.",
+       "id": "mis-204-m1-l1"
+      },
+      {
+       "title": "Operation",
+       "kind": "Reading",
+       "minutes": 8,
+       "summary": "Umbilical camera port, left iliac fossa and suprapubic working ports.",
+       "content": "Umbilical camera port, left iliac fossa and suprapubic working ports. Divide the mesoappendix, secure the base with endoloops or a stapler, remove the appendix in a bag. Wash out pus locally, avoid spreading it. Send the specimen for histology.",
+       "id": "mis-204-m1-l2"
+      },
+      {
+       "title": "Laparoscopic skills refresher",
+       "kind": "VrLab",
+       "minutes": 15,
+       "summary": "Warm up on the laparoscopic tasks before the procedure lab.",
+       "simulationId": "lap-operate",
+       "passScore": 70,
+       "id": "mis-204-m1-l3"
+      },
+      {
+       "title": "Procedure lab: laparoscopic appendicectomy",
+       "kind": "VrLab",
+       "minutes": 20,
+       "simulationId": "lap-appendicectomy",
+       "summary": "The full procedure in the virtual theatre.",
+       "passScore": 70,
+       "id": "mis-204-m1-l4"
+      }
+     ],
+     "id": "mis-204-m1"
+    }
+   ]
+  },
+  {
+   "id": "mis-205",
+   "code": "MIS-205",
+   "title": "Robotic Surgery Fundamentals",
+   "subtitle": "Docking, instrument control and safety in robotic-assisted surgery.",
+   "specialty": "Minimally Invasive Surgery",
+   "level": "Advanced",
+   "description": "Docking, instrument control and safety in robotic-assisted surgery.",
+   "outcomes": [
+    "Describe the components of a robotic system and the team roles",
+    "Explain docking, port placement and emergency undocking",
+    "Recognise the loss of haptic feedback and compensate visually"
+   ],
+   "prerequisites": [
+    "mis-202"
+   ],
+   "skills": [
+    "Robotic docking",
+    "Console skills"
+   ],
+   "frameworks": [
+    "SRS Fundamentals of Robotic Surgery"
+   ],
+   "hours": 4,
+   "cmeCredits": 4,
+   "modules": [
+    {
+     "title": "The robot",
+     "summary": "System, team and safety.",
+     "lessons": [
+      {
+       "title": "Robotic systems",
+       "kind": "Reading",
+       "minutes": 8,
+       "summary": "A surgeon console, a patient-side cart with instrument arms and a vision cart.",
+       "content": "A surgeon console, a patient-side cart with instrument arms and a vision cart. Wristed instruments restore degrees of freedom lost in laparoscopy, and the 3D view restores depth, but haptic feedback is absent: tissue tension must be judged visually. The bedside assistant must be able to undock the robot rapidly in an emergency.",
+       "id": "mis-205-m1-l1"
+      },
+      {
+       "title": "Robotic and vision systems",
+       "kind": "Explore",
+       "minutes": 10,
+       "summary": "Walk round a surgical robot and move its arms.",
+       "equipment": [
+        "robot_surgical_c01",
+        "video_system_a01",
+        "arm_articulated_support_a01"
+       ],
+       "id": "mis-205-m1-l2"
+      },
+      {
+       "title": "Check: robotics",
+       "kind": "Quiz",
+       "minutes": 6,
+       "summary": "1 questions with feedback.",
+       "questions": [
+        {
+         "prompt": "What is the main sensory limitation of most robotic systems?",
+         "options": [
+          {
+           "text": "Lack of haptic (force) feedback",
+           "correct": true,
+           "feedback": "The surgeon must infer force from what they see."
+          },
+          {
+           "text": "No 3D vision",
+           "correct": false,
+           "feedback": "Not quite: The surgeon must infer force from what they see."
+          },
+          {
+           "text": "No wristed instruments",
+           "correct": false,
+           "feedback": "Not quite: The surgeon must infer force from what they see."
+          }
+         ],
+         "id": "mis-205-m1-l3-q1"
+        }
+       ],
+       "passScore": 70,
+       "id": "mis-205-m1-l3"
+      }
+     ],
+     "id": "mis-205-m1"
+    }
+   ]
+  },
+  {
+   "id": "gs-301",
+   "code": "GS-301",
+   "title": "Open Appendicectomy",
+   "subtitle": "The classic open operation through a right iliac fossa incision.",
+   "specialty": "General Surgery",
+   "level": "Intermediate",
+   "description": "The classic open operation through a right iliac fossa incision.",
+   "outcomes": [
+    "Locate McBurney's point and choose the incision",
+    "Split the muscles in the line of their fibres",
+    "Ligate the mesoappendix and the base"
+   ],
+   "prerequisites": [
+    "sf-103"
+   ],
+   "skills": [
+    "Gridiron incision",
+    "Ligation"
+   ],
+   "frameworks": [
+    "ISCP General Surgery"
+   ],
+   "hours": 5,
+   "cmeCredits": 5,
+   "modules": [
+    {
+     "title": "Principles",
+     "summary": "Indications, anatomy and preparation.",
+     "lessons": [
+      {
+       "title": "Steps of open appendicectomy",
+       "kind": "Reading",
+       "minutes": 10,
+       "summary": "A transverse (Lanz) or oblique incision centred on McBurney's point, a third of the way from the anterior superior iliac spine to the umbilicus.",
+       "content": "A transverse (Lanz) or oblique incision centred on McBurney's point, a third of the way from the anterior superior iliac spine to the umbilicus. Split external oblique, internal oblique and transversus in the line of their fibres, open the peritoneum, deliver the caecum and follow the taeniae to the appendix base. Ligate the mesoappendix, crush and ligate the base, divide, then close in layers.",
+       "id": "gs-301-m1-l1"
+      },
+      {
+       "title": "Equipment for this operation",
+       "kind": "Explore",
+       "minutes": 10,
+       "summary": "Explore the instruments and devices used.",
+       "equipment": [
+        "instrument_scalpel_handle_a01",
+        "instrument_artery_forceps_b01",
+        "instrument_retractor_a01",
+        "instrument_scissors_a01",
+        "needle_surgical_a01"
+       ],
+       "id": "gs-301-m1-l2"
+      },
+      {
+       "title": "Check: Open Appendicectomy",
+       "kind": "Quiz",
+       "minutes": 6,
+       "summary": "2 questions with feedback.",
+       "questions": [
+        {
+         "prompt": "McBurney's point lies…",
+         "options": [
+          {
+           "text": "One third of the way from the ASIS to the umbilicus",
+           "correct": true,
+           "feedback": "It marks the usual position of the appendix base."
+          },
+          {
+           "text": "Midway between pubis and umbilicus",
+           "correct": false,
+           "feedback": "Not quite: It marks the usual position of the appendix base."
+          },
+          {
+           "text": "At the umbilicus",
+           "correct": false,
+           "feedback": "Not quite: It marks the usual position of the appendix base."
+          }
+         ],
+         "id": "gs-301-m1-l3-q1"
+        },
+        {
+         "prompt": "How is the appendix found when the caecum is delivered?",
+         "options": [
+          {
+           "text": "Follow the taeniae coli to their convergence",
+           "correct": true,
+           "feedback": "The three taeniae converge on the appendix base."
+          },
+          {
+           "text": "Palpate for the ileocaecal valve",
+           "correct": false,
+           "feedback": "Not quite: The three taeniae converge on the appendix base."
+          },
+          {
+           "text": "Look for the most inflamed loop",
+           "correct": false,
+           "feedback": "Not quite: The three taeniae converge on the appendix base."
+          }
+         ],
+         "id": "gs-301-m1-l3-q2"
+        }
+       ],
+       "passScore": 70,
+       "id": "gs-301-m1-l3"
+      }
+     ],
+     "id": "gs-301-m1"
+    },
+    {
+     "title": "Procedure",
+     "summary": "Practise the operation in the virtual theatre.",
+     "lessons": [
+      {
+       "title": "Procedure lab: Open Appendicectomy",
+       "kind": "VrLab",
+       "minutes": 20,
+       "simulationId": "open-appendicectomy",
+       "summary": "Step-by-step procedure with guidance.",
+       "passScore": 70,
+       "id": "gs-301-m2-l1"
+      },
+      {
+       "title": "Assessment: Open Appendicectomy",
+       "kind": "VrAssessment",
+       "minutes": 25,
+       "simulationId": "open-appendicectomy",
+       "summary": "The procedure unaided, scored by step.",
+       "passScore": 75,
+       "id": "gs-301-m2-l2"
+      }
+     ],
+     "id": "gs-301-m2"
+    }
+   ]
+  },
+  {
+   "id": "gs-302",
+   "code": "GS-302",
+   "title": "Inguinal Hernia Repair",
+   "subtitle": "Anatomy of the groin and the Lichtenstein tension-free mesh repair.",
+   "specialty": "General Surgery",
+   "level": "Intermediate",
+   "description": "Anatomy of the groin and the Lichtenstein tension-free mesh repair.",
+   "outcomes": [
+    "Describe the inguinal canal and Hesselbach's triangle",
+    "Distinguish direct and indirect hernias",
+    "Perform a tension-free mesh repair"
+   ],
+   "prerequisites": [
+    "sf-103"
+   ],
+   "skills": [
+    "Groin anatomy",
+    "Mesh repair"
+   ],
+   "frameworks": [
+    "ISCP General Surgery",
+    "HerniaSurge guidelines"
+   ],
+   "hours": 5,
+   "cmeCredits": 5,
+   "modules": [
+    {
+     "title": "Principles",
+     "summary": "Indications, anatomy and preparation.",
+     "lessons": [
+      {
+       "title": "The Lichtenstein repair",
+       "kind": "Reading",
+       "minutes": 10,
+       "summary": "Indirect hernias pass through the deep ring lateral to the inferior epigastric vessels; direct hernias bulge through Hesselbach's triangle medial to them.",
+       "content": "Indirect hernias pass through the deep ring lateral to the inferior epigastric vessels; direct hernias bulge through Hesselbach's triangle medial to them. Open the external oblique aponeurosis, protect the ilioinguinal nerve, mobilise the cord, reduce or ligate the sac, then lay a mesh on the posterior wall: sutured to the inguinal ligament inferiorly and the conjoint tendon medially, slit around the cord.",
+       "id": "gs-302-m1-l1"
+      },
+      {
+       "title": "Equipment for this operation",
+       "kind": "Explore",
+       "minutes": 10,
+       "summary": "Explore the instruments and devices used.",
+       "equipment": [
+        "instrument_scalpel_handle_a01",
+        "instrument_selfretaining_retractor_a01",
+        "instrument_artery_forceps_curved_b01",
+        "instrument_scissors_a01"
+       ],
+       "id": "gs-302-m1-l2"
+      },
+      {
+       "title": "Check: Inguinal Hernia Repair",
+       "kind": "Quiz",
+       "minutes": 6,
+       "summary": "1 questions with feedback.",
+       "questions": [
+        {
+         "prompt": "An indirect inguinal hernia lies…",
+         "options": [
+          {
+           "text": "Lateral to the inferior epigastric vessels",
+           "correct": true,
+           "feedback": "Indirect hernias follow the deep ring, lateral to the vessels."
+          },
+          {
+           "text": "Medial to the inferior epigastric vessels",
+           "correct": false,
+           "feedback": "That is direct."
+          },
+          {
+           "text": "Below the inguinal ligament",
+           "correct": false,
+           "feedback": "That is a femoral hernia."
+          }
+         ],
+         "id": "gs-302-m1-l3-q1"
+        }
+       ],
+       "passScore": 70,
+       "id": "gs-302-m1-l3"
+      }
+     ],
+     "id": "gs-302-m1"
+    },
+    {
+     "title": "Procedure",
+     "summary": "Practise the operation in the virtual theatre.",
+     "lessons": [
+      {
+       "title": "Procedure lab: Inguinal Hernia Repair",
+       "kind": "VrLab",
+       "minutes": 20,
+       "simulationId": "inguinal-hernia",
+       "summary": "Step-by-step procedure with guidance.",
+       "passScore": 70,
+       "id": "gs-302-m2-l1"
+      },
+      {
+       "title": "Assessment: Inguinal Hernia Repair",
+       "kind": "VrAssessment",
+       "minutes": 25,
+       "simulationId": "inguinal-hernia",
+       "summary": "The procedure unaided, scored by step.",
+       "passScore": 75,
+       "id": "gs-302-m2-l2"
+      }
+     ],
+     "id": "gs-302-m2"
+    }
+   ]
+  },
+  {
+   "id": "gs-303",
+   "code": "GS-303",
+   "title": "Laparotomy: Opening and Closing",
+   "subtitle": "Midline access to the abdomen and a closure that does not fail.",
+   "specialty": "General Surgery",
+   "level": "Intermediate",
+   "description": "Midline access to the abdomen and a closure that does not fail.",
+   "outcomes": [
+    "Open the midline safely, avoiding the bowel",
+    "Explore the abdomen systematically",
+    "Close with a small-bites technique"
+   ],
+   "prerequisites": [
+    "sf-103"
+   ],
+   "skills": [
+    "Midline laparotomy",
+    "Mass closure"
+   ],
+   "frameworks": [
+    "ISCP General Surgery",
+    "EHS abdominal wall closure guidelines"
+   ],
+   "hours": 5,
+   "cmeCredits": 5,
+   "modules": [
+    {
+     "title": "Principles",
+     "summary": "Indications, anatomy and preparation.",
+     "lessons": [
+      {
+       "title": "Opening and closing",
+       "kind": "Reading",
+       "minutes": 10,
+       "summary": "Incise skin and linea alba in the midline, open the peritoneum between clips away from the bowel.",
+       "content": "Incise skin and linea alba in the midline, open the peritoneum between clips away from the bowel. Explore systematically. Close the fascia with a continuous slowly absorbable monofilament using small bites (5 mm from the edge, 5 mm apart), aiming for a suture-to-wound length ratio of at least 4:1 to reduce incisional hernia.",
+       "id": "gs-303-m1-l1"
+      },
+      {
+       "title": "Equipment for this operation",
+       "kind": "Explore",
+       "minutes": 10,
+       "summary": "Explore the instruments and devices used.",
+       "equipment": [
+        "instrument_scalpel_handle_a01",
+        "instrument_selfretaining_retractor_a01",
+        "instrument_suction_a01",
+        "needle_surgical_a01",
+        "unit_electrosurgical_a01"
+       ],
+       "id": "gs-303-m1-l2"
+      },
+      {
+       "title": "Check: Laparotomy: Opening and Closing",
+       "kind": "Quiz",
+       "minutes": 6,
+       "summary": "1 questions with feedback.",
+       "questions": [
+        {
+         "prompt": "The recommended suture length to wound length ratio for midline closure is at least…",
+         "options": [
+          {
+           "text": "4:1",
+           "correct": true,
+           "feedback": "A 4:1 ratio with small bites reduces incisional hernia."
+          },
+          {
+           "text": "1:1",
+           "correct": false,
+           "feedback": "Not quite: A 4:1 ratio with small bites reduces incisional hernia."
+          },
+          {
+           "text": "2:1",
+           "correct": false,
+           "feedback": "Not quite: A 4:1 ratio with small bites reduces incisional hernia."
+          }
+         ],
+         "id": "gs-303-m1-l3-q1"
+        }
+       ],
+       "passScore": 70,
+       "id": "gs-303-m1-l3"
+      }
+     ],
+     "id": "gs-303-m1"
+    },
+    {
+     "title": "Procedure",
+     "summary": "Practise the operation in the virtual theatre.",
+     "lessons": [
+      {
+       "title": "Procedure lab: Laparotomy: Opening and Closing",
+       "kind": "VrLab",
+       "minutes": 20,
+       "simulationId": "laparotomy",
+       "summary": "Step-by-step procedure with guidance.",
+       "passScore": 70,
+       "id": "gs-303-m2-l1"
+      },
+      {
+       "title": "Assessment: Laparotomy: Opening and Closing",
+       "kind": "VrAssessment",
+       "minutes": 25,
+       "simulationId": "laparotomy",
+       "summary": "The procedure unaided, scored by step.",
+       "passScore": 75,
+       "id": "gs-303-m2-l2"
+      }
+     ],
+     "id": "gs-303-m2"
+    }
+   ]
+  },
+  {
+   "id": "gs-304",
+   "code": "GS-304",
+   "title": "Bowel Anastomosis",
+   "subtitle": "Hand-sewn and stapled anastomoses and how they fail.",
+   "specialty": "General Surgery",
+   "level": "Advanced",
+   "description": "Hand-sewn and stapled anastomoses and how they fail.",
+   "outcomes": [
+    "List the requirements for a healthy anastomosis",
+    "Perform a hand-sewn single-layer anastomosis",
+    "Use linear and circular staplers"
+   ],
+   "prerequisites": [
+    "gs-303"
+   ],
+   "skills": [
+    "Hand-sewn anastomosis",
+    "Stapled anastomosis"
+   ],
+   "frameworks": [
+    "ISCP General Surgery"
+   ],
+   "hours": 5,
+   "cmeCredits": 5,
+   "modules": [
+    {
+     "title": "Principles",
+     "summary": "Indications, anatomy and preparation.",
+     "lessons": [
+      {
+       "title": "Principles of anastomosis",
+       "kind": "Reading",
+       "minutes": 10,
+       "summary": "A good anastomosis has a good blood supply, no tension, healthy ends and accurate apposition.",
+       "content": "A good anastomosis has a good blood supply, no tension, healthy ends and accurate apposition. Single-layer extramucosal interrupted or continuous sutures are standard for hand-sewn joins. Circular staplers create end-to-end colorectal joins; check both doughnuts are complete. Leaks typically present on days 3–7 with tachycardia, fever, pain or failure to progress.",
+       "id": "gs-304-m1-l1"
+      },
+      {
+       "title": "Equipment for this operation",
+       "kind": "Explore",
+       "minutes": 10,
+       "summary": "Explore the instruments and devices used.",
+       "equipment": [
+        "stapler_surgical_a01",
+        "instrument_clamp_a01",
+        "instrument_forceps_a01",
+        "needle_surgical_a01"
+       ],
+       "id": "gs-304-m1-l2"
+      },
+      {
+       "title": "Check: Bowel Anastomosis",
+       "kind": "Quiz",
+       "minutes": 6,
+       "summary": "1 questions with feedback.",
+       "questions": [
+        {
+         "prompt": "After a circular stapled anastomosis you must check…",
+         "options": [
+          {
+           "text": "Both tissue doughnuts are complete",
+           "correct": true,
+           "feedback": "Incomplete doughnuts suggest a defect in the staple line."
+          },
+          {
+           "text": "The stapler is empty",
+           "correct": false,
+           "feedback": "Not quite: Incomplete doughnuts suggest a defect in the staple line."
+          },
+          {
+           "text": "The bowel is distended",
+           "correct": false,
+           "feedback": "Not quite: Incomplete doughnuts suggest a defect in the staple line."
+          }
+         ],
+         "id": "gs-304-m1-l3-q1"
+        }
+       ],
+       "passScore": 70,
+       "id": "gs-304-m1-l3"
+      }
+     ],
+     "id": "gs-304-m1"
+    },
+    {
+     "title": "Procedure",
+     "summary": "Practise the operation in the virtual theatre.",
+     "lessons": [
+      {
+       "title": "Procedure lab: Bowel Anastomosis",
+       "kind": "VrLab",
+       "minutes": 20,
+       "simulationId": "bowel-anastomosis",
+       "summary": "Step-by-step procedure with guidance.",
+       "passScore": 70,
+       "id": "gs-304-m2-l1"
+      },
+      {
+       "title": "Assessment: Bowel Anastomosis",
+       "kind": "VrAssessment",
+       "minutes": 25,
+       "simulationId": "bowel-anastomosis",
+       "summary": "The procedure unaided, scored by step.",
+       "passScore": 75,
+       "id": "gs-304-m2-l2"
+      }
+     ],
+     "id": "gs-304-m2"
+    }
+   ]
+  },
+  {
+   "id": "gs-305",
+   "code": "GS-305",
+   "title": "Skin Lesions and Abscesses",
+   "subtitle": "Excision biopsy, incision and drainage under local anaesthetic.",
+   "specialty": "General Surgery",
+   "level": "Foundation",
+   "description": "Excision biopsy, incision and drainage under local anaesthetic.",
+   "outcomes": [
+    "Plan an elliptical excision along skin tension lines",
+    "Drain an abscess safely",
+    "Calculate and give local anaesthetic"
+   ],
+   "prerequisites": [
+    "sf-103"
+   ],
+   "skills": [
+    "Elliptical excision",
+    "Incision and drainage",
+    "Local anaesthesia"
+   ],
+   "frameworks": [
+    "ISCP Core Surgical Training"
+   ],
+   "hours": 5,
+   "cmeCredits": 5,
+   "modules": [
+    {
+     "title": "Principles",
+     "summary": "Indications, anatomy and preparation.",
+     "lessons": [
+      {
+       "title": "Excision and drainage",
+       "kind": "Reading",
+       "minutes": 10,
+       "summary": "Plan an ellipse three times as long as it is wide, along relaxed skin tension lines, with margins appropriate to the suspected diagnosis.",
+       "content": "Plan an ellipse three times as long as it is wide, along relaxed skin tension lines, with margins appropriate to the suspected diagnosis. Abscesses are drained by incision over the fluctuant point, breaking down loculi and leaving the cavity to drain; send pus for culture.",
+       "id": "gs-305-m1-l1"
+      },
+      {
+       "title": "Equipment for this operation",
+       "kind": "Explore",
+       "minutes": 10,
+       "summary": "Explore the instruments and devices used.",
+       "equipment": [
+        "instrument_scalpel_handle_a01",
+        "instrument_forceps_a01",
+        "syringe_a01",
+        "needle_surgical_a01",
+        "bandage_medical_a01",
+        "medical_sample_bag_a01"
+       ],
+       "id": "gs-305-m1-l2"
+      },
+      {
+       "title": "Check: Skin Lesions and Abscesses",
+       "kind": "Quiz",
+       "minutes": 6,
+       "summary": "1 questions with feedback.",
+       "questions": [
+        {
+         "prompt": "An excision ellipse is usually about how long relative to its width?",
+         "options": [
+          {
+           "text": "Three times",
+           "correct": true,
+           "feedback": "A 3:1 ellipse closes without dog-ears."
+          },
+          {
+           "text": "Equal",
+           "correct": false,
+           "feedback": "Not quite: A 3:1 ellipse closes without dog-ears."
+          },
+          {
+           "text": "Ten times",
+           "correct": false,
+           "feedback": "Not quite: A 3:1 ellipse closes without dog-ears."
+          }
+         ],
+         "id": "gs-305-m1-l3-q1"
+        }
+       ],
+       "passScore": 70,
+       "id": "gs-305-m1-l3"
+      }
+     ],
+     "id": "gs-305-m1"
+    },
+    {
+     "title": "Procedure",
+     "summary": "Practise the operation in the virtual theatre.",
+     "lessons": [
+      {
+       "title": "Procedure lab: Skin Lesions and Abscesses",
+       "kind": "VrLab",
+       "minutes": 20,
+       "simulationId": "minor-ops",
+       "summary": "Step-by-step procedure with guidance.",
+       "passScore": 70,
+       "id": "gs-305-m2-l1"
+      },
+      {
+       "title": "Assessment: Skin Lesions and Abscesses",
+       "kind": "VrAssessment",
+       "minutes": 25,
+       "simulationId": "minor-ops",
+       "summary": "The procedure unaided, scored by step.",
+       "passScore": 75,
+       "id": "gs-305-m2-l2"
+      }
+     ],
+     "id": "gs-305-m2"
+    }
+   ]
+  },
+  {
+   "id": "tr-401",
+   "code": "TR-401",
+   "title": "Primary Survey and Haemorrhage Control",
+   "subtitle": "Catastrophic bleeding, airway, breathing, circulation in the injured patient.",
+   "specialty": "Trauma & Emergency",
+   "level": "Intermediate",
+   "description": "Catastrophic bleeding, airway, breathing, circulation in the injured patient.",
+   "outcomes": [
+    "Run a <C>ABCDE primary survey",
+    "Control external haemorrhage with pressure, packing and tourniquets",
+    "Activate a major haemorrhage protocol"
+   ],
+   "prerequisites": [
+    "sf-101"
+   ],
+   "skills": [
+    "Primary survey",
+    "Tourniquet",
+    "Wound packing"
+   ],
+   "frameworks": [
+    "Trauma team training curricula"
+   ],
+   "hours": 5,
+   "cmeCredits": 5,
+   "modules": [
+    {
+     "title": "Principles",
+     "summary": "Indications, anatomy and preparation.",
+     "lessons": [
+      {
+       "title": "The primary survey",
+       "kind": "Reading",
+       "minutes": 10,
+       "summary": "Catastrophic external haemorrhage first, then airway with cervical spine control, breathing, circulation, disability and exposure.",
+       "content": "Catastrophic external haemorrhage first, then airway with cervical spine control, breathing, circulation, disability and exposure. Direct pressure, wound packing and a proximal tourniquet control limb bleeding; record the tourniquet time. Give blood products early in a balanced ratio and tranexamic acid within 3 hours of injury.",
+       "id": "tr-401-m1-l1"
+      },
+      {
+       "title": "Equipment for this operation",
+       "kind": "Explore",
+       "minutes": 10,
+       "summary": "Explore the instruments and devices used.",
+       "equipment": [
+        "monitor_patient_a01",
+        "pump_infusion_a01",
+        "blood_bag_a01",
+        "warmer_infusion_a01",
+        "bandage_medical_a03",
+        "trolley_emergency_a01"
+       ],
+       "id": "tr-401-m1-l2"
+      },
+      {
+       "title": "Check: Primary Survey and Haemorrhage Control",
+       "kind": "Quiz",
+       "minutes": 6,
+       "summary": "1 questions with feedback.",
+       "questions": [
+        {
+         "prompt": "Tranexamic acid in major trauma should be given…",
+         "options": [
+          {
+           "text": "Within 3 hours of injury",
+           "correct": true,
+           "feedback": "Benefit is lost, and harm possible, if given late."
+          },
+          {
+           "text": "Only after surgery",
+           "correct": false,
+           "feedback": "Not quite: Benefit is lost, and harm possible, if given late."
+          },
+          {
+           "text": "After 6 hours",
+           "correct": false,
+           "feedback": "Not quite: Benefit is lost, and harm possible, if given late."
+          }
+         ],
+         "id": "tr-401-m1-l3-q1"
+        }
+       ],
+       "passScore": 70,
+       "id": "tr-401-m1-l3"
+      }
+     ],
+     "id": "tr-401-m1"
+    },
+    {
+     "title": "Procedure",
+     "summary": "Practise the operation in the virtual theatre.",
+     "lessons": [
+      {
+       "title": "Procedure lab: Primary Survey and Haemorrhage Control",
+       "kind": "VrLab",
+       "minutes": 20,
+       "simulationId": "trauma-bay",
+       "summary": "Step-by-step procedure with guidance.",
+       "passScore": 70,
+       "id": "tr-401-m2-l1"
+      },
+      {
+       "title": "Assessment: Primary Survey and Haemorrhage Control",
+       "kind": "VrAssessment",
+       "minutes": 25,
+       "simulationId": "trauma-bay",
+       "summary": "The procedure unaided, scored by step.",
+       "passScore": 75,
+       "id": "tr-401-m2-l2"
+      }
+     ],
+     "id": "tr-401-m2"
+    }
+   ]
+  },
+  {
+   "id": "tr-402",
+   "code": "TR-402",
+   "title": "Chest Drain Insertion",
+   "subtitle": "Safe-triangle anatomy and an open technique.",
+   "specialty": "Trauma & Emergency",
+   "level": "Intermediate",
+   "description": "Safe-triangle anatomy and an open technique.",
+   "outcomes": [
+    "Identify the safe triangle",
+    "Insert a chest drain by blunt dissection",
+    "Connect and secure an underwater seal"
+   ],
+   "prerequisites": [
+    "sf-103"
+   ],
+   "skills": [
+    "Chest drain"
+   ],
+   "frameworks": [
+    "BTS pleural guidelines"
+   ],
+   "hours": 5,
+   "cmeCredits": 5,
+   "modules": [
+    {
+     "title": "Principles",
+     "summary": "Indications, anatomy and preparation.",
+     "lessons": [
+      {
+       "title": "Inserting a chest drain",
+       "kind": "Reading",
+       "minutes": 10,
+       "summary": "The safe triangle: anterior border of latissimus dorsi, lateral border of pectoralis major, a line at the level of the nipple (5th intercostal space), apex below the axilla.",
+       "content": "The safe triangle: anterior border of latissimus dorsi, lateral border of pectoralis major, a line at the level of the nipple (5th intercostal space), apex below the axilla. Infiltrate local anaesthetic, incise, bluntly dissect over the top of the rib (the neurovascular bundle runs under it), sweep with a finger, insert the drain, connect to an underwater seal and secure.",
+       "id": "tr-402-m1-l1"
+      },
+      {
+       "title": "Equipment for this operation",
+       "kind": "Explore",
+       "minutes": 10,
+       "summary": "Explore the instruments and devices used.",
+       "equipment": [
+        "drainage_a01",
+        "drainage_pumpSystem_a01",
+        "instrument_artery_forceps_curved_b01",
+        "instrument_scalpel_handle_a01",
+        "syringe_a02"
+       ],
+       "id": "tr-402-m1-l2"
+      },
+      {
+       "title": "Check: Chest Drain Insertion",
+       "kind": "Quiz",
+       "minutes": 6,
+       "summary": "1 questions with feedback.",
+       "questions": [
+        {
+         "prompt": "Why is dissection done over the upper border of the rib?",
+         "options": [
+          {
+           "text": "The neurovascular bundle runs under each rib",
+           "correct": true,
+           "feedback": "Intercostal vessels and nerve sit in the groove under the rib."
+          },
+          {
+           "text": "The pleura is thinner there",
+           "correct": false,
+           "feedback": "Not quite: Intercostal vessels and nerve sit in the groove under the rib."
+          },
+          {
+           "text": "It hurts less",
+           "correct": false,
+           "feedback": "Not quite: Intercostal vessels and nerve sit in the groove under the rib."
+          }
+         ],
+         "id": "tr-402-m1-l3-q1"
+        }
+       ],
+       "passScore": 70,
+       "id": "tr-402-m1-l3"
+      }
+     ],
+     "id": "tr-402-m1"
+    },
+    {
+     "title": "Procedure",
+     "summary": "Practise the operation in the virtual theatre.",
+     "lessons": [
+      {
+       "title": "Procedure lab: Chest Drain Insertion",
+       "kind": "VrLab",
+       "minutes": 20,
+       "simulationId": "chest-drain",
+       "summary": "Step-by-step procedure with guidance.",
+       "passScore": 70,
+       "id": "tr-402-m2-l1"
+      },
+      {
+       "title": "Assessment: Chest Drain Insertion",
+       "kind": "VrAssessment",
+       "minutes": 25,
+       "simulationId": "chest-drain",
+       "summary": "The procedure unaided, scored by step.",
+       "passScore": 75,
+       "id": "tr-402-m2-l2"
+      }
+     ],
+     "id": "tr-402-m2"
+    }
+   ]
+  },
+  {
+   "id": "tr-403",
+   "code": "TR-403",
+   "title": "Point-of-Care Ultrasound in Trauma (eFAST)",
+   "subtitle": "Find free fluid and pneumothorax at the bedside.",
+   "specialty": "Trauma & Emergency",
+   "level": "Intermediate",
+   "description": "Find free fluid and pneumothorax at the bedside.",
+   "outcomes": [
+    "Obtain the four FAST windows and the lung views",
+    "Recognise free fluid and absent lung sliding"
+   ],
+   "prerequisites": [
+    "sf-107"
+   ],
+   "skills": [
+    "eFAST"
+   ],
+   "frameworks": [
+    "Emergency ultrasound curricula"
+   ],
+   "hours": 5,
+   "cmeCredits": 5,
+   "modules": [
+    {
+     "title": "Principles",
+     "summary": "Indications, anatomy and preparation.",
+     "lessons": [
+      {
+       "title": "The eFAST scan",
+       "kind": "Reading",
+       "minutes": 10,
+       "summary": "Four abdominal windows: right upper quadrant (hepatorenal space), left upper quadrant (splenorenal), pelvis and subxiphoid pericardial.",
+       "content": "Four abdominal windows: right upper quadrant (hepatorenal space), left upper quadrant (splenorenal), pelvis and subxiphoid pericardial. Free fluid appears black (anechoic). The extended scan adds anterior chest views: absent lung sliding suggests pneumothorax.",
+       "id": "tr-403-m1-l1"
+      },
+      {
+       "title": "Equipment for this operation",
+       "kind": "Explore",
+       "minutes": 10,
+       "summary": "Explore the instruments and devices used.",
+       "equipment": [
+        "ultrasound_a01",
+        "ultrasound_b01",
+        "monitor_patient_a01"
+       ],
+       "id": "tr-403-m1-l2"
+      },
+      {
+       "title": "Check: Point-of-Care Ultrasound in Trauma (eFAST)",
+       "kind": "Quiz",
+       "minutes": 6,
+       "summary": "1 questions with feedback.",
+       "questions": [
+        {
+         "prompt": "Free fluid on FAST appears…",
+         "options": [
+          {
+           "text": "Anechoic (black)",
+           "correct": true,
+           "feedback": "Fluid does not reflect ultrasound."
+          },
+          {
+           "text": "Bright white",
+           "correct": false,
+           "feedback": "Not quite: Fluid does not reflect ultrasound."
+          },
+          {
+           "text": "Speckled grey",
+           "correct": false,
+           "feedback": "Not quite: Fluid does not reflect ultrasound."
+          }
+         ],
+         "id": "tr-403-m1-l3-q1"
+        }
+       ],
+       "passScore": 70,
+       "id": "tr-403-m1-l3"
+      }
+     ],
+     "id": "tr-403-m1"
+    },
+    {
+     "title": "Procedure",
+     "summary": "Practise the operation in the virtual theatre.",
+     "lessons": [
+      {
+       "title": "Procedure lab: Point-of-Care Ultrasound in Trauma (eFAST)",
+       "kind": "VrLab",
+       "minutes": 20,
+       "simulationId": "efast",
+       "summary": "Step-by-step procedure with guidance.",
+       "passScore": 70,
+       "id": "tr-403-m2-l1"
+      },
+      {
+       "title": "Assessment: Point-of-Care Ultrasound in Trauma (eFAST)",
+       "kind": "VrAssessment",
+       "minutes": 25,
+       "simulationId": "efast",
+       "summary": "The procedure unaided, scored by step.",
+       "passScore": 75,
+       "id": "tr-403-m2-l2"
+      }
+     ],
+     "id": "tr-403-m2"
+    }
+   ]
+  },
+  {
+   "id": "tr-404",
+   "code": "TR-404",
+   "title": "Vascular Access",
+   "subtitle": "Peripheral, central and intraosseous access.",
+   "specialty": "Trauma & Emergency",
+   "level": "Foundation",
+   "description": "Peripheral, central and intraosseous access.",
+   "outcomes": [
+    "Cannulate a peripheral vein using vein-finding aids",
+    "Describe ultrasound-guided central line insertion with Seldinger technique",
+    "Know when to use intraosseous access"
+   ],
+   "prerequisites": [
+    "sf-101"
+   ],
+   "skills": [
+    "Cannulation",
+    "Seldinger technique"
+   ],
+   "frameworks": [
+    "ISCP Core Surgical Training"
+   ],
+   "hours": 5,
+   "cmeCredits": 5,
+   "modules": [
+    {
+     "title": "Principles",
+     "summary": "Indications, anatomy and preparation.",
+     "lessons": [
+      {
+       "title": "Getting access",
+       "kind": "Reading",
+       "minutes": 10,
+       "summary": "Choose the largest vein you can see or feel; vein finders and ultrasound help in difficult patients.",
+       "content": "Choose the largest vein you can see or feel; vein finders and ultrasound help in difficult patients. Central lines are placed with ultrasound guidance and full asepsis by the Seldinger technique: needle, guidewire (never let go of it), dilator, catheter. Intraosseous access is fast when veins fail in an emergency.",
+       "id": "tr-404-m1-l1"
+      },
+      {
+       "title": "Equipment for this operation",
+       "kind": "Explore",
+       "minutes": 10,
+       "summary": "Explore the instruments and devices used.",
+       "equipment": [
+        "device_vein_finder_a01",
+        "catheter_system_a01",
+        "syringe_a03",
+        "IV_pole_a01",
+        "pump_infusion_a01",
+        "ultrasound_b01"
+       ],
+       "id": "tr-404-m1-l2"
+      },
+      {
+       "title": "Check: Vascular Access",
+       "kind": "Quiz",
+       "minutes": 6,
+       "summary": "1 questions with feedback.",
+       "questions": [
+        {
+         "prompt": "During Seldinger insertion, the operator must…",
+         "options": [
+          {
+           "text": "Keep hold of the guidewire at all times",
+           "correct": true,
+           "feedback": "A lost guidewire can embolise."
+          },
+          {
+           "text": "Remove the wire before dilating",
+           "correct": false,
+           "feedback": "Not quite: A lost guidewire can embolise."
+          },
+          {
+           "text": "Use the dilator first",
+           "correct": false,
+           "feedback": "Not quite: A lost guidewire can embolise."
+          }
+         ],
+         "id": "tr-404-m1-l3-q1"
+        }
+       ],
+       "passScore": 70,
+       "id": "tr-404-m1-l3"
+      }
+     ],
+     "id": "tr-404-m1"
+    },
+    {
+     "title": "Procedure",
+     "summary": "Practise the operation in the virtual theatre.",
+     "lessons": [
+      {
+       "title": "Procedure lab: Vascular Access",
+       "kind": "VrLab",
+       "minutes": 20,
+       "simulationId": "vascular-access",
+       "summary": "Step-by-step procedure with guidance.",
+       "passScore": 70,
+       "id": "tr-404-m2-l1"
+      },
+      {
+       "title": "Assessment: Vascular Access",
+       "kind": "VrAssessment",
+       "minutes": 25,
+       "simulationId": "vascular-access",
+       "summary": "The procedure unaided, scored by step.",
+       "passScore": 75,
+       "id": "tr-404-m2-l2"
+      }
+     ],
+     "id": "tr-404-m2"
+    }
+   ]
+  },
+  {
+   "id": "or-501",
+   "code": "OR-501",
+   "title": "Orthopaedic Principles and Bone Instruments",
+   "subtitle": "Fracture principles, fixation and the instruments that work on bone.",
+   "specialty": "Orthopaedics",
+   "level": "Intermediate",
+   "description": "Fracture principles, fixation and the instruments that work on bone.",
+   "outcomes": [
+    "Describe a fracture and the principles of reduction and fixation",
+    "Name and use bone instruments",
+    "Apply a tourniquet safely"
+   ],
+   "prerequisites": [
+    "sf-102"
+   ],
+   "skills": [
+    "Fracture description",
+    "Bone instruments"
+   ],
+   "frameworks": [
+    "ISCP Trauma & Orthopaedics"
+   ],
+   "hours": 5,
+   "cmeCredits": 5,
+   "modules": [
+    {
+     "title": "Principles",
+     "summary": "Indications, anatomy and preparation.",
+     "lessons": [
+      {
+       "title": "Fractures and fixation",
+       "kind": "Reading",
+       "minutes": 10,
+       "summary": "Describe a fracture by bone, location, pattern, displacement and soft-tissue state.",
+       "content": "Describe a fracture by bone, location, pattern, displacement and soft-tissue state. Treatment: reduce, hold, rehabilitate. Fixation may be relative (casts, nails, external fixators) or absolute (compression plating). Bone is cut and shaped with saws, osteotomes, rongeurs, rasps (raspatories) and drills; tourniquet time is recorded and kept as short as possible.",
+       "id": "or-501-m1-l1"
+      },
+      {
+       "title": "Equipment for this operation",
+       "kind": "Explore",
+       "minutes": 10,
+       "summary": "Explore the instruments and devices used.",
+       "equipment": [
+        "instrument_bone_rongeurs_b01",
+        "instrument_bone_rongeurs_angled_b01",
+        "instrument_bone_clamp_b01",
+        "instrument_bone_forceps_b01",
+        "instrument_bone_hook_b01",
+        "instrument_bone_lever_a01",
+        "instrument_bone_mallet_b01",
+        "instrument_hand_drill_b01",
+        "instrument_handsaw_a01",
+        "instrument_raspatory_a01",
+        "instrument_tamper_a01",
+        "instrument_caliper_a01",
+        "instrument_wire_cutters_b01",
+        "tool_power_surgical_b01"
+       ],
+       "id": "or-501-m1-l2"
+      },
+      {
+       "title": "Check: Orthopaedic Principles and Bone Instruments",
+       "kind": "Quiz",
+       "minutes": 6,
+       "summary": "1 questions with feedback.",
+       "questions": [
+        {
+         "prompt": "Absolute stability of a fracture is achieved by…",
+         "options": [
+          {
+           "text": "Compression across the fracture (e.g. lag screw and plate)",
+           "correct": true,
+           "feedback": "Compression gives primary bone healing; casts and nails give relative stability."
+          },
+          {
+           "text": "A cast",
+           "correct": false,
+           "feedback": "Not quite: Compression gives primary bone healing; casts and nails give relative stability."
+          },
+          {
+           "text": "An intramedullary nail",
+           "correct": false,
+           "feedback": "Not quite: Compression gives primary bone healing; casts and nails give relative stability."
+          }
+         ],
+         "id": "or-501-m1-l3-q1"
+        }
+       ],
+       "passScore": 70,
+       "id": "or-501-m1-l3"
+      }
+     ],
+     "id": "or-501-m1"
+    },
+    {
+     "title": "Procedure",
+     "summary": "Practise the operation in the virtual theatre.",
+     "lessons": [
+      {
+       "title": "Procedure lab: Orthopaedic Principles and Bone Instruments",
+       "kind": "VrLab",
+       "minutes": 20,
+       "simulationId": "ortho-fixation",
+       "summary": "Step-by-step procedure with guidance.",
+       "passScore": 70,
+       "id": "or-501-m2-l1"
+      },
+      {
+       "title": "Assessment: Orthopaedic Principles and Bone Instruments",
+       "kind": "VrAssessment",
+       "minutes": 25,
+       "simulationId": "ortho-fixation",
+       "summary": "The procedure unaided, scored by step.",
+       "passScore": 75,
+       "id": "or-501-m2-l2"
+      }
+     ],
+     "id": "or-501-m2"
+    }
+   ]
+  },
+  {
+   "id": "vs-502",
+   "code": "VS-502",
+   "title": "Vascular Surgery Basics",
+   "subtitle": "Vascular anastomosis and varicose vein surgery.",
+   "specialty": "Vascular Surgery",
+   "level": "Advanced",
+   "description": "Vascular anastomosis and varicose vein surgery.",
+   "outcomes": [
+    "Gain proximal and distal control of a vessel",
+    "Perform an end-to-side anastomosis",
+    "Describe stripping of the great saphenous vein"
+   ],
+   "prerequisites": [
+    "sf-103"
+   ],
+   "skills": [
+    "Vascular control",
+    "Vascular anastomosis"
+   ],
+   "frameworks": [
+    "ISCP Vascular Surgery"
+   ],
+   "hours": 5,
+   "cmeCredits": 5,
+   "modules": [
+    {
+     "title": "Principles",
+     "summary": "Indications, anatomy and preparation.",
+     "lessons": [
+      {
+       "title": "Vascular principles",
+       "kind": "Reading",
+       "minutes": 10,
+       "summary": "Control above and below before opening a vessel.",
+       "content": "Control above and below before opening a vessel. Use fine non-absorbable monofilament (polypropylene), passing the needle inside-out on the artery so the intima is tacked down. Endovenous ablation has largely replaced stripping, but stripping remains an option for selected patients.",
+       "id": "vs-502-m1-l1"
+      },
+      {
+       "title": "Equipment for this operation",
+       "kind": "Explore",
+       "minutes": 10,
+       "summary": "Explore the instruments and devices used.",
+       "equipment": [
+        "instrument_stripper_a01",
+        "instrument_clamp_a01",
+        "instrument_dilator_a01",
+        "needle_surgical_a01",
+        "instrument_forceps_a01"
+       ],
+       "id": "vs-502-m1-l2"
+      },
+      {
+       "title": "Check: Vascular Surgery Basics",
+       "kind": "Quiz",
+       "minutes": 6,
+       "summary": "1 questions with feedback.",
+       "questions": [
+        {
+         "prompt": "On the arterial side of an anastomosis the needle passes…",
+         "options": [
+          {
+           "text": "From inside to outside",
+           "correct": true,
+           "feedback": "Inside-out tacks the intima and prevents a dissection flap."
+          },
+          {
+           "text": "From outside to inside",
+           "correct": false,
+           "feedback": "Not quite: Inside-out tacks the intima and prevents a dissection flap."
+          },
+          {
+           "text": "Either way",
+           "correct": false,
+           "feedback": "Not quite: Inside-out tacks the intima and prevents a dissection flap."
+          }
+         ],
+         "id": "vs-502-m1-l3-q1"
+        }
+       ],
+       "passScore": 70,
+       "id": "vs-502-m1-l3"
+      }
+     ],
+     "id": "vs-502-m1"
+    },
+    {
+     "title": "Procedure",
+     "summary": "Practise the operation in the virtual theatre.",
+     "lessons": [
+      {
+       "title": "Procedure lab: Vascular Surgery Basics",
+       "kind": "VrLab",
+       "minutes": 20,
+       "simulationId": "vascular-anastomosis",
+       "summary": "Step-by-step procedure with guidance.",
+       "passScore": 70,
+       "id": "vs-502-m2-l1"
+      },
+      {
+       "title": "Assessment: Vascular Surgery Basics",
+       "kind": "VrAssessment",
+       "minutes": 25,
+       "simulationId": "vascular-anastomosis",
+       "summary": "The procedure unaided, scored by step.",
+       "passScore": 75,
+       "id": "vs-502-m2-l2"
+      }
+     ],
+     "id": "vs-502-m2"
+    }
+   ]
+  },
+  {
+   "id": "pl-503",
+   "code": "PL-503",
+   "title": "Plastic Surgery: Skin Grafts",
+   "subtitle": "Split and full thickness grafts and the dermatome.",
+   "specialty": "Plastic Surgery",
+   "level": "Intermediate",
+   "description": "Split and full thickness grafts and the dermatome.",
+   "outcomes": [
+    "Choose between split and full thickness grafts",
+    "Harvest a split skin graft",
+    "Care for the graft and donor site"
+   ],
+   "prerequisites": [
+    "sf-103"
+   ],
+   "skills": [
+    "Skin grafting"
+   ],
+   "frameworks": [
+    "ISCP Plastic Surgery"
+   ],
+   "hours": 5,
+   "cmeCredits": 5,
+   "modules": [
+    {
+     "title": "Principles",
+     "summary": "Indications, anatomy and preparation.",
+     "lessons": [
+      {
+       "title": "Skin grafts",
+       "kind": "Reading",
+       "minutes": 10,
+       "summary": "Split-thickness grafts include epidermis and part of the dermis, take readily and can be meshed to cover large areas, but contract.",
+       "content": "Split-thickness grafts include epidermis and part of the dermis, take readily and can be meshed to cover large areas, but contract. Full-thickness grafts give a better colour and less contraction for the face and hands. Grafts need a vascular bed, immobility and no collections underneath to take.",
+       "id": "pl-503-m1-l1"
+      },
+      {
+       "title": "Equipment for this operation",
+       "kind": "Explore",
+       "minutes": 10,
+       "summary": "Explore the instruments and devices used.",
+       "equipment": [
+        "instrument_skingrafting_knife_a01",
+        "instrument_spatula_a01",
+        "instrument_forceps_a01",
+        "bandage_medical_a04"
+       ],
+       "id": "pl-503-m1-l2"
+      },
+      {
+       "title": "Check: Plastic Surgery: Skin Grafts",
+       "kind": "Quiz",
+       "minutes": 6,
+       "summary": "1 questions with feedback.",
+       "questions": [
+        {
+         "prompt": "Which graft contracts more after healing?",
+         "options": [
+          {
+           "text": "Split thickness",
+           "correct": true,
+           "feedback": "Less dermis means more secondary contraction."
+          },
+          {
+           "text": "Full thickness",
+           "correct": false,
+           "feedback": "Not quite: Less dermis means more secondary contraction."
+          },
+          {
+           "text": "They contract equally",
+           "correct": false,
+           "feedback": "Not quite: Less dermis means more secondary contraction."
+          }
+         ],
+         "id": "pl-503-m1-l3-q1"
+        }
+       ],
+       "passScore": 70,
+       "id": "pl-503-m1-l3"
+      }
+     ],
+     "id": "pl-503-m1"
+    },
+    {
+     "title": "Procedure",
+     "summary": "Practise the operation in the virtual theatre.",
+     "lessons": [
+      {
+       "title": "Procedure lab: Plastic Surgery: Skin Grafts",
+       "kind": "VrLab",
+       "minutes": 20,
+       "simulationId": "skin-graft",
+       "summary": "Step-by-step procedure with guidance.",
+       "passScore": 70,
+       "id": "pl-503-m2-l1"
+      },
+      {
+       "title": "Assessment: Plastic Surgery: Skin Grafts",
+       "kind": "VrAssessment",
+       "minutes": 25,
+       "simulationId": "skin-graft",
+       "summary": "The procedure unaided, scored by step.",
+       "passScore": 75,
+       "id": "pl-503-m2-l2"
+      }
+     ],
+     "id": "pl-503-m2"
+    }
+   ]
+  },
+  {
+   "id": "en-504",
+   "code": "EN-504",
+   "title": "ENT Examination and Emergencies",
+   "subtitle": "Otoscopy, epistaxis and the airway.",
+   "specialty": "ENT",
+   "level": "Foundation",
+   "description": "Otoscopy, epistaxis and the airway.",
+   "outcomes": [
+    "Examine the ear with an otoscope",
+    "Manage anterior epistaxis",
+    "Describe emergency front-of-neck access"
+   ],
+   "prerequisites": [
+    "sf-101"
+   ],
+   "skills": [
+    "Otoscopy",
+    "Nasal packing"
+   ],
+   "frameworks": [
+    "ISCP ENT"
+   ],
+   "hours": 5,
+   "cmeCredits": 5,
+   "modules": [
+    {
+     "title": "Principles",
+     "summary": "Indications, anatomy and preparation.",
+     "lessons": [
+      {
+       "title": "ENT essentials",
+       "kind": "Reading",
+       "minutes": 10,
+       "summary": "Pull the pinna up and back in adults to straighten the canal for otoscopy.",
+       "content": "Pull the pinna up and back in adults to straighten the canal for otoscopy. Most epistaxis is anterior (Little's area): sit forward, firm pressure on the soft nose for 15 minutes, then cautery or packing. In a can't-intubate, can't-oxygenate emergency, scalpel-bougie-tube cricothyroidotomy is the standard front-of-neck access.",
+       "id": "en-504-m1-l1"
+      },
+      {
+       "title": "Equipment for this operation",
+       "kind": "Explore",
+       "minutes": 10,
+       "summary": "Explore the instruments and devices used.",
+       "equipment": [
+        "device_otoscope_a01",
+        "instrument_nasal_forceps_b01",
+        "headlight_surgical_a01",
+        "instrument_mirror_a01",
+        "instrument_spoon_a01"
+       ],
+       "id": "en-504-m1-l2"
+      },
+      {
+       "title": "Check: ENT Examination and Emergencies",
+       "kind": "Quiz",
+       "minutes": 6,
+       "summary": "1 questions with feedback.",
+       "questions": [
+        {
+         "prompt": "Most nosebleeds arise from…",
+         "options": [
+          {
+           "text": "Little's area on the anterior septum",
+           "correct": true,
+           "feedback": "Kiesselbach's plexus in Little's area."
+          },
+          {
+           "text": "The posterior nasal cavity",
+           "correct": false,
+           "feedback": "Not quite: Kiesselbach's plexus in Little's area."
+          },
+          {
+           "text": "The inferior turbinate",
+           "correct": false,
+           "feedback": "Not quite: Kiesselbach's plexus in Little's area."
+          }
+         ],
+         "id": "en-504-m1-l3-q1"
+        }
+       ],
+       "passScore": 70,
+       "id": "en-504-m1-l3"
+      }
+     ],
+     "id": "en-504-m1"
+    },
+    {
+     "title": "Procedure",
+     "summary": "Practise the operation in the virtual theatre.",
+     "lessons": [
+      {
+       "title": "Procedure lab: ENT Examination and Emergencies",
+       "kind": "VrLab",
+       "minutes": 20,
+       "simulationId": "ent-exam",
+       "summary": "Step-by-step procedure with guidance.",
+       "passScore": 70,
+       "id": "en-504-m2-l1"
+      },
+      {
+       "title": "Assessment: ENT Examination and Emergencies",
+       "kind": "VrAssessment",
+       "minutes": 25,
+       "simulationId": "ent-exam",
+       "summary": "The procedure unaided, scored by step.",
+       "passScore": 75,
+       "id": "en-504-m2-l2"
+      }
+     ],
+     "id": "en-504-m2"
+    }
+   ]
+  },
+  {
+   "id": "ur-505",
+   "code": "UR-505",
+   "title": "Urinary Catheterisation and Endourology",
+   "subtitle": "Aseptic catheterisation and the basics of cystoscopy.",
+   "specialty": "Urology",
+   "level": "Foundation",
+   "description": "Aseptic catheterisation and the basics of cystoscopy.",
+   "outcomes": [
+    "Catheterise a male and a female patient aseptically",
+    "Recognise and manage a failed catheterisation",
+    "Describe flexible cystoscopy"
+   ],
+   "prerequisites": [
+    "sf-101"
+   ],
+   "skills": [
+    "Catheterisation",
+    "Cystoscopy"
+   ],
+   "frameworks": [
+    "ISCP Urology"
+   ],
+   "hours": 5,
+   "cmeCredits": 5,
+   "modules": [
+    {
+     "title": "Principles",
+     "summary": "Indications, anatomy and preparation.",
+     "lessons": [
+      {
+       "title": "Catheterisation",
+       "kind": "Reading",
+       "minutes": 10,
+       "summary": "Aseptic technique, lubricating local anaesthetic gel, and in men the penis held upright to straighten the urethra.",
+       "content": "Aseptic technique, lubricating local anaesthetic gel, and in men the penis held upright to straighten the urethra. Inflate the balloon only once urine flows; never inflate in the urethra. Document the residual volume. Failed or traumatic catheterisation needs a urology review.",
+       "id": "ur-505-m1-l1"
+      },
+      {
+       "title": "Equipment for this operation",
+       "kind": "Explore",
+       "minutes": 10,
+       "summary": "Explore the instruments and devices used.",
+       "equipment": [
+        "catheter_system_a01",
+        "drainage_a01",
+        "device_catheter_positioning_system_a01",
+        "device_endoscope_a01",
+        "box_glove_a01"
+       ],
+       "id": "ur-505-m1-l2"
+      },
+      {
+       "title": "Check: Urinary Catheterisation and Endourology",
+       "kind": "Quiz",
+       "minutes": 6,
+       "summary": "1 questions with feedback.",
+       "questions": [
+        {
+         "prompt": "When should the catheter balloon be inflated?",
+         "options": [
+          {
+           "text": "Only after urine drains",
+           "correct": true,
+           "feedback": "Inflating in the urethra causes serious trauma."
+          },
+          {
+           "text": "As soon as resistance is felt",
+           "correct": false,
+           "feedback": "Not quite: Inflating in the urethra causes serious trauma."
+          },
+          {
+           "text": "Before insertion",
+           "correct": false,
+           "feedback": "Not quite: Inflating in the urethra causes serious trauma."
+          }
+         ],
+         "id": "ur-505-m1-l3-q1"
+        }
+       ],
+       "passScore": 70,
+       "id": "ur-505-m1-l3"
+      }
+     ],
+     "id": "ur-505-m1"
+    },
+    {
+     "title": "Procedure",
+     "summary": "Practise the operation in the virtual theatre.",
+     "lessons": [
+      {
+       "title": "Procedure lab: Urinary Catheterisation and Endourology",
+       "kind": "VrLab",
+       "minutes": 20,
+       "simulationId": "catheterisation",
+       "summary": "Step-by-step procedure with guidance.",
+       "passScore": 70,
+       "id": "ur-505-m2-l1"
+      },
+      {
+       "title": "Assessment: Urinary Catheterisation and Endourology",
+       "kind": "VrAssessment",
+       "minutes": 25,
+       "simulationId": "catheterisation",
+       "summary": "The procedure unaided, scored by step.",
+       "passScore": 75,
+       "id": "ur-505-m2-l2"
+      }
+     ],
+     "id": "ur-505-m2"
+    }
+   ]
+  },
+  {
+   "id": "ct-506",
+   "code": "CT-506",
+   "title": "Cardiothoracic Surgery Basics",
+   "subtitle": "Sternotomy, bypass and the post-operative chest.",
+   "specialty": "Cardiothoracic Surgery",
+   "level": "Advanced",
+   "description": "Sternotomy, bypass and the post-operative chest.",
+   "outcomes": [
+    "Describe median sternotomy and its closure",
+    "Explain the cardiopulmonary bypass circuit",
+    "Recognise tamponade after cardiac surgery"
+   ],
+   "prerequisites": [
+    "sf-107"
+   ],
+   "skills": [
+    "Sternotomy",
+    "Bypass circuit"
+   ],
+   "frameworks": [
+    "ISCP Cardiothoracic Surgery"
+   ],
+   "hours": 5,
+   "cmeCredits": 5,
+   "modules": [
+    {
+     "title": "Principles",
+     "summary": "Indications, anatomy and preparation.",
+     "lessons": [
+      {
+       "title": "The heart operation",
+       "kind": "Reading",
+       "minutes": 10,
+       "summary": "Median sternotomy divides the sternum in the midline with a saw and is closed with steel wires.",
+       "content": "Median sternotomy divides the sternum in the midline with a saw and is closed with steel wires. Cardiopulmonary bypass drains venous blood, oxygenates it and returns it to the aorta while the heart is arrested with cardioplegia. After surgery, falling blood pressure with rising venous pressure and falling drain output suggests tamponade.",
+       "id": "ct-506-m1-l1"
+      },
+      {
+       "title": "Equipment for this operation",
+       "kind": "Explore",
+       "minutes": 10,
+       "summary": "Explore the instruments and devices used.",
+       "equipment": [
+        "lung_ventilation_artificial_a01",
+        "monitor_patient_a01",
+        "pump_infusion_a01",
+        "drainage_pumpSystem_a01",
+        "defibrillator_a01"
+       ],
+       "id": "ct-506-m1-l2"
+      },
+      {
+       "title": "Check: Cardiothoracic Surgery Basics",
+       "kind": "Quiz",
+       "minutes": 6,
+       "summary": "1 questions with feedback.",
+       "questions": [
+        {
+         "prompt": "Low BP, high CVP and a sudden fall in drain output after cardiac surgery suggest…",
+         "options": [
+          {
+           "text": "Cardiac tamponade",
+           "correct": true,
+           "feedback": "Blood is collecting around the heart instead of draining."
+          },
+          {
+           "text": "Hypovolaemia",
+           "correct": false,
+           "feedback": "Not quite: Blood is collecting around the heart instead of draining."
+          },
+          {
+           "text": "Normal recovery",
+           "correct": false,
+           "feedback": "Not quite: Blood is collecting around the heart instead of draining."
+          }
+         ],
+         "id": "ct-506-m1-l3-q1"
+        }
+       ],
+       "passScore": 70,
+       "id": "ct-506-m1-l3"
+      }
+     ],
+     "id": "ct-506-m1"
+    },
+    {
+     "title": "Procedure",
+     "summary": "Practise the operation in the virtual theatre.",
+     "lessons": [
+      {
+       "title": "Procedure lab: Cardiothoracic Surgery Basics",
+       "kind": "VrLab",
+       "minutes": 20,
+       "simulationId": "cardiac",
+       "summary": "Step-by-step procedure with guidance.",
+       "passScore": 70,
+       "id": "ct-506-m2-l1"
+      },
+      {
+       "title": "Assessment: Cardiothoracic Surgery Basics",
+       "kind": "VrAssessment",
+       "minutes": 25,
+       "simulationId": "cardiac",
+       "summary": "The procedure unaided, scored by step.",
+       "passScore": 75,
+       "id": "ct-506-m2-l2"
+      }
+     ],
+     "id": "ct-506-m2"
+    }
+   ]
+  },
+  {
+   "id": "ns-507",
+   "code": "NS-507",
+   "title": "Neurosurgery Basics: Burr Holes",
+   "subtitle": "Raised intracranial pressure and emergency decompression.",
+   "specialty": "Neurosurgery",
+   "level": "Advanced",
+   "description": "Raised intracranial pressure and emergency decompression.",
+   "outcomes": [
+    "Recognise an extradural haematoma",
+    "Describe burr-hole placement and technique"
+   ],
+   "prerequisites": [
+    "sf-102"
+   ],
+   "skills": [
+    "Burr hole"
+   ],
+   "frameworks": [
+    "ISCP Neurosurgery"
+   ],
+   "hours": 5,
+   "cmeCredits": 5,
+   "modules": [
+    {
+     "title": "Principles",
+     "summary": "Indications, anatomy and preparation.",
+     "lessons": [
+      {
+       "title": "Burr holes",
+       "kind": "Reading",
+       "minutes": 10,
+       "summary": "An extradural haematoma classically follows temporal trauma with a lucid interval; CT shows a lens-shaped collection.",
+       "content": "An extradural haematoma classically follows temporal trauma with a lucid interval; CT shows a lens-shaped collection. Definitive treatment is craniotomy by a neurosurgeon; emergency burr holes are a last resort where transfer is impossible.",
+       "id": "ns-507-m1-l1"
+      },
+      {
+       "title": "Equipment for this operation",
+       "kind": "Explore",
+       "minutes": 10,
+       "summary": "Explore the instruments and devices used.",
+       "equipment": [
+        "instrument_hand_drill_b01",
+        "instrument_punche_a01",
+        "instrument_raspatory_a01",
+        "instrument_suction_a01"
+       ],
+       "id": "ns-507-m1-l2"
+      },
+      {
+       "title": "Check: Neurosurgery Basics: Burr Holes",
+       "kind": "Quiz",
+       "minutes": 6,
+       "summary": "1 questions with feedback.",
+       "questions": [
+        {
+         "prompt": "An extradural haematoma on CT is typically…",
+         "options": [
+          {
+           "text": "Biconvex (lens-shaped)",
+           "correct": true,
+           "feedback": "It is limited by the suture lines."
+          },
+          {
+           "text": "Crescent-shaped",
+           "correct": false,
+           "feedback": "That is subdural."
+          },
+          {
+           "text": "Diffuse",
+           "correct": false,
+           "feedback": "Not quite: It is limited by the suture lines."
+          }
+         ],
+         "id": "ns-507-m1-l3-q1"
+        }
+       ],
+       "passScore": 70,
+       "id": "ns-507-m1-l3"
+      }
+     ],
+     "id": "ns-507-m1"
+    },
+    {
+     "title": "Procedure",
+     "summary": "Practise the operation in the virtual theatre.",
+     "lessons": [
+      {
+       "title": "Procedure lab: Neurosurgery Basics: Burr Holes",
+       "kind": "VrLab",
+       "minutes": 20,
+       "simulationId": "burr-hole",
+       "summary": "Step-by-step procedure with guidance.",
+       "passScore": 70,
+       "id": "ns-507-m2-l1"
+      },
+      {
+       "title": "Assessment: Neurosurgery Basics: Burr Holes",
+       "kind": "VrAssessment",
+       "minutes": 25,
+       "simulationId": "burr-hole",
+       "summary": "The procedure unaided, scored by step.",
+       "passScore": 75,
+       "id": "ns-507-m2-l2"
+      }
+     ],
+     "id": "ns-507-m2"
+    }
+   ]
+  },
+  {
+   "id": "og-508",
+   "code": "OG-508",
+   "title": "Caesarean Section Fundamentals",
+   "subtitle": "Steps, team and safety in an operative birth.",
+   "specialty": "Obstetrics & Gynaecology",
+   "level": "Intermediate",
+   "description": "Steps, team and safety in an operative birth.",
+   "outcomes": [
+    "Describe the steps of a lower-segment caesarean section",
+    "Explain the urgency categories",
+    "Recognise and treat postpartum haemorrhage"
+   ],
+   "prerequisites": [
+    "sf-103"
+   ],
+   "skills": [
+    "LSCS",
+    "PPH"
+   ],
+   "frameworks": [
+    "RCOG curriculum"
+   ],
+   "hours": 5,
+   "cmeCredits": 5,
+   "modules": [
+    {
+     "title": "Principles",
+     "summary": "Indications, anatomy and preparation.",
+     "lessons": [
+      {
+       "title": "Caesarean section",
+       "kind": "Reading",
+       "minutes": 10,
+       "summary": "Pfannenstiel incision, open the rectus sheath, separate the recti, open the peritoneum, reflect the bladder, transverse incision in the lower segment, deliver the baby and placenta, close the uterus in two layers.",
+       "content": "Pfannenstiel incision, open the rectus sheath, separate the recti, open the peritoneum, reflect the bladder, transverse incision in the lower segment, deliver the baby and placenta, close the uterus in two layers. Postpartum haemorrhage is treated with uterine massage, uterotonics, tranexamic acid and escalation.",
+       "id": "og-508-m1-l1"
+      },
+      {
+       "title": "Equipment for this operation",
+       "kind": "Explore",
+       "minutes": 10,
+       "summary": "Explore the instruments and devices used.",
+       "equipment": [
+        "table_surgical_a01",
+        "instrument_retractor_a01",
+        "pump_suction_surgical_a01",
+        "warmer_infusion_a01",
+        "monitor_patient_a01"
+       ],
+       "id": "og-508-m1-l2"
+      },
+      {
+       "title": "Check: Caesarean Section Fundamentals",
+       "kind": "Quiz",
+       "minutes": 6,
+       "summary": "1 questions with feedback.",
+       "questions": [
+        {
+         "prompt": "The uterine incision in a standard caesarean section is…",
+         "options": [
+          {
+           "text": "Transverse in the lower segment",
+           "correct": true,
+           "feedback": "The lower segment bleeds less and heals more strongly."
+          },
+          {
+           "text": "Vertical in the upper segment",
+           "correct": false,
+           "feedback": "Not quite: The lower segment bleeds less and heals more strongly."
+          },
+          {
+           "text": "Through the fundus",
+           "correct": false,
+           "feedback": "Not quite: The lower segment bleeds less and heals more strongly."
+          }
+         ],
+         "id": "og-508-m1-l3-q1"
+        }
+       ],
+       "passScore": 70,
+       "id": "og-508-m1-l3"
+      }
+     ],
+     "id": "og-508-m1"
+    },
+    {
+     "title": "Procedure",
+     "summary": "Practise the operation in the virtual theatre.",
+     "lessons": [
+      {
+       "title": "Procedure lab: Caesarean Section Fundamentals",
+       "kind": "VrLab",
+       "minutes": 20,
+       "simulationId": "caesarean",
+       "summary": "Step-by-step procedure with guidance.",
+       "passScore": 70,
+       "id": "og-508-m2-l1"
+      },
+      {
+       "title": "Assessment: Caesarean Section Fundamentals",
+       "kind": "VrAssessment",
+       "minutes": 25,
+       "simulationId": "caesarean",
+       "summary": "The procedure unaided, scored by step.",
+       "passScore": 75,
+       "id": "og-508-m2-l2"
+      }
+     ],
+     "id": "og-508-m2"
+    }
+   ]
+  },
+  {
+   "id": "pp-601",
+   "code": "PP-601",
+   "title": "The Scrub Practitioner",
+   "subtitle": "Instrument trays, counts, specimens and the sterile supply chain.",
+   "specialty": "Perioperative Practice",
+   "level": "Foundation",
+   "description": "Instrument trays, counts, specimens and the sterile supply chain.",
+   "outcomes": [
+    "Set up a back table and Mayo stand",
+    "Run counts and handle specimens correctly",
+    "Track instruments from sterile services to the patient and back"
+   ],
+   "prerequisites": [
+    "sf-101"
+   ],
+   "skills": [
+    "Back table",
+    "Counts",
+    "Specimens"
+   ],
+   "frameworks": [
+    "AfPP Standards",
+    "ISCP Core Surgical Training"
+   ],
+   "hours": 5,
+   "cmeCredits": 5,
+   "modules": [
+    {
+     "title": "Scrubbing for a case",
+     "summary": "Setting up and running the field.",
+     "lessons": [
+      {
+       "title": "Back table and Mayo stand",
+       "kind": "Reading",
+       "minutes": 8,
+       "summary": "Open the outer wraps away from you, check sterility indicators and tray lists, then lay out instruments in the order they will be used.",
+       "content": "Open the outer wraps away from you, check sterility indicators and tray lists, then lay out instruments in the order they will be used. The Mayo stand holds what the surgeon needs next. Keep sharps in one place and account for every item.",
+       "id": "pp-601-m1-l1"
+      },
+      {
+       "title": "Trays, carts and containers",
+       "kind": "Explore",
+       "minutes": 10,
+       "summary": "Open drawers, lids and trays and see how a case is set up.",
+       "equipment": [
+        "trolley_instrument_b01",
+        "trolley_instrument_b05",
+        "cart_medical_utility_a01",
+        "container_system_sterilising_a03",
+        "tray_sterilization_instrument_c02",
+        "instrument_storage_a01",
+        "medical_sample_bag_a01",
+        "container_jar_glass_silver_a01"
+       ],
+       "id": "pp-601-m1-l2"
+      },
+      {
+       "title": "Back table and count",
+       "kind": "VrLab",
+       "minutes": 15,
+       "summary": "Agree the opening count at the back table.",
+       "simulationId": "lap-prep",
+       "passScore": 70,
+       "id": "pp-601-m1-l3"
+      },
+      {
+       "title": "Closing count",
+       "kind": "VrLab",
+       "minutes": 15,
+       "summary": "Find the hidden swab and complete the closing count.",
+       "simulationId": "lap-close",
+       "passScore": 70,
+       "id": "pp-601-m1-l4"
+      },
+      {
+       "title": "Check: scrub practice",
+       "kind": "Quiz",
+       "minutes": 6,
+       "summary": "1 questions with feedback.",
+       "questions": [
+        {
+         "prompt": "A specimen label must include…",
+         "options": [
+          {
+           "text": "Patient identifiers, specimen site and date",
+           "correct": true,
+           "feedback": "Unlabelled or mislabelled specimens are never events waiting to happen."
+          },
+          {
+           "text": "Only the surgeon's name",
+           "correct": false,
+           "feedback": "Not quite: Unlabelled or mislabelled specimens are never events waiting to happen."
+          },
+          {
+           "text": "Only the ward",
+           "correct": false,
+           "feedback": "Not quite: Unlabelled or mislabelled specimens are never events waiting to happen."
+          }
+         ],
+         "id": "pp-601-m1-l5-q1"
+        }
+       ],
+       "passScore": 70,
+       "id": "pp-601-m1-l5"
+      }
+     ],
+     "id": "pp-601-m1"
+    }
+   ]
+  },
+  {
+   "id": "pp-602",
+   "code": "PP-602",
+   "title": "Infusion Devices and Patient Equipment",
+   "subtitle": "Infusion pumps, syringe drivers, suction, oxygen and monitoring.",
+   "specialty": "Perioperative Practice",
+   "level": "Foundation",
+   "description": "Infusion pumps, syringe drivers, suction, oxygen and monitoring.",
+   "outcomes": [
+    "Set up an infusion pump and syringe driver safely",
+    "Set up suction and oxygen delivery",
+    "Respond to equipment alarms"
+   ],
+   "prerequisites": [],
+   "skills": [
+    "Infusion pumps",
+    "Suction",
+    "Oxygen therapy"
+   ],
+   "frameworks": [
+    "MHRA Infusion device guidance"
+   ],
+   "hours": 3,
+   "cmeCredits": 3,
+   "modules": [
+    {
+     "title": "Devices",
+     "summary": "The equipment at every bedside.",
+     "lessons": [
+      {
+       "title": "Infusion devices",
+       "kind": "Reading",
+       "minutes": 8,
+       "summary": "Volumetric pumps deliver fluids from bags; syringe drivers deliver small precise volumes.",
+       "content": "Volumetric pumps deliver fluids from bags; syringe drivers deliver small precise volumes. Check the drug, dose, rate and line against the prescription, use drug libraries, and never silence an alarm without finding its cause (occlusion, air in line, end of infusion).",
+       "id": "pp-602-m1-l1"
+      },
+      {
+       "title": "Bedside devices",
+       "kind": "Explore",
+       "minutes": 10,
+       "summary": "Operate the infusion pump door, syringe plunger, nebuliser and more.",
+       "equipment": [
+        "pump_infusion_a01",
+        "pump_system_infusion_a01",
+        "warmer_infusion_a01",
+        "syringe_a04",
+        "syringe_insulin_a01",
+        "IV_pole_b01",
+        "pump_suction_surgical_a01",
+        "cannulae_nasal_a01",
+        "mask_nebulization_a01",
+        "device_inhaler_a01",
+        "oximeter_pulse_a01",
+        "pad_vital_a01",
+        "thermometer_fever_a01",
+        "stethoscope_electronic_a01",
+        "blood_glucosemeter_a01"
+       ],
+       "id": "pp-602-m1-l2"
+      },
+      {
+       "title": "Check: devices",
+       "kind": "Quiz",
+       "minutes": 6,
+       "summary": "1 questions with feedback.",
+       "questions": [
+        {
+         "prompt": "An infusion pump alarms 'occlusion downstream'. First you…",
+         "options": [
+          {
+           "text": "Check the line and cannula from pump to patient",
+           "correct": true,
+           "feedback": "A clamp, kink or blocked cannula is the usual cause."
+          },
+          {
+           "text": "Increase the rate",
+           "correct": false,
+           "feedback": "Not quite: A clamp, kink or blocked cannula is the usual cause."
+          },
+          {
+           "text": "Silence and walk away",
+           "correct": false,
+           "feedback": "Not quite: A clamp, kink or blocked cannula is the usual cause."
+          }
+         ],
+         "id": "pp-602-m1-l3-q1"
+        }
+       ],
+       "passScore": 70,
+       "id": "pp-602-m1-l3"
+      }
+     ],
+     "id": "pp-602-m1"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,12 @@
+{
+ "asset": "medical_sample_bag_a01",
+ "category": "Consumables",
+ "trianglesSource": 16731,
+ "size": [
+  0.034,
+  0.219,
+  0.15
+ ],
+ "joints": [],
+ "showcaseClip": null
+}

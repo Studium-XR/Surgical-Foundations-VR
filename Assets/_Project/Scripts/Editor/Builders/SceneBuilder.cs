@@ -272,12 +272,14 @@ namespace SurgicalFoundations.EditorTools
             LightingRig.ApplyEnvironment(new Color(0.05f, 0.06f, 0.065f), ls);
         }
 
+        /// <summary>
+        /// Panels that used to follow the head are world-locked instead: placed in front of the learner when a scene
+        /// loads or they recenter, then left in the room (nothing in the view moves with the camera).
+        /// </summary>
         static void LazyFollowCamera(GameObject go, Vector3 offset)
         {
-            var lf = go.AddComponent<LazyFollow>();
-            lf.targetOffset = offset;
-            lf.positionFollowMode = LazyFollow.PositionFollowMode.Follow;
-            lf.rotationFollowMode = LazyFollow.RotationFollowMode.LookAtWithWorldUp;
+            var wl = go.AddComponent<SurgicalFoundations.UI.WorldLockedPanel>();
+            wl.offset = offset.y > 0.2f ? new Vector3(offset.x, 0.35f, Mathf.Max(offset.z, 1.8f)) : offset;
         }
 
         /// <summary>Instrument placed through a port: its Pivot_Port sits on the skin, shaft aimed at the target.</summary>

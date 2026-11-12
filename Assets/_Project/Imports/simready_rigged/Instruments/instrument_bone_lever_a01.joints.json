@@ -1,0 +1,12 @@
+{
+ "asset": "instrument_bone_lever_a01",
+ "category": "Instruments",
+ "trianglesSource": 3616,
+ "size": [
+  0.241,
+  0.02,
+  0.031
+ ],
+ "joints": [],
+ "showcaseClip": null
+}

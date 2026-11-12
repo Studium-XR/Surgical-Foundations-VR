@@ -1,0 +1,177 @@
+{
+ "id": "efast",
+ "title": "eFAST scan in trauma",
+ "summary": "Look for free fluid and pneumothorax with bedside ultrasound.",
+ "patientState": "awake",
+ "patientName": "Mr Daniel Okafor",
+ "equipment": [
+  {
+   "id": "ultrasound_b01",
+   "place": "bedside",
+   "key": "ultrasound_b01"
+  },
+  {
+   "id": "ultrasound_a01",
+   "place": "tray",
+   "key": "ultrasound_a01"
+  }
+ ],
+ "anchors": [
+  {
+   "name": "ruq",
+   "label": "right upper quadrant (hepatorenal view)",
+   "cranial": 0.17,
+   "right": 0.14,
+   "anterior": -0.04,
+   "radius": 0.07
+  },
+  {
+   "name": "luq",
+   "label": "left upper quadrant (splenorenal view)",
+   "cranial": 0.17,
+   "right": -0.14,
+   "anterior": -0.04,
+   "radius": 0.07
+  },
+  {
+   "name": "pelvis_view",
+   "label": "suprapubic (pelvic view)",
+   "cranial": -0.19,
+   "right": 0.0,
+   "anterior": -0.02,
+   "radius": 0.07
+  },
+  {
+   "name": "subxiphoid",
+   "label": "subxiphoid (pericardial view)",
+   "cranial": 0.27,
+   "right": 0.0,
+   "anterior": 0.0,
+   "radius": 0.06
+  },
+  {
+   "name": "chest_right_anterior",
+   "label": "right anterior chest, 2nd intercostal space",
+   "cranial": 0.45,
+   "right": 0.07,
+   "anterior": 0.02,
+   "radius": 0.06
+  }
+ ],
+ "cables": [],
+ "steps": [
+  {
+   "type": "pick",
+   "title": "Take the ultrasound probe",
+   "item": "ultrasound_a01",
+   "hint": "Curvilinear probe for the abdomen.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "efast-s1"
+  },
+  {
+   "type": "apply",
+   "title": "Right upper quadrant: hepatorenal view",
+   "item": "ultrasound_a01",
+   "target": "ruq",
+   "hint": "Morison's pouch is where free fluid collects first.",
+   "hold": 2.0,
+   "critical": false,
+   "id": "efast-s2"
+  },
+  {
+   "type": "apply",
+   "title": "Left upper quadrant: splenorenal view",
+   "item": "ultrasound_a01",
+   "target": "luq",
+   "hint": "Aim more posterior and higher than on the right.",
+   "hold": 2.0,
+   "critical": false,
+   "id": "efast-s3"
+  },
+  {
+   "type": "apply",
+   "title": "Pelvic view",
+   "item": "ultrasound_a01",
+   "target": "pelvis_view",
+   "hint": "Transverse and longitudinal behind the bladder.",
+   "hold": 2.0,
+   "critical": false,
+   "id": "efast-s4"
+  },
+  {
+   "type": "apply",
+   "title": "Subxiphoid pericardial view",
+   "item": "ultrasound_a01",
+   "target": "subxiphoid",
+   "hint": "Point towards the left shoulder.",
+   "hold": 2.0,
+   "critical": false,
+   "id": "efast-s5"
+  },
+  {
+   "type": "apply",
+   "title": "Anterior chest: lung sliding",
+   "item": "ultrasound_a01",
+   "target": "chest_right_anterior",
+   "hint": "Absent sliding suggests pneumothorax.",
+   "hold": 2.0,
+   "critical": false,
+   "id": "efast-s6"
+  },
+  {
+   "type": "choose",
+   "title": "Interpret",
+   "prompt": "There is a black stripe in Morison's pouch. This is…",
+   "choices": [
+    {
+     "text": "Free fluid, likely blood",
+     "correct": true,
+     "feedback": "Correct: anechoic fluid."
+    },
+    {
+     "text": "Normal kidney fat",
+     "correct": false,
+     "feedback": "Fat is bright.",
+     "critical": false
+    },
+    {
+     "text": "Air",
+     "correct": false,
+     "feedback": "Air scatters the beam and looks bright.",
+     "critical": false
+    }
+   ],
+   "hint": "",
+   "id": "efast-s7"
+  },
+  {
+   "type": "choose",
+   "title": "Act",
+   "prompt": "The patient is unstable with a positive FAST. Next?",
+   "choices": [
+    {
+     "text": "Call for surgery / damage control laparotomy",
+     "correct": true,
+     "feedback": "Correct."
+    },
+    {
+     "text": "CT scan first",
+     "correct": false,
+     "feedback": "An unstable patient should not go to CT.",
+     "critical": true
+    },
+    {
+     "text": "Repeat FAST in an hour",
+     "correct": false,
+     "feedback": "Too late.",
+     "critical": true
+    }
+   ],
+   "hint": "",
+   "id": "efast-s8"
+  }
+ ],
+ "errorPenalty": 10,
+ "hintPenalty": 3
+}

@@ -1,0 +1,36 @@
+{
+ "asset": "pendant_medical_a01",
+ "category": "Architecture",
+ "trianglesSource": 400189,
+ "size": [
+  2.094,
+  2.695,
+  0.858
+ ],
+ "joints": [
+  {
+   "name": "arm_01",
+   "kind": "swing",
+   "node": "J_arm_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -60,
+   "max": 60,
+   "pivot": [
+    -0.1936,
+    2.0005,
+    -0.0
+   ],
+   "parts": [
+    "arm_01_mesh_00"
+   ],
+   "clip": "arm_01_operate"
+  }
+ ],
+ "showcaseClip": "Showcase"
+}

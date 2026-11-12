@@ -1,0 +1,206 @@
+{
+ "id": "skin-graft",
+ "title": "Split-thickness skin graft",
+ "summary": "Harvest a split-skin graft from the thigh and apply it to a clean wound.",
+ "patientState": "anaesthetised",
+ "patientName": "Mr Daniel Okafor",
+ "equipment": [
+  {
+   "id": "disinfectant_a01",
+   "place": "tray",
+   "key": "disinfectant_a01"
+  },
+  {
+   "id": "instrument_skingrafting_knife_a01",
+   "place": "tray",
+   "key": "instrument_skingrafting_knife_a01"
+  },
+  {
+   "id": "instrument_spatula_a01",
+   "place": "tray",
+   "key": "instrument_spatula_a01"
+  },
+  {
+   "id": "instrument_forceps_a01",
+   "place": "tray",
+   "key": "instrument_forceps_a01"
+  },
+  {
+   "id": "stapler_surgical_a01",
+   "place": "tray",
+   "key": "stapler_surgical_a01"
+  },
+  {
+   "id": "bandage_medical_a04",
+   "place": "tray",
+   "key": "bandage_medical_a04"
+  }
+ ],
+ "anchors": [
+  {
+   "name": "right_thigh",
+   "label": "right anterolateral thigh (donor site)",
+   "cranial": -0.4,
+   "right": 0.11,
+   "anterior": -0.03,
+   "radius": 0.07
+  },
+  {
+   "name": "right_shin",
+   "label": "right shin",
+   "cranial": -0.78,
+   "right": 0.09,
+   "anterior": -0.04,
+   "radius": 0.07
+  }
+ ],
+ "cables": [],
+ "steps": [
+  {
+   "type": "choose",
+   "title": "WHO Time Out",
+   "prompt": "Before skin incision for a split skin graft to the right shin, the team pauses. What must be confirmed aloud?",
+   "choices": [
+    {
+     "text": "Patient identity, the procedure, the site and side, and antibiotics given in the last 60 minutes",
+     "correct": true,
+     "feedback": "Correct: the Time Out confirms who, what and where, and that prophylaxis is in."
+    },
+    {
+     "text": "Only that the consent form is signed",
+     "correct": false,
+     "feedback": "The signature alone does not prevent wrong-site surgery.",
+     "critical": false
+    },
+    {
+     "text": "Nothing: the site was marked on the ward",
+     "correct": false,
+     "feedback": "Marking does not replace the Time Out.",
+     "critical": true
+    }
+   ],
+   "hint": "The site is the right thigh donor, right shin recipient. All three phases of the WHO checklist are mandatory.",
+   "id": "skin-graft-s1"
+  },
+  {
+   "type": "pick",
+   "title": "Pick up the skin preparation",
+   "item": "disinfectant_a01",
+   "hint": "Alcoholic chlorhexidine, applied from the incision site outwards.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "skin-graft-s2"
+  },
+  {
+   "type": "apply",
+   "title": "Prepare the skin over the donor thigh",
+   "item": "disinfectant_a01",
+   "target": "right_thigh",
+   "hint": "Centre outwards, wider than the incision; let it dry fully before drapes and diathermy (it is flammable).",
+   "hold": 2.0,
+   "critical": false,
+   "id": "skin-graft-s3"
+  },
+  {
+   "type": "choose",
+   "title": "Which graft?",
+   "prompt": "Large clean wound on the shin. Which graft?",
+   "choices": [
+    {
+     "text": "Split-thickness, meshed if needed",
+     "correct": true,
+     "feedback": "Correct: covers large areas, takes reliably."
+    },
+    {
+     "text": "Full-thickness",
+     "correct": false,
+     "feedback": "Limited donor sites; used for face and hands.",
+     "critical": false
+    },
+    {
+     "text": "No graft, primary closure",
+     "correct": false,
+     "feedback": "Too big to close.",
+     "critical": false
+    }
+   ],
+   "hint": "",
+   "id": "skin-graft-s4"
+  },
+  {
+   "type": "pick",
+   "title": "Lubricate the donor site and set the knife depth",
+   "item": "instrument_skingrafting_knife_a01",
+   "hint": "Thin graft about 0.3 mm.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "skin-graft-s5"
+  },
+  {
+   "type": "apply",
+   "title": "Harvest from the thigh",
+   "item": "instrument_skingrafting_knife_a01",
+   "target": "right_thigh",
+   "hint": "Even, back-and-forth strokes with counter-traction.",
+   "hold": 3.0,
+   "critical": false,
+   "id": "skin-graft-s6"
+  },
+  {
+   "type": "pick",
+   "title": "Spread the graft",
+   "item": "instrument_spatula_a01",
+   "hint": "Dermis down, onto the recipient bed.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "skin-graft-s7"
+  },
+  {
+   "type": "apply",
+   "title": "Lay the graft on the shin wound",
+   "item": "instrument_spatula_a01",
+   "target": "right_shin",
+   "hint": "No folds; dermal side down.",
+   "hold": 2.0,
+   "critical": false,
+   "id": "skin-graft-s8"
+  },
+  {
+   "type": "choose",
+   "title": "Graft take",
+   "prompt": "What makes a graft fail?",
+   "choices": [
+    {
+     "text": "A collection (blood or seroma) under it, shear, or infection",
+     "correct": true,
+     "feedback": "Correct."
+    },
+    {
+     "text": "Bright light",
+     "correct": false,
+     "feedback": "No.",
+     "critical": false
+    },
+    {
+     "text": "Applying it dermis down",
+     "correct": false,
+     "feedback": "That is correct technique.",
+     "critical": false
+    }
+   ],
+   "hint": "",
+   "id": "skin-graft-s9"
+  },
+  {
+   "type": "pick",
+   "title": "Dress with a tie-over or compression dressing",
+   "item": "bandage_medical_a04",
+   "hint": "Immobilise for 5 days.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "skin-graft-s10"
+  }
+ ],
+ "errorPenalty": 10,
+ "hintPenalty": 3
+}

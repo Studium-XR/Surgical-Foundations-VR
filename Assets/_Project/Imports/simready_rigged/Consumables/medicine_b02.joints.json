@@ -1,0 +1,12 @@
+{
+ "asset": "medicine_b02",
+ "category": "Consumables",
+ "trianglesSource": 9149,
+ "size": [
+  0.08,
+  0.15,
+  0.08
+ ],
+ "joints": [],
+ "showcaseClip": null
+}

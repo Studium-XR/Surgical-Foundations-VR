@@ -1,0 +1,12 @@
+{
+ "asset": "disinfectant_b01",
+ "category": "Sterile",
+ "trianglesSource": 12033,
+ "size": [
+  0.03,
+  0.111,
+  0.03
+ ],
+ "joints": [],
+ "showcaseClip": null
+}

@@ -14,6 +14,17 @@ affiliate."
 | HYM_anaesthetist_monitor | A person stands, turns the head to the left to look at a screen, reaches out with the right hand to press buttons at chest height, then lowers the hand and looks forward. | 7 s |
 | HYM_anaesthetist_idle | A person stands still with arms relaxed at the sides, breathing calmly and occasionally turning the head to look left and right. | 6 s |
 
+| HYM_patient_lie_breathe | A person lies on their back with the arms by the sides, breathing slowly so the chest rises and falls, and slowly turns the head to the right and back to the middle. | 8 s |
+| HYM_patient_lie_talk | A person lies on their back with the arms by the sides, turns the head to the right and talks, lifting the right hand a little from the bed and lowering it again. | 8 s |
+| HYM_patient_sit_idle | A person sits on a chair with both hands resting on the thighs, breathing calmly, looking forward and now and then turning the head slightly to the side. | 8 s |
+| HYM_patient_sit_talk | A person sits on a chair and talks to someone standing in front of them, nodding a little and gesturing gently with the right hand at chest height, then rests the hand on the thigh. | 8 s |
+| HYM_patient_sit_listen | A person sits on a chair and listens attentively, nods the head twice, then keeps the hands resting on the thighs. | 6 s |
+| HYM_patient_sit_pain | A person sits on a chair, leans forward and holds the lower right side of the belly with the right hand, then slowly sits up straight again. | 6 s |
+| HYM_patient_sit_wave | A person sits on a chair, raises the right hand to wave hello, then lowers it back to the thigh. | 4 s |
+
+The patient clips (generated 2026-11-12) play on CHR_Patient (Imports/patient/source/Patient_Rigged.fbx, rigged by
+Tools/Characters/rig_patient.py) through Surgical Foundations → Build → 1j · Patient Character.
+
 Seed 0, guidance scale 5.0. The clips play on CHR_ScrubNurse and CHR_Anaesthetist through Humanoid retargeting
 (Surgical Foundations → Build → 1i · Staff Animations). Tencent claims no rights in the generated outputs.
 

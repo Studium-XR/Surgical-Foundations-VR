@@ -1,0 +1,2658 @@
+{
+ "asset": "ultrasound_b01",
+ "category": "Devices",
+ "trianglesSource": 198902,
+ "size": [
+  0.364,
+  0.352,
+  0.378
+ ],
+ "joints": [
+  {
+   "name": "button_01",
+   "kind": "press",
+   "node": "J_button_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1732,
+    0.0447,
+    0.1234
+   ],
+   "parts": [
+    "button_01_mesh_00"
+   ],
+   "clip": "button_01_operate"
+  },
+  {
+   "name": "button_02",
+   "kind": "press",
+   "node": "J_button_02",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1732,
+    0.0447,
+    0.1043
+   ],
+   "parts": [
+    "button_02_mesh_00"
+   ],
+   "clip": "button_02_operate"
+  },
+  {
+   "name": "button_03",
+   "kind": "press",
+   "node": "J_button_03",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1732,
+    0.0447,
+    0.0852
+   ],
+   "parts": [
+    "button_03_mesh_00"
+   ],
+   "clip": "button_03_operate"
+  },
+  {
+   "name": "button_05",
+   "kind": "press",
+   "node": "J_button_05",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1732,
+    0.0447,
+    -0.0378
+   ],
+   "parts": [
+    "button_05_mesh_00"
+   ],
+   "clip": "button_05_operate"
+  },
+  {
+   "name": "button_06",
+   "kind": "press",
+   "node": "J_button_06",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1732,
+    0.0447,
+    -0.0564
+   ],
+   "parts": [
+    "button_06_mesh_00"
+   ],
+   "clip": "button_06_operate"
+  },
+  {
+   "name": "button_07",
+   "kind": "press",
+   "node": "J_button_07",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1732,
+    0.0447,
+    -0.0748
+   ],
+   "parts": [
+    "button_07_mesh_00"
+   ],
+   "clip": "button_07_operate"
+  },
+  {
+   "name": "button_08",
+   "kind": "press",
+   "node": "J_button_08",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1732,
+    0.0447,
+    -0.0933
+   ],
+   "parts": [
+    "button_08_mesh_00"
+   ],
+   "clip": "button_08_operate"
+  },
+  {
+   "name": "button_09",
+   "kind": "press",
+   "node": "J_button_09",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1574,
+    0.0448,
+    0.1234
+   ],
+   "parts": [
+    "button_09_mesh_00"
+   ],
+   "clip": "button_09_operate"
+  },
+  {
+   "name": "button_10",
+   "kind": "press",
+   "node": "J_button_10",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1574,
+    0.0448,
+    0.106
+   ],
+   "parts": [
+    "button_10_mesh_00"
+   ],
+   "clip": "button_10_operate"
+  },
+  {
+   "name": "button_100",
+   "kind": "press",
+   "node": "J_button_100",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.2229,
+    0.0449,
+    0.0306
+   ],
+   "parts": [
+    "button_100_mesh_00"
+   ],
+   "clip": "button_100_operate"
+  },
+  {
+   "name": "button_101",
+   "kind": "press",
+   "node": "J_button_101",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.213,
+    0.0449,
+    0.0
+   ],
+   "parts": [
+    "button_101_mesh_00"
+   ],
+   "clip": "button_101_operate"
+  },
+  {
+   "name": "button_102",
+   "kind": "press",
+   "node": "J_button_102",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.2229,
+    0.0449,
+    -0.0306
+   ],
+   "parts": [
+    "button_102_mesh_00"
+   ],
+   "clip": "button_102_operate"
+  },
+  {
+   "name": "button_103",
+   "kind": "press",
+   "node": "J_button_103",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.2582,
+    0.0448,
+    0.0422
+   ],
+   "parts": [
+    "button_103_mesh_00"
+   ],
+   "clip": "button_103_operate"
+  },
+  {
+   "name": "button_104",
+   "kind": "press",
+   "node": "J_button_104",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.2582,
+    0.0448,
+    -0.0422
+   ],
+   "parts": [
+    "button_104_mesh_00"
+   ],
+   "clip": "button_104_operate"
+  },
+  {
+   "name": "button_11",
+   "kind": "press",
+   "node": "J_button_11",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1574,
+    0.0448,
+    0.0901
+   ],
+   "parts": [
+    "button_11_mesh_00"
+   ],
+   "clip": "button_11_operate"
+  },
+  {
+   "name": "button_12",
+   "kind": "press",
+   "node": "J_button_12",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1574,
+    0.0448,
+    0.0743
+   ],
+   "parts": [
+    "button_12_mesh_00"
+   ],
+   "clip": "button_12_operate"
+  },
+  {
+   "name": "button_13",
+   "kind": "press",
+   "node": "J_button_13",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1574,
+    0.0448,
+    0.0585
+   ],
+   "parts": [
+    "button_13_mesh_00"
+   ],
+   "clip": "button_13_operate"
+  },
+  {
+   "name": "button_14",
+   "kind": "press",
+   "node": "J_button_14",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1574,
+    0.0448,
+    0.0427
+   ],
+   "parts": [
+    "button_14_mesh_00"
+   ],
+   "clip": "button_14_operate"
+  },
+  {
+   "name": "button_15",
+   "kind": "press",
+   "node": "J_button_15",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1574,
+    0.0448,
+    0.0268
+   ],
+   "parts": [
+    "button_15_mesh_00"
+   ],
+   "clip": "button_15_operate"
+  },
+  {
+   "name": "button_16",
+   "kind": "press",
+   "node": "J_button_16",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1574,
+    0.0448,
+    0.011
+   ],
+   "parts": [
+    "button_16_mesh_00"
+   ],
+   "clip": "button_16_operate"
+  },
+  {
+   "name": "button_17",
+   "kind": "press",
+   "node": "J_button_17",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1574,
+    0.0448,
+    -0.0048
+   ],
+   "parts": [
+    "button_17_mesh_00"
+   ],
+   "clip": "button_17_operate"
+  },
+  {
+   "name": "button_18",
+   "kind": "press",
+   "node": "J_button_18",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1574,
+    0.0448,
+    -0.0206
+   ],
+   "parts": [
+    "button_18_mesh_00"
+   ],
+   "clip": "button_18_operate"
+  },
+  {
+   "name": "button_19",
+   "kind": "press",
+   "node": "J_button_19",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1574,
+    0.0448,
+    -0.0364
+   ],
+   "parts": [
+    "button_19_mesh_00"
+   ],
+   "clip": "button_19_operate"
+  },
+  {
+   "name": "button_20",
+   "kind": "press",
+   "node": "J_button_20",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1574,
+    0.0448,
+    -0.0523
+   ],
+   "parts": [
+    "button_20_mesh_00"
+   ],
+   "clip": "button_20_operate"
+  },
+  {
+   "name": "button_21",
+   "kind": "press",
+   "node": "J_button_21",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1574,
+    0.0448,
+    -0.0813
+   ],
+   "parts": [
+    "button_21_mesh_00"
+   ],
+   "clip": "button_21_operate"
+  },
+  {
+   "name": "button_22",
+   "kind": "press",
+   "node": "J_button_22",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1416,
+    0.0448,
+    0.1197
+   ],
+   "parts": [
+    "button_22_mesh_00"
+   ],
+   "clip": "button_22_operate"
+  },
+  {
+   "name": "button_23",
+   "kind": "press",
+   "node": "J_button_23",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1416,
+    0.0448,
+    0.0985
+   ],
+   "parts": [
+    "button_23_mesh_00"
+   ],
+   "clip": "button_23_operate"
+  },
+  {
+   "name": "button_24",
+   "kind": "press",
+   "node": "J_button_24",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1416,
+    0.0448,
+    0.0827
+   ],
+   "parts": [
+    "button_24_mesh_00"
+   ],
+   "clip": "button_24_operate"
+  },
+  {
+   "name": "button_25",
+   "kind": "press",
+   "node": "J_button_25",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1416,
+    0.0448,
+    0.0669
+   ],
+   "parts": [
+    "button_25_mesh_00"
+   ],
+   "clip": "button_25_operate"
+  },
+  {
+   "name": "button_26",
+   "kind": "press",
+   "node": "J_button_26",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1416,
+    0.0448,
+    0.0511
+   ],
+   "parts": [
+    "button_26_mesh_00"
+   ],
+   "clip": "button_26_operate"
+  },
+  {
+   "name": "button_27",
+   "kind": "press",
+   "node": "J_button_27",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1416,
+    0.0448,
+    0.0352
+   ],
+   "parts": [
+    "button_27_mesh_00"
+   ],
+   "clip": "button_27_operate"
+  },
+  {
+   "name": "button_28",
+   "kind": "press",
+   "node": "J_button_28",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1416,
+    0.0448,
+    0.0194
+   ],
+   "parts": [
+    "button_28_mesh_00"
+   ],
+   "clip": "button_28_operate"
+  },
+  {
+   "name": "button_29",
+   "kind": "press",
+   "node": "J_button_29",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1416,
+    0.0448,
+    0.0036
+   ],
+   "parts": [
+    "button_29_mesh_00"
+   ],
+   "clip": "button_29_operate"
+  },
+  {
+   "name": "button_30",
+   "kind": "press",
+   "node": "J_button_30",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1416,
+    0.0448,
+    -0.0122
+   ],
+   "parts": [
+    "button_30_mesh_00"
+   ],
+   "clip": "button_30_operate"
+  },
+  {
+   "name": "button_31",
+   "kind": "press",
+   "node": "J_button_31",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1416,
+    0.0448,
+    -0.028
+   ],
+   "parts": [
+    "button_31_mesh_00"
+   ],
+   "clip": "button_31_operate"
+  },
+  {
+   "name": "button_32",
+   "kind": "press",
+   "node": "J_button_32",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1416,
+    0.0448,
+    -0.0439
+   ],
+   "parts": [
+    "button_32_mesh_00"
+   ],
+   "clip": "button_32_operate"
+  },
+  {
+   "name": "button_33",
+   "kind": "press",
+   "node": "J_button_33",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1416,
+    0.0448,
+    -0.0597
+   ],
+   "parts": [
+    "button_33_mesh_00"
+   ],
+   "clip": "button_33_operate"
+  },
+  {
+   "name": "button_34",
+   "kind": "press",
+   "node": "J_button_34",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1416,
+    0.0448,
+    -0.0755
+   ],
+   "parts": [
+    "button_34_mesh_00"
+   ],
+   "clip": "button_34_operate"
+  },
+  {
+   "name": "button_35",
+   "kind": "press",
+   "node": "J_button_35",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1337,
+    0.0448,
+    -0.091
+   ],
+   "parts": [
+    "button_35_mesh_00"
+   ],
+   "clip": "button_35_operate"
+  },
+  {
+   "name": "button_36",
+   "kind": "press",
+   "node": "J_button_36",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1258,
+    0.0448,
+    0.1216
+   ],
+   "parts": [
+    "button_36_mesh_00"
+   ],
+   "clip": "button_36_operate"
+  },
+  {
+   "name": "button_37",
+   "kind": "press",
+   "node": "J_button_37",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1258,
+    0.0448,
+    0.1024
+   ],
+   "parts": [
+    "button_37_mesh_00"
+   ],
+   "clip": "button_37_operate"
+  },
+  {
+   "name": "button_38",
+   "kind": "press",
+   "node": "J_button_38",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1258,
+    0.0448,
+    0.0866
+   ],
+   "parts": [
+    "button_38_mesh_00"
+   ],
+   "clip": "button_38_operate"
+  },
+  {
+   "name": "button_39",
+   "kind": "press",
+   "node": "J_button_39",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1258,
+    0.0448,
+    0.0708
+   ],
+   "parts": [
+    "button_39_mesh_00"
+   ],
+   "clip": "button_39_operate"
+  },
+  {
+   "name": "button_40",
+   "kind": "press",
+   "node": "J_button_40",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1258,
+    0.0448,
+    0.0549
+   ],
+   "parts": [
+    "button_40_mesh_00"
+   ],
+   "clip": "button_40_operate"
+  },
+  {
+   "name": "button_41",
+   "kind": "press",
+   "node": "J_button_41",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1258,
+    0.0448,
+    0.0391
+   ],
+   "parts": [
+    "button_41_mesh_00"
+   ],
+   "clip": "button_41_operate"
+  },
+  {
+   "name": "button_42",
+   "kind": "press",
+   "node": "J_button_42",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1258,
+    0.0448,
+    0.0233
+   ],
+   "parts": [
+    "button_42_mesh_00"
+   ],
+   "clip": "button_42_operate"
+  },
+  {
+   "name": "button_43",
+   "kind": "press",
+   "node": "J_button_43",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1258,
+    0.0448,
+    0.0075
+   ],
+   "parts": [
+    "button_43_mesh_00"
+   ],
+   "clip": "button_43_operate"
+  },
+  {
+   "name": "button_44",
+   "kind": "press",
+   "node": "J_button_44",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1258,
+    0.0448,
+    -0.0084
+   ],
+   "parts": [
+    "button_44_mesh_00"
+   ],
+   "clip": "button_44_operate"
+  },
+  {
+   "name": "button_45",
+   "kind": "press",
+   "node": "J_button_45",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1258,
+    0.0448,
+    -0.0242
+   ],
+   "parts": [
+    "button_45_mesh_00"
+   ],
+   "clip": "button_45_operate"
+  },
+  {
+   "name": "button_46",
+   "kind": "press",
+   "node": "J_button_46",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1258,
+    0.0448,
+    -0.04
+   ],
+   "parts": [
+    "button_46_mesh_00"
+   ],
+   "clip": "button_46_operate"
+  },
+  {
+   "name": "button_47",
+   "kind": "press",
+   "node": "J_button_47",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1258,
+    0.0448,
+    -0.0558
+   ],
+   "parts": [
+    "button_47_mesh_00"
+   ],
+   "clip": "button_47_operate"
+  },
+  {
+   "name": "button_48",
+   "kind": "press",
+   "node": "J_button_48",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1258,
+    0.0448,
+    -0.0716
+   ],
+   "parts": [
+    "button_48_mesh_00"
+   ],
+   "clip": "button_48_operate"
+  },
+  {
+   "name": "button_49",
+   "kind": "press",
+   "node": "J_button_49",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1099,
+    0.0448,
+    0.125
+   ],
+   "parts": [
+    "button_49_mesh_00"
+   ],
+   "clip": "button_49_operate"
+  },
+  {
+   "name": "button_50",
+   "kind": "press",
+   "node": "J_button_50",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1099,
+    0.0448,
+    0.1092
+   ],
+   "parts": [
+    "button_50_mesh_00"
+   ],
+   "clip": "button_50_operate"
+  },
+  {
+   "name": "button_51",
+   "kind": "press",
+   "node": "J_button_51",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1099,
+    0.0448,
+    0.0934
+   ],
+   "parts": [
+    "button_51_mesh_00"
+   ],
+   "clip": "button_51_operate"
+  },
+  {
+   "name": "button_52",
+   "kind": "press",
+   "node": "J_button_52",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1099,
+    0.0448,
+    0.0776
+   ],
+   "parts": [
+    "button_52_mesh_00"
+   ],
+   "clip": "button_52_operate"
+  },
+  {
+   "name": "button_53",
+   "kind": "press",
+   "node": "J_button_53",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1099,
+    0.0448,
+    0.0618
+   ],
+   "parts": [
+    "button_53_mesh_00"
+   ],
+   "clip": "button_53_operate"
+  },
+  {
+   "name": "button_54",
+   "kind": "press",
+   "node": "J_button_54",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1099,
+    0.0448,
+    0.0459
+   ],
+   "parts": [
+    "button_54_mesh_00"
+   ],
+   "clip": "button_54_operate"
+  },
+  {
+   "name": "button_55",
+   "kind": "press",
+   "node": "J_button_55",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1099,
+    0.0448,
+    0.0301
+   ],
+   "parts": [
+    "button_55_mesh_00"
+   ],
+   "clip": "button_55_operate"
+  },
+  {
+   "name": "button_56",
+   "kind": "press",
+   "node": "J_button_56",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1099,
+    0.0448,
+    0.0143
+   ],
+   "parts": [
+    "button_56_mesh_00"
+   ],
+   "clip": "button_56_operate"
+  },
+  {
+   "name": "button_57",
+   "kind": "press",
+   "node": "J_button_57",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1099,
+    0.0448,
+    -0.0015
+   ],
+   "parts": [
+    "button_57_mesh_00"
+   ],
+   "clip": "button_57_operate"
+  },
+  {
+   "name": "button_58",
+   "kind": "press",
+   "node": "J_button_58",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1099,
+    0.0448,
+    -0.0173
+   ],
+   "parts": [
+    "button_58_mesh_00"
+   ],
+   "clip": "button_58_operate"
+  },
+  {
+   "name": "button_59",
+   "kind": "press",
+   "node": "J_button_59",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1099,
+    0.0448,
+    -0.0332
+   ],
+   "parts": [
+    "button_59_mesh_00"
+   ],
+   "clip": "button_59_operate"
+  },
+  {
+   "name": "button_60",
+   "kind": "press",
+   "node": "J_button_60",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1099,
+    0.0448,
+    -0.049
+   ],
+   "parts": [
+    "button_60_mesh_00"
+   ],
+   "clip": "button_60_operate"
+  },
+  {
+   "name": "button_61",
+   "kind": "press",
+   "node": "J_button_61",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1099,
+    0.0448,
+    -0.0648
+   ],
+   "parts": [
+    "button_61_mesh_00"
+   ],
+   "clip": "button_61_operate"
+  },
+  {
+   "name": "button_62",
+   "kind": "press",
+   "node": "J_button_62",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1099,
+    0.0448,
+    -0.0876
+   ],
+   "parts": [
+    "button_62_mesh_00"
+   ],
+   "clip": "button_62_operate"
+  },
+  {
+   "name": "button_63",
+   "kind": "press",
+   "node": "J_button_63",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.0922,
+    0.0447,
+    0.125
+   ],
+   "parts": [
+    "button_63_mesh_00"
+   ],
+   "clip": "button_63_operate"
+  },
+  {
+   "name": "button_64",
+   "kind": "press",
+   "node": "J_button_64",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.0922,
+    0.0447,
+    0.1094
+   ],
+   "parts": [
+    "button_64_mesh_00"
+   ],
+   "clip": "button_64_operate"
+  },
+  {
+   "name": "button_65",
+   "kind": "press",
+   "node": "J_button_65",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.0922,
+    0.0447,
+    0.0934
+   ],
+   "parts": [
+    "button_65_mesh_00"
+   ],
+   "clip": "button_65_operate"
+  },
+  {
+   "name": "button_66",
+   "kind": "press",
+   "node": "J_button_66",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.0922,
+    0.0447,
+    0.0776
+   ],
+   "parts": [
+    "button_66_mesh_00"
+   ],
+   "clip": "button_66_operate"
+  },
+  {
+   "name": "button_67",
+   "kind": "press",
+   "node": "J_button_67",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.0922,
+    0.0447,
+    0.0618
+   ],
+   "parts": [
+    "button_67_mesh_00"
+   ],
+   "clip": "button_67_operate"
+  },
+  {
+   "name": "button_68",
+   "kind": "press",
+   "node": "J_button_68",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.0922,
+    0.0447,
+    0.046
+   ],
+   "parts": [
+    "button_68_mesh_00"
+   ],
+   "clip": "button_68_operate"
+  },
+  {
+   "name": "button_69",
+   "kind": "press",
+   "node": "J_button_69",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.0922,
+    0.0447,
+    0.0212
+   ],
+   "parts": [
+    "button_69_mesh_00"
+   ],
+   "clip": "button_69_operate"
+  },
+  {
+   "name": "button_70",
+   "kind": "press",
+   "node": "J_button_70",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.0922,
+    0.0447,
+    0.0054
+   ],
+   "parts": [
+    "button_70_mesh_00"
+   ],
+   "clip": "button_70_operate"
+  },
+  {
+   "name": "button_71",
+   "kind": "press",
+   "node": "J_button_71",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.0922,
+    0.0447,
+    -0.0104
+   ],
+   "parts": [
+    "button_71_mesh_00"
+   ],
+   "clip": "button_71_operate"
+  },
+  {
+   "name": "button_72",
+   "kind": "press",
+   "node": "J_button_72",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.0922,
+    0.0447,
+    -0.0262
+   ],
+   "parts": [
+    "button_72_mesh_00"
+   ],
+   "clip": "button_72_operate"
+  },
+  {
+   "name": "button_73",
+   "kind": "press",
+   "node": "J_button_73",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.0922,
+    0.0447,
+    -0.0477
+   ],
+   "parts": [
+    "button_73_mesh_00"
+   ],
+   "clip": "button_73_operate"
+  },
+  {
+   "name": "button_74",
+   "kind": "press",
+   "node": "J_button_74",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.0922,
+    0.0447,
+    -0.0635
+   ],
+   "parts": [
+    "button_74_mesh_00"
+   ],
+   "clip": "button_74_operate"
+  },
+  {
+   "name": "button_75",
+   "kind": "press",
+   "node": "J_button_75",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.0922,
+    0.0447,
+    -0.0793
+   ],
+   "parts": [
+    "button_75_mesh_00"
+   ],
+   "clip": "button_75_operate"
+  },
+  {
+   "name": "button_76",
+   "kind": "press",
+   "node": "J_button_76",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.0922,
+    0.0447,
+    -0.0951
+   ],
+   "parts": [
+    "button_76_mesh_00"
+   ],
+   "clip": "button_76_operate"
+  },
+  {
+   "name": "button_77",
+   "kind": "press",
+   "node": "J_button_77",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.0933,
+    0.0448,
+    0.1605
+   ],
+   "parts": [
+    "button_77_mesh_00"
+   ],
+   "clip": "button_77_operate"
+  },
+  {
+   "name": "button_78",
+   "kind": "press",
+   "node": "J_button_78",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1164,
+    0.0448,
+    0.1605
+   ],
+   "parts": [
+    "button_78_mesh_00"
+   ],
+   "clip": "button_78_operate"
+  },
+  {
+   "name": "button_79",
+   "kind": "press",
+   "node": "J_button_79",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1354,
+    0.0448,
+    0.1605
+   ],
+   "parts": [
+    "button_79_mesh_00"
+   ],
+   "clip": "button_79_operate"
+  },
+  {
+   "name": "button_80",
+   "kind": "press",
+   "node": "J_button_80",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1541,
+    0.0448,
+    0.1605
+   ],
+   "parts": [
+    "button_80_mesh_00"
+   ],
+   "clip": "button_80_operate"
+  },
+  {
+   "name": "button_81",
+   "kind": "press",
+   "node": "J_button_81",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1735,
+    0.0448,
+    0.1605
+   ],
+   "parts": [
+    "button_81_mesh_00"
+   ],
+   "clip": "button_81_operate"
+  },
+  {
+   "name": "button_82",
+   "kind": "press",
+   "node": "J_button_82",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.2059,
+    0.0449,
+    0.1655
+   ],
+   "parts": [
+    "button_82_mesh_00"
+   ],
+   "clip": "button_82_operate"
+  },
+  {
+   "name": "button_83",
+   "kind": "press",
+   "node": "J_button_83",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.2064,
+    0.0449,
+    0.1425
+   ],
+   "parts": [
+    "button_83_mesh_00"
+   ],
+   "clip": "button_83_operate"
+  },
+  {
+   "name": "button_84",
+   "kind": "press",
+   "node": "J_button_84",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.2503,
+    0.0448,
+    0.1622
+   ],
+   "parts": [
+    "button_84_mesh_00"
+   ],
+   "clip": "button_84_operate"
+  },
+  {
+   "name": "button_85",
+   "kind": "press",
+   "node": "J_button_85",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.2715,
+    0.0448,
+    0.1622
+   ],
+   "parts": [
+    "button_85_mesh_00"
+   ],
+   "clip": "button_85_operate"
+  },
+  {
+   "name": "button_86",
+   "kind": "press",
+   "node": "J_button_86",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.2692,
+    0.0449,
+    0.0733
+   ],
+   "parts": [
+    "button_86_mesh_00"
+   ],
+   "clip": "button_86_operate"
+  },
+  {
+   "name": "button_87",
+   "kind": "press",
+   "node": "J_button_87",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.2383,
+    0.0449,
+    0.0689
+   ],
+   "parts": [
+    "button_87_mesh_00"
+   ],
+   "clip": "button_87_operate"
+  },
+  {
+   "name": "button_88",
+   "kind": "press",
+   "node": "J_button_88",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.2167,
+    0.0449,
+    0.0574
+   ],
+   "parts": [
+    "button_88_mesh_00"
+   ],
+   "clip": "button_88_operate"
+  },
+  {
+   "name": "button_89",
+   "kind": "press",
+   "node": "J_button_89",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1933,
+    0.045,
+    0.0411
+   ],
+   "parts": [
+    "button_89_mesh_00"
+   ],
+   "clip": "button_89_operate"
+  },
+  {
+   "name": "button_90",
+   "kind": "press",
+   "node": "J_button_90",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1934,
+    0.045,
+    0.0134
+   ],
+   "parts": [
+    "button_90_mesh_00"
+   ],
+   "clip": "button_90_operate"
+  },
+  {
+   "name": "button_91",
+   "kind": "press",
+   "node": "J_button_91",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1934,
+    0.045,
+    -0.0146
+   ],
+   "parts": [
+    "button_91_mesh_00"
+   ],
+   "clip": "button_91_operate"
+  },
+  {
+   "name": "button_92",
+   "kind": "press",
+   "node": "J_button_92",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1934,
+    0.045,
+    -0.0422
+   ],
+   "parts": [
+    "button_92_mesh_00"
+   ],
+   "clip": "button_92_operate"
+  },
+  {
+   "name": "button_93",
+   "kind": "press",
+   "node": "J_button_93",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.2321,
+    0.0449,
+    -0.0635
+   ],
+   "parts": [
+    "button_93_mesh_00"
+   ],
+   "clip": "button_93_operate"
+  },
+  {
+   "name": "button_94",
+   "kind": "press",
+   "node": "J_button_94",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.2794,
+    0.0449,
+    -0.068
+   ],
+   "parts": [
+    "button_94_mesh_00"
+   ],
+   "clip": "button_94_operate"
+  },
+  {
+   "name": "button_95",
+   "kind": "press",
+   "node": "J_button_95",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.2062,
+    0.0449,
+    -0.1415
+   ],
+   "parts": [
+    "button_95_mesh_00"
+   ],
+   "clip": "button_95_operate"
+  },
+  {
+   "name": "button_96",
+   "kind": "press",
+   "node": "J_button_96",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.2062,
+    0.0449,
+    -0.1651
+   ],
+   "parts": [
+    "button_96_mesh_00"
+   ],
+   "clip": "button_96_operate"
+  },
+  {
+   "name": "button_97",
+   "kind": "press",
+   "node": "J_button_97",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.2364,
+    0.045,
+    -0.1587
+   ],
+   "parts": [
+    "button_97_mesh_00"
+   ],
+   "clip": "button_97_operate"
+  },
+  {
+   "name": "button_98",
+   "kind": "press",
+   "node": "J_button_98",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.257,
+    0.045,
+    -0.1588
+   ],
+   "parts": [
+    "button_98_mesh_00"
+   ],
+   "clip": "button_98_operate"
+  },
+  {
+   "name": "button_99",
+   "kind": "press",
+   "node": "J_button_99",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.2758,
+    0.045,
+    -0.1588
+   ],
+   "parts": [
+    "button_99_mesh_00"
+   ],
+   "clip": "button_99_operate"
+  },
+  {
+   "name": "display_01",
+   "kind": "tilt",
+   "node": "J_display_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -25,
+   "max": 25,
+   "pivot": [
+    -0.0228,
+    0.1814,
+    -0.0
+   ],
+   "parts": [
+    "display_01_mesh_00"
+   ],
+   "clip": "display_01_operate"
+  },
+  {
+   "name": "knob_01",
+   "kind": "turn",
+   "node": "J_knob_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -270,
+   "max": 0,
+   "pivot": [
+    -0.0681,
+    0.0429,
+    0.1036
+   ],
+   "parts": [
+    "knob_01_mesh_00"
+   ],
+   "clip": "knob_01_operate"
+  },
+  {
+   "name": "knob_02",
+   "kind": "turn",
+   "node": "J_knob_02",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -270,
+   "max": 0,
+   "pivot": [
+    -0.0681,
+    0.0429,
+    0.0627
+   ],
+   "parts": [
+    "knob_02_mesh_00"
+   ],
+   "clip": "knob_02_operate"
+  },
+  {
+   "name": "knob_03",
+   "kind": "turn",
+   "node": "J_knob_03",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -270,
+   "max": 0,
+   "pivot": [
+    -0.0681,
+    0.0429,
+    0.0221
+   ],
+   "parts": [
+    "knob_03_mesh_00"
+   ],
+   "clip": "knob_03_operate"
+  },
+  {
+   "name": "knob_04",
+   "kind": "turn",
+   "node": "J_knob_04",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -270,
+   "max": 0,
+   "pivot": [
+    -0.0681,
+    0.0429,
+    -0.0203
+   ],
+   "parts": [
+    "knob_04_mesh_00"
+   ],
+   "clip": "knob_04_operate"
+  },
+  {
+   "name": "knob_05",
+   "kind": "turn",
+   "node": "J_knob_05",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -270,
+   "max": 0,
+   "pivot": [
+    -0.0681,
+    0.0429,
+    -0.0613
+   ],
+   "parts": [
+    "knob_05_mesh_00"
+   ],
+   "clip": "knob_05_operate"
+  },
+  {
+   "name": "knob_06",
+   "kind": "turn",
+   "node": "J_knob_06",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -270,
+   "max": 0,
+   "pivot": [
+    -0.0681,
+    0.0429,
+    -0.102
+   ],
+   "parts": [
+    "knob_06_mesh_00"
+   ],
+   "clip": "knob_06_operate"
+  },
+  {
+   "name": "knob_07",
+   "kind": "turn",
+   "node": "J_knob_07",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -270,
+   "max": 0,
+   "pivot": [
+    -0.0681,
+    0.0429,
+    -0.1422
+   ],
+   "parts": [
+    "knob_07_mesh_00"
+   ],
+   "clip": "knob_07_operate"
+  },
+  {
+   "name": "knob_08",
+   "kind": "turn",
+   "node": "J_knob_08",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -270,
+   "max": 0,
+   "pivot": [
+    -0.2624,
+    0.0463,
+    0.1181
+   ],
+   "parts": [
+    "knob_08_mesh_00"
+   ],
+   "clip": "knob_08_operate"
+  },
+  {
+   "name": "knob_09",
+   "kind": "turn",
+   "node": "J_knob_09",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -270,
+   "max": 0,
+   "pivot": [
+    -0.2113,
+    0.0464,
+    0.097
+   ],
+   "parts": [
+    "knob_09_mesh_00"
+   ],
+   "clip": "knob_09_operate"
+  },
+  {
+   "name": "knob_10",
+   "kind": "turn",
+   "node": "J_knob_10",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -270,
+   "max": 0,
+   "pivot": [
+    -0.265,
+    0.0464,
+    -0.1123
+   ],
+   "parts": [
+    "knob_10_mesh_01"
+   ],
+   "clip": "knob_10_operate"
+  },
+  {
+   "name": "knob_11",
+   "kind": "turn",
+   "node": "J_knob_11",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -270,
+   "max": 0,
+   "pivot": [
+    -0.2112,
+    0.0464,
+    -0.0983
+   ],
+   "parts": [
+    "knob_11_mesh_00"
+   ],
+   "clip": "knob_11_operate"
+  }
+ ],
+ "showcaseClip": "Showcase"
+}

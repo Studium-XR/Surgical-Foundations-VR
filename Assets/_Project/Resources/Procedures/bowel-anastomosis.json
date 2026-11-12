@@ -1,0 +1,190 @@
+{
+ "id": "bowel-anastomosis",
+ "title": "Bowel anastomosis",
+ "summary": "Join two ends of small bowel with a single-layer hand-sewn anastomosis.",
+ "patientState": "anaesthetised",
+ "patientName": "Mr Daniel Okafor",
+ "equipment": [
+  {
+   "id": "instrument_clamp_a01",
+   "place": "tray",
+   "key": "instrument_clamp_a01"
+  },
+  {
+   "id": "instrument_forceps_a01",
+   "place": "tray",
+   "key": "instrument_forceps_a01"
+  },
+  {
+   "id": "instrument_artery_forceps_b01",
+   "place": "tray",
+   "key": "instrument_artery_forceps_b01"
+  },
+  {
+   "id": "instrument_scissors_a01",
+   "place": "tray",
+   "key": "instrument_scissors_a01"
+  },
+  {
+   "id": "needle_surgical_a01",
+   "place": "tray",
+   "key": "needle_surgical_a01"
+  },
+  {
+   "id": "stapler_surgical_a01",
+   "place": "tray",
+   "key": "stapler_surgical_a01"
+  },
+  {
+   "id": "instrument_suction_a01",
+   "place": "tray",
+   "key": "instrument_suction_a01"
+  }
+ ],
+ "anchors": [
+  {
+   "name": "umbilicus",
+   "label": "umbilicus",
+   "cranial": 0.0,
+   "right": 0.0,
+   "anterior": 0.0,
+   "radius": 0.05
+  },
+  {
+   "name": "midline_lower",
+   "label": "lower midline",
+   "cranial": -0.12,
+   "right": 0.0,
+   "anterior": -0.01,
+   "radius": 0.06
+  }
+ ],
+ "cables": [],
+ "steps": [
+  {
+   "type": "choose",
+   "title": "Requirements",
+   "prompt": "Which is NOT a requirement for a healthy anastomosis?",
+   "choices": [
+    {
+     "text": "Tension across the join to keep it straight",
+     "correct": true,
+     "feedback": "Correct: tension causes leaks."
+    },
+    {
+     "text": "A good blood supply",
+     "correct": false,
+     "feedback": "This is essential.",
+     "critical": false
+    },
+    {
+     "text": "Healthy bowel ends",
+     "correct": false,
+     "feedback": "This is essential.",
+     "critical": false
+    }
+   ],
+   "hint": "",
+   "id": "bowel-anastomosis-s1"
+  },
+  {
+   "type": "pick",
+   "title": "Apply the soft bowel clamps",
+   "item": "instrument_clamp_a01",
+   "hint": "Non-crushing clamps, away from the cut ends.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "bowel-anastomosis-s2"
+  },
+  {
+   "type": "pick",
+   "title": "Hold the bowel",
+   "item": "instrument_forceps_a01",
+   "hint": "Non-toothed forceps for bowel.",
+   "wrongItems": [
+    "instrument_artery_forceps_b01"
+   ],
+   "critical": false,
+   "id": "bowel-anastomosis-s3"
+  },
+  {
+   "type": "apply",
+   "title": "Place the mesenteric corner stitch",
+   "item": "needle_surgical_a01",
+   "target": "umbilicus",
+   "hint": "Seromuscular, extramucosal, round-bodied needle.",
+   "hold": 1.5,
+   "critical": false,
+   "id": "bowel-anastomosis-s4"
+  },
+  {
+   "type": "confirm",
+   "title": "Run the posterior and anterior walls (single-layer extramucosal)",
+   "hint": "Bites about 5 mm, 5 mm apart.",
+   "id": "bowel-anastomosis-s5"
+  },
+  {
+   "type": "operate",
+   "title": "Fire the stapler (alternative technique)",
+   "item": "stapler_surgical_a01",
+   "joint": "hand_01",
+   "open": true,
+   "hint": "Squeeze the handle fully to fire.",
+   "id": "bowel-anastomosis-s6"
+  },
+  {
+   "type": "choose",
+   "title": "Check the join",
+   "prompt": "After a circular stapled anastomosis you must check…",
+   "choices": [
+    {
+     "text": "That both tissue doughnuts are complete",
+     "correct": true,
+     "feedback": "Correct."
+    },
+    {
+     "text": "That the stapler is empty",
+     "correct": false,
+     "feedback": "Irrelevant to the anastomosis.",
+     "critical": false
+    },
+    {
+     "text": "That the bowel is distended",
+     "correct": false,
+     "feedback": "Not a check.",
+     "critical": false
+    }
+   ],
+   "hint": "",
+   "id": "bowel-anastomosis-s7"
+  },
+  {
+   "type": "choose",
+   "title": "Leak",
+   "prompt": "Day 4: tachycardia, fever and abdominal pain. What do you suspect first?",
+   "choices": [
+    {
+     "text": "Anastomotic leak",
+     "correct": true,
+     "feedback": "Correct: act on it early."
+    },
+    {
+     "text": "Normal recovery",
+     "correct": false,
+     "feedback": "Never assume.",
+     "critical": true
+    },
+    {
+     "text": "Wound infection only",
+     "correct": false,
+     "feedback": "Rule out a leak first.",
+     "critical": false
+    }
+   ],
+   "hint": "",
+   "id": "bowel-anastomosis-s8"
+  }
+ ],
+ "errorPenalty": 10,
+ "hintPenalty": 3
+}

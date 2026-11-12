@@ -6,7 +6,10 @@ using UnityEngine;
 
 namespace SurgicalFoundations.UI
 {
-    /// <summary>Speaker-icon subtitle bar under the learner's view while a voice prompt plays (US-ACS-04).</summary>
+    /// <summary>
+    /// Speaker-icon subtitle bar while a voice prompt plays (US-ACS-04). The bar is world-locked: each new line is placed
+    /// in front of the learner only if the last spot is out of view, and it does not follow the head while it shows.
+    /// </summary>
     public class SubtitlePresenter : MonoBehaviour
     {
         [SerializeField] CanvasGroup group;
@@ -33,6 +36,8 @@ namespace SurgicalFoundations.UI
             var s = SessionManager.Instance;
             if (s != null && !s.Settings.subtitles) return;
             label.text = $"“{text}”";
+            var anchor = GetComponentInParent<WorldLockedPanel>();
+            if (anchor != null) anchor.PlaceIfOutOfView();
             if (running != null) StopCoroutine(running);
             running = StartCoroutine(Run(seconds));
         }

@@ -1800,7 +1800,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: SurgicalFoundations.Runtime::SurgicalFoundations.UI.PauseMenu
   panel: {fileID: 466764107}
   dimmer: {fileID: 1187718507}
-  distance: 1.1
 --- !u!1 &1758307568
 GameObject:
   m_ObjectHideFlags: 0

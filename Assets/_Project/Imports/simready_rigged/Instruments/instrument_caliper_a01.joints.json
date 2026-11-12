@@ -1,0 +1,36 @@
+{
+ "asset": "instrument_caliper_a01",
+ "category": "Instruments",
+ "trianglesSource": 5619,
+ "size": [
+  0.238,
+  0.008,
+  0.078
+ ],
+ "joints": [
+  {
+   "name": "jaw",
+   "kind": "jaw",
+   "node": "J_jaw",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -30,
+   "max": 0,
+   "pivot": [
+    0.0239,
+    0.0039,
+    0.0009
+   ],
+   "parts": [
+    "depthblade_01_mesh_00"
+   ],
+   "clip": "jaw_operate"
+  }
+ ],
+ "showcaseClip": "Showcase"
+}

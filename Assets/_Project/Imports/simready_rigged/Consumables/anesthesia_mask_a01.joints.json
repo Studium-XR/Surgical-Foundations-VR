@@ -1,0 +1,36 @@
+{
+ "asset": "anesthesia_mask_a01",
+ "category": "Consumables",
+ "trianglesSource": 61955,
+ "size": [
+  0.13,
+  0.051,
+  0.088
+ ],
+ "joints": [
+  {
+   "name": "cover",
+   "kind": "lid",
+   "node": "J_cover",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -100,
+   "max": 0,
+   "pivot": [
+    0.0331,
+    0.0437,
+    -0.0108
+   ],
+   "parts": [
+    "cover_mesh_00"
+   ],
+   "clip": "cover_operate"
+  }
+ ],
+ "showcaseClip": "Showcase"
+}

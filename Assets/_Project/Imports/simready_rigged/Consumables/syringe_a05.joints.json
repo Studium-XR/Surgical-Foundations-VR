@@ -1,0 +1,83 @@
+{
+ "asset": "syringe_a05",
+ "category": "Consumables",
+ "trianglesSource": 9059,
+ "size": [
+  0.116,
+  0.013,
+  0.019
+ ],
+ "joints": [
+  {
+   "name": "cap_01",
+   "kind": "lid",
+   "node": "J_cap_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -100,
+   "max": 0,
+   "pivot": [
+    0.0104,
+    0.0132,
+    -0.0065
+   ],
+   "parts": [
+    "cap_01_mesh_00"
+   ],
+   "clip": "cap_01_operate"
+  },
+  {
+   "name": "cap_02",
+   "kind": "lid",
+   "node": "J_cap_02",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -100,
+   "max": 0,
+   "pivot": [
+    -0.0824,
+    0.012,
+    -0.0053
+   ],
+   "parts": [
+    "cap_02_mesh_00",
+    "needle_01_mesh_00"
+   ],
+   "clip": "cap_02_operate"
+  },
+  {
+   "name": "plunger_01",
+   "kind": "plunge",
+   "node": "J_plunger_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.0637,
+   "pivot": [
+    -0.0204,
+    0.0067,
+    -0.0
+   ],
+   "parts": [
+    "plunger_01_mesh_00"
+   ],
+   "clip": "plunger_01_operate"
+  }
+ ],
+ "showcaseClip": "Showcase"
+}

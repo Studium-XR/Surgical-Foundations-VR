@@ -1,0 +1,194 @@
+{
+ "id": "vascular-access",
+ "title": "Peripheral and central venous access",
+ "summary": "Cannulate a vein using a vein finder, and plan a Seldinger central line.",
+ "patientState": "awake",
+ "patientName": "Mr Daniel Okafor",
+ "equipment": [
+  {
+   "id": "device_vein_finder_a01",
+   "place": "tray",
+   "key": "device_vein_finder_a01"
+  },
+  {
+   "id": "disinfectant_a01",
+   "place": "tray",
+   "key": "disinfectant_a01"
+  },
+  {
+   "id": "syringe_a03",
+   "place": "tray",
+   "key": "syringe_a03"
+  },
+  {
+   "id": "catheter_system_a01",
+   "place": "tray",
+   "key": "catheter_system_a01"
+  },
+  {
+   "id": "IV_pole_a01",
+   "place": "head",
+   "key": "IV_pole_a01"
+  },
+  {
+   "id": "pump_infusion_a01",
+   "place": "head",
+   "key": "pump_infusion_a01"
+  },
+  {
+   "id": "bandage_medical_a01",
+   "place": "tray",
+   "key": "bandage_medical_a01"
+  },
+  {
+   "id": "ultrasound_b01",
+   "place": "bedside",
+   "key": "ultrasound_b01"
+  }
+ ],
+ "anchors": [
+  {
+   "name": "right_antecubital",
+   "label": "right antecubital fossa",
+   "cranial": 0.05,
+   "right": 0.26,
+   "anterior": -0.06,
+   "radius": 0.06
+  },
+  {
+   "name": "right_hand",
+   "label": "right hand",
+   "cranial": -0.12,
+   "right": 0.29,
+   "anterior": -0.08,
+   "radius": 0.06
+  }
+ ],
+ "cables": [],
+ "steps": [
+  {
+   "type": "talk",
+   "title": "Explain the cannula",
+   "prompt": "Do I really need another needle?",
+   "choices": [
+    {
+     "text": "I need a drip to give you fluids and medicines. It's a sharp scratch, and I'll use this light to find a good vein first.",
+     "correct": true,
+     "reply": "Okay, go ahead.",
+     "feedback": ""
+    },
+    {
+     "text": "Yes. Hold still.",
+     "correct": false,
+     "feedback": "Explain why and what to expect.",
+     "reply": "Fine…"
+    }
+   ],
+   "hint": "",
+   "id": "vascular-access-s1"
+  },
+  {
+   "type": "pick",
+   "title": "Find a vein with the vein finder",
+   "item": "device_vein_finder_a01",
+   "hint": "Near-infrared light shows the veins under the skin.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "vascular-access-s2"
+  },
+  {
+   "type": "apply",
+   "title": "Scan the antecubital fossa",
+   "item": "device_vein_finder_a01",
+   "target": "right_antecubital",
+   "hint": "Choose a straight, bouncy vein.",
+   "hold": 2.0,
+   "critical": false,
+   "id": "vascular-access-s3"
+  },
+  {
+   "type": "pick",
+   "title": "Pick up the skin preparation",
+   "item": "disinfectant_a01",
+   "hint": "Alcoholic chlorhexidine, applied from the incision site outwards.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "vascular-access-s4"
+  },
+  {
+   "type": "apply",
+   "title": "Prepare the skin over the chosen vein",
+   "item": "disinfectant_a01",
+   "target": "right_antecubital",
+   "hint": "Centre outwards, wider than the incision; let it dry fully before drapes and diathermy (it is flammable).",
+   "hold": 2.0,
+   "critical": false,
+   "id": "vascular-access-s5"
+  },
+  {
+   "type": "pick",
+   "title": "Take the cannula",
+   "item": "catheter_system_a01",
+   "hint": "Bevel up, 15–30°; watch for flashback, then advance the cannula off the needle.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "vascular-access-s6"
+  },
+  {
+   "type": "apply",
+   "title": "Cannulate the vein",
+   "item": "catheter_system_a01",
+   "target": "right_antecubital",
+   "hint": "Flashback, lower, advance a few mm, slide the cannula in.",
+   "hold": 1.5,
+   "critical": false,
+   "id": "vascular-access-s7"
+  },
+  {
+   "type": "pick",
+   "title": "Flush the cannula",
+   "item": "syringe_a03",
+   "hint": "Saline flush: no swelling, no pain.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "vascular-access-s8"
+  },
+  {
+   "type": "operate",
+   "title": "Open the infusion pump door and load the line",
+   "item": "pump_infusion_a01",
+   "joint": "",
+   "open": true,
+   "hint": "Check drug, dose, rate and line against the prescription.",
+   "id": "vascular-access-s9"
+  },
+  {
+   "type": "choose",
+   "title": "Central line",
+   "prompt": "During a Seldinger central line insertion you must…",
+   "choices": [
+    {
+     "text": "Never let go of the guidewire",
+     "correct": true,
+     "feedback": "Correct: a lost wire can embolise."
+    },
+    {
+     "text": "Remove the wire before dilating",
+     "correct": false,
+     "feedback": "The dilator goes over the wire.",
+     "critical": true
+    },
+    {
+     "text": "Insert without ultrasound",
+     "correct": false,
+     "feedback": "Ultrasound guidance is the standard.",
+     "critical": false
+    }
+   ],
+   "hint": "",
+   "id": "vascular-access-s10"
+  }
+ ],
+ "errorPenalty": 10,
+ "hintPenalty": 3
+}

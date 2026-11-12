@@ -1,0 +1,404 @@
+{
+ "asset": "monitor_patient_a01",
+ "category": "Equipment",
+ "trianglesSource": 226644,
+ "size": [
+  0.577,
+  1.496,
+  0.53
+ ],
+ "joints": [
+  {
+   "name": "button_01",
+   "kind": "press",
+   "node": "J_button_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.061,
+    1.2147,
+    -0.0732
+   ],
+   "parts": [
+    "button_01_mesh_00"
+   ],
+   "clip": "button_01_operate"
+  },
+  {
+   "name": "button_02",
+   "kind": "press",
+   "node": "J_button_02",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.061,
+    1.2147,
+    -0.0365
+   ],
+   "parts": [
+    "button_02_mesh_00"
+   ],
+   "clip": "button_02_operate"
+  },
+  {
+   "name": "button_03",
+   "kind": "press",
+   "node": "J_button_03",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.061,
+    1.2147,
+    0.0002
+   ],
+   "parts": [
+    "button_03_mesh_00"
+   ],
+   "clip": "button_03_operate"
+  },
+  {
+   "name": "button_04",
+   "kind": "press",
+   "node": "J_button_04",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.061,
+    1.2147,
+    0.037
+   ],
+   "parts": [
+    "button_04_mesh_00"
+   ],
+   "clip": "button_04_operate"
+  },
+  {
+   "name": "button_05",
+   "kind": "press",
+   "node": "J_button_05",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.061,
+    1.2147,
+    0.0737
+   ],
+   "parts": [
+    "button_05_mesh_00"
+   ],
+   "clip": "button_05_operate"
+  },
+  {
+   "name": "button_06",
+   "kind": "press",
+   "node": "J_button_06",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.0571,
+    1.2147,
+    0.1228
+   ],
+   "parts": [
+    "button_06_mesh_00"
+   ],
+   "clip": "button_06_operate"
+  },
+  {
+   "name": "screen_01",
+   "kind": "tilt",
+   "node": "J_screen_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -25,
+   "max": 25,
+   "pivot": [
+    -0.0603,
+    1.3684,
+    -0.0017
+   ],
+   "parts": [
+    "screen_01_mesh_00"
+   ],
+   "clip": "screen_01_operate"
+  },
+  {
+   "name": "tirebase_01",
+   "kind": "swivel",
+   "node": "J_tirebase_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -180,
+   "max": 180,
+   "pivot": [
+    0.0069,
+    0.1046,
+    -0.2549
+   ],
+   "parts": [
+    "tireBase_01_mesh_00"
+   ],
+   "clip": "tirebase_01_operate"
+  },
+  {
+   "name": "tire_01",
+   "kind": "spin",
+   "node": "J_tire_01",
+   "parent": "J_tirebase_01",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -360,
+   "max": 0,
+   "pivot": [
+    0.0143,
+    0.0364,
+    -0.2549
+   ],
+   "parts": [
+    "tire_01_mesh_00"
+   ],
+   "clip": "tire_01_operate"
+  },
+  {
+   "name": "tirebase_02",
+   "kind": "swivel",
+   "node": "J_tirebase_02",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -180,
+   "max": 180,
+   "pivot": [
+    0.2262,
+    0.1046,
+    -0.0469
+   ],
+   "parts": [
+    "tireBase_02_mesh_00"
+   ],
+   "clip": "tirebase_02_operate"
+  },
+  {
+   "name": "tire_02",
+   "kind": "spin",
+   "node": "J_tire_02",
+   "parent": "J_tirebase_02",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -360,
+   "max": 0,
+   "pivot": [
+    0.2337,
+    0.0364,
+    -0.0469
+   ],
+   "parts": [
+    "tire_02_mesh_00"
+   ],
+   "clip": "tire_02_operate"
+  },
+  {
+   "name": "tirebase_03",
+   "kind": "swivel",
+   "node": "J_tirebase_03",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -180,
+   "max": 180,
+   "pivot": [
+    0.0961,
+    0.1046,
+    0.226
+   ],
+   "parts": [
+    "tireBase_03_mesh_00"
+   ],
+   "clip": "tirebase_03_operate"
+  },
+  {
+   "name": "tire_03",
+   "kind": "spin",
+   "node": "J_tire_03",
+   "parent": "J_tirebase_03",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -360,
+   "max": 0,
+   "pivot": [
+    0.1036,
+    0.0364,
+    0.226
+   ],
+   "parts": [
+    "tire_03_mesh_00"
+   ],
+   "clip": "tire_03_operate"
+  },
+  {
+   "name": "tirebase_04",
+   "kind": "swivel",
+   "node": "J_tirebase_04",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -180,
+   "max": 180,
+   "pivot": [
+    -0.2036,
+    0.1046,
+    0.1866
+   ],
+   "parts": [
+    "tireBase_04_mesh_00"
+   ],
+   "clip": "tirebase_04_operate"
+  },
+  {
+   "name": "tire_04",
+   "kind": "spin",
+   "node": "J_tire_04",
+   "parent": "J_tirebase_04",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -360,
+   "max": 0,
+   "pivot": [
+    -0.1961,
+    0.0364,
+    0.1866
+   ],
+   "parts": [
+    "tire_04_mesh_00"
+   ],
+   "clip": "tire_04_operate"
+  },
+  {
+   "name": "tirebase_05",
+   "kind": "swivel",
+   "node": "J_tirebase_05",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -180,
+   "max": 180,
+   "pivot": [
+    -0.2588,
+    0.1046,
+    -0.1106
+   ],
+   "parts": [
+    "tireBase_05_mesh_00"
+   ],
+   "clip": "tirebase_05_operate"
+  },
+  {
+   "name": "tire_05",
+   "kind": "spin",
+   "node": "J_tire_05",
+   "parent": "J_tirebase_05",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -360,
+   "max": 0,
+   "pivot": [
+    -0.2513,
+    0.0364,
+    -0.1106
+   ],
+   "parts": [
+    "tire_05_mesh_00"
+   ],
+   "clip": "tire_05_operate"
+  }
+ ],
+ "showcaseClip": "Showcase"
+}

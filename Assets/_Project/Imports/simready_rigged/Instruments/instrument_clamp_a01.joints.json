@@ -1,0 +1,36 @@
+{
+ "asset": "instrument_clamp_a01",
+ "category": "Instruments",
+ "trianglesSource": 20686,
+ "size": [
+  0.178,
+  0.011,
+  0.078
+ ],
+ "joints": [
+  {
+   "name": "jaw",
+   "kind": "jaw",
+   "node": "J_jaw",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -30,
+   "max": 0,
+   "pivot": [
+    -0.0207,
+    0.0038,
+    -0.0003
+   ],
+   "parts": [
+    "body_02_mesh_00"
+   ],
+   "clip": "jaw_operate"
+  }
+ ],
+ "showcaseClip": "Showcase"
+}

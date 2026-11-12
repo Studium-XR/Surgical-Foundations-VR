@@ -1,0 +1,12 @@
+{
+ "asset": "instrument_retractor_a01",
+ "category": "Instruments",
+ "trianglesSource": 14860,
+ "size": [
+  0.164,
+  0.01,
+  0.023
+ ],
+ "joints": [],
+ "showcaseClip": null
+}

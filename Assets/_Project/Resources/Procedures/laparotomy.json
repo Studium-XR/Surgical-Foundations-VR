@@ -1,0 +1,367 @@
+{
+ "id": "laparotomy",
+ "title": "Midline laparotomy: opening and closing",
+ "summary": "Open the abdomen safely and close it with a small-bites technique.",
+ "patientState": "anaesthetised",
+ "patientName": "Mr Daniel Okafor",
+ "equipment": [
+  {
+   "id": "unit_electrosurgical_a01",
+   "place": "bedside",
+   "key": "unit_electrosurgical_a01"
+  },
+  {
+   "id": "pendant_medical_a01",
+   "place": "head",
+   "key": "pendant_medical_a01"
+  },
+  {
+   "id": "pump_suction_surgical_a01",
+   "place": "head",
+   "key": "pump_suction_surgical_a01"
+  },
+  {
+   "id": "disinfectant_a01",
+   "place": "tray",
+   "key": "disinfectant_a01"
+  },
+  {
+   "id": "instrument_scalpel_handle_a01",
+   "place": "tray",
+   "key": "instrument_scalpel_handle_a01"
+  },
+  {
+   "id": "instrument_artery_forceps_b01",
+   "place": "tray",
+   "key": "instrument_artery_forceps_b01"
+  },
+  {
+   "id": "instrument_scissors_a01",
+   "place": "tray",
+   "key": "instrument_scissors_a01"
+  },
+  {
+   "id": "instrument_selfretaining_retractor_a01",
+   "place": "tray",
+   "key": "instrument_selfretaining_retractor_a01"
+  },
+  {
+   "id": "instrument_suction_a01",
+   "place": "tray",
+   "key": "instrument_suction_a01"
+  },
+  {
+   "id": "needle_surgical_a01",
+   "place": "tray",
+   "key": "needle_surgical_a01"
+  }
+ ],
+ "anchors": [
+  {
+   "name": "midline_upper",
+   "label": "upper midline",
+   "cranial": 0.13,
+   "right": 0.0,
+   "anterior": 0.0,
+   "radius": 0.06
+  },
+  {
+   "name": "midline_lower",
+   "label": "lower midline",
+   "cranial": -0.12,
+   "right": 0.0,
+   "anterior": -0.01,
+   "radius": 0.06
+  },
+  {
+   "name": "umbilicus",
+   "label": "umbilicus",
+   "cranial": 0.0,
+   "right": 0.0,
+   "anterior": 0.0,
+   "radius": 0.05
+  },
+  {
+   "name": "pad_site",
+   "label": "right thigh, patient plate site",
+   "cranial": -0.36,
+   "right": 0.1,
+   "anterior": -0.03,
+   "radius": 0.08
+  }
+ ],
+ "cables": [
+  {
+   "key": "esu_power",
+   "label": "Diathermy mains lead",
+   "from": "unit_electrosurgical_a01",
+   "fromHeight": 0.3,
+   "fromSide": -0.25,
+   "to": "pendant_medical_a01",
+   "toHeight": 0.45,
+   "toSide": -0.3,
+   "toAnchor": "",
+   "color": "#3A3D44",
+   "length": 4.0
+  },
+  {
+   "key": "return_pad",
+   "label": "Return electrode (patient plate)",
+   "from": "unit_electrosurgical_a01",
+   "fromHeight": 0.55,
+   "fromSide": 0.25,
+   "to": "",
+   "toHeight": 0.5,
+   "toSide": 0.25,
+   "toAnchor": "pad_site",
+   "color": "#2E7BD6",
+   "length": 3.2
+  },
+  {
+   "key": "suction_vacuum",
+   "label": "Suction line to the wall vacuum",
+   "from": "pump_suction_surgical_a01",
+   "fromHeight": 0.75,
+   "fromSide": -0.25,
+   "to": "pendant_medical_a01",
+   "toHeight": 0.6,
+   "toSide": 0.0,
+   "toAnchor": "",
+   "color": "#F2C230",
+   "length": 3.5
+  },
+  {
+   "key": "suction_power",
+   "label": "Suction unit mains lead",
+   "from": "pump_suction_surgical_a01",
+   "fromHeight": 0.25,
+   "fromSide": -0.25,
+   "to": "pendant_medical_a01",
+   "toHeight": 0.45,
+   "toSide": 0.3,
+   "toAnchor": "",
+   "color": "#3A3D44",
+   "length": 3.5
+  }
+ ],
+ "steps": [
+  {
+   "type": "plug",
+   "title": "Plug the diathermy generator into the pendant",
+   "item": "esu_power",
+   "hint": "Mains lead from the generator into a socket on the ceiling pendant.",
+   "id": "laparotomy-s1"
+  },
+  {
+   "type": "choose",
+   "title": "Where does the patient plate go?",
+   "prompt": "Where should the return electrode (patient plate) be placed?",
+   "choices": [
+    {
+     "text": "On a well-perfused muscle mass close to the operation, such as the thigh, on dry hair-free skin",
+     "correct": true,
+     "feedback": "Correct: a large, well-perfused contact area keeps the current density low."
+    },
+    {
+     "text": "Over a bony prominence",
+     "correct": false,
+     "feedback": "Poor contact: a burn risk at the plate.",
+     "critical": false
+    },
+    {
+     "text": "Over a metal implant",
+     "correct": false,
+     "feedback": "Current concentrates in the metal.",
+     "critical": true
+    },
+    {
+     "text": "Anywhere on the patient",
+     "correct": false,
+     "feedback": "Distance and contact both matter.",
+     "critical": false
+    }
+   ],
+   "hint": "",
+   "id": "laparotomy-s2"
+  },
+  {
+   "type": "plug",
+   "title": "Apply the patient plate to the thigh",
+   "item": "return_pad",
+   "hint": "Full, flat contact on the thigh; check the generator's contact alarm clears.",
+   "id": "laparotomy-s3"
+  },
+  {
+   "type": "plug",
+   "title": "Connect the suction to the wall vacuum",
+   "item": "suction_vacuum",
+   "hint": "Canister tubing to the yellow vacuum outlet on the pendant.",
+   "id": "laparotomy-s4"
+  },
+  {
+   "type": "plug",
+   "title": "Plug in the suction unit",
+   "item": "suction_power",
+   "hint": "",
+   "id": "laparotomy-s5"
+  },
+  {
+   "type": "choose",
+   "title": "WHO Time Out",
+   "prompt": "Before skin incision for a laparotomy, the team pauses. What must be confirmed aloud?",
+   "choices": [
+    {
+     "text": "Patient identity, the procedure, the site and side, and antibiotics given in the last 60 minutes",
+     "correct": true,
+     "feedback": "Correct: the Time Out confirms who, what and where, and that prophylaxis is in."
+    },
+    {
+     "text": "Only that the consent form is signed",
+     "correct": false,
+     "feedback": "The signature alone does not prevent wrong-site surgery.",
+     "critical": false
+    },
+    {
+     "text": "Nothing: the site was marked on the ward",
+     "correct": false,
+     "feedback": "Marking does not replace the Time Out.",
+     "critical": true
+    }
+   ],
+   "hint": "The site is the midline. All three phases of the WHO checklist are mandatory.",
+   "id": "laparotomy-s6"
+  },
+  {
+   "type": "pick",
+   "title": "Pick up the skin preparation",
+   "item": "disinfectant_a01",
+   "hint": "Alcoholic chlorhexidine, applied from the incision site outwards.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "laparotomy-s7"
+  },
+  {
+   "type": "apply",
+   "title": "Prepare the skin over the abdomen",
+   "item": "disinfectant_a01",
+   "target": "umbilicus",
+   "hint": "Centre outwards, wider than the incision; let it dry fully before drapes and diathermy (it is flammable).",
+   "hold": 2.0,
+   "critical": false,
+   "id": "laparotomy-s8"
+  },
+  {
+   "type": "pick",
+   "title": "Take the scalpel",
+   "item": "instrument_scalpel_handle_a01",
+   "hint": "Skin only with the knife.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "laparotomy-s9"
+  },
+  {
+   "type": "apply",
+   "title": "Incise the upper midline",
+   "item": "instrument_scalpel_handle_a01",
+   "target": "midline_upper",
+   "hint": "Skirt the umbilicus.",
+   "hold": 1.5,
+   "critical": false,
+   "id": "laparotomy-s10"
+  },
+  {
+   "type": "apply",
+   "title": "Continue to the lower midline",
+   "item": "instrument_scalpel_handle_a01",
+   "target": "midline_lower",
+   "hint": "Straight line along the linea alba.",
+   "hold": 1.5,
+   "critical": false,
+   "id": "laparotomy-s11"
+  },
+  {
+   "type": "choose",
+   "title": "Open the peritoneum",
+   "prompt": "How is the peritoneum opened safely?",
+   "choices": [
+    {
+     "text": "Lift it between two clips and nick it, away from the bowel",
+     "correct": true,
+     "feedback": "Correct."
+    },
+    {
+     "text": "Cut straight through with the knife",
+     "correct": false,
+     "feedback": "Risk of bowel injury.",
+     "critical": true
+    },
+    {
+     "text": "With monopolar diathermy on cut at full depth",
+     "correct": false,
+     "feedback": "Risk of bowel burn.",
+     "critical": true
+    }
+   ],
+   "hint": "",
+   "id": "laparotomy-s12"
+  },
+  {
+   "type": "operate",
+   "title": "Turn the suction on",
+   "item": "pump_suction_surgical_a01",
+   "joint": "",
+   "open": true,
+   "hint": "Suction ready before opening the abdomen.",
+   "id": "laparotomy-s13"
+  },
+  {
+   "type": "pick",
+   "title": "Place the self-retaining retractor",
+   "item": "instrument_selfretaining_retractor_a01",
+   "hint": "",
+   "wrongItems": [],
+   "critical": false,
+   "id": "laparotomy-s14"
+  },
+  {
+   "type": "confirm",
+   "title": "Explore the abdomen systematically",
+   "hint": "All four quadrants, then the pelvis, then the small bowel from the duodenojejunal flexure.",
+   "id": "laparotomy-s15"
+  },
+  {
+   "type": "choose",
+   "title": "Closing",
+   "prompt": "Which closure lowers the risk of incisional hernia?",
+   "choices": [
+    {
+     "text": "Continuous slowly absorbable monofilament, small bites 5 mm by 5 mm, suture:wound length at least 4:1",
+     "correct": true,
+     "feedback": "Correct."
+    },
+    {
+     "text": "Interrupted large bites 2 cm apart",
+     "correct": false,
+     "feedback": "Higher hernia rate.",
+     "critical": false
+    },
+    {
+     "text": "Rapidly absorbable braided suture",
+     "correct": false,
+     "feedback": "Loses strength too early.",
+     "critical": false
+    }
+   ],
+   "hint": "",
+   "id": "laparotomy-s16"
+  },
+  {
+   "type": "confirm",
+   "title": "Final count and skin closure",
+   "hint": "",
+   "id": "laparotomy-s17"
+  }
+ ],
+ "errorPenalty": 10,
+ "hintPenalty": 3
+}

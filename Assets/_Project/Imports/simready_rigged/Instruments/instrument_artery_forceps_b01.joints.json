@@ -1,0 +1,36 @@
+{
+ "asset": "instrument_artery_forceps_b01",
+ "category": "Instruments",
+ "trianglesSource": 10488,
+ "size": [
+  0.186,
+  0.005,
+  0.094
+ ],
+ "joints": [
+  {
+   "name": "jaw",
+   "kind": "jaw",
+   "node": "J_jaw",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -30,
+   "max": 0,
+   "pivot": [
+    0.0381,
+    0.0026,
+    0.0002
+   ],
+   "parts": [
+    "handleRight_01_mesh_00"
+   ],
+   "clip": "jaw_operate"
+  }
+ ],
+ "showcaseClip": "Showcase"
+}

@@ -1,0 +1,128 @@
+{
+ "asset": "trolley_instrument_b05",
+ "category": "Carts",
+ "trianglesSource": 102022,
+ "size": [
+  0.706,
+  0.944,
+  0.506
+ ],
+ "joints": [
+  {
+   "name": "lock_01",
+   "kind": "lever",
+   "node": "J_lock_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -20,
+   "max": 0,
+   "pivot": [
+    0.1248,
+    0.1706,
+    -0.0044
+   ],
+   "parts": [
+    "lock_01_mesh_00"
+   ],
+   "clip": "lock_01_operate"
+  },
+  {
+   "name": "tire_01",
+   "kind": "spin",
+   "node": "J_tire_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -360,
+   "max": 0,
+   "pivot": [
+    0.29,
+    0.0364,
+    -0.0044
+   ],
+   "parts": [
+    "tire_01_mesh_00"
+   ],
+   "clip": "tire_01_operate"
+  },
+  {
+   "name": "tire_03",
+   "kind": "spin",
+   "node": "J_tire_03",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -360,
+   "max": 0,
+   "pivot": [
+    -0.1901,
+    0.0364,
+    -0.195
+   ],
+   "parts": [
+    "tire_03_mesh_00"
+   ],
+   "clip": "tire_03_operate"
+  },
+  {
+   "name": "wheel_01",
+   "kind": "spin",
+   "node": "J_wheel_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -360,
+   "max": 0,
+   "pivot": [
+    0.2968,
+    0.0509,
+    -0.0044
+   ],
+   "parts": [
+    "wheel_01_mesh_00"
+   ],
+   "clip": "wheel_01_operate"
+  },
+  {
+   "name": "wheel_03",
+   "kind": "spin",
+   "node": "J_wheel_03",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -360,
+   "max": 0,
+   "pivot": [
+    -0.1968,
+    0.0509,
+    -0.195
+   ],
+   "parts": [
+    "wheel_03_mesh_00"
+   ],
+   "clip": "wheel_03_operate"
+  }
+ ],
+ "showcaseClip": "Showcase"
+}

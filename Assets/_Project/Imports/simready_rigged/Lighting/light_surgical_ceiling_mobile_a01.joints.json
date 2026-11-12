@@ -1,0 +1,358 @@
+{
+ "asset": "light_surgical_ceiling_mobile_a01",
+ "category": "Lighting",
+ "trianglesSource": 250373,
+ "size": [
+  1.347,
+  1.729,
+  0.634
+ ],
+ "joints": [
+  {
+   "name": "button_01",
+   "kind": "press",
+   "node": "J_button_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.7704,
+    1.6847,
+    -0.3219
+   ],
+   "parts": [
+    "button_01_mesh_01"
+   ],
+   "clip": "button_01_operate"
+  },
+  {
+   "name": "button_02",
+   "kind": "press",
+   "node": "J_button_02",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.7382,
+    1.6847,
+    -0.3219
+   ],
+   "parts": [
+    "button_02_mesh_01"
+   ],
+   "clip": "button_02_operate"
+  },
+  {
+   "name": "button_03",
+   "kind": "press",
+   "node": "J_button_03",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.7049,
+    1.6847,
+    -0.3219
+   ],
+   "parts": [
+    "button_03_mesh_01"
+   ],
+   "clip": "button_03_operate"
+  },
+  {
+   "name": "button_04",
+   "kind": "press",
+   "node": "J_button_04",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.7538,
+    1.6693,
+    -0.3219
+   ],
+   "parts": [
+    "button_04_mesh_01"
+   ],
+   "clip": "button_04_operate"
+  },
+  {
+   "name": "button_05",
+   "kind": "press",
+   "node": "J_button_05",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.7704,
+    1.6539,
+    -0.3219
+   ],
+   "parts": [
+    "button_05_mesh_01"
+   ],
+   "clip": "button_05_operate"
+  },
+  {
+   "name": "button_06",
+   "kind": "press",
+   "node": "J_button_06",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.7382,
+    1.6539,
+    -0.3219
+   ],
+   "parts": [
+    "button_06_mesh_01"
+   ],
+   "clip": "button_06_operate"
+  },
+  {
+   "name": "button_07",
+   "kind": "press",
+   "node": "J_button_07",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.7049,
+    1.6539,
+    -0.3219
+   ],
+   "parts": [
+    "button_07_mesh_01"
+   ],
+   "clip": "button_07_operate"
+  },
+  {
+   "name": "wheelbase_01",
+   "kind": "swivel",
+   "node": "J_wheelbase_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -180,
+   "max": 180,
+   "pivot": [
+    0.3173,
+    0.0797,
+    0.2658
+   ],
+   "parts": [
+    "wheelBase_01_mesh_00"
+   ],
+   "clip": "wheelbase_01_operate"
+  },
+  {
+   "name": "wheel_01",
+   "kind": "spin",
+   "node": "J_wheel_01",
+   "parent": "J_wheelbase_01",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -360,
+   "max": 0,
+   "pivot": [
+    0.3116,
+    0.0279,
+    0.2658
+   ],
+   "parts": [
+    "wheel_01_mesh_00"
+   ],
+   "clip": "wheel_01_operate"
+  },
+  {
+   "name": "wheelbase_02",
+   "kind": "swivel",
+   "node": "J_wheelbase_02",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -180,
+   "max": 180,
+   "pivot": [
+    0.3173,
+    0.0636,
+    -0.2662
+   ],
+   "parts": [
+    "wheelBase_02_mesh_00"
+   ],
+   "clip": "wheelbase_02_operate"
+  },
+  {
+   "name": "wheel_02",
+   "kind": "spin",
+   "node": "J_wheel_02",
+   "parent": "J_wheelbase_02",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -360,
+   "max": 0,
+   "pivot": [
+    0.3116,
+    0.0279,
+    -0.2662
+   ],
+   "parts": [
+    "wheel_02_mesh_00"
+   ],
+   "clip": "wheel_02_operate"
+  },
+  {
+   "name": "wheelbase_04",
+   "kind": "swivel",
+   "node": "J_wheelbase_04",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -180,
+   "max": 180,
+   "pivot": [
+    -0.3175,
+    0.0636,
+    0.2658
+   ],
+   "parts": [
+    "wheelBase_04_mesh_00"
+   ],
+   "clip": "wheelbase_04_operate"
+  },
+  {
+   "name": "wheel_03",
+   "kind": "spin",
+   "node": "J_wheel_03",
+   "parent": "J_wheelbase_04",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -360,
+   "max": 0,
+   "pivot": [
+    -0.3118,
+    0.0279,
+    0.2658
+   ],
+   "parts": [
+    "wheel_03_mesh_00"
+   ],
+   "clip": "wheel_03_operate"
+  },
+  {
+   "name": "wheelbase_03",
+   "kind": "swivel",
+   "node": "J_wheelbase_03",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -180,
+   "max": 180,
+   "pivot": [
+    -0.3177,
+    0.0636,
+    -0.2658
+   ],
+   "parts": [
+    "wheelBase_03_mesh_00"
+   ],
+   "clip": "wheelbase_03_operate"
+  },
+  {
+   "name": "wheel_04",
+   "kind": "spin",
+   "node": "J_wheel_04",
+   "parent": "J_wheelbase_03",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -360,
+   "max": 0,
+   "pivot": [
+    -0.312,
+    0.0279,
+    -0.2658
+   ],
+   "parts": [
+    "wheel_04_mesh_00"
+   ],
+   "clip": "wheel_04_operate"
+  }
+ ],
+ "showcaseClip": "Showcase"
+}

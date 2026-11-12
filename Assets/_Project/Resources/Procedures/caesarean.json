@@ -1,0 +1,352 @@
+{
+ "id": "caesarean",
+ "title": "Caesarean section",
+ "summary": "Steps, team and safety in a category 2 caesarean section.",
+ "patientState": "anaesthetised",
+ "patientName": "Mr Daniel Okafor",
+ "equipment": [
+  {
+   "id": "unit_electrosurgical_a01",
+   "place": "bedside",
+   "key": "unit_electrosurgical_a01"
+  },
+  {
+   "id": "pendant_medical_a01",
+   "place": "head",
+   "key": "pendant_medical_a01"
+  },
+  {
+   "id": "pump_suction_surgical_a01",
+   "place": "head",
+   "key": "pump_suction_surgical_a01"
+  },
+  {
+   "id": "disinfectant_a01",
+   "place": "tray",
+   "key": "disinfectant_a01"
+  },
+  {
+   "id": "instrument_scalpel_handle_a01",
+   "place": "tray",
+   "key": "instrument_scalpel_handle_a01"
+  },
+  {
+   "id": "instrument_retractor_a01",
+   "place": "tray",
+   "key": "instrument_retractor_a01"
+  },
+  {
+   "id": "instrument_scissors_a01",
+   "place": "tray",
+   "key": "instrument_scissors_a01"
+  },
+  {
+   "id": "warmer_infusion_a01",
+   "place": "bedside",
+   "key": "warmer_infusion_a01"
+  },
+  {
+   "id": "monitor_patient_a01",
+   "place": "head",
+   "key": "monitor_patient_a01"
+  },
+  {
+   "id": "syringe_a01",
+   "place": "tray",
+   "key": "syringe_a01"
+  }
+ ],
+ "anchors": [
+  {
+   "name": "suprapubic",
+   "label": "suprapubic skin crease",
+   "cranial": -0.2,
+   "right": 0.0,
+   "anterior": -0.03,
+   "radius": 0.07
+  },
+  {
+   "name": "umbilicus",
+   "label": "umbilicus",
+   "cranial": 0.0,
+   "right": 0.0,
+   "anterior": 0.0,
+   "radius": 0.05
+  },
+  {
+   "name": "pad_site",
+   "label": "right thigh, patient plate site",
+   "cranial": -0.36,
+   "right": 0.1,
+   "anterior": -0.03,
+   "radius": 0.08
+  }
+ ],
+ "cables": [
+  {
+   "key": "esu_power",
+   "label": "Diathermy mains lead",
+   "from": "unit_electrosurgical_a01",
+   "fromHeight": 0.3,
+   "fromSide": -0.25,
+   "to": "pendant_medical_a01",
+   "toHeight": 0.45,
+   "toSide": -0.3,
+   "toAnchor": "",
+   "color": "#3A3D44",
+   "length": 4.0
+  },
+  {
+   "key": "return_pad",
+   "label": "Return electrode (patient plate)",
+   "from": "unit_electrosurgical_a01",
+   "fromHeight": 0.55,
+   "fromSide": 0.25,
+   "to": "",
+   "toHeight": 0.5,
+   "toSide": 0.25,
+   "toAnchor": "pad_site",
+   "color": "#2E7BD6",
+   "length": 3.2
+  },
+  {
+   "key": "suction_vacuum",
+   "label": "Suction line to the wall vacuum",
+   "from": "pump_suction_surgical_a01",
+   "fromHeight": 0.75,
+   "fromSide": -0.25,
+   "to": "pendant_medical_a01",
+   "toHeight": 0.6,
+   "toSide": 0.0,
+   "toAnchor": "",
+   "color": "#F2C230",
+   "length": 3.5
+  },
+  {
+   "key": "suction_power",
+   "label": "Suction unit mains lead",
+   "from": "pump_suction_surgical_a01",
+   "fromHeight": 0.25,
+   "fromSide": -0.25,
+   "to": "pendant_medical_a01",
+   "toHeight": 0.45,
+   "toSide": 0.3,
+   "toAnchor": "",
+   "color": "#3A3D44",
+   "length": 3.5
+  }
+ ],
+ "steps": [
+  {
+   "type": "plug",
+   "title": "Plug the diathermy generator into the pendant",
+   "item": "esu_power",
+   "hint": "Mains lead from the generator into a socket on the ceiling pendant.",
+   "id": "caesarean-s1"
+  },
+  {
+   "type": "choose",
+   "title": "Where does the patient plate go?",
+   "prompt": "Where should the return electrode (patient plate) be placed?",
+   "choices": [
+    {
+     "text": "On a well-perfused muscle mass close to the operation, such as the thigh, on dry hair-free skin",
+     "correct": true,
+     "feedback": "Correct: a large, well-perfused contact area keeps the current density low."
+    },
+    {
+     "text": "Over a bony prominence",
+     "correct": false,
+     "feedback": "Poor contact: a burn risk at the plate.",
+     "critical": false
+    },
+    {
+     "text": "Over a metal implant",
+     "correct": false,
+     "feedback": "Current concentrates in the metal.",
+     "critical": true
+    },
+    {
+     "text": "Anywhere on the patient",
+     "correct": false,
+     "feedback": "Distance and contact both matter.",
+     "critical": false
+    }
+   ],
+   "hint": "",
+   "id": "caesarean-s2"
+  },
+  {
+   "type": "plug",
+   "title": "Apply the patient plate to the thigh",
+   "item": "return_pad",
+   "hint": "Full, flat contact on the thigh; check the generator's contact alarm clears.",
+   "id": "caesarean-s3"
+  },
+  {
+   "type": "plug",
+   "title": "Connect the suction to the wall vacuum",
+   "item": "suction_vacuum",
+   "hint": "Canister tubing to the yellow vacuum outlet on the pendant.",
+   "id": "caesarean-s4"
+  },
+  {
+   "type": "plug",
+   "title": "Plug in the suction unit",
+   "item": "suction_power",
+   "hint": "",
+   "id": "caesarean-s5"
+  },
+  {
+   "type": "choose",
+   "title": "WHO Time Out",
+   "prompt": "Before skin incision for a caesarean section, the team pauses. What must be confirmed aloud?",
+   "choices": [
+    {
+     "text": "Patient identity, the procedure, the site and side, and antibiotics given in the last 60 minutes",
+     "correct": true,
+     "feedback": "Correct: the Time Out confirms who, what and where, and that prophylaxis is in."
+    },
+    {
+     "text": "Only that the consent form is signed",
+     "correct": false,
+     "feedback": "The signature alone does not prevent wrong-site surgery.",
+     "critical": false
+    },
+    {
+     "text": "Nothing: the site was marked on the ward",
+     "correct": false,
+     "feedback": "Marking does not replace the Time Out.",
+     "critical": true
+    }
+   ],
+   "hint": "The site is the lower abdomen. All three phases of the WHO checklist are mandatory.",
+   "id": "caesarean-s6"
+  },
+  {
+   "type": "pick",
+   "title": "Pick up the skin preparation",
+   "item": "disinfectant_a01",
+   "hint": "Alcoholic chlorhexidine, applied from the incision site outwards.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "caesarean-s7"
+  },
+  {
+   "type": "apply",
+   "title": "Prepare the skin over the lower abdomen",
+   "item": "disinfectant_a01",
+   "target": "suprapubic",
+   "hint": "Centre outwards, wider than the incision; let it dry fully before drapes and diathermy (it is flammable).",
+   "hold": 2.0,
+   "critical": false,
+   "id": "caesarean-s8"
+  },
+  {
+   "type": "pick",
+   "title": "Take the scalpel",
+   "item": "instrument_scalpel_handle_a01",
+   "hint": "Pfannenstiel incision, two fingers above the symphysis.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "caesarean-s9"
+  },
+  {
+   "type": "apply",
+   "title": "Transverse suprapubic incision",
+   "item": "instrument_scalpel_handle_a01",
+   "target": "suprapubic",
+   "hint": "Curved, in the skin crease.",
+   "hold": 1.5,
+   "critical": false,
+   "id": "caesarean-s10"
+  },
+  {
+   "type": "pick",
+   "title": "Bladder retractor",
+   "item": "instrument_retractor_a01",
+   "hint": "Reflect and protect the bladder.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "caesarean-s11"
+  },
+  {
+   "type": "choose",
+   "title": "Uterine incision",
+   "prompt": "The uterus is opened…",
+   "choices": [
+    {
+     "text": "Transversely in the lower segment",
+     "correct": true,
+     "feedback": "Correct: less bleeding, stronger scar."
+    },
+    {
+     "text": "Vertically through the fundus",
+     "correct": false,
+     "feedback": "Classical incision: high rupture risk.",
+     "critical": false
+    },
+    {
+     "text": "Anywhere convenient",
+     "correct": false,
+     "feedback": "No.",
+     "critical": false
+    }
+   ],
+   "hint": "",
+   "id": "caesarean-s12"
+  },
+  {
+   "type": "operate",
+   "title": "Suction ready for liquor",
+   "item": "pump_suction_surgical_a01",
+   "joint": "",
+   "open": true,
+   "hint": "",
+   "id": "caesarean-s13"
+  },
+  {
+   "type": "confirm",
+   "title": "Deliver the baby and the placenta",
+   "hint": "Note the time; hand the baby to the midwife/neonatologist.",
+   "id": "caesarean-s14"
+  },
+  {
+   "type": "pick",
+   "title": "Give the uterotonic",
+   "item": "syringe_a01",
+   "hint": "Oxytocin as per protocol.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "caesarean-s15"
+  },
+  {
+   "type": "choose",
+   "title": "Postpartum haemorrhage",
+   "prompt": "Heavy bleeding after delivery. First actions?",
+   "choices": [
+    {
+     "text": "Uterine massage, uterotonics, tranexamic acid, call for help",
+     "correct": true,
+     "feedback": "Correct."
+    },
+    {
+     "text": "Wait and see",
+     "correct": false,
+     "feedback": "PPH kills quickly.",
+     "critical": false
+    },
+    {
+     "text": "Close quickly and leave",
+     "correct": false,
+     "feedback": "Bleeding continues.",
+     "critical": false
+    }
+   ],
+   "hint": "",
+   "id": "caesarean-s16"
+  }
+ ],
+ "errorPenalty": 10,
+ "hintPenalty": 3
+}

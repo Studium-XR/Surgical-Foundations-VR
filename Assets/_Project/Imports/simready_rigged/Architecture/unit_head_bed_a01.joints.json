@@ -1,0 +1,266 @@
+{
+ "asset": "unit_head_bed_a01",
+ "category": "Architecture",
+ "trianglesSource": 189332,
+ "size": [
+  0.613,
+  1.668,
+  1.263
+ ],
+ "joints": [
+  {
+   "name": "arm_01",
+   "kind": "swing",
+   "node": "J_arm_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -60,
+   "max": 60,
+   "pivot": [
+    -0.1488,
+    0.598,
+    0.1446
+   ],
+   "parts": [
+    "arm_01_mesh_00"
+   ],
+   "clip": "arm_01_operate"
+  },
+  {
+   "name": "arm_02",
+   "kind": "swing",
+   "node": "J_arm_02",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -60,
+   "max": 60,
+   "pivot": [
+    -0.1488,
+    0.598,
+    -0.1446
+   ],
+   "parts": [
+    "arm_02_mesh_00"
+   ],
+   "clip": "arm_02_operate"
+  },
+  {
+   "name": "drawer_01",
+   "kind": "slide",
+   "node": "J_drawer_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.2374,
+   "pivot": [
+    -0.415,
+    0.0722,
+    0.0
+   ],
+   "parts": [
+    "drawer_01_mesh_00"
+   ],
+   "clip": "drawer_01_operate"
+  },
+  {
+   "name": "knob_01",
+   "kind": "turn",
+   "node": "J_knob_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -270,
+   "max": 0,
+   "pivot": [
+    -0.1874,
+    0.8501,
+    0.1734
+   ],
+   "parts": [
+    "knob_01_mesh_00"
+   ],
+   "clip": "knob_01_operate"
+  },
+  {
+   "name": "knob_02",
+   "kind": "turn",
+   "node": "J_knob_02",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -270,
+   "max": 0,
+   "pivot": [
+    -0.1875,
+    0.4564,
+    0.1734
+   ],
+   "parts": [
+    "knob_02_mesh_00"
+   ],
+   "clip": "knob_02_operate"
+  },
+  {
+   "name": "knob_03",
+   "kind": "turn",
+   "node": "J_knob_03",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -270,
+   "max": 0,
+   "pivot": [
+    -0.1766,
+    0.4952,
+    0.5312
+   ],
+   "parts": [
+    "knob_03_mesh_00"
+   ],
+   "clip": "knob_03_operate"
+  },
+  {
+   "name": "knob_04",
+   "kind": "turn",
+   "node": "J_knob_04",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -270,
+   "max": 0,
+   "pivot": [
+    -0.1766,
+    0.889,
+    0.5312
+   ],
+   "parts": [
+    "knob_04_mesh_00"
+   ],
+   "clip": "knob_04_operate"
+  },
+  {
+   "name": "knob_05",
+   "kind": "turn",
+   "node": "J_knob_05",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -270,
+   "max": 0,
+   "pivot": [
+    -0.1853,
+    0.8501,
+    -0.1734
+   ],
+   "parts": [
+    "knob_05_mesh_00"
+   ],
+   "clip": "knob_05_operate"
+  },
+  {
+   "name": "knob_06",
+   "kind": "turn",
+   "node": "J_knob_06",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -270,
+   "max": 0,
+   "pivot": [
+    -0.1853,
+    0.4564,
+    -0.1734
+   ],
+   "parts": [
+    "knob_06_mesh_00"
+   ],
+   "clip": "knob_06_operate"
+  },
+  {
+   "name": "knob_07",
+   "kind": "turn",
+   "node": "J_knob_07",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -270,
+   "max": 0,
+   "pivot": [
+    -0.1745,
+    0.4952,
+    -0.5312
+   ],
+   "parts": [
+    "knob_07_mesh_00"
+   ],
+   "clip": "knob_07_operate"
+  },
+  {
+   "name": "knob_08",
+   "kind": "turn",
+   "node": "J_knob_08",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -270,
+   "max": 0,
+   "pivot": [
+    -0.1745,
+    0.889,
+    -0.5312
+   ],
+   "parts": [
+    "knob_08_mesh_00"
+   ],
+   "clip": "knob_08_operate"
+  }
+ ],
+ "showcaseClip": "Showcase"
+}

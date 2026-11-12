@@ -1,0 +1,227 @@
+{
+ "id": "ortho-fixation",
+ "title": "Fracture fixation basics",
+ "summary": "Reduce and fix a tibial shaft fracture: instruments and principles.",
+ "patientState": "anaesthetised",
+ "patientName": "Mr Daniel Okafor",
+ "equipment": [
+  {
+   "id": "disinfectant_a01",
+   "place": "tray",
+   "key": "disinfectant_a01"
+  },
+  {
+   "id": "instrument_bone_clamp_b01",
+   "place": "tray",
+   "key": "instrument_bone_clamp_b01"
+  },
+  {
+   "id": "instrument_bone_forceps_b01",
+   "place": "tray",
+   "key": "instrument_bone_forceps_b01"
+  },
+  {
+   "id": "instrument_hand_drill_b01",
+   "place": "tray",
+   "key": "instrument_hand_drill_b01"
+  },
+  {
+   "id": "tool_power_surgical_b01",
+   "place": "tray",
+   "key": "tool_power_surgical_b01"
+  },
+  {
+   "id": "instrument_bone_mallet_b01",
+   "place": "tray",
+   "key": "instrument_bone_mallet_b01"
+  },
+  {
+   "id": "instrument_bone_rongeurs_b01",
+   "place": "tray",
+   "key": "instrument_bone_rongeurs_b01"
+  },
+  {
+   "id": "instrument_caliper_a01",
+   "place": "tray",
+   "key": "instrument_caliper_a01"
+  },
+  {
+   "id": "instrument_raspatory_a01",
+   "place": "tray",
+   "key": "instrument_raspatory_a01"
+  },
+  {
+   "id": "Xray_machine_buckyStand_a01",
+   "place": "foot",
+   "key": "Xray_machine_buckyStand_a01"
+  }
+ ],
+ "anchors": [
+  {
+   "name": "right_shin",
+   "label": "right shin",
+   "cranial": -0.78,
+   "right": 0.09,
+   "anterior": -0.04,
+   "radius": 0.07
+  }
+ ],
+ "cables": [],
+ "steps": [
+  {
+   "type": "choose",
+   "title": "WHO Time Out",
+   "prompt": "Before skin incision for fixation of the right tibia, the team pauses. What must be confirmed aloud?",
+   "choices": [
+    {
+     "text": "Patient identity, the procedure, the site and side, and antibiotics given in the last 60 minutes",
+     "correct": true,
+     "feedback": "Correct: the Time Out confirms who, what and where, and that prophylaxis is in."
+    },
+    {
+     "text": "Only that the consent form is signed",
+     "correct": false,
+     "feedback": "The signature alone does not prevent wrong-site surgery.",
+     "critical": false
+    },
+    {
+     "text": "Nothing: the site was marked on the ward",
+     "correct": false,
+     "feedback": "Marking does not replace the Time Out.",
+     "critical": true
+    }
+   ],
+   "hint": "The site is the right leg. All three phases of the WHO checklist are mandatory.",
+   "id": "ortho-fixation-s1"
+  },
+  {
+   "type": "pick",
+   "title": "Pick up the skin preparation",
+   "item": "disinfectant_a01",
+   "hint": "Alcoholic chlorhexidine, applied from the incision site outwards.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "ortho-fixation-s2"
+  },
+  {
+   "type": "apply",
+   "title": "Prepare the skin over the right shin",
+   "item": "disinfectant_a01",
+   "target": "right_shin",
+   "hint": "Centre outwards, wider than the incision; let it dry fully before drapes and diathermy (it is flammable).",
+   "hold": 2.0,
+   "critical": false,
+   "id": "ortho-fixation-s3"
+  },
+  {
+   "type": "choose",
+   "title": "Describe",
+   "prompt": "How should a fracture be described?",
+   "choices": [
+    {
+     "text": "Bone, location, pattern, displacement, and the state of the skin",
+     "correct": true,
+     "feedback": "Correct."
+    },
+    {
+     "text": "Just 'broken leg'",
+     "correct": false,
+     "feedback": "Not useful for planning.",
+     "critical": false
+    },
+    {
+     "text": "By the mechanism only",
+     "correct": false,
+     "feedback": "Mechanism helps but doesn't describe the fracture.",
+     "critical": false
+    }
+   ],
+   "hint": "",
+   "id": "ortho-fixation-s4"
+  },
+  {
+   "type": "pick",
+   "title": "Strip the periosteum minimally with the raspatory",
+   "item": "instrument_raspatory_a01",
+   "hint": "Preserve the blood supply.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "ortho-fixation-s5"
+  },
+  {
+   "type": "pick",
+   "title": "Reduce with the bone clamp",
+   "item": "instrument_bone_clamp_b01",
+   "hint": "Clamp across the fracture to hold the reduction.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "ortho-fixation-s6"
+  },
+  {
+   "type": "apply",
+   "title": "Hold the reduction",
+   "item": "instrument_bone_clamp_b01",
+   "target": "right_shin",
+   "hint": "Restore length, alignment and rotation.",
+   "hold": 2.0,
+   "critical": false,
+   "id": "ortho-fixation-s7"
+  },
+  {
+   "type": "pick",
+   "title": "Drill the screw hole",
+   "item": "tool_power_surgical_b01",
+   "hint": "Drill with a guide; measure with the depth gauge.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "ortho-fixation-s8"
+  },
+  {
+   "type": "apply",
+   "title": "Drill across the fracture",
+   "item": "tool_power_surgical_b01",
+   "target": "right_shin",
+   "hint": "Perpendicular to the fracture for a lag screw.",
+   "hold": 2.0,
+   "critical": false,
+   "id": "ortho-fixation-s9"
+  },
+  {
+   "type": "choose",
+   "title": "Stability",
+   "prompt": "A lag screw and plate give…",
+   "choices": [
+    {
+     "text": "Absolute stability with primary bone healing",
+     "correct": true,
+     "feedback": "Correct."
+    },
+    {
+     "text": "Relative stability",
+     "correct": false,
+     "feedback": "That is a nail or cast.",
+     "critical": false
+    },
+    {
+     "text": "No stability",
+     "correct": false,
+     "feedback": "They do stabilise.",
+     "critical": false
+    }
+   ],
+   "hint": "",
+   "id": "ortho-fixation-s10"
+  },
+  {
+   "type": "operate",
+   "title": "Check the X-ray",
+   "item": "Xray_machine_buckyStand_a01",
+   "joint": "",
+   "open": true,
+   "hint": "Two views at right angles.",
+   "id": "ortho-fixation-s11"
+  }
+ ],
+ "errorPenalty": 10,
+ "hintPenalty": 3
+}

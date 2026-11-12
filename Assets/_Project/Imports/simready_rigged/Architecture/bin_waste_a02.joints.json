@@ -1,0 +1,59 @@
+{
+ "asset": "bin_waste_a02",
+ "category": "Architecture",
+ "trianglesSource": 36944,
+ "size": [
+  0.363,
+  0.435,
+  0.275
+ ],
+ "joints": [
+  {
+   "name": "lid_01",
+   "kind": "lid",
+   "node": "J_lid_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -100,
+   "max": 0,
+   "pivot": [
+    0.0335,
+    0.4351,
+    -0.1292
+   ],
+   "parts": [
+    "lid_01_mesh_00"
+   ],
+   "clip": "lid_01_operate"
+  },
+  {
+   "name": "pedal_01",
+   "kind": "lever",
+   "node": "J_pedal_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -20,
+   "max": 0,
+   "pivot": [
+    -0.1049,
+    0.0391,
+    0.0
+   ],
+   "parts": [
+    "pedal_01_mesh_00"
+   ],
+   "clip": "pedal_01_operate"
+  }
+ ],
+ "showcaseClip": "Showcase"
+}

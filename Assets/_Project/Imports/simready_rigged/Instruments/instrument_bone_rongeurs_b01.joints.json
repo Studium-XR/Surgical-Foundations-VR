@@ -1,0 +1,38 @@
+{
+ "asset": "instrument_bone_rongeurs_b01",
+ "category": "Instruments",
+ "trianglesSource": 25480,
+ "size": [
+  0.236,
+  0.016,
+  0.131
+ ],
+ "joints": [
+  {
+   "name": "jaw",
+   "kind": "jaw",
+   "node": "J_jaw",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -30,
+   "max": 0,
+   "pivot": [
+    0.0217,
+    0.0076,
+    0.0009
+   ],
+   "parts": [
+    "handleRight_01_mesh_00",
+    "jawrRght_01_mesh_00",
+    "springRight_01_mesh_00"
+   ],
+   "clip": "jaw_operate"
+  }
+ ],
+ "showcaseClip": "Showcase"
+}

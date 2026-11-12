@@ -1,0 +1,234 @@
+{
+ "id": "minor-ops",
+ "title": "Excision of a skin lesion",
+ "summary": "Elliptical excision biopsy of a forearm lesion under local anaesthetic.",
+ "patientState": "awake",
+ "patientName": "Mr Daniel Okafor",
+ "equipment": [
+  {
+   "id": "tool_pen_surgical_marking_a01",
+   "place": "tray",
+   "key": "tool_pen_surgical_marking_a01"
+  },
+  {
+   "id": "disinfectant_a01",
+   "place": "tray",
+   "key": "disinfectant_a01"
+  },
+  {
+   "id": "syringe_a02",
+   "place": "tray",
+   "key": "syringe_a02"
+  },
+  {
+   "id": "instrument_scalpel_handle_a01",
+   "place": "tray",
+   "key": "instrument_scalpel_handle_a01"
+  },
+  {
+   "id": "instrument_forceps_a01",
+   "place": "tray",
+   "key": "instrument_forceps_a01"
+  },
+  {
+   "id": "instrument_scissors_a01",
+   "place": "tray",
+   "key": "instrument_scissors_a01"
+  },
+  {
+   "id": "needle_surgical_a01",
+   "place": "tray",
+   "key": "needle_surgical_a01"
+  },
+  {
+   "id": "medical_sample_bag_a01",
+   "place": "tray",
+   "key": "medical_sample_bag_a01"
+  },
+  {
+   "id": "bandage_medical_a01",
+   "place": "tray",
+   "key": "bandage_medical_a01"
+  }
+ ],
+ "anchors": [
+  {
+   "name": "right_forearm",
+   "label": "right forearm lesion",
+   "cranial": -0.06,
+   "right": 0.27,
+   "anterior": -0.05,
+   "radius": 0.05
+  }
+ ],
+ "cables": [],
+ "steps": [
+  {
+   "type": "talk",
+   "title": "Introduce yourself and check identity",
+   "prompt": "Hello… are you the doctor doing my operation?",
+   "choices": [
+    {
+     "text": "Hello, I'm one of the surgical team. Can you tell me your full name and date of birth?",
+     "correct": true,
+     "reply": "Daniel Okafor, fourteenth of March 1968.",
+     "feedback": ""
+    },
+    {
+     "text": "Yes. Let's get started straight away.",
+     "correct": false,
+     "feedback": "Introduce yourself and confirm identity first.",
+     "reply": "Oh… okay, I suppose."
+    }
+   ],
+   "hint": "Name, role, then two identifiers from the patient, checked against the wristband.",
+   "id": "minor-ops-s1"
+  },
+  {
+   "type": "talk",
+   "title": "Explain and check understanding",
+   "prompt": "What exactly are you going to do?",
+   "choices": [
+    {
+     "text": "I'll explain the excision of the lump, why we're doing it, the main risks such as a scar, bleeding and the need for further surgery if the result shows it, and the alternatives. Stop me with any questions.",
+     "correct": true,
+     "reply": "Thank you. That helps. What about the pain afterwards?",
+     "feedback": ""
+    },
+    {
+     "text": "It's a routine thing, nothing to worry about.",
+     "correct": false,
+     "feedback": "Material risks and alternatives must be explained.",
+     "reply": "Right… if you say so."
+    }
+   ],
+   "hint": "Valid consent: capacity, information (nature, purpose, material risks, alternatives), voluntary decision.",
+   "id": "minor-ops-s2"
+  },
+  {
+   "type": "pick",
+   "title": "Pick up the marking pen",
+   "item": "tool_pen_surgical_marking_a01",
+   "hint": "Mark the ellipse before the local anaesthetic distorts the skin.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "minor-ops-s3"
+  },
+  {
+   "type": "apply",
+   "title": "Mark a 3:1 ellipse along the skin tension lines",
+   "item": "tool_pen_surgical_marking_a01",
+   "target": "right_forearm",
+   "hint": "Margins of 2 mm for a benign-looking lesion.",
+   "hold": 1.5,
+   "critical": false,
+   "id": "minor-ops-s4"
+  },
+  {
+   "type": "pick",
+   "title": "Pick up the skin preparation",
+   "item": "disinfectant_a01",
+   "hint": "Alcoholic chlorhexidine, applied from the incision site outwards.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "minor-ops-s5"
+  },
+  {
+   "type": "apply",
+   "title": "Prepare the skin over the lesion",
+   "item": "disinfectant_a01",
+   "target": "right_forearm",
+   "hint": "Centre outwards, wider than the incision; let it dry fully before drapes and diathermy (it is flammable).",
+   "hold": 2.0,
+   "critical": false,
+   "id": "minor-ops-s6"
+  },
+  {
+   "type": "pick",
+   "title": "Draw up local anaesthetic",
+   "item": "syringe_a02",
+   "hint": "1 % lidocaine; check the maximum safe dose for the patient's weight first.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "minor-ops-s7"
+  },
+  {
+   "type": "apply",
+   "title": "Infiltrate the ellipse",
+   "item": "syringe_a02",
+   "target": "right_forearm",
+   "hint": "Aspirate before injecting; wait for the anaesthetic to work.",
+   "hold": 1.5,
+   "critical": false,
+   "id": "minor-ops-s8"
+  },
+  {
+   "type": "pick",
+   "title": "Take the scalpel",
+   "item": "instrument_scalpel_handle_a01",
+   "hint": "No. 15 blade, pen grip.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "minor-ops-s9"
+  },
+  {
+   "type": "apply",
+   "title": "Incise along the ellipse",
+   "item": "instrument_scalpel_handle_a01",
+   "target": "right_forearm",
+   "hint": "Blade perpendicular to the skin, through the full dermis.",
+   "hold": 2.0,
+   "critical": false,
+   "id": "minor-ops-s10"
+  },
+  {
+   "type": "confirm",
+   "title": "Excise the ellipse at the level of the subcutaneous fat",
+   "hint": "Hold the tip with toothed forceps; don't crush the specimen.",
+   "id": "minor-ops-s11"
+  },
+  {
+   "type": "pick",
+   "title": "Put the specimen in the specimen pot",
+   "item": "medical_sample_bag_a01",
+   "hint": "Label it at the bedside: patient, site, date, orientation.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "minor-ops-s12"
+  },
+  {
+   "type": "choose",
+   "title": "Specimen labelling",
+   "prompt": "When should the specimen be labelled?",
+   "choices": [
+    {
+     "text": "Immediately, at the bedside, with the patient's identifiers",
+     "correct": true,
+     "feedback": "Correct."
+    },
+    {
+     "text": "At the end of the list",
+     "correct": false,
+     "feedback": "Unlabelled specimens get mixed up.",
+     "critical": true
+    },
+    {
+     "text": "By the pathology lab",
+     "correct": false,
+     "feedback": "They cannot know whose it is.",
+     "critical": false
+    }
+   ],
+   "hint": "",
+   "id": "minor-ops-s13"
+  },
+  {
+   "type": "confirm",
+   "title": "Close with interrupted sutures and dress",
+   "hint": "As in the wound closure lab.",
+   "id": "minor-ops-s14"
+  }
+ ],
+ "errorPenalty": 10,
+ "hintPenalty": 3
+}

@@ -1,0 +1,36 @@
+{
+ "asset": "device_insulin_lancing_a01",
+ "category": "Devices",
+ "trianglesSource": 17917,
+ "size": [
+  0.096,
+  0.019,
+  0.019
+ ],
+ "joints": [
+  {
+   "name": "cap_01",
+   "kind": "lid",
+   "node": "J_cap_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -100,
+   "max": 0,
+   "pivot": [
+    -0.0383,
+    0.0186,
+    -0.0093
+   ],
+   "parts": [
+    "cap_01_mesh_00"
+   ],
+   "clip": "cap_01_operate"
+  }
+ ],
+ "showcaseClip": "Showcase"
+}

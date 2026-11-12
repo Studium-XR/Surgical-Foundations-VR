@@ -6,16 +6,17 @@ using UnityEngine.InputSystem;
 namespace SurgicalFoundations.UI
 {
     /// <summary>
-    /// Menu button → world dims, timer freezes, pause card appears in front of the learner (US-ACS-03, screen 13).
-    /// Lives in 00_Bootstrap so it works in every scene.
+    /// Menu button (or Pause on the palm hub) → world dims, timer freezes, and the pause card appears on the learner's
+    /// left palm (US-ACS-03, screen 13). It rides on the hand and stays in the room when the hand is lowered; it is
+    /// never attached to the head. Lives in 00_Bootstrap so it works in every scene.
     /// </summary>
     public class PauseMenu : MonoBehaviour
     {
         [SerializeField] UIPanel panel;
         [SerializeField] GameObject dimmer;
-        [SerializeField] float distance = 1.1f;
 
         InputAction menuAction;
+        PalmDock dock;
 
         void Awake()
         {
@@ -24,6 +25,9 @@ namespace SurgicalFoundations.UI
             menuAction.AddBinding("<XRController>{LeftHand}/menuButton");
             menuAction.AddBinding("<XRController>{LeftHand}/menu");
             menuAction.AddBinding("<Keyboard>/escape"); // desk testing without a headset
+            var host = panel.transform.parent.gameObject;
+            if (!host.TryGetComponent(out dock)) dock = host.AddComponent<PalmDock>();
+            dock.handScale = 0.5f;
         }
 
         void OnEnable()
@@ -72,13 +76,9 @@ namespace SurgicalFoundations.UI
 
         void PlaceInFront()
         {
+            dock.Dock();
             var cam = Camera.main;
-            if (cam == null) return;
-            var fwd = Vector3.ProjectOnPlane(cam.transform.forward, Vector3.up).normalized;
-            if (fwd.sqrMagnitude < 0.01f) fwd = Vector3.forward;
-            panel.transform.parent.position = cam.transform.position + fwd * distance - Vector3.up * 0.1f;
-            panel.transform.parent.rotation = Quaternion.LookRotation(fwd, Vector3.up);
-            if (dimmer != null) dimmer.transform.position = cam.transform.position;
+            if (dimmer != null && cam != null) dimmer.transform.position = cam.transform.position;
         }
 
         public void Resume() => SessionManager.Instance?.SetPaused(false);

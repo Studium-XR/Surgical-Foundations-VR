@@ -1,0 +1,243 @@
+{
+ "asset": "device_blood_pressure_monitor_a01",
+ "category": "Devices",
+ "trianglesSource": 273495,
+ "size": [
+  0.346,
+  0.178,
+  0.399
+ ],
+ "joints": [
+  {
+   "name": "bottombutton_01",
+   "kind": "press",
+   "node": "J_bottombutton_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.0619,
+    0.1108,
+    0.0038
+   ],
+   "parts": [
+    "bottomButton_01_mesh_00"
+   ],
+   "clip": "bottombutton_01_operate"
+  },
+  {
+   "name": "informationbutton_01",
+   "kind": "press",
+   "node": "J_informationbutton_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.0927,
+    0.0598,
+    0.079
+   ],
+   "parts": [
+    "informationButton_01_mesh_00"
+   ],
+   "clip": "informationbutton_01_operate"
+  },
+  {
+   "name": "leftbutton_01",
+   "kind": "press",
+   "node": "J_leftbutton_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.0927,
+    0.0598,
+    0.0293
+   ],
+   "parts": [
+    "leftButton_01_mesh_00"
+   ],
+   "clip": "leftbutton_01_operate"
+  },
+  {
+   "name": "personselectionbutton_01",
+   "kind": "press",
+   "node": "J_personselectionbutton_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.0927,
+    0.0598,
+    0.053
+   ],
+   "parts": [
+    "personSelectionButton_01_mesh_00"
+   ],
+   "clip": "personselectionbutton_01_operate"
+  },
+  {
+   "name": "powerbutton_01",
+   "kind": "press",
+   "node": "J_powerbutton_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.0991,
+    0.0442,
+    -0.0986
+   ],
+   "parts": [
+    "powerButton_01_mesh_00"
+   ],
+   "clip": "powerbutton_01_operate"
+  },
+  {
+   "name": "rightbutton_01",
+   "kind": "press",
+   "node": "J_rightbutton_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.0927,
+    0.0598,
+    0.0164
+   ],
+   "parts": [
+    "rightButton_01_mesh_00"
+   ],
+   "clip": "rightbutton_01_operate"
+  },
+  {
+   "name": "settingsbutton_01",
+   "kind": "press",
+   "node": "J_settingsbutton_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.0927,
+    0.0598,
+    0.066
+   ],
+   "parts": [
+    "settingsButton_01_mesh_00"
+   ],
+   "clip": "settingsbutton_01_operate"
+  },
+  {
+   "name": "startbutton_01",
+   "kind": "press",
+   "node": "J_startbutton_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1001,
+    0.0441,
+    0.0673
+   ],
+   "parts": [
+    "startButton_01_mesh_00"
+   ],
+   "clip": "startbutton_01_operate"
+  },
+  {
+   "name": "stopbutton_01",
+   "kind": "press",
+   "node": "J_stopbutton_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1001,
+    0.0441,
+    0.0284
+   ],
+   "parts": [
+    "stopButton_01_mesh_00"
+   ],
+   "clip": "stopbutton_01_operate"
+  },
+  {
+   "name": "topbutton_01",
+   "kind": "press",
+   "node": "J_topbutton_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.0536,
+    0.1285,
+    0.0038
+   ],
+   "parts": [
+    "topButton_01_mesh_00"
+   ],
+   "clip": "topbutton_01_operate"
+  }
+ ],
+ "showcaseClip": "Showcase"
+}

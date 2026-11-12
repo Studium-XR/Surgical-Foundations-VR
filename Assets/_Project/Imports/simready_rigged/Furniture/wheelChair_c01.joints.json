@@ -1,0 +1,105 @@
+{
+ "asset": "wheelChair_c01",
+ "category": "Furniture",
+ "trianglesSource": 841114,
+ "size": [
+  0.78,
+  0.736,
+  0.542
+ ],
+ "joints": [
+  {
+   "name": "wheelbase_01",
+   "kind": "swivel",
+   "node": "J_wheelbase_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -180,
+   "max": 180,
+   "pivot": [
+    -0.233,
+    0.1475,
+    -0.2119
+   ],
+   "parts": [
+    "wheelBase_01_mesh_00"
+   ],
+   "clip": "wheelbase_01_operate"
+  },
+  {
+   "name": "wheel_01",
+   "kind": "spin",
+   "node": "J_wheel_01",
+   "parent": "J_wheelbase_01",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -360,
+   "max": 0,
+   "pivot": [
+    -0.2081,
+    0.0484,
+    -0.2154
+   ],
+   "parts": [
+    "wheel_01_mesh_00"
+   ],
+   "clip": "wheel_01_operate"
+  },
+  {
+   "name": "wheelbase_02",
+   "kind": "swivel",
+   "node": "J_wheelbase_02",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -180,
+   "max": 180,
+   "pivot": [
+    -0.233,
+    0.1475,
+    0.2118
+   ],
+   "parts": [
+    "wheelBase_02_mesh_00"
+   ],
+   "clip": "wheelbase_02_operate"
+  },
+  {
+   "name": "wheel_02",
+   "kind": "spin",
+   "node": "J_wheel_02",
+   "parent": "J_wheelbase_02",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -360,
+   "max": 0,
+   "pivot": [
+    -0.2081,
+    0.0484,
+    0.2153
+   ],
+   "parts": [
+    "wheel_02_mesh_00"
+   ],
+   "clip": "wheel_02_operate"
+  }
+ ],
+ "showcaseClip": "Showcase"
+}

@@ -1,0 +1,12 @@
+{
+ "asset": "bandage_medical_a04",
+ "category": "Consumables",
+ "trianglesSource": 7831,
+ "size": [
+  0.045,
+  0.075,
+  0.045
+ ],
+ "joints": [],
+ "showcaseClip": null
+}

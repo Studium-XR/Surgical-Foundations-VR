@@ -1,0 +1,227 @@
+{
+ "id": "chest-drain",
+ "title": "Chest drain insertion",
+ "summary": "Open (blunt dissection) insertion of a chest drain for a traumatic pneumothorax.",
+ "patientState": "awake",
+ "patientName": "Mr Daniel Okafor",
+ "equipment": [
+  {
+   "id": "disinfectant_a01",
+   "place": "tray",
+   "key": "disinfectant_a01"
+  },
+  {
+   "id": "syringe_a02",
+   "place": "tray",
+   "key": "syringe_a02"
+  },
+  {
+   "id": "instrument_scalpel_handle_a01",
+   "place": "tray",
+   "key": "instrument_scalpel_handle_a01"
+  },
+  {
+   "id": "instrument_artery_forceps_curved_b01",
+   "place": "tray",
+   "key": "instrument_artery_forceps_curved_b01"
+  },
+  {
+   "id": "drainage_a01",
+   "place": "tray",
+   "key": "drainage_a01"
+  },
+  {
+   "id": "drainage_pumpSystem_a01",
+   "place": "bedside",
+   "key": "drainage_pumpSystem_a01"
+  },
+  {
+   "id": "needle_surgical_a01",
+   "place": "tray",
+   "key": "needle_surgical_a01"
+  },
+  {
+   "id": "bandage_medical_a01",
+   "place": "tray",
+   "key": "bandage_medical_a01"
+  }
+ ],
+ "anchors": [
+  {
+   "name": "safe_triangle",
+   "label": "right safe triangle, 5th intercostal space mid-axillary line",
+   "cranial": 0.3,
+   "right": 0.18,
+   "anterior": -0.06,
+   "radius": 0.06
+  },
+  {
+   "name": "chest_right_anterior",
+   "label": "right anterior chest, 2nd intercostal space",
+   "cranial": 0.45,
+   "right": 0.07,
+   "anterior": 0.02,
+   "radius": 0.06
+  },
+  {
+   "name": "umbilicus",
+   "label": "umbilicus",
+   "cranial": 0.0,
+   "right": 0.0,
+   "anterior": 0.0,
+   "radius": 0.05
+  }
+ ],
+ "cables": [],
+ "steps": [
+  {
+   "type": "talk",
+   "title": "Introduce yourself and check identity",
+   "prompt": "Hello… are you the doctor doing my operation?",
+   "choices": [
+    {
+     "text": "Hello, I'm one of the surgical team. Can you tell me your full name and date of birth?",
+     "correct": true,
+     "reply": "Daniel Okafor, fourteenth of March 1968.",
+     "feedback": ""
+    },
+    {
+     "text": "Yes. Let's get started straight away.",
+     "correct": false,
+     "feedback": "Introduce yourself and confirm identity first.",
+     "reply": "Oh… okay, I suppose."
+    }
+   ],
+   "hint": "Name, role, then two identifiers from the patient, checked against the wristband.",
+   "id": "chest-drain-s1"
+  },
+  {
+   "type": "choose",
+   "title": "Where?",
+   "prompt": "Where do you insert the drain?",
+   "choices": [
+    {
+     "text": "The safe triangle: 5th intercostal space, between latissimus dorsi and pectoralis major",
+     "correct": true,
+     "feedback": "Correct."
+    },
+    {
+     "text": "2nd intercostal space, mid-clavicular line",
+     "correct": false,
+     "feedback": "That is for needle decompression.",
+     "critical": false
+    },
+    {
+     "text": "Below the nipple, anterior chest",
+     "correct": false,
+     "feedback": "Risk of liver and spleen injury.",
+     "critical": true
+    }
+   ],
+   "hint": "",
+   "id": "chest-drain-s2"
+  },
+  {
+   "type": "pick",
+   "title": "Pick up the skin preparation",
+   "item": "disinfectant_a01",
+   "hint": "Alcoholic chlorhexidine, applied from the incision site outwards.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "chest-drain-s3"
+  },
+  {
+   "type": "apply",
+   "title": "Prepare the skin over the safe triangle",
+   "item": "disinfectant_a01",
+   "target": "safe_triangle",
+   "hint": "Centre outwards, wider than the incision; let it dry fully before drapes and diathermy (it is flammable).",
+   "hold": 2.0,
+   "critical": false,
+   "id": "chest-drain-s4"
+  },
+  {
+   "type": "pick",
+   "title": "Draw up local anaesthetic",
+   "item": "syringe_a02",
+   "hint": "1 % lidocaine; check the maximum safe dose for the patient's weight first.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "chest-drain-s5"
+  },
+  {
+   "type": "apply",
+   "title": "Infiltrate the safe triangle down to the pleura",
+   "item": "syringe_a02",
+   "target": "safe_triangle",
+   "hint": "Aspirate before injecting; wait for the anaesthetic to work.",
+   "hold": 1.5,
+   "critical": false,
+   "id": "chest-drain-s6"
+  },
+  {
+   "type": "pick",
+   "title": "Take the scalpel",
+   "item": "instrument_scalpel_handle_a01",
+   "hint": "",
+   "wrongItems": [],
+   "critical": false,
+   "id": "chest-drain-s7"
+  },
+  {
+   "type": "apply",
+   "title": "Incise over the upper border of the rib",
+   "item": "instrument_scalpel_handle_a01",
+   "target": "safe_triangle",
+   "hint": "The neurovascular bundle runs under each rib.",
+   "hold": 1.5,
+   "critical": true,
+   "id": "chest-drain-s8"
+  },
+  {
+   "type": "pick",
+   "title": "Blunt dissection with curved forceps",
+   "item": "instrument_artery_forceps_curved_b01",
+   "hint": "Spread, don't stab; then a finger sweep.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "chest-drain-s9"
+  },
+  {
+   "type": "apply",
+   "title": "Open the pleura with the forceps",
+   "item": "instrument_artery_forceps_curved_b01",
+   "target": "safe_triangle",
+   "hint": "Controlled, over the rib.",
+   "hold": 1.5,
+   "critical": false,
+   "id": "chest-drain-s10"
+  },
+  {
+   "type": "pick",
+   "title": "Insert the drain",
+   "item": "drainage_a01",
+   "hint": "No trocar: guide the tube with forceps.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "chest-drain-s11"
+  },
+  {
+   "type": "operate",
+   "title": "Connect the underwater seal",
+   "item": "drainage_pumpSystem_a01",
+   "joint": "",
+   "open": true,
+   "hint": "Check the water level swings with breathing.",
+   "id": "chest-drain-s12"
+  },
+  {
+   "type": "confirm",
+   "title": "Secure the drain and get a chest X-ray",
+   "hint": "Suture, dressing; X-ray to check the position.",
+   "id": "chest-drain-s13"
+  }
+ ],
+ "errorPenalty": 10,
+ "hintPenalty": 3
+}

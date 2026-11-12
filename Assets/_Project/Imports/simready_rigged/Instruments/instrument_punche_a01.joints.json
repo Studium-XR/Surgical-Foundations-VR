@@ -1,0 +1,12 @@
+{
+ "asset": "instrument_punche_a01",
+ "category": "Instruments",
+ "trianglesSource": 12710,
+ "size": [
+  0.25,
+  0.017,
+  0.114
+ ],
+ "joints": [],
+ "showcaseClip": null
+}

@@ -1,0 +1,295 @@
+{
+ "id": "inguinal-hernia",
+ "title": "Inguinal hernia repair (Lichtenstein)",
+ "summary": "A tension-free mesh repair of a right inguinal hernia.",
+ "patientState": "anaesthetised",
+ "patientName": "Mr Daniel Okafor",
+ "equipment": [
+  {
+   "id": "unit_electrosurgical_a01",
+   "place": "bedside",
+   "key": "unit_electrosurgical_a01"
+  },
+  {
+   "id": "pendant_medical_a01",
+   "place": "head",
+   "key": "pendant_medical_a01"
+  },
+  {
+   "id": "disinfectant_a01",
+   "place": "tray",
+   "key": "disinfectant_a01"
+  },
+  {
+   "id": "instrument_scalpel_handle_a01",
+   "place": "tray",
+   "key": "instrument_scalpel_handle_a01"
+  },
+  {
+   "id": "instrument_forceps_a01",
+   "place": "tray",
+   "key": "instrument_forceps_a01"
+  },
+  {
+   "id": "instrument_selfretaining_retractor_a01",
+   "place": "tray",
+   "key": "instrument_selfretaining_retractor_a01"
+  },
+  {
+   "id": "instrument_artery_forceps_curved_b01",
+   "place": "tray",
+   "key": "instrument_artery_forceps_curved_b01"
+  },
+  {
+   "id": "instrument_scissors_a01",
+   "place": "tray",
+   "key": "instrument_scissors_a01"
+  },
+  {
+   "id": "needle_surgical_a01",
+   "place": "tray",
+   "key": "needle_surgical_a01"
+  }
+ ],
+ "anchors": [
+  {
+   "name": "right_groin",
+   "label": "right groin, above the inguinal ligament",
+   "cranial": -0.17,
+   "right": 0.08,
+   "anterior": -0.03,
+   "radius": 0.06
+  },
+  {
+   "name": "umbilicus",
+   "label": "umbilicus",
+   "cranial": 0.0,
+   "right": 0.0,
+   "anterior": 0.0,
+   "radius": 0.05
+  },
+  {
+   "name": "pad_site",
+   "label": "right thigh, patient plate site",
+   "cranial": -0.36,
+   "right": 0.1,
+   "anterior": -0.03,
+   "radius": 0.08
+  }
+ ],
+ "cables": [
+  {
+   "key": "esu_power",
+   "label": "Diathermy mains lead",
+   "from": "unit_electrosurgical_a01",
+   "fromHeight": 0.3,
+   "fromSide": -0.25,
+   "to": "pendant_medical_a01",
+   "toHeight": 0.45,
+   "toSide": -0.3,
+   "toAnchor": "",
+   "color": "#3A3D44",
+   "length": 4.0
+  },
+  {
+   "key": "return_pad",
+   "label": "Return electrode (patient plate)",
+   "from": "unit_electrosurgical_a01",
+   "fromHeight": 0.55,
+   "fromSide": 0.25,
+   "to": "",
+   "toHeight": 0.5,
+   "toSide": 0.25,
+   "toAnchor": "pad_site",
+   "color": "#2E7BD6",
+   "length": 3.2
+  }
+ ],
+ "steps": [
+  {
+   "type": "plug",
+   "title": "Plug the diathermy generator into the pendant",
+   "item": "esu_power",
+   "hint": "Mains lead from the generator into a socket on the ceiling pendant.",
+   "id": "inguinal-hernia-s1"
+  },
+  {
+   "type": "choose",
+   "title": "Where does the patient plate go?",
+   "prompt": "Where should the return electrode (patient plate) be placed?",
+   "choices": [
+    {
+     "text": "On a well-perfused muscle mass close to the operation, such as the thigh, on dry hair-free skin",
+     "correct": true,
+     "feedback": "Correct: a large, well-perfused contact area keeps the current density low."
+    },
+    {
+     "text": "Over a bony prominence",
+     "correct": false,
+     "feedback": "Poor contact: a burn risk at the plate.",
+     "critical": false
+    },
+    {
+     "text": "Over a metal implant",
+     "correct": false,
+     "feedback": "Current concentrates in the metal.",
+     "critical": true
+    },
+    {
+     "text": "Anywhere on the patient",
+     "correct": false,
+     "feedback": "Distance and contact both matter.",
+     "critical": false
+    }
+   ],
+   "hint": "",
+   "id": "inguinal-hernia-s2"
+  },
+  {
+   "type": "plug",
+   "title": "Apply the patient plate to the thigh",
+   "item": "return_pad",
+   "hint": "Full, flat contact on the thigh; check the generator's contact alarm clears.",
+   "id": "inguinal-hernia-s3"
+  },
+  {
+   "type": "choose",
+   "title": "WHO Time Out",
+   "prompt": "Before skin incision for a right inguinal hernia repair, the team pauses. What must be confirmed aloud?",
+   "choices": [
+    {
+     "text": "Patient identity, the procedure, the site and side, and antibiotics given in the last 60 minutes",
+     "correct": true,
+     "feedback": "Correct: the Time Out confirms who, what and where, and that prophylaxis is in."
+    },
+    {
+     "text": "Only that the consent form is signed",
+     "correct": false,
+     "feedback": "The signature alone does not prevent wrong-site surgery.",
+     "critical": false
+    },
+    {
+     "text": "Nothing: the site was marked on the ward",
+     "correct": false,
+     "feedback": "Marking does not replace the Time Out.",
+     "critical": true
+    }
+   ],
+   "hint": "The site is the right groin. All three phases of the WHO checklist are mandatory.",
+   "id": "inguinal-hernia-s4"
+  },
+  {
+   "type": "pick",
+   "title": "Pick up the skin preparation",
+   "item": "disinfectant_a01",
+   "hint": "Alcoholic chlorhexidine, applied from the incision site outwards.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "inguinal-hernia-s5"
+  },
+  {
+   "type": "apply",
+   "title": "Prepare the skin over the right groin",
+   "item": "disinfectant_a01",
+   "target": "right_groin",
+   "hint": "Centre outwards, wider than the incision; let it dry fully before drapes and diathermy (it is flammable).",
+   "hold": 2.0,
+   "critical": false,
+   "id": "inguinal-hernia-s6"
+  },
+  {
+   "type": "pick",
+   "title": "Take the scalpel",
+   "item": "instrument_scalpel_handle_a01",
+   "hint": "Incision 2 cm above and parallel to the medial two thirds of the inguinal ligament.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "inguinal-hernia-s7"
+  },
+  {
+   "type": "apply",
+   "title": "Incise the right groin",
+   "item": "instrument_scalpel_handle_a01",
+   "target": "right_groin",
+   "hint": "Wrong side is a never event: check the mark.",
+   "hold": 1.5,
+   "critical": true,
+   "id": "inguinal-hernia-s8"
+  },
+  {
+   "type": "pick",
+   "title": "Place the self-retaining retractor",
+   "item": "instrument_selfretaining_retractor_a01",
+   "hint": "Opens the wound without an assistant.",
+   "wrongItems": [],
+   "critical": false,
+   "id": "inguinal-hernia-s9"
+  },
+  {
+   "type": "choose",
+   "title": "Protect the nerve",
+   "prompt": "Which nerve lies on the spermatic cord and must be protected?",
+   "choices": [
+    {
+     "text": "Ilioinguinal nerve",
+     "correct": true,
+     "feedback": "Correct."
+    },
+    {
+     "text": "Femoral nerve",
+     "correct": false,
+     "feedback": "It is below the inguinal ligament.",
+     "critical": false
+    },
+    {
+     "text": "Obturator nerve",
+     "correct": false,
+     "feedback": "Deep in the pelvis.",
+     "critical": false
+    }
+   ],
+   "hint": "",
+   "id": "inguinal-hernia-s10"
+  },
+  {
+   "type": "choose",
+   "title": "Classify the hernia",
+   "prompt": "The sac emerges lateral to the inferior epigastric vessels. It is…",
+   "choices": [
+    {
+     "text": "Indirect",
+     "correct": true,
+     "feedback": "Correct: through the deep ring."
+    },
+    {
+     "text": "Direct",
+     "correct": false,
+     "feedback": "Direct hernias are medial to the vessels.",
+     "critical": false
+    },
+    {
+     "text": "Femoral",
+     "correct": false,
+     "feedback": "Femoral hernias are below the ligament.",
+     "critical": false
+    }
+   ],
+   "hint": "",
+   "id": "inguinal-hernia-s11"
+  },
+  {
+   "type": "confirm",
+   "title": "Reduce the sac and lay the mesh on the posterior wall",
+   "hint": "Mesh to the inguinal ligament inferiorly, conjoint tendon medially, slit round the cord.",
+   "id": "inguinal-hernia-s12"
+  },
+  {
+   "type": "confirm",
+   "title": "Close the external oblique and skin; final count",
+   "hint": "",
+   "id": "inguinal-hernia-s13"
+  }
+ ],
+ "errorPenalty": 10,
+ "hintPenalty": 3
+}

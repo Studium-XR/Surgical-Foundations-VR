@@ -177,9 +177,10 @@ namespace SurgicalFoundations.EditorTools
         {
             var controller = StaffController(prefabName);
             if (controller == null) return;
-            var animator = inst.GetComponent<Animator>() ?? inst.AddComponent<Animator>();
+            if (!inst.TryGetComponent<Animator>(out var animator)) animator = inst.AddComponent<Animator>();
             if (animator.avatar == null || !animator.avatar.isHuman) return; // model not Humanoid: keep the static pose
             animator.runtimeAnimatorController = controller;
+            animator.enabled = true; // TryModel switched it off while the character had no clips; it has them now
             animator.applyRootMotion = false; // staff stay where the scene puts them
             animator.cullingMode = AnimatorCullingMode.CullUpdateTransforms;
         }

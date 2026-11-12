@@ -1,0 +1,1509 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b148a10c527ef34f9d9e85a0d5a7eff, type: 3}
+  m_Name: SimReadyLibrary
+  m_EditorClassIdentifier: SurgicalFoundations.Runtime::SurgicalFoundations.Interaction.SimReadyLibrary
+  entries:
+  - id: arm_articulated_support_a01
+    displayName: Arm articulated support
+    category: Architecture
+    prefab: {fileID: 6087573693697600284, guid: 970ea38ba054d7a49b70d812445fcab3, type: 3}
+    joints: 3
+    size: {x: 1.3889189, y: 2.6213589, z: 1.1982772}
+  - id: fixture_trashBin_wallMounted_a01
+    displayName: Fixture trash bin wall mounted
+    category: Architecture
+    prefab: {fileID: 2086352010369180180, guid: cfeccd8b6e517c94185266e1268894fe, type: 3}
+    joints: 0
+    size: {x: 0.15457988, y: 0.35035753, z: 0.28462073}
+  - id: fixture_trashBin_withDispenser_a01
+    displayName: Fixture trash bin with dispenser
+    category: Architecture
+    prefab: {fileID: 1849650263461731884, guid: 267b738c7be83654bbff3c5f1d696ced, type: 3}
+    joints: 0
+    size: {x: 0.30027622, y: 1.3976083, z: 0.434253}
+  - id: pendant_medical_a01
+    displayName: Medical pendant
+    category: Architecture
+    prefab: {fileID: 145641490459408796, guid: 676dc769684955546bcb38dc4a6ceab6, type: 3}
+    joints: 1
+    size: {x: 2.0944042, y: 2.6949544, z: 0.8579983}
+  - id: sign_hospital_board_a01
+    displayName: Sign hospital board
+    category: Architecture
+    prefab: {fileID: 3675967522311901068, guid: c984f61a260691b4d9be501b20976051, type: 3}
+    joints: 0
+    size: {x: 0.012036991, y: 0.8016268, z: 2.012327}
+  - id: sign_hospital_board_b01
+    displayName: Sign hospital board
+    category: Architecture
+    prefab: {fileID: 347294649828663745, guid: 2ee8e30c64cf81a49a15838f984cc35e, type: 3}
+    joints: 0
+    size: {x: 0.011971584, y: 0.41757005, z: 1.0006962}
+  - id: sign_hospital_board_b02
+    displayName: Sign hospital board
+    category: Architecture
+    prefab: {fileID: 8845734737873571875, guid: 1731f902d1fce704980e89cc5bd5b7fd, type: 3}
+    joints: 0
+    size: {x: 0.011971585, y: 0.556129, z: 1.0006962}
+  - id: sign_hospital_doNotEnter_a01
+    displayName: Sign hospital do not enter
+    category: Architecture
+    prefab: {fileID: 250050942138202840, guid: 36d07796dace8e446b067a7ed90898de, type: 3}
+    joints: 0
+    size: {x: 0.04811528, y: 0.20543212, z: 0.42290595}
+  - id: sign_hospital_sidewall_a01
+    displayName: Sign hospital sidewall
+    category: Architecture
+    prefab: {fileID: 3241295282320481693, guid: 41d292da29c7b5645b80961cc966976d, type: 3}
+    joints: 0
+    size: {x: 0.0244738, y: 0.25999576, z: 0.31423706}
+  - id: sign_hospital_sidewall_a02
+    displayName: Sign hospital sidewall
+    category: Architecture
+    prefab: {fileID: 2814600931166664975, guid: 5290ce9e3b3910b44ac6271f26251c38, type: 3}
+    joints: 0
+    size: {x: 0.0244738, y: 0.2599574, z: 0.31423706}
+  - id: sign_hospital_sidewall_a03
+    displayName: Sign hospital sidewall
+    category: Architecture
+    prefab: {fileID: 5962147845786611096, guid: f6e4d0fc328c4ad46b8c0179361d3063, type: 3}
+    joints: 0
+    size: {x: 0.0244738, y: 0.25991902, z: 0.31423706}
+  - id: sign_hospital_sidewall_a04
+    displayName: Sign hospital sidewall
+    category: Architecture
+    prefab: {fileID: 5861995361261752706, guid: a9a47d8a9f02e784ca0dcaef4b6acffc, type: 3}
+    joints: 0
+    size: {x: 0.0244738, y: 0.25991902, z: 0.31423706}
+  - id: sign_hospital_sidewall_a05
+    displayName: Sign hospital sidewall
+    category: Architecture
+    prefab: {fileID: 6650552166949576577, guid: 4ffc89d25e5b52d47846c05fc6c5f1d3, type: 3}
+    joints: 0
+    size: {x: 0.0244738, y: 0.25995743, z: 0.31423706}
+  - id: sign_hospital_sidewall_a06
+    displayName: Sign hospital sidewall
+    category: Architecture
+    prefab: {fileID: 5813286548928925275, guid: 735ac63136d67d34d9a208d9e25b3bbe, type: 3}
+    joints: 0
+    size: {x: 0.0244738, y: 0.25999576, z: 0.31423706}
+  - id: sign_hospital_sidewall_a07
+    displayName: Sign hospital sidewall
+    category: Architecture
+    prefab: {fileID: 8726278264527367168, guid: a223f99027d94414cb7b74ca4f80f567, type: 3}
+    joints: 0
+    size: {x: 0.0244738, y: 0.25991902, z: 0.31423706}
+  - id: sign_hospital_sidewall_a08
+    displayName: Sign hospital sidewall
+    category: Architecture
+    prefab: {fileID: 6514728551432566743, guid: 4e1723ac39d23484595b76c9b1b39737, type: 3}
+    joints: 0
+    size: {x: 0.0244738, y: 0.25988066, z: 0.31423706}
+  - id: sign_hospital_sidewall_a09
+    displayName: Sign hospital sidewall
+    category: Architecture
+    prefab: {fileID: 7254524324474468458, guid: 5b71f9ed20e719a46a44ea6bf4a5ea9b, type: 3}
+    joints: 0
+    size: {x: 0.0244738, y: 0.259919, z: 0.31423706}
+  - id: sign_hospital_sidewall_a10
+    displayName: Sign hospital sidewall
+    category: Architecture
+    prefab: {fileID: 4380850603579278669, guid: b6972215c8f84e54ba1c2d0a791a6721, type: 3}
+    joints: 0
+    size: {x: 0.0244738, y: 0.259919, z: 0.31423706}
+  - id: sign_hospital_sidewall_a11
+    displayName: Sign hospital sidewall
+    category: Architecture
+    prefab: {fileID: 2725839106902272265, guid: 35d0f0cb11e248843bcf90dafe1f3861, type: 3}
+    joints: 0
+    size: {x: 0.024473801, y: 0.25991902, z: 0.31423706}
+  - id: sign_hospital_sidewall_a12
+    displayName: Sign hospital sidewall
+    category: Architecture
+    prefab: {fileID: 4688983764410162573, guid: 651a83b2bcd3495458c5309f67842aa6, type: 3}
+    joints: 0
+    size: {x: 0.024473801, y: 0.25988066, z: 0.31423706}
+  - id: sign_hospital_sidewall_a13
+    displayName: Sign hospital sidewall
+    category: Architecture
+    prefab: {fileID: 8107241163668331555, guid: 250a07594de8a3f4cab93c636f774092, type: 3}
+    joints: 0
+    size: {x: 0.024473798, y: 0.25988066, z: 0.31423706}
+  - id: sign_hospital_sidewall_a14
+    displayName: Sign hospital sidewall
+    category: Architecture
+    prefab: {fileID: 5050888450725779557, guid: 70eda3b5f3da5d64cb2024fdc4cbf1d1, type: 3}
+    joints: 0
+    size: {x: 0.0244738, y: 0.25991902, z: 0.31423706}
+  - id: sign_hospital_sidewall_b02
+    displayName: Sign hospital sidewall
+    category: Architecture
+    prefab: {fileID: 3073990928311421591, guid: b15ea68721bba284cb9c439e4a88cbce, type: 3}
+    joints: 0
+    size: {x: 0.0102808885, y: 0.25993356, z: 0.1799949}
+  - id: sign_hospital_sidewall_b03
+    displayName: Sign hospital sidewall
+    category: Architecture
+    prefab: {fileID: 3765321353214170354, guid: 631f4a533b5a0574594a404573f5ae32, type: 3}
+    joints: 0
+    size: {x: 0.010279685, y: 0.25990313, z: 0.18000555}
+  - id: unit_head_bed_a01
+    displayName: Unit head bed
+    category: Architecture
+    prefab: {fileID: 5034080507342097375, guid: 58dca9db09e8b594186fee68e59a9672, type: 3}
+    joints: 11
+    size: {x: 0.6128789, y: 1.6680349, z: 1.2631357}
+  - id: unit_head_bed_b01
+    displayName: Unit head bed
+    category: Architecture
+    prefab: {fileID: 515850688636398579, guid: 2bb2d83fd2fdab64393e394da3e6b871, type: 3}
+    joints: 2
+    size: {x: 0.09036574, y: 0.28643525, z: 1.7214983}
+  - id: bin_waste_a01
+    displayName: Waste bin
+    category: Architecture
+    prefab: {fileID: 6479651698870907311, guid: 92296668d2bebf0468551fd7d1064cb9, type: 3}
+    joints: 2
+    size: {x: 0.23769431, y: 0.27999246, z: 0.18013917}
+  - id: bin_waste_a02
+    displayName: Waste bin
+    category: Architecture
+    prefab: {fileID: 933568079494831942, guid: 87a1382076ab6fe4c883fbe341f6389a, type: 3}
+    joints: 2
+    size: {x: 0.36309087, y: 0.43510386, z: 0.275187}
+  - id: bin_waste_a03
+    displayName: Waste bin
+    category: Architecture
+    prefab: {fileID: 2798229908867366372, guid: 0294ca8547021a4459c511368799092f, type: 3}
+    joints: 2
+    size: {x: 0.426702, y: 0.6038631, z: 0.3234263}
+  - id: bin_waste_a04
+    displayName: Waste bin
+    category: Architecture
+    prefab: {fileID: 6440468782256253769, guid: 3da56cd53a758d94180315f5a0ca70e9, type: 3}
+    joints: 2
+    size: {x: 0.48485082, y: 0.69983745, z: 0.36745784}
+  - id: bin_waste_b01
+    displayName: Waste bin
+    category: Architecture
+    prefab: {fileID: 4305836871024459962, guid: a4ed2e19cbf9b674a8daa3abbf5f479b, type: 3}
+    joints: 2
+    size: {x: 0.44037518, y: 0.46691024, z: 0.25400108}
+  - id: cart_equipment_diagnostic_a01
+    displayName: Cart equipment diagnostic
+    category: Carts
+    prefab: {fileID: 5839518960654097228, guid: e5ea7d3edc461f84a87bfc7237c107a0, type: 3}
+    joints: 17
+    size: {x: 1.1517334, y: 1.2215383, z: 0.56878346}
+  - id: cart_medical_utility_a01
+    displayName: Cart medical utility
+    category: Carts
+    prefab: {fileID: 43678653482968486, guid: d75b8e4238d733c4a8404d4c6d357c67, type: 3}
+    joints: 9
+    size: {x: 0.7531303, y: 1.4565678, z: 0.9056917}
+  - id: cart_medical_utility_a02
+    displayName: Cart medical utility
+    category: Carts
+    prefab: {fileID: 7836736463678139188, guid: 094ba4249b268104c9248dc71d566ffc, type: 3}
+    joints: 15
+    size: {x: 0.7530905, y: 1.278718, z: 0.54500705}
+  - id: cart_medical_utility_a03
+    displayName: Cart medical utility
+    category: Carts
+    prefab: {fileID: 2585261436851922234, guid: 7e3d91003d2fe6141b910ac256f6230a, type: 3}
+    joints: 16
+    size: {x: 0.75700057, y: 1.2745656, z: 0.6004828}
+  - id: cart_computer_a01
+    displayName: Computer cart
+    category: Carts
+    prefab: {fileID: 5246292751787392881, guid: 2d78711083e8ab84a9b09a59dc2a2327, type: 3}
+    joints: 0
+    size: {x: 0.61840403, y: 1.0822514, z: 0.7412077}
+  - id: trolley_emergency_a01
+    displayName: Emergency trolley
+    category: Carts
+    prefab: {fileID: 1720527228093928398, guid: e23782204a4fccd48afa218f68340250, type: 3}
+    joints: 11
+    size: {x: 0.75160545, y: 1.7170265, z: 0.9179383}
+  - id: cart_mobile_a01
+    displayName: Mobile cart
+    category: Carts
+    prefab: {fileID: 1279044569572182043, guid: 606a083c44bd4de47ab0724b146f0e97, type: 3}
+    joints: 8
+    size: {x: 0.93980545, y: 1.0867841, z: 0.67050725}
+  - id: cart_mobile_b01
+    displayName: Mobile cart
+    category: Carts
+    prefab: {fileID: 4882298546180138353, guid: 87a6e6bd16e63364b9475b0b3f94956a, type: 3}
+    joints: 8
+    size: {x: 0.9880686, y: 1.0491542, z: 0.37878343}
+  - id: cart_mobile_c01
+    displayName: Mobile cart
+    category: Carts
+    prefab: {fileID: 8726832699539518520, guid: 6a47fd7efe2155c4e99433f122a27986, type: 3}
+    joints: 8
+    size: {x: 1.4941471, y: 1.0214303, z: 0.55223024}
+  - id: cart_mobile_d01
+    displayName: Mobile cart
+    category: Carts
+    prefab: {fileID: 5600777594571519132, guid: d487ed89878a4444899bc8e0f0c4a0cc, type: 3}
+    joints: 8
+    size: {x: 1.5776634, y: 1.096014, z: 0.6475076}
+  - id: cart_mobile_e01
+    displayName: Mobile cart
+    category: Carts
+    prefab: {fileID: 1058669081224479134, guid: 9d92de7c36ee61c45a431641aadb670e, type: 3}
+    joints: 8
+    size: {x: 0.40075886, y: 1.5792159, z: 0.8375751}
+  - id: cart_mobile_f01
+    displayName: Mobile cart
+    category: Carts
+    prefab: {fileID: 7434516195528109541, guid: 87a221757744b8e4c8a148fd94c40e00, type: 3}
+    joints: 10
+    size: {x: 0.77929157, y: 1.4905123, z: 1.3979177}
+  - id: trolley_instrument_b01
+    displayName: Trolley
+    category: Carts
+    prefab: {fileID: 2223294181582067221, guid: 78d702eeba5198b41bb1279c5e8c48ef, type: 3}
+    joints: 8
+    size: {x: 1.055524, y: 0.88945675, z: 0.5784164}
+  - id: trolley_instrument_b02
+    displayName: Trolley
+    category: Carts
+    prefab: {fileID: 7645326203008479114, guid: ddb0e68b979243546a670f1a029e35c4, type: 3}
+    joints: 8
+    size: {x: 0.58912957, y: 0.9050571, z: 0.53865635}
+  - id: trolley_instrument_b03
+    displayName: Trolley
+    category: Carts
+    prefab: {fileID: 6710617900684115779, guid: 16672845d7edf80479e4522dcda05373, type: 3}
+    joints: 8
+    size: {x: 0.78140616, y: 0.7780448, z: 0.46937788}
+  - id: trolley_instrument_b04
+    displayName: Trolley
+    category: Carts
+    prefab: {fileID: 6181618660102726519, guid: 542550200193e9749bd436ab43f7a5be, type: 3}
+    joints: 9
+    size: {x: 0.9654703, y: 0.86633193, z: 0.4502161}
+  - id: trolley_instrument_b05
+    displayName: Trolley
+    category: Carts
+    prefab: {fileID: 2151434572949383226, guid: 51160bc17db40e6479a42d11c1e931bb, type: 3}
+    joints: 5
+    size: {x: 0.70564175, y: 0.94419754, z: 0.5056019}
+  - id: trolley_instrument_b07
+    displayName: Trolley
+    category: Carts
+    prefab: {fileID: 6984673168824587185, guid: cb9a445fe90150e4c90bc2205a493883, type: 3}
+    joints: 5
+    size: {x: 0.73305357, y: 0.98437595, z: 0.54402894}
+  - id: trolley_instrument_b08
+    displayName: Trolley
+    category: Carts
+    prefab: {fileID: 799997274714111069, guid: 49c4348a68229404f887b1328ee57c0f, type: 3}
+    joints: 14
+    size: {x: 1.3272598, y: 0.86441314, z: 0.58126324}
+  - id: blood_bag_a01
+    displayName: Bag blood
+    category: Consumables
+    prefab: {fileID: 4469826554022977764, guid: 727c52314e613c5409f72240c314ae3a, type: 3}
+    joints: 0
+    size: {x: 0.26433557, y: 0.045994747, z: 0.17523426}
+  - id: container_jar_glass_black_a01
+    displayName: Container jar glass black
+    category: Consumables
+    prefab: {fileID: 556319009992438663, guid: 3e169ae044928964cbfdd779822fbba3, type: 3}
+    joints: 1
+    size: {x: 0.11474324, y: 0.18683773, z: 0.11492904}
+  - id: container_jar_glass_black_a02
+    displayName: Container jar glass black
+    category: Consumables
+    prefab: {fileID: 3926772351010040894, guid: 7d85d5445d801b241988730140862d0d, type: 3}
+    joints: 1
+    size: {x: 0.11474324, y: 0.18403018, z: 0.25873154}
+  - id: container_jar_glass_gold_a01
+    displayName: Container jar glass gold
+    category: Consumables
+    prefab: {fileID: 6706479344279947376, guid: 7bdb58237b081e94b9e352fd6a2da3d2, type: 3}
+    joints: 1
+    size: {x: 0.11474324, y: 0.18683809, z: 0.11492904}
+  - id: container_jar_glass_gold_a02
+    displayName: Container jar glass gold
+    category: Consumables
+    prefab: {fileID: 5293893742117289685, guid: b5c724fb873a0d7459d342f078dcdbf4, type: 3}
+    joints: 1
+    size: {x: 0.11474324, y: 0.18403018, z: 0.25873154}
+  - id: container_jar_glass_red_a01
+    displayName: Container jar glass red
+    category: Consumables
+    prefab: {fileID: 456158251855179688, guid: 097ef1a898a832844ae38415c365a6fc, type: 3}
+    joints: 1
+    size: {x: 0.11474324, y: 0.18683809, z: 0.11492904}
+  - id: container_jar_glass_red_a02
+    displayName: Container jar glass red
+    category: Consumables
+    prefab: {fileID: 7738808121234175395, guid: 6d44e8d1bba316f45aeb38ea29a38b44, type: 3}
+    joints: 1
+    size: {x: 0.11474324, y: 0.18403018, z: 0.25873154}
+  - id: container_jar_glass_silver_a01
+    displayName: Container jar glass silver
+    category: Consumables
+    prefab: {fileID: 2688546587903412067, guid: b1c8702273442a64aa6536a97e402f19, type: 3}
+    joints: 1
+    size: {x: 0.11474324, y: 0.18683809, z: 0.11492904}
+  - id: container_jar_glass_silver_a02
+    displayName: Container jar glass silver
+    category: Consumables
+    prefab: {fileID: 2859416362229765461, guid: 601e9483b01e0084b86a146fc5d47f0b, type: 3}
+    joints: 1
+    size: {x: 0.11474325, y: 0.18403018, z: 0.26245663}
+  - id: drainage_a01
+    displayName: Drainage
+    category: Consumables
+    prefab: {fileID: 8980056865989825639, guid: 77dcb197a1711eb4ab7bd230bd8631d2, type: 3}
+    joints: 0
+    size: {x: 0.35480702, y: 0.04267456, z: 0.17002404}
+  - id: box_glove_a01
+    displayName: Glove box
+    category: Consumables
+    prefab: {fileID: 262216516327833406, guid: 628afd5df44620f4e854c7c556ae8603, type: 3}
+    joints: 0
+    size: {x: 0.17815891, y: 0.05620376, z: 0.11717046}
+  - id: syringe_insulin_a01
+    displayName: Insulin syringe
+    category: Consumables
+    prefab: {fileID: 124102572833324684, guid: 6112b43d977b14b4cb423e4d8ddfe24b, type: 3}
+    joints: 1
+    size: {x: 0.10209183, y: 0.011843922, z: 0.022256702}
+  - id: syringe_insulin_a02
+    displayName: Insulin syringe
+    category: Consumables
+    prefab: {fileID: 8295473671340143742, guid: d4d86d9c1c9bd7a4bbe0f6661f0ccef6, type: 3}
+    joints: 1
+    size: {x: 0.10773124, y: 0.011842199, z: 0.022255357}
+  - id: syringe_insulin_b01
+    displayName: Insulin syringe
+    category: Consumables
+    prefab: {fileID: 278215741567696463, guid: 74a580f7e32e5ac47b5c361506cef19f, type: 3}
+    joints: 2
+    size: {x: 0.12027911, y: 0.010513003, z: 0.027331527}
+  - id: blood_line_a01
+    displayName: Line blood
+    category: Consumables
+    prefab: {fileID: 6788921437845011235, guid: f35a8d92887df5b4fb16fb5cc0c2a881, type: 3}
+    joints: 13
+    size: {x: 0.72173524, y: 1.8186374, z: 0.57077193}
+  - id: blood_line_a02
+    displayName: Line blood
+    category: Consumables
+    prefab: {fileID: 4579331701270359469, guid: ff9a0b262f3263347b24023a63c71a86, type: 3}
+    joints: 6
+    size: {x: 0.7216809, y: 1.9522812, z: 0.570686}
+  - id: anesthesia_mask_a01
+    displayName: Mask anesthesia
+    category: Consumables
+    prefab: {fileID: 3308250351404082977, guid: 23667267ff88b764ba57c82ccbbedaf8, type: 3}
+    joints: 1
+    size: {x: 0.13038716, y: 0.051268116, z: 0.0882096}
+  - id: bandage_medical_a01
+    displayName: Medical bandage
+    category: Consumables
+    prefab: {fileID: 4745592264734921742, guid: f574035775cbd5b4b9a4df7e9c571782, type: 3}
+    joints: 0
+    size: {x: 0.049396917, y: 0.042379797, z: 0.051876344}
+  - id: bandage_medical_a03
+    displayName: Medical bandage
+    category: Consumables
+    prefab: {fileID: 3621774046000651644, guid: 7d565ab0cfe45ec46bd5836fe9b080bc, type: 3}
+    joints: 0
+    size: {x: 0.044345345, y: 0.03500206, z: 0.044407707}
+  - id: bandage_medical_a04
+    displayName: Medical bandage
+    category: Consumables
+    prefab: {fileID: 276748518909087303, guid: 377f3c7f1f24016408a4a64ce59350fb, type: 3}
+    joints: 0
+    size: {x: 0.044619586, y: 0.074999996, z: 0.044560075}
+  - id: facemask_medical_a01
+    displayName: Medical facemask
+    category: Consumables
+    prefab: {fileID: 3410454812582476349, guid: 469e5814697de5b4daf8a0081aa92916, type: 3}
+    joints: 0
+    size: {x: 0.18065467, y: 0.070090726, z: 0.10041946}
+  - id: medical_sample_bag_a01
+    displayName: Medical sample bag
+    category: Consumables
+    prefab: {fileID: 4439483209948488603, guid: 7a35809585f577942b2d3a46dc4c7ccf, type: 3}
+    joints: 0
+    size: {x: 0.03443344, y: 0.21899857, z: 0.15031213}
+  - id: medicine_a03
+    displayName: Medicine
+    category: Consumables
+    prefab: {fileID: 8198139296445698092, guid: e4d313fdc7c353848a3ffb85c0c49fd5, type: 3}
+    joints: 0
+    size: {x: 0.034881454, y: 0.15049, z: 0.08499426}
+  - id: medicine_b01
+    displayName: Medicine
+    category: Consumables
+    prefab: {fileID: 8886795849957861638, guid: 9c2aae0d79b21d649b2d3ad008fcf68f, type: 3}
+    joints: 0
+    size: {x: 0.08032179, y: 0.15000023, z: 0.08039503}
+  - id: medicine_b02
+    displayName: Medicine
+    category: Consumables
+    prefab: {fileID: 1770438901652768242, guid: dd771020c03ab984b8d558f2408706b3, type: 3}
+    joints: 0
+    size: {x: 0.08032179, y: 0.15000023, z: 0.08039503}
+  - id: medicine_b03
+    displayName: Medicine
+    category: Consumables
+    prefab: {fileID: 1170766657146669742, guid: 7b3c3cfb892b6184f99636cf02949761, type: 3}
+    joints: 0
+    size: {x: 0.08032179, y: 0.15000023, z: 0.08039503}
+  - id: medicine_b04
+    displayName: Medicine
+    category: Consumables
+    prefab: {fileID: 3371764965205483371, guid: 9a0adaf1ade9dda449e50ae7ff28110c, type: 3}
+    joints: 0
+    size: {x: 0.08032179, y: 0.15000023, z: 0.08039503}
+  - id: medicine_c01
+    displayName: Medicine
+    category: Consumables
+    prefab: {fileID: 543481328008148160, guid: 90739d6ab23f7e34d99d12fced491b18, type: 3}
+    joints: 0
+    size: {x: 0.032626756, y: 0.13434039, z: 0.015809093}
+  - id: medicine_c02
+    displayName: Medicine
+    category: Consumables
+    prefab: {fileID: 6788279736614311384, guid: 30b7b4041ff9ac24e9e73f4977bc070b, type: 3}
+    joints: 0
+    size: {x: 0.032626756, y: 0.13434039, z: 0.015809093}
+  - id: medicine_c03
+    displayName: Medicine
+    category: Consumables
+    prefab: {fileID: 298300979571960196, guid: 5231a8a1fe38be6488ba6531ea9fbd7d, type: 3}
+    joints: 0
+    size: {x: 0.032626756, y: 0.13434039, z: 0.015809093}
+  - id: medicine_c04
+    displayName: Medicine
+    category: Consumables
+    prefab: {fileID: 4591645818826893332, guid: 574cecb0007385e4ba803855abe8f530, type: 3}
+    joints: 0
+    size: {x: 0.032626756, y: 0.1343404, z: 0.015809093}
+  - id: medicine_c05
+    displayName: Medicine
+    category: Consumables
+    prefab: {fileID: 6078232126779199077, guid: 57534d1185a108e4d9ac693ca6ca2e39, type: 3}
+    joints: 0
+    size: {x: 0.032626756, y: 0.13434039, z: 0.015809093}
+  - id: medicine_c06
+    displayName: Medicine
+    category: Consumables
+    prefab: {fileID: 4793606286571724052, guid: 51ca033e0bcbdc14ab58aaafade7472d, type: 3}
+    joints: 0
+    size: {x: 0.032626756, y: 0.13434039, z: 0.015809093}
+  - id: cannulae_nasal_a01
+    displayName: Nasal cannulae
+    category: Consumables
+    prefab: {fileID: 3599375037616180528, guid: cd69fd4957d724c45b73203df3157b5b, type: 3}
+    joints: 0
+    size: {x: 0.19131744, y: 0.020096932, z: 0.18652765}
+  - id: mask_nebulization_a01
+    displayName: Nebulization mask
+    category: Consumables
+    prefab: {fileID: 5582582598254895551, guid: 4e54fdce066983349b2e1ecccbdced6c, type: 3}
+    joints: 0
+    size: {x: 0.19012132, y: 0.18601085, z: 0.120875105}
+  - id: ppe_gloves_lightDuty_a01
+    displayName: Ppe gloves light duty
+    category: Consumables
+    prefab: {fileID: 5736180755719173390, guid: 91f950e126b41f642a782cfcc2a67f5b, type: 3}
+    joints: 0
+    size: {x: 0.24686418, y: 0.016294423, z: 0.23100257}
+  - id: drainage_pumpSystem_a01
+    displayName: Pump system drainage
+    category: Consumables
+    prefab: {fileID: 6932584119813030224, guid: 9e5ae372e49942445bede8ec4664e052, type: 3}
+    joints: 0
+    size: {x: 0.120603174, y: 0.037900753, z: 0.05146254}
+  - id: drape_surgical_a01
+    displayName: Surgical drape
+    category: Consumables
+    prefab: {fileID: 9096868852776500365, guid: 0a6a7adb01cad454696ded260ede2989, type: 3}
+    joints: 0
+    size: {x: 0.27324745, y: 0.07306924, z: 0.21201402}
+  - id: drape_surgical_a02
+    displayName: Surgical drape
+    category: Consumables
+    prefab: {fileID: 5036176704858527354, guid: 8750f9568c8c00245a647123c7134248, type: 3}
+    joints: 0
+    size: {x: 0.27064186, y: 0.06563553, z: 0.20998004}
+  - id: syringe_a01
+    displayName: Syringe
+    category: Consumables
+    prefab: {fileID: 3774947835172127052, guid: 69672e57c0cda3e4e98094f40eec943f, type: 3}
+    joints: 2
+    size: {x: 0.17511249, y: 0.025163986, z: 0.03532393}
+  - id: syringe_a02
+    displayName: Syringe
+    category: Consumables
+    prefab: {fileID: 6455266294218576882, guid: b6b3b7c86bc85cc418473da3c33464c7, type: 3}
+    joints: 2
+    size: {x: 0.15214142, y: 0.020103764, z: 0.029403795}
+  - id: syringe_a03
+    displayName: Syringe
+    category: Consumables
+    prefab: {fileID: 8432811294603649665, guid: 2c483b8203ff4a141a124a1ebdca7e89, type: 3}
+    joints: 2
+    size: {x: 0.13369924, y: 0.017591666, z: 0.02774725}
+  - id: syringe_a04
+    displayName: Syringe
+    category: Consumables
+    prefab: {fileID: 4856680279981893157, guid: 8501d9a026d4adc4ea0e2ffc4233885f, type: 3}
+    joints: 2
+    size: {x: 0.12799689, y: 0.012543654, z: 0.022166528}
+  - id: syringe_a05
+    displayName: Syringe
+    category: Consumables
+    prefab: {fileID: 3491450589918175102, guid: 7a31d8aba08ad064ca0329c3155983c1, type: 3}
+    joints: 3
+    size: {x: 0.11631917, y: 0.013005156, z: 0.018953044}
+  - id: catheter_system_a01
+    displayName: System catheter
+    category: Consumables
+    prefab: {fileID: 881494694737170630, guid: 47f13169467cf714f85eb7a07444fa2d, type: 3}
+    joints: 3
+    size: {x: 0.50290954, y: 0.060885586, z: 0.20696199}
+  - id: defibrillator_a01
+    displayName: Defibrillator
+    category: Devices
+    prefab: {fileID: 1028382776956214319, guid: 0a13674d4c42b594d93e52a56bc088f0, type: 3}
+    joints: 12
+    size: {x: 0.20365314, y: 0.26742345, z: 0.44391954}
+  - id: device_blood_pressure_monitor_a01
+    displayName: Device blood pressure monitor
+    category: Devices
+    prefab: {fileID: 4624997475552699863, guid: 27fa74ebece6a13418cbaa390e76e310, type: 3}
+    joints: 10
+    size: {x: 0.3459667, y: 0.17780906, z: 0.39867473}
+  - id: device_catheter_positioning_system_a01
+    displayName: Device catheter positioning system
+    category: Devices
+    prefab: {fileID: 2099788390713411568, guid: 07ac335e77d4c7648b561fede448bea0, type: 3}
+    joints: 0
+    size: {x: 0.28685364, y: 0.3561458, z: 0.5201852}
+  - id: device_endoscopy_system_b01
+    displayName: Device endoscopy system
+    category: Devices
+    prefab: {fileID: 5553930765643787524, guid: 88dcf18799d580f468412b03f661073a, type: 3}
+    joints: 7
+    size: {x: 0.8883799, y: 0.17275983, z: 0.90977705}
+  - id: device_insulin_lancing_a01
+    displayName: Device insulin lancing
+    category: Devices
+    prefab: {fileID: 7193434458324946119, guid: 9d39fff915347824bbe81321770f1992, type: 3}
+    joints: 1
+    size: {x: 0.09649685, y: 0.01879191, z: 0.018599443}
+  - id: device_insulin_lancing_b01
+    displayName: Device insulin lancing
+    category: Devices
+    prefab: {fileID: 8909940734183332313, guid: 0cddca8d3c542ed4fbb00b33e02a4264, type: 3}
+    joints: 3
+    size: {x: 0.12011327, y: 0.0145047065, z: 0.014470391}
+  - id: device_insulin_lancing_c01
+    displayName: Device insulin lancing
+    category: Devices
+    prefab: {fileID: 4015282876851109568, guid: 4f5d50b1210cda34f90310035e927ba2, type: 3}
+    joints: 2
+    size: {x: 0.04163435, y: 0.21584825, z: 0.03024382}
+  - id: device_vein_finder_a01
+    displayName: Device vein finder
+    category: Devices
+    prefab: {fileID: 4706013878137227765, guid: 38fa8a92d00320b48aa9c2a9a655c751, type: 3}
+    joints: 0
+    size: {x: 0.22117248, y: 0.059891462, z: 0.06380637}
+  - id: stethoscope_electronic_a01
+    displayName: Electronic stethoscope
+    category: Devices
+    prefab: {fileID: 3469138661235910676, guid: cee2936d7fbe35f42a1edd7c8942a3c8, type: 3}
+    joints: 0
+    size: {x: 0.5977787, y: 0.04429862, z: 0.22142215}
+  - id: device_endoscope_a01
+    displayName: Endoscope device
+    category: Devices
+    prefab: {fileID: 3149026610420473638, guid: be18526b63cb3e2418c0545bafce24f5, type: 3}
+    joints: 8
+    size: {x: 0.7128459, y: 1.998802, z: 1.3112835}
+  - id: thermometer_fever_a01
+    displayName: Fever thermometer
+    category: Devices
+    prefab: {fileID: 5284969759457865162, guid: 1a5736217da44aa428c52d10a8eeca8d, type: 3}
+    joints: 0
+    size: {x: 0.14959101, y: 0.04867061, z: 0.0375039}
+  - id: blood_glucosemeter_a01
+    displayName: Glucosemeter blood
+    category: Devices
+    prefab: {fileID: 8218848232645707753, guid: 102761e71cca97540996c54149092cf2, type: 3}
+    joints: 0
+    size: {x: 0.2228272, y: 0.026000265, z: 0.1182559}
+  - id: device_inhaler_a01
+    displayName: Inhaler device
+    category: Devices
+    prefab: {fileID: 1185476768021205442, guid: 6369c2676ec8b8f4487be7ae938f1785, type: 3}
+    joints: 2
+    size: {x: 0.40858588, y: 0.21014898, z: 0.25536025}
+  - id: device_lancing_a01
+    displayName: Lancing device
+    category: Devices
+    prefab: {fileID: 81613481311589069, guid: 8e64fdde42c39204fafe385267584c93, type: 3}
+    joints: 2
+    size: {x: 0.14674155, y: 0.017561639, z: 0.01745091}
+  - id: device_otoscope_a01
+    displayName: Otoscope device
+    category: Devices
+    prefab: {fileID: 8977043390094606612, guid: 21bbaf03d525d5048b9dbeb398e1228e, type: 3}
+    joints: 1
+    size: {x: 0.072966024, y: 0.19070573, z: 0.04896412}
+  - id: oximeter_pulse_a01
+    displayName: Pulse oximeter
+    category: Devices
+    prefab: {fileID: 8409298187332267477, guid: 96e50954947d26143bb324add54afd7c, type: 3}
+    joints: 5
+    size: {x: 0.25694388, y: 0.030978968, z: 0.16360898}
+  - id: headlight_surgical_a01
+    displayName: Surgical headlight
+    category: Devices
+    prefab: {fileID: 6634165256176645246, guid: a5b926361e4ef664fb1bd193822d96c8, type: 3}
+    joints: 0
+    size: {x: 0.49751535, y: 0.14696622, z: 0.2308919}
+  - id: ultrasound_a01
+    displayName: Ultrasound
+    category: Devices
+    prefab: {fileID: 7883636744916665133, guid: c9fc9b67c25e2634cb17dd55780035cf, type: 3}
+    joints: 49
+    size: {x: 1.1478462, y: 1.6579667, z: 0.6494714}
+  - id: ultrasound_b01
+    displayName: Ultrasound
+    category: Devices
+    prefab: {fileID: 8330426619449404640, guid: 41321cfaf5f5d0546b3116a82ec2396c, type: 3}
+    joints: 115
+    size: {x: 0.36443877, y: 0.35163084, z: 0.3784824}
+  - id: pad_vital_a01
+    displayName: Vital pad
+    category: Devices
+    prefab: {fileID: 3898834422874063609, guid: 61f1d37582e39a7479a50d7cb421f60d, type: 3}
+    joints: 1
+    size: {x: 0.2779464, y: 0.4024521, z: 0.5687549}
+  - id: unit_electrosurgical_a01
+    displayName: Electrosurgical unit
+    category: Equipment
+    prefab: {fileID: 1817746383517040212, guid: d460095f01ce24543a6e52e23164b415, type: 3}
+    joints: 11
+    size: {x: 0.9738356, y: 0.24408159, z: 0.96782714}
+  - id: pump_infusion_a01
+    displayName: Infusion pump
+    category: Equipment
+    prefab: {fileID: 9167052525703618240, guid: 01f33db6aa2be5c47b8cd8a0f60cccba, type: 3}
+    joints: 2
+    size: {x: 0.20690738, y: 0.14406982, z: 0.35195336}
+  - id: warmer_infusion_a01
+    displayName: Infusion warmer
+    category: Equipment
+    prefab: {fileID: 7248953381447139241, guid: 6852c5dfc1f6ef345a5c8337466a1081, type: 3}
+    joints: 0
+    size: {x: 0.20066436, y: 0.16578221, z: 0.13209419}
+  - id: lung_ventilation_artificial_a01
+    displayName: Lung ventilation artificial
+    category: Equipment
+    prefab: {fileID: 5532230058902487206, guid: 1ce8b56eb9a01d34a8f999e1d4d60694, type: 3}
+    joints: 17
+    size: {x: 0.72682494, y: 1.3403515, z: 0.5317477}
+  - id: anesthesia_machine_a01
+    displayName: Machine anesthesia
+    category: Equipment
+    prefab: {fileID: 1038985227700209511, guid: 0472a527541fe8b4f839630e2c94db4c, type: 3}
+    joints: 32
+    size: {x: 0.84529644, y: 1.7014318, z: 2.2615733}
+  - id: monitor_patient_a01
+    displayName: Patient monitor
+    category: Equipment
+    prefab: {fileID: 3091370732004784397, guid: fef3980f5935dab45a52512e9d676adc, type: 3}
+    joints: 17
+    size: {x: 0.57665145, y: 1.4956876, z: 0.5299319}
+  - id: IV_pole_a01
+    displayName: Pole iv
+    category: Equipment
+    prefab: {fileID: 5831154602328617587, guid: 4a9f1330e5628dd4987674f6274df0fa, type: 3}
+    joints: 13
+    size: {x: 0.72205544, y: 1.7993743, z: 0.57080704}
+  - id: IV_pole_a02
+    displayName: Pole iv
+    category: Equipment
+    prefab: {fileID: 6490567183621275357, guid: 82992979c3f919a47ac39b710dd7c592, type: 3}
+    joints: 13
+    size: {x: 0.72205544, y: 1.9521675, z: 0.57080704}
+  - id: IV_pole_a03
+    displayName: Pole iv
+    category: Equipment
+    prefab: {fileID: 4900997210242019806, guid: d7fa1fbf40e772047baeb23e9180b749, type: 3}
+    joints: 13
+    size: {x: 0.72205544, y: 1.8185391, z: 0.57080704}
+  - id: IV_pole_a04
+    displayName: Pole iv
+    category: Equipment
+    prefab: {fileID: 4835993992115426981, guid: 8fe203d9587a40b40b48e05120e7f5d1, type: 3}
+    joints: 13
+    size: {x: 0.72205544, y: 1.8185437, z: 0.57080704}
+  - id: IV_pole_b01
+    displayName: Pole iv
+    category: Equipment
+    prefab: {fileID: 8221556612324165342, guid: 96c19811d68e41a4f8669d1453ec7880, type: 3}
+    joints: 18
+    size: {x: 0.7218182, y: 1.7657213, z: 0.9443361}
+  - id: IV_pole_b02
+    displayName: Pole iv
+    category: Equipment
+    prefab: {fileID: 7199558188556373825, guid: 794450f1c35c40b43bb93d4da15c2402, type: 3}
+    joints: 16
+    size: {x: 0.7220166, y: 1.8450713, z: 0.5708847}
+  - id: IV_pole_b03
+    displayName: Pole iv
+    category: Equipment
+    prefab: {fileID: 7194163704770278948, guid: 285dc4179dc347f49a76f717def1845d, type: 3}
+    joints: 13
+    size: {x: 0.7220564, y: 1.7276771, z: 0.57097083}
+  - id: pump_suction_surgical_a01
+    displayName: Pump suction surgical
+    category: Equipment
+    prefab: {fileID: 2958335378384517289, guid: fffd1e44161dfe04b957a590b875ddde, type: 3}
+    joints: 9
+    size: {x: 0.6020252, y: 1.0303719, z: 0.626578}
+  - id: pump_system_infusion_a01
+    displayName: Pump system infusion
+    category: Equipment
+    prefab: {fileID: 4045534409761272683, guid: ea733bdd90032624dbce1f769d4ad5bb, type: 3}
+    joints: 13
+    size: {x: 0.5307915, y: 1.9035254, z: 0.6372796}
+  - id: monitor_surgical_a01
+    displayName: Surgical monitor
+    category: Equipment
+    prefab: {fileID: 3816578432588007239, guid: 5058ea66e1854b34c83dbb9b0bad345e, type: 3}
+    joints: 3
+    size: {x: 0.14397241, y: 1.4887242, z: 1.186504}
+  - id: robot_surgical_c01
+    displayName: Surgical robot
+    category: Equipment
+    prefab: {fileID: 5697845417434088628, guid: 7bb5b7c2a14c3ac4086967766322a5fc, type: 3}
+    joints: 9
+    size: {x: 1.4811269, y: 1.4125003, z: 0.6756861}
+  - id: laser_system_a01
+    displayName: System laser
+    category: Equipment
+    prefab: {fileID: 3063779671445760579, guid: dd125517a81094f41b405bd81f2d77b9, type: 3}
+    joints: 9
+    size: {x: 0.9852669, y: 1.3155557, z: 0.53360933}
+  - id: video_system_a01
+    displayName: System video
+    category: Equipment
+    prefab: {fileID: 3450373553177864756, guid: 8102369487421434489c744aa31a88a7, type: 3}
+    joints: 11
+    size: {x: 0.7645417, y: 1.8544261, z: 2.2563024}
+  - id: bed_hospital_standard_a01
+    displayName: Bed hospital standard
+    category: Furniture
+    prefab: {fileID: 2604421946955737345, guid: 54e0f26ee4dd10648b9839450c7bba89, type: 3}
+    joints: 8
+    size: {x: 2.2831428, y: 0.8864921, z: 1.0070535}
+  - id: bed_hospital_standard_a02
+    displayName: Bed hospital standard
+    category: Furniture
+    prefab: {fileID: 2440471721115064406, guid: 27b8441e707c3f64c9c3fb145a7f7018, type: 3}
+    joints: 8
+    size: {x: 2.3575163, y: 0.8862343, z: 1.0283318}
+  - id: chair_patient_mobile_a01
+    displayName: Chair patient mobile
+    category: Furniture
+    prefab: {fileID: 7909842155411422861, guid: b549c90f78c7d5144832c7cf12c8bbfe, type: 3}
+    joints: 9
+    size: {x: 0.9355157, y: 1.197828, z: 0.78537154}
+  - id: facilityFurniture_lockerUnit_multiDoor_a01
+    displayName: Facility furniture locker unit multi door
+    category: Furniture
+    prefab: {fileID: 1189308881415213902, guid: 13e511b1d7b56da499ae23fd9e151e59, type: 3}
+    joints: 0
+    size: {x: 0.5214435, y: 2.010199, z: 1.0818919}
+  - id: chair_hospital_a01
+    displayName: Hospital chair
+    category: Furniture
+    prefab: {fileID: 5388092316414157580, guid: eb45e8b12d60da74cab33a659696de8f, type: 3}
+    joints: 10
+    size: {x: 0.73343307, y: 1.3241031, z: 0.7440958}
+  - id: chair_hospital_b01
+    displayName: Hospital chair
+    category: Furniture
+    prefab: {fileID: 3572675710189621471, guid: 2e408678d6cdae64ea43a8b99b2b23cd, type: 3}
+    joints: 10
+    size: {x: 0.69233954, y: 1.0563452, z: 0.70262027}
+  - id: chair_hospital_b02
+    displayName: Hospital chair
+    category: Furniture
+    prefab: {fileID: 3069216733289164428, guid: a7400be552851064faef787ac5cb95ce, type: 3}
+    joints: 10
+    size: {x: 0.69233954, y: 0.9260995, z: 0.70262766}
+  - id: chair_hospital_b03
+    displayName: Hospital chair
+    category: Furniture
+    prefab: {fileID: 2279284470824184937, guid: 068da00b395b7d9418b0aa021cdb3996, type: 3}
+    joints: 10
+    size: {x: 0.71668696, y: 1.2684269, z: 0.70259964}
+  - id: clogs_hospital_a01
+    displayName: Hospital clogs
+    category: Furniture
+    prefab: {fileID: 7969924019232682083, guid: ca197185f58fb3c4baf7bf61043a2d60, type: 3}
+    joints: 0
+    size: {x: 0.30260786, y: 0.12359649, z: 0.28837162}
+  - id: screen_hospital_a01
+    displayName: Hospital screen
+    category: Furniture
+    prefab: {fileID: 2631004518091077891, guid: 4b508eb83abe4c84ab6c9cbe20a21115, type: 3}
+    joints: 2
+    size: {x: 0.628255, y: 1.8806849, z: 2.8248062}
+  - id: screen_hospital_b01
+    displayName: Hospital screen
+    category: Furniture
+    prefab: {fileID: 4499896651733560991, guid: f5010fb484b87ac4596c69e3ba7775e8, type: 3}
+    joints: 0
+    size: {x: 3.23852, y: 3.4524097, z: 3.3013248}
+  - id: screen_hospital_b02
+    displayName: Hospital screen
+    category: Furniture
+    prefab: {fileID: 4818258296359049024, guid: b39f4df70266df04e9a26a7978b60417, type: 3}
+    joints: 0
+    size: {x: 3.1776183, y: 3.4552066, z: 3.3744233}
+  - id: screen_hospital_b03
+    displayName: Hospital screen
+    category: Furniture
+    prefab: {fileID: 6606072042028620512, guid: a3d1e1a35e52f524796b60efdfdb44fc, type: 3}
+    joints: 0
+    size: {x: 3.1775563, y: 3.4529757, z: 3.384767}
+  - id: screen_hospital_b04
+    displayName: Hospital screen
+    category: Furniture
+    prefab: {fileID: 2396503119877003910, guid: 0cb964f14c5a6014abc14664457cafb7, type: 3}
+    joints: 0
+    size: {x: 3.2383673, y: 3.4554012, z: 3.2866685}
+  - id: screen_hospital_b05
+    displayName: Hospital screen
+    category: Furniture
+    prefab: {fileID: 7450279040863217428, guid: d2533db8c98bd2f4ca7a22632b9a6699, type: 3}
+    joints: 0
+    size: {x: 3.2383628, y: 3.453979, z: 3.3360927}
+  - id: screen_hospital_b06
+    displayName: Hospital screen
+    category: Furniture
+    prefab: {fileID: 2326366300443278991, guid: 4577859a9a13a084c9e2a78d6dd0a937, type: 3}
+    joints: 0
+    size: {x: 3.1406465, y: 3.4554133, z: 3.359908}
+  - id: screen_hospital_b07
+    displayName: Hospital screen
+    category: Furniture
+    prefab: {fileID: 7323877552266765191, guid: 42113bcf9da8d304c9c699d8599e6c01, type: 3}
+    joints: 0
+    size: {x: 3.1404471, y: 3.455237, z: 3.4090314}
+  - id: screen_hospital_b08
+    displayName: Hospital screen
+    category: Furniture
+    prefab: {fileID: 2225003560087646517, guid: 76925df02b175414c95f804f2de74029, type: 3}
+    joints: 0
+    size: {x: 3.1404366, y: 3.455237, z: 3.4090314}
+  - id: screen_hospital_b09
+    displayName: Hospital screen
+    category: Furniture
+    prefab: {fileID: 2888124945631323801, guid: de284468f667a82479426978f822af54, type: 3}
+    joints: 0
+    size: {x: 3.1405454, y: 3.4553037, z: 3.3701127}
+  - id: lamp_table_bedside_a01
+    displayName: Lamp table bedside
+    category: Furniture
+    prefab: {fileID: 5230009844248341311, guid: 2dee143bde91b1d4bbbcadf89d551af0, type: 3}
+    joints: 1
+    size: {x: 0.19805203, y: 0.3716396, z: 0.19877791}
+  - id: storage_locker_double_bench_b01
+    displayName: Storage locker double bench
+    category: Furniture
+    prefab: {fileID: 5839746964019258381, guid: ed966d0d738a09c4f8be13218fcd230c, type: 3}
+    joints: 0
+    size: {x: 0.6442819, y: 2.0900095, z: 0.830276}
+  - id: storage_locker_double_bench_b03
+    displayName: Storage locker double bench
+    category: Furniture
+    prefab: {fileID: 3005863392824839800, guid: d3aec4973ca35aa4d914d1f84988a857, type: 3}
+    joints: 0
+    size: {x: 1.2803996, y: 2.0900095, z: 0.830276}
+  - id: chair_surgical_a01
+    displayName: Surgical chair
+    category: Furniture
+    prefab: {fileID: 7326799625320914264, guid: 3b3ac68bbbd4d1047b46c0a2fff9a8cb, type: 3}
+    joints: 11
+    size: {x: 0.58026797, y: 0.88821185, z: 0.58244437}
+  - id: chair_surgical_b01
+    displayName: Surgical chair
+    category: Furniture
+    prefab: {fileID: 700150851541614182, guid: 4b843b2ad02c9944b97fd76635766687, type: 3}
+    joints: 13
+    size: {x: 0.51697695, y: 0.6345714, z: 0.51852924}
+  - id: table_surgical_a01
+    displayName: Surgical table
+    category: Furniture
+    prefab: {fileID: 6021606538004347062, guid: fa8577c0edc351947862cfca8d7855c6, type: 3}
+    joints: 6
+    size: {x: 2.205925, y: 0.9372769, z: 0.6858225}
+  - id: wheelChair_c01
+    displayName: Wheel chair
+    category: Furniture
+    prefab: {fileID: 731679748905194488, guid: d0f1d56ac4c39d94eaa24aa22a25ffd2, type: 3}
+    joints: 4
+    size: {x: 0.7804642, y: 0.7359976, z: 0.54194343}
+  - id: CT_injection_system_a01
+    displayName: Ct injection system
+    category: Imaging
+    prefab: {fileID: 5118071579776388881, guid: f22dcba18e3352446b37ceeee2e64946, type: 3}
+    joints: 12
+    size: {x: 0.5762891, y: 1.6404634, z: 0.6720631}
+  - id: Xray_machine_buckyStand_a01
+    displayName: Xray machine bucky stand
+    category: Imaging
+    prefab: {fileID: 9035706643020866789, guid: 7707aab7d73e817448381b3cfdb63e32, type: 3}
+    joints: 4
+    size: {x: 0.60878026, y: 2.1714735, z: 0.5533175}
+  - id: Xray_machine_buckyTable_a01
+    displayName: Xray machine bucky table
+    category: Imaging
+    prefab: {fileID: 557403538098478694, guid: cdeb9c191bb2ed5418f5635187d8286d, type: 3}
+    joints: 2
+    size: {x: 0.87462294, y: 0.90314424, z: 2.3500001}
+  - id: Xray_machine_HVgenerator_a01
+    displayName: Xray machine hvgenerator
+    category: Imaging
+    prefab: {fileID: 8868606632450702217, guid: cb3fb13838c25c24b84a59b1cd083ef6, type: 3}
+    joints: 7
+    size: {x: 0.6201587, y: 0.9309165, z: 0.9723855}
+  - id: Xray_machine_XrayArmRack_a01
+    displayName: Xray machine xray arm rack
+    category: Imaging
+    prefab: {fileID: 1439662887602205221, guid: df3b88e3b4c692b41a9462295bcb107a, type: 3}
+    joints: 10
+    size: {x: 1.353799, y: 2.2648528, z: 2.7273312}
+  - id: needle_48mm_a01
+    displayName: 48mm needle
+    category: Instruments
+    prefab: {fileID: 8113001708176541837, guid: f832111ce3573b1449567fecab1eb731, type: 3}
+    joints: 0
+    size: {x: 0.0143559, y: 0.0013858455, z: 0.04779708}
+  - id: needle_58mm_a01
+    displayName: 58mm needle
+    category: Instruments
+    prefab: {fileID: 7876485435368737751, guid: cd610374d821fa844b8a4063a6600570, type: 3}
+    joints: 0
+    size: {x: 0.01735208, y: 0.0016317688, z: 0.057737473}
+  - id: needle_68mm_a01
+    displayName: 68mm needle
+    category: Instruments
+    prefab: {fileID: 5239828293123780278, guid: d9c196217fe22f04b95640bd0eeb4d91, type: 3}
+    joints: 0
+    size: {x: 0.02034349, y: 0.0019754572, z: 0.06770487}
+  - id: needle_78mm_a01
+    displayName: 78mm needle
+    category: Instruments
+    prefab: {fileID: 587109494452717955, guid: caccf2cd0bff95344b2d8a80c23dda4e, type: 3}
+    joints: 0
+    size: {x: 0.023336854, y: 0.0022656678, z: 0.07765126}
+  - id: needle_88mm_a01
+    displayName: 88mm needle
+    category: Instruments
+    prefab: {fileID: 153780161977541055, guid: 02cd7ed32a6f8014ea1159479e697404, type: 3}
+    joints: 0
+    size: {x: 0.026327588, y: 0.0025560246, z: 0.08760266}
+  - id: instrument_adams_pliers_b01
+    displayName: Adams pliers
+    category: Instruments
+    prefab: {fileID: 2185156866906572608, guid: b9e31fb5e62c4f347b0a2a12004d1752, type: 3}
+    joints: 0
+    size: {x: 0.19043773, y: 0.015575189, z: 0.09844199}
+  - id: instrument_artery_forceps_b01
+    displayName: Artery forceps
+    category: Instruments
+    prefab: {fileID: 136603454668696761, guid: 98ffbe226a067c54089e9df31d3c8a84, type: 3}
+    joints: 1
+    size: {x: 0.18569648, y: 0.0047478527, z: 0.094349235}
+  - id: instrument_artery_forceps_curved_b01
+    displayName: Artery forceps curved
+    category: Instruments
+    prefab: {fileID: 1337160578494159733, guid: 52859c70790a56d429f709d2252f015b, type: 3}
+    joints: 1
+    size: {x: 0.18066794, y: 0.019288491, z: 0.09857899}
+  - id: instrument_bipolar_dissecting_scissors_a01
+    displayName: Bipolar dissecting scissors
+    category: Instruments
+    prefab: {fileID: 205360505127349094, guid: c752c4a5c5b8d4d4f8a5e2a145055ff6, type: 3}
+    joints: 1
+    size: {x: 0.27643543, y: 0.0048313877, z: 0.049014293}
+  - id: instrument_bone_clamp_b01
+    displayName: Bone clamp
+    category: Instruments
+    prefab: {fileID: 5089166440496673205, guid: dd66a254e7fe0394a822e846bb72499a, type: 3}
+    joints: 1
+    size: {x: 0.2464869, y: 0.043056846, z: 0.036647614}
+  - id: instrument_bone_forceps_b01
+    displayName: Bone forceps
+    category: Instruments
+    prefab: {fileID: 6457858292162453119, guid: d498bfa9558874d41b811e6bf14728f8, type: 3}
+    joints: 1
+    size: {x: 0.17332445, y: 0.022808824, z: 0.10368122}
+  - id: instrument_bone_hook_b01
+    displayName: Bone hook
+    category: Instruments
+    prefab: {fileID: 6369980747049672416, guid: ec7fcd6ec69512a499c71d6ce805b763, type: 3}
+    joints: 0
+    size: {x: 0.17074762, y: 0.02363693, z: 0.041896142}
+  - id: instrument_bone_lever_a01
+    displayName: Bone lever
+    category: Instruments
+    prefab: {fileID: 2146795754943615645, guid: 6df587f3ccc20ec4ea76ef079495f57a, type: 3}
+    joints: 0
+    size: {x: 0.2409085, y: 0.020439029, z: 0.031026151}
+  - id: instrument_bone_mallet_b01
+    displayName: Bone mallet
+    category: Instruments
+    prefab: {fileID: 2580855123069504398, guid: 2837327c3de60004a8eb779692db035c, type: 3}
+    joints: 0
+    size: {x: 0.19168976, y: 0.034538906, z: 0.050901596}
+  - id: instrument_bone_rongeurs_b01
+    displayName: Bone rongeurs
+    category: Instruments
+    prefab: {fileID: 7756144888049678509, guid: 33a37a1be04dbd04ca72a42f98b44ec3, type: 3}
+    joints: 1
+    size: {x: 0.23591408, y: 0.016031634, z: 0.13053714}
+  - id: instrument_bone_rongeurs_angled_b01
+    displayName: Bone rongeurs angled
+    category: Instruments
+    prefab: {fileID: 6052725468305579792, guid: c50abcfad4bb0da41a824b6642db5ea5, type: 3}
+    joints: 0
+    size: {x: 0.23349386, y: 0.016034022, z: 0.15217036}
+  - id: instrument_bone_rongeurs_curved_b01
+    displayName: Bone rongeurs curved
+    category: Instruments
+    prefab: {fileID: 5726215552073039248, guid: 4e3d79f442230984ca7cb480720442e1, type: 3}
+    joints: 0
+    size: {x: 0.23652905, y: 0.019388251, z: 0.13053715}
+  - id: instrument_caliper_a01
+    displayName: Caliper instrument
+    category: Instruments
+    prefab: {fileID: 2399912185273699230, guid: 3ec51ba5c13cc8f4db8bba1ae1572825, type: 3}
+    joints: 1
+    size: {x: 0.23828322, y: 0.0075175297, z: 0.07840927}
+  - id: instrument_clamp_a01
+    displayName: Clamp instrument
+    category: Instruments
+    prefab: {fileID: 2476354902900927321, guid: 30695e816aa1d9649aac655a2cfdd868, type: 3}
+    joints: 1
+    size: {x: 0.17816786, y: 0.0106790885, z: 0.077963665}
+  - id: instrument_dilator_a01
+    displayName: Dilator instrument
+    category: Instruments
+    prefab: {fileID: 1053888741175126820, guid: 6ae1ec847ebd8154aa79afccb30ecd0d, type: 3}
+    joints: 0
+    size: {x: 0.18989716, y: 0.0043581245, z: 0.0043581245}
+  - id: instrument_forceps_a01
+    displayName: Forceps instrument
+    category: Instruments
+    prefab: {fileID: 556333020254419355, guid: cc6cbed0141ed6649bb462d6bcb182a5, type: 3}
+    joints: 0
+    size: {x: 0.18013012, y: 0.014777652, z: 0.0101376455}
+  - id: instrument_hand_drill_b01
+    displayName: Hand drill
+    category: Instruments
+    prefab: {fileID: 642692346623240887, guid: b83d2175cdf20b7439786d9eb7ff458a, type: 3}
+    joints: 0
+    size: {x: 0.2927901, y: 0.054725878, z: 0.109254226}
+  - id: instrument_handsaw_a01
+    displayName: Handsaw instrument
+    category: Instruments
+    prefab: {fileID: 3259878314434053121, guid: 8093739ec95b8f64aadf808eadb04851, type: 3}
+    joints: 0
+    size: {x: 0.34681618, y: 0.0121507915, z: 0.09836002}
+  - id: instrument_knife_a01
+    displayName: Knife instrument
+    category: Instruments
+    prefab: {fileID: 3465619537785111109, guid: 8e9233636f0f7384a85cc7b43a0ca0f3, type: 3}
+    joints: 0
+    size: {x: 0.3150292, y: 0.00765479, z: 0.018271483}
+  - id: instrument_ligature_needle_a01
+    displayName: Ligature needle
+    category: Instruments
+    prefab: {fileID: 723653881285719259, guid: 51b56aca3344d3f4b985ef9df10c9b49, type: 3}
+    joints: 0
+    size: {x: 0.21858153, y: 0.02208029, z: 0.023587886}
+  - id: instrument_mallet_a01
+    displayName: Mallet instrument
+    category: Instruments
+    prefab: {fileID: 2056571014522595299, guid: 475a1ad4bd470fd4a93c20a7e1d827b2, type: 3}
+    joints: 0
+    size: {x: 0.2433156, y: 0.037157882, z: 0.063956946}
+  - id: instrument_mirror_a01
+    displayName: Mirror instrument
+    category: Instruments
+    prefab: {fileID: 7819777279634096875, guid: c5976f8b40851484ea3d7c54143f9125, type: 3}
+    joints: 0
+    size: {x: 0.18624419, y: 0.014937276, z: 0.026941663}
+  - id: instrument_nasal_forceps_b01
+    displayName: Nasal forceps
+    category: Instruments
+    prefab: {fileID: 2062589503214036850, guid: b9383ac1e92ae004fbb6ae3966c84521, type: 3}
+    joints: 0
+    size: {x: 0.21905212, y: 0.0037704213, z: 0.10594395}
+  - id: instrument_punche_a01
+    displayName: Punche instrument
+    category: Instruments
+    prefab: {fileID: 7064358879501391470, guid: 31f12104f881b8843916f053a2b1f331, type: 3}
+    joints: 0
+    size: {x: 0.25046146, y: 0.017244212, z: 0.11399065}
+  - id: instrument_raspatory_a01
+    displayName: Raspatory instrument
+    category: Instruments
+    prefab: {fileID: 258358523121618384, guid: 699fc6390a890b04fac5ab93e6a6bee6, type: 3}
+    joints: 0
+    size: {x: 0.20169796, y: 0.028807841, z: 0.02893095}
+  - id: instrument_redonspike_a01
+    displayName: Redonspike instrument
+    category: Instruments
+    prefab: {fileID: 4050217566517889374, guid: 6d40a2292b153fb4c8584b337afd5f96, type: 3}
+    joints: 0
+    size: {x: 0.20051706, y: 0.0029386068, z: 0.0251006}
+  - id: instrument_retractor_a01
+    displayName: Retractor instrument
+    category: Instruments
+    prefab: {fileID: 5309233852789645067, guid: 37ce2ca9355596b4a99935f4da79d476, type: 3}
+    joints: 0
+    size: {x: 0.16400926, y: 0.010050679, z: 0.02312457}
+  - id: instrument_scalpel_handle_a01
+    displayName: Scalpel handle
+    category: Instruments
+    prefab: {fileID: 4491205982416690752, guid: 0ddbf334a1b36024ba6d3342f52d369a, type: 3}
+    joints: 0
+    size: {x: 0.15345275, y: 0.0025101681, z: 0.0144241}
+  - id: instrument_scissors_a01
+    displayName: Scissors instrument
+    category: Instruments
+    prefab: {fileID: 1670513467306108240, guid: 0cefd65dcb1c99544be40d721aa819b7, type: 3}
+    joints: 1
+    size: {x: 0.17191267, y: 0.00482882, z: 0.049019914}
+  - id: instrument_selfretaining_retractor_a01
+    displayName: Selfretaining retractor
+    category: Instruments
+    prefab: {fileID: 3527139326941060515, guid: 84be6f91724dbe044b638a4f240e1f00, type: 3}
+    joints: 1
+    size: {x: 0.190952, y: 0.024036078, z: 0.08980722}
+  - id: instrument_skingrafting_knife_a01
+    displayName: Skingrafting knife
+    category: Instruments
+    prefab: {fileID: 7344449612331752027, guid: bb13de6fdb051b24f8556e9b9c65d3df, type: 3}
+    joints: 0
+    size: {x: 0.30342928, y: 0.013038196, z: 0.036040734}
+  - id: instrument_spatula_a01
+    displayName: Spatula instrument
+    category: Instruments
+    prefab: {fileID: 5460796891989826877, guid: 525852def86c40540a32f41c690d9c19, type: 3}
+    joints: 0
+    size: {x: 0.24321133, y: 0.013360405, z: 0.026423912}
+  - id: instrument_spoon_a01
+    displayName: Spoon instrument
+    category: Instruments
+    prefab: {fileID: 8452923813511587032, guid: 035b28748ba639e41903e9880c7b53f9, type: 3}
+    joints: 0
+    size: {x: 0.18245737, y: 0.028777115, z: 0.028933028}
+  - id: instrument_storage_a01
+    displayName: Storage instrument
+    category: Instruments
+    prefab: {fileID: 2540221013698455464, guid: 9d9a10931147c3b4a9c73cf7d1ca9c22, type: 3}
+    joints: 1
+    size: {x: 0.051001363, y: 0.011279227, z: 0.03151261}
+  - id: instrument_stripper_a01
+    displayName: Stripper instrument
+    category: Instruments
+    prefab: {fileID: 8383339647917015609, guid: 44fbf1d0c5256014099d94114d898b68, type: 3}
+    joints: 0
+    size: {x: 0.45061582, y: 0.033500172, z: 0.04505196}
+  - id: instrument_suction_a01
+    displayName: Suction instrument
+    category: Instruments
+    prefab: {fileID: 1734942850387969551, guid: c052f9dbd8a1f854396909acac325cab, type: 3}
+    joints: 0
+    size: {x: 0.28715205, y: 0.024398942, z: 0.07222402}
+  - id: needle_surgical_a01
+    displayName: Surgical needle
+    category: Instruments
+    prefab: {fileID: 1045022451879764533, guid: 0fef3297901173b4eadf5c814287383c, type: 3}
+    joints: 1
+    size: {x: 0.120447844, y: 0.06033028, z: 0.059770364}
+  - id: stapler_surgical_a01
+    displayName: Surgical stapler
+    category: Instruments
+    prefab: {fileID: 1107024518084532218, guid: 5440eaccfdab94c429631350c80e91df, type: 3}
+    joints: 1
+    size: {x: 0.4601935, y: 0.030615047, z: 0.16561879}
+  - id: instrument_tamper_a01
+    displayName: Tamper instrument
+    category: Instruments
+    prefab: {fileID: 6462029022620705298, guid: d24033190d302ce4eb0776508d20f32f, type: 3}
+    joints: 0
+    size: {x: 0.19356921, y: 0.028808214, z: 0.028926376}
+  - id: tool_pen_surgical_marking_a01
+    displayName: Tool pen surgical marking
+    category: Instruments
+    prefab: {fileID: 2608990822811992094, guid: da87dcf350e50c845afc4d87fe8042d9, type: 3}
+    joints: 0
+    size: {x: 0.13570416, y: 0.026645385, z: 0.019050185}
+  - id: tool_power_surgical_b01
+    displayName: Tool power surgical
+    category: Instruments
+    prefab: {fileID: 257869874320719229, guid: a94b9c710189ebb419010d97a0d36344, type: 3}
+    joints: 3
+    size: {x: 0.25278372, y: 0.22059503, z: 0.07464123}
+  - id: tool_power_surgical_c01
+    displayName: Tool power surgical
+    category: Instruments
+    prefab: {fileID: 3897592967959918873, guid: b008b5e13b79a6d40a750bbeb97f4988, type: 3}
+    joints: 5
+    size: {x: 0.2849139, y: 0.305283, z: 0.086965114}
+  - id: instrument_wire_cutters_b01
+    displayName: Wire cutters
+    category: Instruments
+    prefab: {fileID: 702993122879192030, guid: 5c4eff1bc090bc9438f9bf2e4ce0322d, type: 3}
+    joints: 0
+    size: {x: 0.21088722, y: 0.026246663, z: 0.10285407}
+  - id: light_head_bed_a01
+    displayName: Light head bed
+    category: Lighting
+    prefab: {fileID: 997534139528681431, guid: f8d2692ad33904a4eb644ee49fb52081, type: 3}
+    joints: 0
+    size: {x: 0.08370269, y: 0.07642324, z: 0.7120161}
+  - id: light_surgical_ceiling_arm_a01
+    displayName: Light surgical ceiling arm
+    category: Lighting
+    prefab: {fileID: 8038029617296468026, guid: 54bd08c545d6f9b45bbd2ce6912d924b, type: 3}
+    joints: 11
+    size: {x: 1.4932812, y: 2.0457523, z: 3.9597127}
+  - id: light_surgical_ceiling_arm_b01
+    displayName: Light surgical ceiling arm
+    category: Lighting
+    prefab: {fileID: 6096024857520210470, guid: 69e458896769a6443a715b0653c5edb5, type: 3}
+    joints: 3
+    size: {x: 1.158641, y: 0.6108992, z: 0.45604354}
+  - id: light_surgical_ceiling_frame_a01
+    displayName: Light surgical ceiling frame
+    category: Lighting
+    prefab: {fileID: 2910846025856415343, guid: 038542ea0b43f3144bb9383ed644ed7a, type: 3}
+    joints: 0
+    size: {x: 3.9945645, y: 0.96561253, z: 3.994504}
+  - id: light_surgical_ceiling_mobile_a01
+    displayName: Light surgical ceiling mobile
+    category: Lighting
+    prefab: {fileID: 2204096720525376035, guid: fdc115ce561a9594d87e2f86b150833a, type: 3}
+    joints: 15
+    size: {x: 1.3472393, y: 1.7284901, z: 0.6335521}
+  - id: lighting_main_light_a01
+    displayName: Lighting main light
+    category: Lighting
+    prefab: {fileID: 459712738613514219, guid: fc7d8ee1679ed20448d3396903d27542, type: 3}
+    joints: 0
+    size: {x: 5.866064, y: 0.12992686, z: 7.289921}
+  - id: lighting_main_mount_a01
+    displayName: Lighting main mount
+    category: Lighting
+    prefab: {fileID: 6270599912633940758, guid: 404cec1a4ca6c8747b92d4dd1f8f610c, type: 3}
+    joints: 0
+    size: {x: 0.43467033, y: 0.63581806, z: 8.037722}
+  - id: container_system_sterilising_a02
+    displayName: Container system sterilising
+    category: Sterile
+    prefab: {fileID: 1914185021323846243, guid: 102d17f9beb542949850a69f20d44aa3, type: 3}
+    joints: 3
+    size: {x: 0.32783347, y: 0.16036996, z: 0.30133355}
+  - id: container_system_sterilising_a03
+    displayName: Container system sterilising
+    category: Sterile
+    prefab: {fileID: 5434236827435250650, guid: 482f9830519bac448981502f748a5a5f, type: 3}
+    joints: 3
+    size: {x: 0.3278404, y: 0.21036148, z: 0.30133355}
+  - id: container_system_sterilising_b01
+    displayName: Container system sterilising
+    category: Sterile
+    prefab: {fileID: 2560979584878511761, guid: a9c45e2f41bceee429eaecbddee21a29, type: 3}
+    joints: 0
+    size: {x: 0.42499977, y: 0.0497543, z: 0.2799782}
+  - id: container_system_sterilising_b02
+    displayName: Container system sterilising
+    category: Sterile
+    prefab: {fileID: 6052222266705617246, guid: 8f0496a9489c4d5459a943e4ca39c69c, type: 3}
+    joints: 0
+    size: {x: 0.4249996, y: 0.039793048, z: 0.2550231}
+  - id: container_system_sterilising_b03
+    displayName: Container system sterilising
+    category: Sterile
+    prefab: {fileID: 1822880579431598727, guid: 3a6abafc0c15d094bafb0d6e4deccd13, type: 3}
+    joints: 0
+    size: {x: 0.30000356, y: 0.039808817, z: 0.21001256}
+  - id: container_system_sterilising_b04
+    displayName: Container system sterilising
+    category: Sterile
+    prefab: {fileID: 6844430463659327136, guid: 6b72d6bcbcde7594fbe3d40073317924, type: 3}
+    joints: 0
+    size: {x: 0.24499963, y: 0.029848278, z: 0.17500722}
+  - id: container_system_sterilising_b05
+    displayName: Container system sterilising
+    category: Sterile
+    prefab: {fileID: 4752459958073230908, guid: 65e4bc35bf3f1c948989fe75c5eb68bd, type: 3}
+    joints: 0
+    size: {x: 0.2049995, y: 0.019894969, z: 0.12999298}
+  - id: container_system_sterilising_b06
+    displayName: Container system sterilising
+    category: Sterile
+    prefab: {fileID: 3028589848853295200, guid: 4a2c231fad6594c4d93a89b172dd02a8, type: 3}
+    joints: 0
+    size: {x: 0.239799, y: 0.029858693, z: 0.17981082}
+  - id: container_system_sterilising_c01
+    displayName: Container system sterilising
+    category: Sterile
+    prefab: {fileID: 2481926130262637094, guid: a39aa230722bf6140843bccb2ff5c095, type: 3}
+    joints: 0
+    size: {x: 0.21700001, y: 0.0349404, z: 0.13381457}
+  - id: container_system_sterilising_d01
+    displayName: Container system sterilising
+    category: Sterile
+    prefab: {fileID: 2497249215132396786, guid: 0f360981786cef04bacb59d9867f2152, type: 3}
+    joints: 0
+    size: {x: 0.16194502, y: 0.06514472, z: 0.16194502}
+  - id: container_system_sterilising_d02
+    displayName: Container system sterilising
+    category: Sterile
+    prefab: {fileID: 8106612935061053010, guid: 33f9e1d06a10c2648ab692b73cc5738e, type: 3}
+    joints: 0
+    size: {x: 0.17194496, y: 0.06933527, z: 0.17194496}
+  - id: container_system_sterilising_d03
+    displayName: Container system sterilising
+    category: Sterile
+    prefab: {fileID: 5283208899578453731, guid: 0357dd2f7393f40439e7d8e4af147db8, type: 3}
+    joints: 0
+    size: {x: 0.211944, y: 0.08590436, z: 0.211944}
+  - id: container_system_sterilising_e01
+    displayName: Container system sterilising
+    category: Sterile
+    prefab: {fileID: 8166431979705262529, guid: ab0f693d7df6dbe43a0f220b7ca06642, type: 3}
+    joints: 1
+    size: {x: 0.5078553, y: 0.1467489, z: 0.31277665}
+  - id: disinfectant_a01
+    displayName: Disinfectant
+    category: Sterile
+    prefab: {fileID: 3955591656107767386, guid: c9f227c855c703345bac6382433aaf2b, type: 3}
+    joints: 0
+    size: {x: 0.044722967, y: 0.19101113, z: 0.0674517}
+  - id: disinfectant_b01
+    displayName: Disinfectant
+    category: Sterile
+    prefab: {fileID: 1070121689134440247, guid: 87b164ad42885a24b88f7cc85e833299, type: 3}
+    joints: 0
+    size: {x: 0.030101087, y: 0.110631615, z: 0.030206231}
+  - id: disinfectant_c01
+    displayName: Disinfectant
+    category: Sterile
+    prefab: {fileID: 4170783173223447413, guid: d90e2820e4aec1b49866810c2923d981, type: 3}
+    joints: 0
+    size: {x: 0.07025422, y: 0.17019151, z: 0.06651674}
+  - id: disinfectant_d01
+    displayName: Disinfectant
+    category: Sterile
+    prefab: {fileID: 4469439364588440901, guid: d5ef800b976d4cd4fab00a544338d85e, type: 3}
+    joints: 1
+    size: {x: 0.10351391, y: 0.37045807, z: 0.15297875}
+  - id: fixture_sink_basin_a01
+    displayName: Fixture sink basin
+    category: Sterile
+    prefab: {fileID: 7075422025992359914, guid: 130210f37eaa8b44688826072b6e0fc0, type: 3}
+    joints: 0
+    size: {x: 0.49087426, y: 0.22417638, z: 0.7197541}
+  - id: fixture_soapDispenser_wallMounted_a01
+    displayName: Fixture soap dispenser wall mounted
+    category: Sterile
+    prefab: {fileID: 4514172397297812538, guid: 0fe3d0f95cba72a4386aaf70ffe3db15, type: 3}
+    joints: 0
+    size: {x: 0.07897143, y: 0.36840212, z: 0.23127022}
+  - id: sanitary_sink_wallMounted_a01
+    displayName: Sanitary sink wall mounted
+    category: Sterile
+    prefab: {fileID: 5935998346032497960, guid: 9601f9e60d097c34b8f6bb58dd025fe5, type: 3}
+    joints: 0
+    size: {x: 0.5136937, y: 0.58429825, z: 0.70000005}
+  - id: cleaning_soapDispenser_a01
+    displayName: Soap dispenser cleaning
+    category: Sterile
+    prefab: {fileID: 3650340684145563767, guid: 2b487cdf3463f084fbd223946659efae, type: 3}
+    joints: 0
+    size: {x: 0.075101316, y: 0.18166095, z: 0.06948177}
+  - id: cleaning_soapDispenser_a02
+    displayName: Soap dispenser cleaning
+    category: Sterile
+    prefab: {fileID: 7265643043147189335, guid: d1d56075a318f0c45a0155697f38e499, type: 3}
+    joints: 0
+    size: {x: 0.07969816, y: 0.23102209, z: 0.080002934}
+  - id: cleaning_soapDispenser_b01
+    displayName: Soap dispenser cleaning
+    category: Sterile
+    prefab: {fileID: 3484665683602018511, guid: 2ae4cfb8c63cc284592e45a484996105, type: 3}
+    joints: 0
+    size: {x: 0.07438214, y: 0.17477848, z: 0.07704793}
+  - id: cleaning_soapDispenser_c01
+    displayName: Soap dispenser cleaning
+    category: Sterile
+    prefab: {fileID: 3685230516187359135, guid: ba1ed17db0adfa541a30f0ca581d01ff, type: 3}
+    joints: 0
+    size: {x: 0.055623572, y: 0.20718907, z: 0.057204463}
+  - id: cleaning_soapDispenser_d01
+    displayName: Soap dispenser cleaning
+    category: Sterile
+    prefab: {fileID: 1319723260534722464, guid: 861da32c0dba818428f425e88fc610a1, type: 3}
+    joints: 0
+    size: {x: 0.07775174, y: 0.18228096, z: 0.07775174}
+  - id: cleaning_soapDispenser_e01
+    displayName: Soap dispenser cleaning
+    category: Sterile
+    prefab: {fileID: 2344170276345473312, guid: 071eb03927b180841b720d2e265703a2, type: 3}
+    joints: 0
+    size: {x: 0.07304112, y: 0.1389434, z: 0.074610546}
+  - id: sink_surgical_a01
+    displayName: Surgical sink
+    category: Sterile
+    prefab: {fileID: 6370063584732934582, guid: ded65614b8e032042b29e0ebb7735536, type: 3}
+    joints: 0
+    size: {x: 0.6915629, y: 1.590297, z: 1.6006529}
+  - id: tray_sterilization_instrument_c02
+    displayName: Tray sterilization instrument
+    category: Sterile
+    prefab: {fileID: 7675414585760229323, guid: 55b911caefe6ba140aa913b4b336531b, type: 3}
+    joints: 2
+    size: {x: 0.3533454, y: 0.06516871, z: 0.18976288}
+  - id: tray_sterilization_instrument_c03
+    displayName: Tray sterilization instrument
+    category: Sterile
+    prefab: {fileID: 8527841120698205893, guid: 07219ee60bb283a4d8825da8c8769c2c, type: 3}
+    joints: 2
+    size: {x: 0.35180634, y: 0.092518464, z: 0.18976288}

@@ -1,0 +1,59 @@
+{
+ "asset": "device_inhaler_a01",
+ "category": "Devices",
+ "trianglesSource": 62828,
+ "size": [
+  0.409,
+  0.21,
+  0.255
+ ],
+ "joints": [
+  {
+   "name": "button_01",
+   "kind": "press",
+   "node": "J_button_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "m",
+   "min": 0,
+   "max": 0.003,
+   "pivot": [
+    -0.1011,
+    0.0619,
+    -0.0
+   ],
+   "parts": [
+    "button_01_mesh_00"
+   ],
+   "clip": "button_01_operate"
+  },
+  {
+   "name": "maskcap_01",
+   "kind": "lid",
+   "node": "J_maskcap_01",
+   "parent": null,
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "unit": "deg",
+   "min": -100,
+   "max": 0,
+   "pivot": [
+    -0.0927,
+    0.1874,
+    0.0586
+   ],
+   "parts": [
+    "maskCap_01_mesh_00"
+   ],
+   "clip": "maskcap_01_operate"
+  }
+ ],
+ "showcaseClip": "Showcase"
+}

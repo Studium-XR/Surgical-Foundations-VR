@@ -1,0 +1,134 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8845734737873571875
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1921224806768685869}
+  - component: {fileID: 3877811701366167331}
+  - component: {fileID: 3731658476653234706}
+  m_Layer: 0
+  m_Name: SR_sign_hospital_board_b02
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1921224806768685869
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8845734737873571875}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3576955112758768712}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3877811701366167331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8845734737873571875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1702acc6fce3f94088a58037765ed3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: SurgicalFoundations.Runtime::SurgicalFoundations.Interaction.ArticulatedDevice
+  manifest: {fileID: 4900000, guid: e853bc04341bfec4b9943a73bae8898d, type: 3}
+  easeSpeed: 4
+  interactive: 1
+--- !u!65 &3731658476653234706
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8845734737873571875}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.011971585, y: 0.556129, z: 1.0006962}
+  m_Center: {x: 0, y: 0.2780645, z: 0}
+--- !u!1001 &4612402382771980683
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1921224806768685869}
+    m_Modifications:
+    - target: {fileID: -8952813311275223787, guid: 8bb35e97976391549a34cd2e3bc0830a, type: 3}
+      propertyPath: m_Name
+      value: sign_hospital_board_b02
+      objectReference: {fileID: 0}
+    - target: {fileID: -1035425223869268541, guid: 8bb35e97976391549a34cd2e3bc0830a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.00608097
+      objectReference: {fileID: 0}
+    - target: {fileID: -1035425223869268541, guid: 8bb35e97976391549a34cd2e3bc0830a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.00011494756
+      objectReference: {fileID: 0}
+    - target: {fileID: -1035425223869268541, guid: 8bb35e97976391549a34cd2e3bc0830a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.000000059604645
+      objectReference: {fileID: 0}
+    - target: {fileID: -1035425223869268541, guid: 8bb35e97976391549a34cd2e3bc0830a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1035425223869268541, guid: 8bb35e97976391549a34cd2e3bc0830a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1035425223869268541, guid: 8bb35e97976391549a34cd2e3bc0830a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1035425223869268541, guid: 8bb35e97976391549a34cd2e3bc0830a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1035425223869268541, guid: 8bb35e97976391549a34cd2e3bc0830a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1035425223869268541, guid: 8bb35e97976391549a34cd2e3bc0830a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1035425223869268541, guid: 8bb35e97976391549a34cd2e3bc0830a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: -4161369568681901532, guid: 8bb35e97976391549a34cd2e3bc0830a, type: 3}
+--- !u!4 &3576955112758768712 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -1035425223869268541, guid: 8bb35e97976391549a34cd2e3bc0830a, type: 3}
+  m_PrefabInstance: {fileID: 4612402382771980683}
+  m_PrefabAsset: {fileID: 0}
