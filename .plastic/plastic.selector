@@ -1,4 +1,0 @@
-repository "Surgical Foundations VR/Surgical Foundations VR 2026-09-29_12-15-15@11270597923045@cloud"
-  path "/"
-    br "/main"
-    co "/main"
