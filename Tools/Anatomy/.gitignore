@@ -1,0 +1,4 @@
+Source/*.zip
+Source/*.blend
+Output/
+*.log

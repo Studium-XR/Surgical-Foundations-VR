@@ -63,12 +63,17 @@ namespace SurgicalFoundations.UI
             canvas.worldCamera = Camera.main;
             go.AddComponent<CanvasScaler>().dynamicPixelsPerUnit = 2f;
             go.AddComponent<TrackedDeviceGraphicRaycaster>();
-            // To the learner's right, turned to face them; placed when the lobby loads and on recenter only.
-            go.AddComponent<WorldLockedPanel>().offset = new Vector3(1.45f, -0.05f, 0.85f);
+            // To the learner's right, turned to face them; placed when the lobby loads and on recenter only. The lobby's
+            // own panels stand on an arc about 1.6 m out: Recent attempts at -41°, Main ahead, Settings at +41° (to about
+            // +54° at its edge). This 1.5 m wide panel goes next along that arc, at +84°, so its edge (about 24° either
+            // side) clears Settings instead of cutting through it.
+            const float Radius = 1.65f, Angle = 84f;
+            go.AddComponent<WorldLockedPanel>().offset = new Vector3(
+                Radius * Mathf.Sin(Angle * Mathf.Deg2Rad), -0.05f, Radius * Mathf.Cos(Angle * Mathf.Deg2Rad));
 
             var bg = Img(root, UISprites.Rounded, Panel, Vector2.zero, new Vector2(W, H));
             bg.type = Image.Type.Sliced;
-            bg.pixelsPerUnitMultiplier = 0.25f;
+            bg.pixelsPerUnitMultiplier = 1f; // 24 px corners: restrained, not bubbly
             Label(root, "Studium XR · Courses", 38, FontStyles.Bold, Text, new Vector2(-W / 2 + 40, H / 2 - 52), new Vector2(700, 50));
             body = New("Body", root, Vector2.zero, new Vector2(W, H));
 
@@ -128,11 +133,11 @@ namespace SurgicalFoundations.UI
             {
                 var cc = c;
                 var e = CourseProgressStore.Get(c.id);
-                bool locked = !CourseProgressStore.PrerequisitesMet(c);
+                bool ready = CourseProgressStore.PrerequisitesMet(c);
                 var b = Button(body, new Vector2(x, y), new Vector2(390, 92), c == course ? CardOn : Card, () => { course = cc; lessonPage = 0; Draw(); });
-                Label(b, $"{c.code} · {c.level}", 15, FontStyles.Bold, locked ? Amber : Mint, new Vector2(-180, 28), new Vector2(360, 22));
+                Label(b, $"{c.code} · {c.level}", 15, FontStyles.Bold, ready ? Mint : Amber, new Vector2(-180, 28), new Vector2(360, 22));
                 Label(b, c.title, 21, FontStyles.Bold, Text, new Vector2(-180, 2), new Vector2(360, 30));
-                string state = e == null ? (locked ? "Prerequisites first" : $"{c.hours} h · {c.cmeCredits:0.#} CME") :
+                string state = e == null ? $"{c.hours} h · {c.cmeCredits:0.#} CME" + (ready ? "" : " · see recommended") :
                     e.status == EnrollmentStatus.Completed ? "Completed" : $"{Mathf.RoundToInt(e.progress * 100)}% complete";
                 Label(b, state, 16, FontStyles.Normal, Muted, new Vector2(-180, -26), new Vector2(360, 22));
                 if (e != null) Bar(b, new Vector2(0, -42), 360, e.progress);
@@ -160,7 +165,6 @@ namespace SurgicalFoundations.UI
             int pages = Mathf.Max(1, Mathf.CeilToInt(lessons.Count / (float)LessonsPerPage));
             lessonPage = Mathf.Clamp(lessonPage, 0, pages - 1);
             float ly = y - 140;
-            bool locked = !CourseProgressStore.PrerequisitesMet(course);
             foreach (var l in lessons.Skip(lessonPage * LessonsPerPage).Take(LessonsPerPage))
             {
                 var ll = l;
@@ -168,19 +172,21 @@ namespace SurgicalFoundations.UI
                 bool available = CourseSession.IsAvailable(l);
                 var b = Button(body, new Vector2(x0 + 330, ly), new Vector2(660, 62), Card, () => Open(ll));
                 Label(b, done ? "OK" : KindGlyph(l.kind), 20, FontStyles.Bold, done ? Mint : Muted, new Vector2(-314, 0), new Vector2(40, 30));
-                Label(b, l.title, 20, FontStyles.Bold, available && !locked ? Text : Muted, new Vector2(-270, 10), new Vector2(430, 28));
+                Label(b, l.title, 20, FontStyles.Bold, available ? Text : Muted, new Vector2(-270, 10), new Vector2(430, 28));
                 Label(b, $"{KindName(l.kind)} · {l.minutes} min" + (available ? "" : " · in development"), 15, FontStyles.Normal, available ? Muted : Amber, new Vector2(-270, -14), new Vector2(430, 22));
                 ly -= 70;
             }
             if (pages > 1) Pager(new Vector2(x0 + 330, -H / 2 + 50), lessonPage, pages, d => { lessonPage += d; Draw(); });
 
-            // Continue / prerequisites
-            if (locked)
+            // Continue, plus the courses recommended first. Prerequisites advise, they do not lock: every course can be
+            // started, as on Coursera, and the certificate rules (all lessons complete) are unchanged.
+            var missing = course.prerequisites.Where(p => CourseProgressStore.Get(p)?.status != EnrollmentStatus.Completed).ToList();
+            if (missing.Count > 0)
             {
-                var need = string.Join(", ", course.prerequisites.Select(p => CourseCatalogStore.Find(p)?.code ?? p));
-                Label(body, "Complete first: " + need, 18, FontStyles.Bold, Amber, new Vector2(x0, -H / 2 + 110), new Vector2(660, 26));
+                var need = string.Join(", ", missing.Select(p => CourseCatalogStore.Find(p)?.code ?? p));
+                var rec = Label(body, "Recommended first: " + need, 16, FontStyles.Bold, Amber, new Vector2(x0 + 320, -H / 2 + 110), new Vector2(340, 52));
+                rec.textWrappingMode = TextWrappingModes.Normal;
             }
-            else
             {
                 var next = lessons.FirstOrDefault(l => !CourseProgressStore.IsLessonDone(course.id, l.id) && CourseSession.IsAvailable(l));
                 if (next != null)
@@ -196,7 +202,7 @@ namespace SurgicalFoundations.UI
         void Open(Lesson l)
         {
             if (course == null) return;
-            if (!CourseProgressStore.PrerequisitesMet(course) || !CourseSession.IsAvailable(l)) { AudioManager.Instance?.Play(SoundId.UI_Denied); return; }
+            if (!CourseSession.IsAvailable(l)) { AudioManager.Instance?.Play(SoundId.UI_Denied); return; }
             lesson = l;
             question = 0; correct = 0; answered = false;
             CourseSession.Begin(course, l); // VR lessons load their scene from here
@@ -206,7 +212,7 @@ namespace SurgicalFoundations.UI
 
         void DrawReading()
         {
-            Label(body, $"{course.code} · Reading · {lesson.minutes} min", 18, FontStyles.Bold, Mint, new Vector2(-W / 2 + 40, H / 2 - 130), new Vector2(900, 26));
+            Label(body, $"{course.code} · {KindName(lesson.kind)} · {lesson.minutes} min", 18, FontStyles.Bold, Mint, new Vector2(-W / 2 + 40, H / 2 - 130), new Vector2(900, 26));
             Label(body, lesson.title, 34, FontStyles.Bold, Text, new Vector2(-W / 2 + 40, H / 2 - 180), new Vector2(1300, 44));
             var t = Label(body, lesson.content ?? lesson.summary, 26, FontStyles.Normal, Text, new Vector2(-W / 2 + 40, 20), new Vector2(W - 80, 520));
             t.textWrappingMode = TextWrappingModes.Normal;
@@ -280,6 +286,38 @@ namespace SurgicalFoundations.UI
         string feedback;
         bool lastRight;
 
+        // ─────────────────────────────── preview ───────────────────────────────
+        // Used by the course gallery capture tool: shows a page exactly as a learner sees it, without launching
+        // anything or recording progress.
+
+        /// <summary>Shows a course's page (its program selected, the right page of the course list).</summary>
+        public void ShowCourse(Course c)
+        {
+            if (c == null) return;
+            program = CourseCatalogStore.Programs.FirstOrDefault(p => p.courseIds.Contains(c.id) && p.id != "perioperative-practice")
+                      ?? CourseCatalogStore.Programs.FirstOrDefault(p => p.courseIds.Contains(c.id)) ?? program;
+            coursePage = program != null ? Mathf.Max(0, program.courseIds.IndexOf(c.id)) / CoursesPerPage : 0;
+            course = c; lesson = null; lessonPage = 0;
+            Draw();
+        }
+
+        /// <summary>Shows a reading, video or quiz; for a quiz, question <paramref name="index"/>, optionally answered correctly.</summary>
+        public void ShowLesson(Course c, Lesson l, int index = 0, bool answered = false)
+        {
+            ShowCourse(c);
+            lesson = l; question = index; correct = 0; this.answered = false;
+            if (answered && l.kind == LessonKind.Quiz && index < l.questions.Count)
+            {
+                var right = l.questions[index].options.FirstOrDefault(o => o.correct);
+                this.answered = true; lastRight = true;
+                feedback = "Correct. " + (right?.feedback ?? "");
+            }
+            Draw();
+        }
+
+        /// <summary>The panel's canvas, so a capture camera can frame it.</summary>
+        public RectTransform PanelRect => root;
+
         void Answer(QuizOption o)
         {
             if (answered) return;
@@ -345,7 +383,7 @@ namespace SurgicalFoundations.UI
         {
             var img = Img(parent, UISprites.Rounded, color, pos, size);
             img.type = Image.Type.Sliced;
-            img.pixelsPerUnitMultiplier = 0.5f;
+            img.pixelsPerUnitMultiplier = 2f; // 12 px corners on cards and buttons
             var b = img.gameObject.AddComponent<Button>();
             var c = b.colors;
             c.highlightedColor = new Color(0.85f, 0.97f, 0.94f); c.pressedColor = new Color(0.75f, 0.9f, 0.86f); c.fadeDuration = 0.06f;

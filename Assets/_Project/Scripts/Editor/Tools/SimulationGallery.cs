@@ -60,7 +60,7 @@ namespace SurgicalFoundations.EditorTools
             Fixed("SkillsLab", "skills_lab_3.png", l => l.LoadFrontend(SceneIds.SkillsLab), new Vector3(0.2f, 2.6f, 2.8f), new Vector3(0f, 0.6f, -0.8f), 80f),
 
             // Equipment lab: an Explore lesson's devices laid out in the skills lab.
-            new Shot { area = "EquipmentLab", file = "equipment_lab_1.png", load = l => { EquipmentLabRequest.Equipment = EquipmentLabSet(); l.LoadFrontend(SceneIds.SkillsLab); }, view = () => (new Vector3(0.75f, 1.62f, -0.15f), new Vector3(0.35f, 1.0f, -1.6f), 70f) },
+            new Shot { area = "EquipmentLab", file = "equipment_lab_1.png", load = l => { EquipmentLabRequest.Equipment = EquipmentLabSet(); l.LoadFrontend(SceneIds.SkillsLab); }, view = () => (new Vector3(0.1f, 1.62f, -0.1f), new Vector3(-0.2f, 1.0f, -1.6f), 74f) },
             new Shot { area = "EquipmentLab", file = "equipment_lab_2.png", load = null, view = () => (new Vector3(2.0f, 1.75f, -0.5f), new Vector3(0.3f, 0.9f, -1.6f), 70f) },
             new Shot { area = "EquipmentLab", file = "equipment_lab_3.png", load = null, view = () => FacePanel("Showroom_Panel", 1.0f, 0f, 62f) },
 

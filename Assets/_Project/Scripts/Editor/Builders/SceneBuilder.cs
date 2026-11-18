@@ -483,11 +483,11 @@ namespace SurgicalFoundations.EditorTools
             Lighting("SkillsLab", 14, new Color(0.05f, 0.06f, 0.06f), LightingRig.Profile.Lab, lights);
 
             Inst("TrainingProps/PROP_PegBoard", props, new Vector3(0.1f, 0.92f, 0.62f), 0);
-            var grasper = Inst("Instruments/INST_AtraumaticGrasper", props, new Vector3(-0.3f, 0.94f, 0.5f), Quaternion.Euler(0, 25, 90));
+            var grasper = Inst("Instruments/INST_AtraumaticGrasper", props, new Vector3(-0.3f, 0.94f, 0.5f), Quaternion.Euler(0, 0, 90)); // laid straight, parallel to the bench edge
             Kinematic(grasper);
             var diagram = Inst("TrainingProps/PROP_ControllerDiagram", props, new Vector3(0.62f, 1.25f, 0.62f), -35f);
             diagram.transform.localScale = Vector3.one * 2.5f; // enlarged for the tutorial callouts
-            TryInst("Equipment/EQ_Microscope", props, new Vector3(-0.5f, 0.92f, 0.78f), 30f);
+            TryInst("Equipment/EQ_Microscope", props, new Vector3(-0.5f, 0.92f, 0.78f), 0f);
             Inst("Equipment/EQ_BackTable", props, new Vector3(-2.3f, 0, 1.4f), 90f);
             TryInst("TrainingProps/PROP_OpenSurgerySet", props, new Vector3(-2.3f, 0.926f, 1.4f), 90f);
 
@@ -526,14 +526,15 @@ namespace SurgicalFoundations.EditorTools
             Inst("Equipment/EQ_ORTable", eq, Vector3.zero);
             Inst("Equipment/EQ_SurgicalLights", eq, Vector3.zero);
             Inst("Equipment/EQ_LapTower", eq, new Vector3(0.25f, 0, 1.25f), 180f);
-            // Head end, towards −Z: its swing-arm monitor reaches ~0.8 m sideways and would sit in the anaesthetist's face.
-            Inst("Equipment/EQ_AnaesthesiaMachine", eq, new Vector3(-1.85f, 0, -0.35f), 110f);
+            // Everything square to the walls (multiples of 90°), like a real theatre after the room is set:
+            // head end, towards −Z: its swing-arm monitor reaches ~0.8 m sideways and would sit in the anaesthetist's face.
+            Inst("Equipment/EQ_AnaesthesiaMachine", eq, new Vector3(-2.0f, 0, -0.35f), 90f);
             Inst("Equipment/EQ_MayoStand", eq, new Vector3(0.8f, 0, -0.7f), 0f);
             Inst("Equipment/EQ_BackTable", eq, new Vector3(2.0f, 0, -1.3f), 90f);
-            TryInst("Equipment/EQ_HeartLungMachine", eq, new Vector3(2.75f, 0, 2.55f), 225f);
+            TryInst("Equipment/EQ_HeartLungMachine", eq, new Vector3(2.7f, 0, 2.6f), 180f); // parked in the far corner, facing the room
             TryInst("Equipment/EQ_SurgeryLamp", eq, new Vector3(1.1f, 0, 0.6f), -90f);
-            TryInst("Equipment/EQ_PatientMonitor", eq, new Vector3(-1.05f, 0, 1.1f), 150f);
-            TryInst("Equipment/EQ_IVStand", eq, new Vector3(-1.05f, 0, -1.05f), 30f); // clear of the anaesthesia machine
+            TryInst("Equipment/EQ_PatientMonitor", eq, new Vector3(-1.05f, 0, 1.1f), 180f); // screen towards the team
+            TryInst("Equipment/EQ_IVStand", eq, new Vector3(-1.1f, 0, -0.95f), 0f); // clear of the anaesthesia machine
             TryInst("Equipment/EQ_OxygenCylinder", eq, new Vector3(-3.1f, 0, -0.45f), 90f);
             TryInst("Equipment/EQ_SupplyCabinet", eq, new Vector3(-3.2f, 0, -2.35f), 90f);
             TryInst("Equipment/EQ_StorageCabinet", eq, new Vector3(3.2f, 0, -2.6f), -90f);

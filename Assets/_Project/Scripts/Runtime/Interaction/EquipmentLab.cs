@@ -25,13 +25,18 @@ namespace SurgicalFoundations.Interaction
 
         // Skills lab (walls at ±3.1 m, training table ahead of the normal start spot): the open floor behind the start
         // spot is the showroom. The learner stands at LearnerSpot facing −Z; devices stand on DisplaySpot.
-        static readonly Vector3 LearnerSpot = new Vector3(0.6f, 0f, -0.45f);
-        static readonly Vector3 DisplaySpot = new Vector3(0.6f, 0f, -1.75f);
-        static readonly Vector3 PanelSpot = new Vector3(-0.45f, 1.42f, -1.25f);
+        // The display is centred on the open floor (clear of the wall cabinet and the parked wheelchair and trolley), and
+        // the panel stands well to the left, so even the anaesthesia machine's swing arms reach neither.
+        static readonly Vector3 LearnerSpot = new Vector3(0.3f, 0f, -0.45f);
+        static readonly Vector3 DisplaySpot = new Vector3(0.3f, 0f, -1.7f);
+        static readonly Vector3 PanelSpot = new Vector3(-1.3f, 1.42f, -1.15f);
 
         readonly List<SimReadyLibrary.Entry> exhibits = new List<SimReadyLibrary.Entry>();
         readonly List<GameObject> spawned = new List<GameObject>();
         GameObject current, plinth;
+
+        /// <summary>The device on display now (for the course gallery capture tool).</summary>
+        public GameObject Current => current;
         int index;
         TextMeshProUGUI nameText, infoText, countText;
         RectTransform listArea;
@@ -197,7 +202,7 @@ namespace SurgicalFoundations.Interaction
             go.AddComponent<TrackedDeviceGraphicRaycaster>();
             var bg = Img(rt, UI.UISprites.Rounded, new Color(0.09f, 0.094f, 0.11f, 0.95f), Vector2.zero, rt.sizeDelta);
             bg.type = Image.Type.Sliced;
-            bg.pixelsPerUnitMultiplier = 0.3f;
+            bg.pixelsPerUnitMultiplier = 1f; // 24 px corners: restrained, not bubbly
 
             Text(rt, "Equipment", 20, FontStyles.Bold, new Color(0.36f, 0.88f, 0.78f), new Vector2(0, 340), new Vector2(560, 30));
             nameText = Text(rt, "", 36, FontStyles.Bold, new Color(0.9f, 0.91f, 0.93f), new Vector2(0, 295), new Vector2(560, 48));
@@ -284,7 +289,7 @@ namespace SurgicalFoundations.Interaction
         {
             var img = Img(parent, UI.UISprites.Rounded, primary ? new Color(0.36f, 0.88f, 0.78f) : new Color(0.15f, 0.16f, 0.18f), pos, size);
             img.type = Image.Type.Sliced;
-            img.pixelsPerUnitMultiplier = 0.5f;
+            img.pixelsPerUnitMultiplier = 2f; // 12 px corners on cards and buttons
             var b = img.gameObject.AddComponent<UnityEngine.UI.Button>();
             var c = b.colors;
             c.highlightedColor = new Color(0.8f, 0.96f, 0.92f);

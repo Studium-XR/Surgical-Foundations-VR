@@ -175,9 +175,12 @@ namespace SurgicalFoundations.UI
         void Advance()
         {
             if (advanced) return;
-            advanced = true;
             var sequence = GetComponentInParent<StepSequence>();
-            if (sequence != null) sequence.Next();
+            if (sequence == null) return;
+            advanced = true;
+            // The step after this panel, whichever step is showing: on first launch with a saved account this runs from
+            // OnEnable before the sequence has shown anything, and Next() would have shown the sign-in step again.
+            sequence.ShowAfter(gameObject);
         }
 
         // Same monospacing the builder gives these labels; setting .text replaces the builder's tags.

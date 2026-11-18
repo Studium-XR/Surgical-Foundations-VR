@@ -24,8 +24,9 @@ namespace SurgicalFoundations.Curriculum
         {
             get
             {
+                // A guest keeps their own progress even when an account is saved on the headset.
                 var auth = BackendServices.Instance != null ? BackendServices.Instance.Auth : null;
-                return auth != null && !string.IsNullOrEmpty(auth.UserId) ? auth.UserId : "guest";
+                return auth != null && !auth.IsGuest && !string.IsNullOrEmpty(auth.UserId) ? auth.UserId : "guest";
             }
         }
 
@@ -106,7 +107,7 @@ namespace SurgicalFoundations.Curriculum
         static void Queue(string kind, string courseId, object body)
         {
             var b = BackendServices.Instance;
-            if (b == null || b.Queue == null || b.Auth == null || string.IsNullOrEmpty(b.Auth.UserId)) return; // guests stay local
+            if (b == null || b.Queue == null || b.Auth == null || b.Auth.IsGuest || string.IsNullOrEmpty(b.Auth.UserId)) return; // guests stay local
             b.Queue.Enqueue(kind, b.Auth.UserId, courseId, body);
         }
 

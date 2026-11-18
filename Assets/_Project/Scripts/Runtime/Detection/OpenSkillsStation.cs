@@ -580,7 +580,7 @@ namespace SurgicalFoundations.Detection
 
             var bg = Panel(rt, "Background", UISprites.Rounded, new Color(0.06f, 0.11f, 0.12f, 0.96f), Vector2.zero, rt.sizeDelta);
             bg.type = Image.Type.Sliced;
-            bg.pixelsPerUnitMultiplier = 0.4f;
+            bg.pixelsPerUnitMultiplier = 1f; // 24 px corners: restrained, not bubbly
             stepText = Text(rt, 18, new Color(0.36f, 0.88f, 0.78f), new Vector2(0, 175), new Vector2(560, 30), FontStyles.Bold);
             titleText = Text(rt, 34, new Color(0.91f, 0.94f, 0.94f), new Vector2(0, 138), new Vector2(560, 44), FontStyles.Bold);
             bodyText = Text(rt, 22, new Color(0.75f, 0.81f, 0.81f), new Vector2(0, -10), new Vector2(560, 240), FontStyles.Normal);

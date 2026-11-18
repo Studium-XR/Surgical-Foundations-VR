@@ -88,7 +88,7 @@ namespace SurgicalFoundations.Interaction
             {
                 var look = i == 0 ? left : right;
                 var controller = space.Find(i == 0 ? "Left Controller" : "Right Controller");
-                if (controller != null && controller.gameObject.activeInHierarchy) ShowHand(i, controller, look == HandLook.Bare ? null : For(look));
+                if (controller != null && controller.gameObject.activeInHierarchy) ShowHand(i, controller, For(look));
                 else RemoveHand(i);
             }
         }
@@ -112,8 +112,8 @@ namespace SurgicalFoundations.Interaction
                 r.enabled = false;
                 hiddenController[i].Add(r);
             }
-            // Bare: the XRI hand visual's own materials, exactly as the tracked hands look while scrubbing.
-            // Gloved / contaminated: the glove material on every slot.
+            // Skin, glove or contaminated glove on every slot, the same as the tracked hands get. (The XRI demo
+            // material is see-through: the far fingers show through the palm, so each hand read as two hands.)
             foreach (var r in controllerHands[i].GetComponentsInChildren<SkinnedMeshRenderer>())
             {
                 if (!originalMaterials.TryGetValue(r, out var original)) originalMaterials[r] = original = r.sharedMaterials;

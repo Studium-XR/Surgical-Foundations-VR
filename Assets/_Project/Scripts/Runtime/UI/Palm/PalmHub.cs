@@ -219,7 +219,7 @@ namespace SurgicalFoundations.UI
 
             var bg = Img(card, "Panel", UISprites.Rounded, Panel, Vector2.zero, new Vector2(W, H));
             bg.type = Image.Type.Sliced;
-            bg.pixelsPerUnitMultiplier = 0.3f;
+            bg.pixelsPerUnitMultiplier = 1f; // 24 px corners: restrained, not bubbly
 
             // Header: clock · stage · mode
             clock = Label(card, "00:00", 40, FontStyles.Bold, Text, new Vector2(-W / 2 + 28, H / 2 - 44), new Vector2(170, 50), TextAlignmentOptions.Left);
@@ -242,7 +242,7 @@ namespace SurgicalFoundations.UI
             // Objectives overlay (covers the buttons while shown; tap to close).
             var ov = Img(card, "ObjectivesPanel", UISprites.Rounded, Hex("1E2024", 0.98f), new Vector2(0, -70), new Vector2(W - 32, H - 130));
             ov.type = Image.Type.Sliced;
-            ov.pixelsPerUnitMultiplier = 0.3f;
+            ov.pixelsPerUnitMultiplier = 1f; // 24 px corners: restrained, not bubbly
             objectivesPanel = ov.gameObject;
             objectives = Label(ov.rectTransform, "", 19, FontStyles.Normal, Text, Vector2.zero, new Vector2(W - 72, H - 160), TextAlignmentOptions.TopLeft);
             objectives.textWrappingMode = TextWrappingModes.Normal;
@@ -254,7 +254,7 @@ namespace SurgicalFoundations.UI
         {
             var t = Img(card, "Btn_" + name, UISprites.Rounded, TileBg, pos, new Vector2(148, 112));
             t.type = Image.Type.Sliced;
-            t.pixelsPerUnitMultiplier = 0.4f;
+            t.pixelsPerUnitMultiplier = 2f;
             var b = t.gameObject.AddComponent<Button>();
             var colors = b.colors;
             colors.highlightedColor = TileOn; colors.pressedColor = TileOn * 0.9f; colors.selectedColor = Color.white; colors.fadeDuration = 0.06f;

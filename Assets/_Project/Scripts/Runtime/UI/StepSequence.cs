@@ -33,6 +33,17 @@ namespace SurgicalFoundations.UI
 
         public void Next() => GoTo(index + 1);
 
+        /// <summary>
+        /// Shows the step after <paramref name="step"/>. Unlike <see cref="Next"/> this does not depend on which step is
+        /// showing, so a panel can move on from its own OnEnable, before this sequence's Start has shown step 0.
+        /// </summary>
+        public void ShowAfter(GameObject step)
+        {
+            int i = steps != null ? System.Array.IndexOf(steps, step) : -1;
+            if (i < 0) { Next(); return; }
+            GoTo(i + 1);
+        }
+
         /// <summary>Jump to a step (branches). Past the last step ends the stage.</summary>
         public void GoTo(int i)
         {

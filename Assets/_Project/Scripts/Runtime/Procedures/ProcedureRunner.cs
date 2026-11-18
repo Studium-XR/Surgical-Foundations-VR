@@ -632,7 +632,7 @@ namespace SurgicalFoundations.Procedures
             go.AddComponent<TrackedDeviceGraphicRaycaster>();
             var bg = Img(panel, UI.UISprites.Rounded, new Color(0.09f, 0.094f, 0.11f, 0.95f), Vector2.zero, panel.sizeDelta);
             bg.type = Image.Type.Sliced;
-            bg.pixelsPerUnitMultiplier = 0.25f;
+            bg.pixelsPerUnitMultiplier = 1f; // 24 px corners: restrained, not bubbly
 
             titleText = Text(panel, $"{def.title}", 34, new Vector2(0, 330), new Vector2(1020, 46), FontStyles.Bold);
             statusText = Text(panel, "", 20, new Vector2(0, 290), new Vector2(1020, 30), FontStyles.Normal, new Color(0.54f, 0.56f, 0.59f));
@@ -688,7 +688,7 @@ namespace SurgicalFoundations.Procedures
         {
             var img = Img(parent, UI.UISprites.Rounded, new Color(0.13f, 0.14f, 0.165f), pos, size);
             img.type = Image.Type.Sliced;
-            img.pixelsPerUnitMultiplier = 0.5f;
+            img.pixelsPerUnitMultiplier = 2f; // 12 px corners on cards and buttons
             var b = img.gameObject.AddComponent<Button>();
             var c = b.colors;
             c.highlightedColor = new Color(0.75f, 0.95f, 0.9f);

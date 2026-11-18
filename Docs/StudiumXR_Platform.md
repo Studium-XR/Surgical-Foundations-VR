@@ -10,13 +10,22 @@ palm-anchored interface, per-headset quality, and the rigged NVIDIA SimReady equ
 | Source of truth | `Tools/Curriculum/build_catalog.py` (compact course definitions) |
 | Generated | `Assets/_Project/Resources/Curriculum/catalog.json` (shipped in the app) and `Studium-XR-Backend/src/SurgicalFoundations.Api/Catalog/catalog.json` (embedded in the API) |
 | Shape | programs → courses → modules → lessons (Reading, Video, Quiz, VR lab, VR assessment, Explore in 3D) |
-| Size | 6 programs, 32 courses, 158 lessons |
+| Size | 6 programs, 32 courses, 162 lessons; 34 quizzes with 5 questions each (170, every option with feedback) |
+| Gallery | [CourseGallery.md](CourseGallery.md): every part of the courses outside Surgical Foundations, captured by **Tools → Capture Course Gallery** |
 
 Programs: Surgical Foundations (8 courses), Minimally Invasive Surgery (5), General Surgery Procedures (5), Trauma and
 Emergency Surgery (4), Surgical Specialties (8: orthopaedics, vascular, plastics, ENT, urology, cardiothoracic,
 neurosurgery, obstetrics), Perioperative Practice (2 + shared).
 
-Each course carries outcomes, skills, the frameworks it maps to, hours, CME credits and prerequisites. Edit the Python
+Questions beyond each course's first ones live in the `MORE_QUESTIONS` bank in `build_catalog.py`; the build fails if a
+quiz has fewer than five questions or a bank entry no longer matches a quiz. MIS-201 has a **Diagnostic laparoscopy**
+module built on Children's Hospital Colorado's film *Diagnostic Laparoscopy for Endometriosis*
+(youtube.com/watch?v=KJfQnlGgBgA) and its procedure page: watch-along notes as a Video lesson (the headset shows the
+notes and the link to open on a phone or computer; it does not stream YouTube) and a five-question check.
+
+Each course carries outcomes, skills, the frameworks it maps to, hours, CME credits and prerequisites. Prerequisites are
+recommendations, as on Coursera: every course in every program can be started, and the course browser shows
+"Recommended first: …" in amber until those courses are complete. Certificates still need every lesson complete. Edit the Python
 file and run `py -3 -I Tools/Curriculum/build_catalog.py`; bump `VERSION` so headsets pick up the API's newer copy.
 
 **Clinical sign-off:** the readings and questions were drafted from published guidance (WHO checklist, WHO/NICE SSI,
@@ -27,7 +36,7 @@ FLS/FUSE outlines, ACS/APDS/ASE, ISCP). They must be reviewed by a surgical educ
 | Lesson kind | Status |
 |---|---|
 | Reading, Quiz | Work in the lobby course browser, offline, with feedback per answer |
-| Explore in 3D | Work: the skills lab lays out the lesson's SimReady equipment with working parts |
+| Explore in 3D | Work: a showroom in the skills lab shows the lesson's devices one at a time (Previous / Next / Turn / Operate, parts worked by hand) |
 | VR lab / assessment: `lap-prep`, `lap-access`, `lap-operate`, `lap-close`, `lap-foundations`, `skills-lab` | Launch the existing theatre stages; a single-stage lesson ends at that stage's summary |
 | VR lab / assessment: the other 19 (suturing, minor ops, open and laparoscopic appendicectomy, hernia, laparotomy, anastomosis, trauma bay, chest drain, eFAST, vascular access, catheterisation, ENT, orthopaedic fixation, vascular anastomosis, skin graft, burr hole, caesarean, cardiac tamponade) | Procedure labs (below) |
 
@@ -60,6 +69,11 @@ snap zone that lines the plug up in its socket, the matching socket glowing (bri
 the plug returning to its coil if dropped anywhere else, and cables drawn with a natural sag that never tangles. The lab
 "Setting up the theatre equipment" (SF-101, MIS-201) is all set-up; open appendicectomy, hernia, laparotomy, laparoscopic
 appendicectomy, caesarean, trauma bay and cardiac labs start with their own set-up. 20 labs, 253 steps, 45 plug-ins.
+
+**Smoke test:** in play mode (started from 00_Bootstrap), **Tools → Test Course Lessons** launches every VR lab,
+assessment and Explore lesson outside Surgical Foundations from the lobby (the "all programs" item includes it) and writes
+`Logs/CourseLessonSmokeTest.txt`. Last run: 45/45 lessons start. The first procedure lab of an editor session takes
+10–15 s to appear while its models load; later ones take 1–3 s.
 
 These are procedural walkthroughs with real instruments and targets, not tissue simulation: incisions, sutures and
 dissection are judged by instrument, site and sequence.
@@ -142,13 +156,21 @@ CC BY 4.0."
 unusual door, the opening angle of an instrument). Check a model with `preview_rig.py` and fix it in
 `rig_overrides.json` before it is used in an assessed lesson.
 
-## 5 · Rigged equipment in the main scenes
+## 5 · Rigged equipment in the main scenes, kept tidy
 
 **Surgical Foundations → Build → 1k · Dress Scenes with SimReady Equipment** puts working SimReady devices into the
-theatre (and so into every stage played on top of it) and the skills lab: ventilator, diathermy generator on its cart,
-suction pump, infusion pump stand, emergency trolley with defibrillator; utility cart, wheelchair, emergency trolley,
-bedside lamp and blood pressure monitor. Each is turned so its controls face into the room, and its drawers, doors,
-knobs and buttons work by hand exactly as in the equipment lab. Positions are in `SceneEquipmentDressing.cs`.
+theatre (and so into every stage played on top of it) and the skills lab, organised rather than scattered: every device
+stands with its back to a wall, square to it (multiples of 90°), controls facing into the room, in evenly spaced rows.
+Theatre: an equipment bay on the far wall (ventilator, suction pump, infusion stand, diathermy generator on its cart,
+two slots kept free) and the emergency trolley with defibrillator flush on the right wall. Skills lab: emergency trolley
+and wheelchair along the back wall, utility cart on the left wall. Positions are in `SceneEquipmentDressing.cs`.
+
+**Procedure labs** never duplicate what the theatre already has: they borrow the bay's devices and the theatre's own
+monitor, tower and IV stand, move what they need to fixed spots (head end, foot end, the free bay slots), and lay the
+hand-held items on the instrument trolley beside the learner in sorted rows (instruments first, long axis across).
+
+**Equipment lab (Explore lessons)** is a showroom: one device at a time on a clear display spot in the skills lab, the
+learner placed facing it, with a panel listing the lesson's devices.
 
 ## 6 · Theatre staff
 

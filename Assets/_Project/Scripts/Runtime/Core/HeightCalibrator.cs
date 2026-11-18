@@ -75,10 +75,42 @@ namespace SurgicalFoundations.Core
 
         public void MarkDirty() => dirty = true;
 
+        float lastGoodY;
+        bool sceneJustLoaded;
+
+        void OnEnable() => UnityEngine.SceneManagement.SceneManager.sceneLoaded += OnSceneLoaded;
+        void OnDisable() => UnityEngine.SceneManagement.SceneManager.sceneLoaded -= OnSceneLoaded;
+        void OnSceneLoaded(UnityEngine.SceneManagement.Scene s, UnityEngine.SceneManagement.LoadSceneMode m) => sceneJustLoaded = true;
+
+        /// <summary>
+        /// Puts the camera offset back where it was before a scene load. XROrigin only ever changes its height on a
+        /// recenter, but the XRI Interaction Simulator (desktop testing) sets the offset's world position to a stale
+        /// value on every scene load, even when XR Simulation is not the active loader. Combined with the rig dropping
+        /// under gravity while the old floor is unloaded, that left the camera metres away from the rig, often above
+        /// the theatre ceiling (a black view). Called by the scene loader before it places the rig, and every frame
+        /// here. On a headset the offset is already where it was, so this changes nothing.
+        /// </summary>
+        public void RestoreOffset()
+        {
+            if (origin == null || origin.CameraFloorOffsetObject == null) return;
+            var t = origin.CameraFloorOffsetObject.transform;
+            var p = t.localPosition;
+            bool moved = Mathf.Abs(p.x) > 0.001f || Mathf.Abs(p.z) > 0.001f;
+            if (!moved && !sceneJustLoaded) return;
+            sceneJustLoaded = false;
+            t.localPosition = new Vector3(0f, lastGoodY, 0f);
+        }
+
+        static bool SimulatorRunning() =>
+            Application.isEditor &&
+            FindAnyObjectByType<UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation.XRInteractionSimulator>() != null;
+
         void LateUpdate()
         {
             if (origin == null || origin.Camera == null || origin.CameraFloorOffsetObject == null) return;
             offset = origin.CameraFloorOffsetObject.transform;
+            RestoreOffset();
+            lastGoodY = offset.localPosition.y;
 
             // XROrigin puts the offset back to 0 on a recenter or tracking-origin change; that needs a fresh calibration.
             if (!float.IsNaN(applied) && Mathf.Abs(offset.localPosition.y - applied) > 0.001f) dirty = true;
@@ -88,7 +120,10 @@ namespace SurgicalFoundations.Core
             var headY = origin.Camera.transform.localPosition.y;
             stableTime = Mathf.Abs(headY - lastHeadY) < 0.02f ? stableTime + Time.unscaledDeltaTime : 0f;
             lastHeadY = headY;
-            if (headY < 0.3f || stableTime < 0.5f) return;
+            // A real head below 30 cm is not tracked yet. The desktop XR Interaction Simulator's head starts at 0, though,
+            // and never "arrives", so with the simulator running the learner is lifted from wherever the head is.
+            if (stableTime < 0.5f) return;
+            if (headY < 0.3f && !SimulatorRunning()) return;
 
             var seated = SessionManager.Instance != null && SessionManager.Instance.Settings.posture == Posture.Seated;
             var target = seated ? seatedEyeHeight : minStandingEyeHeight;

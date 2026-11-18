@@ -136,6 +136,7 @@ namespace SurgicalFoundations.Core
             if (xrOrigin == null) xrOrigin = FindAnyObjectByType<XROrigin>();
             if (xrOrigin == null || t == null) return;
             workSpot = t;
+            if (HeightCalibrator.Instance != null) HeightCalibrator.Instance.RestoreOffset();
             xrOrigin.MatchOriginUpCameraForward(Vector3.up, Vector3.ProjectOnPlane(t.forward, Vector3.up).normalized);
             var cameraHeight = xrOrigin.CameraInOriginSpaceHeight;
             xrOrigin.MoveCameraToWorldLocation(t.position + Vector3.up * cameraHeight);

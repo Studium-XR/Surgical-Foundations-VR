@@ -369,12 +369,16 @@ namespace SurgicalFoundations.EditorTools
             var model = b.Group("Model", Vector3.zero);
             foreach (var p in parts) PlacePart(p, model, m);
             var hooks = PartBounds(parts, m, "hooks_");
-            var bag = new Vector3(hooks.max.x - 0.03f, hooks.min.y - 0.12f, hooks.center.z); // on the outer hook
-            b.Box("IVBag", bag, new Vector3(0.11f, 0.19f, 0.035f), "Hosp_IVBag");
-            b.Cyl("IVLine", new Vector3(bag.x, bag.y - 0.5f, bag.z), 0.004f, 0.82f, "Hosp_IVBag");
+            var hook = new Vector3(hooks.max.x - 0.03f, hooks.min.y + 0.01f, hooks.center.z); // the outer hook
+            if (!HangIVBag(b, hook)) // fallback when Imports/iv_supplies.glb is missing
+            {
+                var bag = hook + Vector3.down * 0.13f;
+                b.Box("IVBag", bag, new Vector3(0.11f, 0.19f, 0.035f), "Hosp_IVBag");
+                b.Cyl("IVLine", new Vector3(bag.x, bag.y - 0.5f, bag.z), 0.004f, 0.82f, "Hosp_IVBag");
+            }
             b.FitColliderFromRenderers();
             b.Info("EQ-X5", "IV stand with infusion bag", "Equipment", AssetRelease.MVP, 20100,
-                "NVIDIA SimReady IV_pole_a01 (CC BY 4.0) with a procedural infusion bag.").isPlaceholder = false;
+                "NVIDIA SimReady IV_pole_a01 (CC BY 4.0) with the 1 L bag from Imports/iv_supplies.glb.").isPlaceholder = false;
             b.Save(Folder("Equipment"));
             return true;
         }

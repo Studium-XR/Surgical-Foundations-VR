@@ -423,7 +423,7 @@ namespace SurgicalFoundations.UI
             var bg = Img(root, "Panel", UISprites.Rounded, Panel, Vector2.zero, new Vector2(Width, Height));
             bg.type = Image.Type.Sliced;
             bg.raycastTarget = true; // catches rays between controls so they don't fall through to the scene
-            bg.pixelsPerUnitMultiplier = 0.25f; // bigger corner radius
+            bg.pixelsPerUnitMultiplier = 1f; // 24 px corners: restrained, not bubbly
 
             Label(root, "Quick settings", 34, FontStyles.Bold, Text, new Vector2(-Width / 2 + 40, Height / 2 - 48), new Vector2(600, 44), TextAlignmentOptions.Left);
             Label(root, "Adjust your view and training aids", 20, FontStyles.Normal, TextMuted, new Vector2(-Width / 2 + 40, Height / 2 - 84), new Vector2(600, 30), TextAlignmentOptions.Left);
@@ -470,7 +470,7 @@ namespace SurgicalFoundations.UI
                 var pos = ListCentre + new Vector2(0, (VisibleRows / 2 - r) * (RowH + RowGap));
                 var row = Img(root, $"Row_{r}", UISprites.Rounded, Row, pos, new Vector2(RowW, RowH));
                 row.type = Image.Type.Sliced;
-                row.pixelsPerUnitMultiplier = 1.4f;
+                row.pixelsPerUnitMultiplier = 2f;
                 var bar = Img(row.rectTransform, "Bar", UISprites.Rounded, Mint, new Vector2(-RowW / 2 + 6, 0), new Vector2(5, RowH - 22));
                 bar.type = Image.Type.Sliced;
                 bar.pixelsPerUnitMultiplier = 8f;
@@ -504,7 +504,7 @@ namespace SurgicalFoundations.UI
 
             var save = Img(root, "Save", UISprites.Rounded, Hex("2C2F35"), new Vector2(-Width / 2 + 330, -Height / 2 + 56), new Vector2(260, 64));
             save.type = Image.Type.Sliced;
-            save.pixelsPerUnitMultiplier = 1.2f;
+            save.pixelsPerUnitMultiplier = 2f;
             Label(save.rectTransform, "Save changes", 24, FontStyles.Normal, Text, Vector2.zero, new Vector2(240, 60), TextAlignmentOptions.Center);
             save.gameObject.AddComponent<Button>().onClick.AddListener(() => Close(true));
 

@@ -1,5 +1,5 @@
 {
- "version": 2,
+ "version": 3,
  "programs": [
   {
    "id": "surgical-foundations",
@@ -160,8 +160,8 @@
       {
        "title": "Check: theatre and team",
        "kind": "Quiz",
-       "minutes": 6,
-       "summary": "2 questions with feedback.",
+       "minutes": 10,
+       "summary": "5 questions with feedback.",
        "questions": [
         {
          "prompt": "Who is primarily responsible for the instrument and swab count?",
@@ -204,6 +204,69 @@
           }
          ],
          "id": "sf-101-m1-l5-q2"
+        },
+        {
+         "prompt": "Theatre doors are kept closed during a case mainly to…",
+         "options": [
+          {
+           "text": "Keep the positive-pressure airflow that pushes contaminated air out",
+           "correct": true,
+           "feedback": "Opening doors disrupts the ventilation that protects the sterile field."
+          },
+          {
+           "text": "Reduce noise",
+           "correct": false,
+           "feedback": "Not quite: Opening doors disrupts the ventilation that protects the sterile field."
+          },
+          {
+           "text": "Keep the room warm",
+           "correct": false,
+           "feedback": "Not quite: Opening doors disrupts the ventilation that protects the sterile field."
+          }
+         ],
+         "id": "sf-101-m1-l5-q3"
+        },
+        {
+         "prompt": "The circulating practitioner…",
+         "options": [
+          {
+           "text": "Opens supplies, keeps records and supports the scrubbed team from outside the sterile field",
+           "correct": true,
+           "feedback": "The circulator is unscrubbed and links the sterile field to the rest of the theatre."
+          },
+          {
+           "text": "Hands instruments to the surgeon",
+           "correct": false,
+           "feedback": "That is the scrub practitioner."
+          },
+          {
+           "text": "Gives the anaesthetic",
+           "correct": false,
+           "feedback": "Not quite: The circulator is unscrubbed and links the sterile field to the rest of the theatre."
+          }
+         ],
+         "id": "sf-101-m1-l5-q4"
+        },
+        {
+         "prompt": "If you are unsure whether an item is still sterile, you should…",
+         "options": [
+          {
+           "text": "Treat it as unsterile and replace it",
+           "correct": true,
+           "feedback": "When in doubt, it is not sterile."
+          },
+          {
+           "text": "Use it if it looks clean",
+           "correct": false,
+           "feedback": "Not quite: When in doubt, it is not sterile."
+          },
+          {
+           "text": "Wipe it with alcohol and use it",
+           "correct": false,
+           "feedback": "Not quite: When in doubt, it is not sterile."
+          }
+         ],
+         "id": "sf-101-m1-l5-q5"
         }
        ],
        "passScore": 70,
@@ -227,8 +290,8 @@
       {
        "title": "Check: the checklist",
        "kind": "Quiz",
-       "minutes": 6,
-       "summary": "2 questions with feedback.",
+       "minutes": 10,
+       "summary": "5 questions with feedback.",
        "questions": [
         {
          "prompt": "When is the Time Out performed?",
@@ -271,6 +334,69 @@
           }
          ],
          "id": "sf-101-m2-l2-q2"
+        },
+        {
+         "prompt": "The three phases of the WHO Surgical Safety Checklist are…",
+         "options": [
+          {
+           "text": "Sign In, Time Out, Sign Out",
+           "correct": true,
+           "feedback": "Before induction, before incision and before the patient leaves theatre."
+          },
+          {
+           "text": "Consent, Incision, Closure",
+           "correct": false,
+           "feedback": "Not quite: Before induction, before incision and before the patient leaves theatre."
+          },
+          {
+           "text": "Arrival, Anaesthesia, Recovery",
+           "correct": false,
+           "feedback": "Not quite: Before induction, before incision and before the patient leaves theatre."
+          }
+         ],
+         "id": "sf-101-m2-l2-q3"
+        },
+        {
+         "prompt": "Sign In takes place…",
+         "options": [
+          {
+           "text": "Before induction of anaesthesia",
+           "correct": true,
+           "feedback": "Identity, site, consent, allergies, airway and blood loss risk are confirmed while the patient can still answer."
+          },
+          {
+           "text": "After the skin incision",
+           "correct": false,
+           "feedback": "Not quite: Identity, site, consent, allergies, airway and blood loss risk are confirmed while the patient can still answer."
+          },
+          {
+           "text": "In the recovery room",
+           "correct": false,
+           "feedback": "Not quite: Identity, site, consent, allergies, airway and blood loss risk are confirmed while the patient can still answer."
+          }
+         ],
+         "id": "sf-101-m2-l2-q4"
+        },
+        {
+         "prompt": "At Sign Out the team confirms…",
+         "options": [
+          {
+           "text": "The procedure, that counts are complete, specimen labels and any equipment problems",
+           "correct": true,
+           "feedback": "Sign Out closes the loop before the patient leaves."
+          },
+          {
+           "text": "Only the patient's name",
+           "correct": false,
+           "feedback": "Not quite: Sign Out closes the loop before the patient leaves."
+          },
+          {
+           "text": "The next patient on the list",
+           "correct": false,
+           "feedback": "Not quite: Sign Out closes the loop before the patient leaves."
+          }
+         ],
+         "id": "sf-101-m2-l2-q5"
         }
        ],
        "passScore": 70,
@@ -311,8 +437,8 @@
       {
        "title": "Check: scrubbing",
        "kind": "Quiz",
-       "minutes": 6,
-       "summary": "2 questions with feedback.",
+       "minutes": 10,
+       "summary": "5 questions with feedback.",
        "questions": [
         {
          "prompt": "Which part of a sterile gown is considered sterile?",
@@ -355,6 +481,69 @@
           }
          ],
          "id": "sf-101-m3-l4-q2"
+        },
+        {
+         "prompt": "At the first scrub of the day you should also…",
+         "options": [
+          {
+           "text": "Clean under the nails with a nail pick",
+           "correct": true,
+           "feedback": "Subungual spaces hold most of the hand's bacteria."
+          },
+          {
+           "text": "Skip the forearms",
+           "correct": false,
+           "feedback": "Not quite: Subungual spaces hold most of the hand's bacteria."
+          },
+          {
+           "text": "Put gloves on before washing",
+           "correct": false,
+           "feedback": "Not quite: Subungual spaces hold most of the hand's bacteria."
+          }
+         ],
+         "id": "sf-101-m3-l4-q3"
+        },
+        {
+         "prompt": "In closed gloving…",
+         "options": [
+          {
+           "text": "The hands stay inside the gown cuffs while the gloves go on",
+           "correct": true,
+           "feedback": "Bare hands never touch the outside of the gown or gloves."
+          },
+          {
+           "text": "The circulator puts your gloves on",
+           "correct": false,
+           "feedback": "Not quite: Bare hands never touch the outside of the gown or gloves."
+          },
+          {
+           "text": "Gloves go on before the gown",
+           "correct": false,
+           "feedback": "Not quite: Bare hands never touch the outside of the gown or gloves."
+          }
+         ],
+         "id": "sf-101-m3-l4-q4"
+        },
+        {
+         "prompt": "Your glove is punctured during the case. You…",
+         "options": [
+          {
+           "text": "Step back and have the glove changed (and the sharp checked)",
+           "correct": true,
+           "feedback": "A puncture breaks the barrier for you and the patient."
+          },
+          {
+           "text": "Carry on until the end",
+           "correct": false,
+           "feedback": "Not quite: A puncture breaks the barrier for you and the patient."
+          },
+          {
+           "text": "Wipe the glove with alcohol",
+           "correct": false,
+           "feedback": "Not quite: A puncture breaks the barrier for you and the patient."
+          }
+         ],
+         "id": "sf-101-m3-l4-q5"
         }
        ],
        "passScore": 70,
@@ -471,8 +660,8 @@
       {
        "title": "Check: name the family",
        "kind": "Quiz",
-       "minutes": 6,
-       "summary": "2 questions with feedback.",
+       "minutes": 10,
+       "summary": "5 questions with feedback.",
        "questions": [
         {
          "prompt": "Which forceps should be used to hold bowel wall?",
@@ -515,6 +704,69 @@
           }
          ],
          "id": "sf-102-m1-l3-q2"
+        },
+        {
+         "prompt": "Toothed dissecting forceps are best for…",
+         "options": [
+          {
+           "text": "Skin and fascia",
+           "correct": true,
+           "feedback": "Teeth grip tough tissue securely; use non-toothed forceps on delicate tissue."
+          },
+          {
+           "text": "Bowel and vessels",
+           "correct": false,
+           "feedback": "Teeth crush and tear delicate tissue."
+          },
+          {
+           "text": "Nerves",
+           "correct": false,
+           "feedback": "Not quite: Teeth grip tough tissue securely; use non-toothed forceps on delicate tissue."
+          }
+         ],
+         "id": "sf-102-m1-l3-q3"
+        },
+        {
+         "prompt": "Artery forceps (haemostats) are used to…",
+         "options": [
+          {
+           "text": "Clamp bleeding vessels before tying or diathermy",
+           "correct": true,
+           "feedback": "They crush and hold a vessel so it can be ligated or coagulated."
+          },
+          {
+           "text": "Cut sutures",
+           "correct": false,
+           "feedback": "Not quite: They crush and hold a vessel so it can be ligated or coagulated."
+          },
+          {
+           "text": "Hold the needle while suturing",
+           "correct": false,
+           "feedback": "Not quite: They crush and hold a vessel so it can be ligated or coagulated."
+          }
+         ],
+         "id": "sf-102-m1-l3-q4"
+        },
+        {
+         "prompt": "Compared with Metzenbaum scissors, Mayo scissors are…",
+         "options": [
+          {
+           "text": "Heavier, for tough tissue and sutures",
+           "correct": true,
+           "feedback": "Metzenbaum for fine dissection, Mayo for heavy tissue."
+          },
+          {
+           "text": "Finer, for delicate dissection",
+           "correct": false,
+           "feedback": "That describes Metzenbaum."
+          },
+          {
+           "text": "Used only for dressings",
+           "correct": false,
+           "feedback": "Not quite: Metzenbaum for fine dissection, Mayo for heavy tissue."
+          }
+         ],
+         "id": "sf-102-m1-l3-q5"
         }
        ],
        "passScore": 70,
@@ -555,8 +807,8 @@
       {
        "title": "Check: handling",
        "kind": "Quiz",
-       "minutes": 6,
-       "summary": "1 questions with feedback.",
+       "minutes": 10,
+       "summary": "5 questions with feedback.",
        "questions": [
         {
          "prompt": "Scalpel blades should be loaded…",
@@ -578,6 +830,90 @@
           }
          ],
          "id": "sf-102-m2-l4-q1"
+        },
+        {
+         "prompt": "Sharps are passed in theatre…",
+         "options": [
+          {
+           "text": "Through a neutral zone such as a kidney dish, not hand to hand",
+           "correct": true,
+           "feedback": "A neutral zone prevents sharps injuries to the team."
+          },
+          {
+           "text": "Hand to hand, point first",
+           "correct": false,
+           "feedback": "Not quite: A neutral zone prevents sharps injuries to the team."
+          },
+          {
+           "text": "Dropped onto the Mayo stand",
+           "correct": false,
+           "feedback": "Not quite: A neutral zone prevents sharps injuries to the team."
+          }
+         ],
+         "id": "sf-102-m2-l4-q2"
+        },
+        {
+         "prompt": "A needle holder grips a curved needle…",
+         "options": [
+          {
+           "text": "About a third of the way back from the swaged end",
+           "correct": true,
+           "feedback": "That point gives control without bending the needle."
+          },
+          {
+           "text": "At the very tip",
+           "correct": false,
+           "feedback": "It will slip and blunt the point."
+          },
+          {
+           "text": "On the swage",
+           "correct": false,
+           "feedback": "The swage is the weakest part."
+          }
+         ],
+         "id": "sf-102-m2-l4-q3"
+        },
+        {
+         "prompt": "A pen grip on the scalpel suits…",
+         "options": [
+          {
+           "text": "Short, fine incisions with a No. 15 blade",
+           "correct": true,
+           "feedback": "Fine control for small incisions; a table-knife grip for long ones."
+          },
+          {
+           "text": "Long skin incisions with a No. 10 blade",
+           "correct": false,
+           "feedback": "Use the table-knife grip for those."
+          },
+          {
+           "text": "Cutting sutures",
+           "correct": false,
+           "feedback": "Not quite: Fine control for small incisions; a table-knife grip for long ones."
+          }
+         ],
+         "id": "sf-102-m2-l4-q4"
+        },
+        {
+         "prompt": "A needle is found loose on the floor. You…",
+         "options": [
+          {
+           "text": "Pick it up with an instrument, put it in the sharps bin and reconcile the count",
+           "correct": true,
+           "feedback": "Every sharp must be accounted for, safely."
+          },
+          {
+           "text": "Leave it for the cleaners",
+           "correct": false,
+           "feedback": "Not quite: Every sharp must be accounted for, safely."
+          },
+          {
+           "text": "Pick it up with your fingers",
+           "correct": false,
+           "feedback": "Not quite: Every sharp must be accounted for, safely."
+          }
+         ],
+         "id": "sf-102-m2-l4-q5"
         }
        ],
        "passScore": 70,
@@ -650,8 +986,8 @@
       {
        "title": "Check: materials",
        "kind": "Quiz",
-       "minutes": 6,
-       "summary": "2 questions with feedback.",
+       "minutes": 10,
+       "summary": "5 questions with feedback.",
        "questions": [
         {
          "prompt": "Which needle is used for skin?",
@@ -694,6 +1030,69 @@
           }
          ],
          "id": "sf-103-m1-l3-q2"
+        },
+        {
+         "prompt": "A round-bodied (taper) needle is chosen for…",
+         "options": [
+          {
+           "text": "Bowel, vessels and other soft tissue that tears easily",
+           "correct": true,
+           "feedback": "It parts tissue without cutting it."
+          },
+          {
+           "text": "Skin",
+           "correct": false,
+           "feedback": "Not quite: It parts tissue without cutting it."
+          },
+          {
+           "text": "Tough fascia only",
+           "correct": false,
+           "feedback": "Not quite: It parts tissue without cutting it."
+          }
+         ],
+         "id": "sf-103-m1-l3-q3"
+        },
+        {
+         "prompt": "Which suture is absorbable?",
+         "options": [
+          {
+           "text": "Polyglactin (Vicryl)",
+           "correct": true,
+           "feedback": "Polyglactin is absorbed by hydrolysis in weeks."
+          },
+          {
+           "text": "Polypropylene (Prolene)",
+           "correct": false,
+           "feedback": "Not quite: Polyglactin is absorbed by hydrolysis in weeks."
+          },
+          {
+           "text": "Nylon",
+           "correct": false,
+           "feedback": "Not quite: Polyglactin is absorbed by hydrolysis in weeks."
+          }
+         ],
+         "id": "sf-103-m1-l3-q4"
+        },
+        {
+         "prompt": "Interrupted sutures on the face are usually removed after…",
+         "options": [
+          {
+           "text": "3–5 days",
+           "correct": true,
+           "feedback": "The face heals fast; early removal avoids track marks."
+          },
+          {
+           "text": "10–14 days",
+           "correct": false,
+           "feedback": "That suits the back or limbs."
+          },
+          {
+           "text": "21 days",
+           "correct": false,
+           "feedback": "Not quite: The face heals fast; early removal avoids track marks."
+          }
+         ],
+         "id": "sf-103-m1-l3-q5"
         }
        ],
        "passScore": 70,
@@ -812,8 +1211,8 @@
       {
        "title": "Check: SSI",
        "kind": "Quiz",
-       "minutes": 6,
-       "summary": "2 questions with feedback.",
+       "minutes": 10,
+       "summary": "5 questions with feedback.",
        "questions": [
         {
          "prompt": "If hair must be removed, it should be removed with…",
@@ -856,6 +1255,69 @@
           }
          ],
          "id": "sf-104-m1-l4-q2"
+        },
+        {
+         "prompt": "For most operations, skin is prepared with…",
+         "options": [
+          {
+           "text": "Alcohol-based chlorhexidine",
+           "correct": true,
+           "feedback": "Alcohol-based chlorhexidine gives the lowest SSI rates in most surgery."
+          },
+          {
+           "text": "Soap and water",
+           "correct": false,
+           "feedback": "Not quite: Alcohol-based chlorhexidine gives the lowest SSI rates in most surgery."
+          },
+          {
+           "text": "Aqueous iodine in every case",
+           "correct": false,
+           "feedback": "Alcohol-based chlorhexidine is preferred unless contraindicated."
+          }
+         ],
+         "id": "sf-104-m1-l4-q3"
+        },
+        {
+         "prompt": "Keeping the patient warm during surgery…",
+         "options": [
+          {
+           "text": "Reduces surgical site infection",
+           "correct": true,
+           "feedback": "Hypothermia impairs immunity and wound perfusion."
+          },
+          {
+           "text": "Increases infection risk",
+           "correct": false,
+           "feedback": "Not quite: Hypothermia impairs immunity and wound perfusion."
+          },
+          {
+           "text": "Has no effect on infection",
+           "correct": false,
+           "feedback": "Not quite: Hypothermia impairs immunity and wound perfusion."
+          }
+         ],
+         "id": "sf-104-m1-l4-q4"
+        },
+        {
+         "prompt": "A 'dirty' wound is one…",
+         "options": [
+          {
+           "text": "With established infection or a perforated viscus",
+           "correct": true,
+           "feedback": "Wound class predicts infection risk and guides antibiotics."
+          },
+          {
+           "text": "Through intact skin with no viscus opened",
+           "correct": false,
+           "feedback": "That is clean."
+          },
+          {
+           "text": "Entering the bowel under control",
+           "correct": false,
+           "feedback": "That is clean-contaminated."
+          }
+         ],
+         "id": "sf-104-m1-l4-q5"
         }
        ],
        "passScore": 70,
@@ -917,8 +1379,8 @@
       {
        "title": "Check: consent and safety",
        "kind": "Quiz",
-       "minutes": 6,
-       "summary": "2 questions with feedback.",
+       "minutes": 10,
+       "summary": "5 questions with feedback.",
        "questions": [
         {
          "prompt": "Which of these is required for valid consent?",
@@ -961,6 +1423,69 @@
           }
          ],
          "id": "sf-105-m1-l3-q2"
+        },
+        {
+         "prompt": "Consent should be taken by…",
+         "options": [
+          {
+           "text": "Someone able to do the procedure, or trained to explain it and its risks",
+           "correct": true,
+           "feedback": "The person consenting must be able to answer the patient's questions."
+          },
+          {
+           "text": "Any member of staff",
+           "correct": false,
+           "feedback": "Not quite: The person consenting must be able to answer the patient's questions."
+          },
+          {
+           "text": "The patient's relative",
+           "correct": false,
+           "feedback": "Not quite: The person consenting must be able to answer the patient's questions."
+          }
+         ],
+         "id": "sf-105-m1-l3-q3"
+        },
+        {
+         "prompt": "An adult lacks capacity for an urgent operation and has no advance decision. The team…",
+         "options": [
+          {
+           "text": "Acts in their best interests and documents why",
+           "correct": true,
+           "feedback": "Relatives are consulted but cannot consent for an adult in UK law."
+          },
+          {
+           "text": "Waits for a relative to sign",
+           "correct": false,
+           "feedback": "Not quite: Relatives are consulted but cannot consent for an adult in UK law."
+          },
+          {
+           "text": "Cancels the operation",
+           "correct": false,
+           "feedback": "Not quite: Relatives are consulted but cannot consent for an adult in UK law."
+          }
+         ],
+         "id": "sf-105-m1-l3-q4"
+        },
+        {
+         "prompt": "Wrong-site surgery is prevented by…",
+         "options": [
+          {
+           "text": "Marking the site with the patient awake and confirming it at the Time Out",
+           "correct": true,
+           "feedback": "Marking and Time Out together catch site errors."
+          },
+          {
+           "text": "Marking after draping",
+           "correct": false,
+           "feedback": "Not quite: Marking and Time Out together catch site errors."
+          },
+          {
+           "text": "Relying on the theatre list",
+           "correct": false,
+           "feedback": "Not quite: Marking and Time Out together catch site errors."
+          }
+         ],
+         "id": "sf-105-m1-l3-q5"
         }
        ],
        "passScore": 70,
@@ -1024,8 +1549,8 @@
       {
        "title": "Check: energy",
        "kind": "Quiz",
-       "minutes": 6,
-       "summary": "2 questions with feedback.",
+       "minutes": 10,
+       "summary": "5 questions with feedback.",
        "questions": [
         {
          "prompt": "Which current path does bipolar diathermy use?",
@@ -1068,6 +1593,69 @@
           }
          ],
          "id": "sf-106-m1-l3-q2"
+        },
+        {
+         "prompt": "In monopolar diathermy the current returns through…",
+         "options": [
+          {
+           "text": "The patient return electrode (plate)",
+           "correct": true,
+           "feedback": "Current passes through the patient to the plate."
+          },
+          {
+           "text": "The other jaw of the forceps",
+           "correct": false,
+           "feedback": "That is bipolar."
+          },
+          {
+           "text": "The operating table",
+           "correct": false,
+           "feedback": "Not quite: Current passes through the patient to the plate."
+          }
+         ],
+         "id": "sf-106-m1-l3-q3"
+        },
+        {
+         "prompt": "The return plate goes on…",
+         "options": [
+          {
+           "text": "Clean, dry, well-perfused muscle such as the thigh, away from metal implants",
+           "correct": true,
+           "feedback": "Good contact over a large area prevents plate burns."
+          },
+          {
+           "text": "A bony prominence",
+           "correct": false,
+           "feedback": "Not quite: Good contact over a large area prevents plate burns."
+          },
+          {
+           "text": "Hairy skin without clipping",
+           "correct": false,
+           "feedback": "Not quite: Good contact over a large area prevents plate burns."
+          }
+         ],
+         "id": "sf-106-m1-l3-q4"
+        },
+        {
+         "prompt": "Surgical smoke (plume) should be…",
+         "options": [
+          {
+           "text": "Removed with smoke evacuation",
+           "correct": true,
+           "feedback": "Plume contains toxic chemicals and particles."
+          },
+          {
+           "text": "Breathed in, it is harmless",
+           "correct": false,
+           "feedback": "Not quite: Plume contains toxic chemicals and particles."
+          },
+          {
+           "text": "Cleared by opening the doors",
+           "correct": false,
+           "feedback": "Not quite: Plume contains toxic chemicals and particles."
+          }
+         ],
+         "id": "sf-106-m1-l3-q5"
         }
        ],
        "passScore": 70,
@@ -1144,8 +1732,8 @@
       {
        "title": "Check: monitoring and drugs",
        "kind": "Quiz",
-       "minutes": 6,
-       "summary": "2 questions with feedback.",
+       "minutes": 10,
+       "summary": "5 questions with feedback.",
        "questions": [
         {
          "prompt": "What is the maximum dose of plain lidocaine for a 70 kg adult (3 mg/kg)?",
@@ -1188,6 +1776,69 @@
           }
          ],
          "id": "sf-107-m1-l4-q2"
+        },
+        {
+         "prompt": "Normal end-tidal CO2 is about…",
+         "options": [
+          {
+           "text": "4.5–6 kPa (35–45 mmHg)",
+           "correct": true,
+           "feedback": "A sudden change needs an explanation."
+          },
+          {
+           "text": "10–12 kPa",
+           "correct": false,
+           "feedback": "Not quite: A sudden change needs an explanation."
+          },
+          {
+           "text": "1–2 kPa",
+           "correct": false,
+           "feedback": "Not quite: A sudden change needs an explanation."
+          }
+         ],
+         "id": "sf-107-m1-l4-q3"
+        },
+        {
+         "prompt": "Early signs of local anaesthetic toxicity include…",
+         "options": [
+          {
+           "text": "Perioral tingling, tinnitus and confusion",
+           "correct": true,
+           "feedback": "CNS signs come first, then seizures and cardiovascular collapse."
+          },
+          {
+           "text": "A rash only",
+           "correct": false,
+           "feedback": "Not quite: CNS signs come first, then seizures and cardiovascular collapse."
+          },
+          {
+           "text": "Pinpoint pupils",
+           "correct": false,
+           "feedback": "Not quite: CNS signs come first, then seizures and cardiovascular collapse."
+          }
+         ],
+         "id": "sf-107-m1-l4-q4"
+        },
+        {
+         "prompt": "Severe local anaesthetic toxicity is treated with…",
+         "options": [
+          {
+           "text": "Intravenous 20% lipid emulsion",
+           "correct": true,
+           "feedback": "Lipid emulsion with full resuscitation; naloxone and flumazenil reverse other drugs."
+          },
+          {
+           "text": "Naloxone",
+           "correct": false,
+           "feedback": "Not quite: Lipid emulsion with full resuscitation; naloxone and flumazenil reverse other drugs."
+          },
+          {
+           "text": "Flumazenil",
+           "correct": false,
+           "feedback": "Not quite: Lipid emulsion with full resuscitation; naloxone and flumazenil reverse other drugs."
+          }
+         ],
+         "id": "sf-107-m1-l4-q5"
         }
        ],
        "passScore": 70,
@@ -1246,8 +1897,8 @@
       {
        "title": "Check: NOTSS",
        "kind": "Quiz",
-       "minutes": 6,
-       "summary": "1 questions with feedback.",
+       "minutes": 10,
+       "summary": "5 questions with feedback.",
        "questions": [
         {
          "prompt": "Closed-loop communication means…",
@@ -1269,6 +1920,90 @@
           }
          ],
          "id": "sf-108-m1-l3-q1"
+        },
+        {
+         "prompt": "The four NOTSS categories are situation awareness, decision making, communication and teamwork, and…",
+         "options": [
+          {
+           "text": "Leadership",
+           "correct": true,
+           "feedback": "Non-technical skills complement technical skill."
+          },
+          {
+           "text": "Dexterity",
+           "correct": false,
+           "feedback": "Not quite: Non-technical skills complement technical skill."
+          },
+          {
+           "text": "Speed",
+           "correct": false,
+           "feedback": "Not quite: Non-technical skills complement technical skill."
+          }
+         ],
+         "id": "sf-108-m1-l3-q2"
+        },
+        {
+         "prompt": "Situation awareness means gathering information, understanding it and…",
+         "options": [
+          {
+           "text": "Projecting what will happen next",
+           "correct": true,
+           "feedback": "Anticipation lets the team act before problems escalate."
+          },
+          {
+           "text": "Writing it down",
+           "correct": false,
+           "feedback": "Not quite: Anticipation lets the team act before problems escalate."
+          },
+          {
+           "text": "Delegating it",
+           "correct": false,
+           "feedback": "Not quite: Anticipation lets the team act before problems escalate."
+          }
+         ],
+         "id": "sf-108-m1-l3-q3"
+        },
+        {
+         "prompt": "A junior sees a safety problem while the consultant is busy. Best is to…",
+         "options": [
+          {
+           "text": "Speak up clearly, e.g. 'I'm concerned that…'",
+           "correct": true,
+           "feedback": "Graded assertiveness: concern, uncomfortable, safety issue."
+          },
+          {
+           "text": "Stay silent",
+           "correct": false,
+           "feedback": "Not quite: Graded assertiveness: concern, uncomfortable, safety issue."
+          },
+          {
+           "text": "Mention it after the case",
+           "correct": false,
+           "feedback": "Not quite: Graded assertiveness: concern, uncomfortable, safety issue."
+          }
+         ],
+         "id": "sf-108-m1-l3-q4"
+        },
+        {
+         "prompt": "A team brief before the list…",
+         "options": [
+          {
+           "text": "Improves teamwork and catches problems early",
+           "correct": true,
+           "feedback": "Briefs and debriefs reduce errors and delays."
+          },
+          {
+           "text": "Wastes theatre time",
+           "correct": false,
+           "feedback": "Not quite: Briefs and debriefs reduce errors and delays."
+          },
+          {
+           "text": "Is only for the surgeon",
+           "correct": false,
+           "feedback": "Not quite: Briefs and debriefs reduce errors and delays."
+          }
+         ],
+         "id": "sf-108-m1-l3-q5"
         }
        ],
        "passScore": 70,
@@ -1347,8 +2082,8 @@
       {
        "title": "Check: the tower",
        "kind": "Quiz",
-       "minutes": 6,
-       "summary": "1 questions with feedback.",
+       "minutes": 10,
+       "summary": "5 questions with feedback.",
        "questions": [
         {
          "prompt": "A typical adult intra-abdominal pressure for laparoscopy is…",
@@ -1370,6 +2105,90 @@
           }
          ],
          "id": "mis-201-m1-l4-q1"
+        },
+        {
+         "prompt": "CO2 is used for pneumoperitoneum because it is…",
+         "options": [
+          {
+           "text": "Non-flammable and quickly absorbed and breathed out",
+           "correct": true,
+           "feedback": "It is safe with diathermy and clears quickly."
+          },
+          {
+           "text": "The cheapest gas",
+           "correct": false,
+           "feedback": "Not quite: It is safe with diathermy and clears quickly."
+          },
+          {
+           "text": "Better for image colour",
+           "correct": false,
+           "feedback": "Not quite: It is safe with diathermy and clears quickly."
+          }
+         ],
+         "id": "mis-201-m1-l4-q2"
+        },
+        {
+         "prompt": "Before the laparoscope goes in you should…",
+         "options": [
+          {
+           "text": "White-balance and focus the camera and warm or defog the lens",
+           "correct": true,
+           "feedback": "A clear, true-colour image from the start."
+          },
+          {
+           "text": "Rest the lit scope on the drapes",
+           "correct": false,
+           "feedback": "The light cable tip can burn drapes and skin."
+          },
+          {
+           "text": "Nothing: the tower does it",
+           "correct": false,
+           "feedback": "Not quite: A clear, true-colour image from the start."
+          }
+         ],
+         "id": "mis-201-m1-l4-q3"
+        },
+        {
+         "prompt": "During insufflation the end-tidal CO2 falls suddenly with hypotension. Think…",
+         "options": [
+          {
+           "text": "Gas embolism",
+           "correct": true,
+           "feedback": "Stop insufflating, release the pneumoperitoneum and resuscitate."
+          },
+          {
+           "text": "Light anaesthesia",
+           "correct": false,
+           "feedback": "Not quite: Stop insufflating, release the pneumoperitoneum and resuscitate."
+          },
+          {
+           "text": "A normal response",
+           "correct": false,
+           "feedback": "Not quite: Stop insufflating, release the pneumoperitoneum and resuscitate."
+          }
+         ],
+         "id": "mis-201-m1-l4-q4"
+        },
+        {
+         "prompt": "Working ports are placed so the instruments meet the target at about…",
+         "options": [
+          {
+           "text": "60°",
+           "correct": true,
+           "feedback": "Triangulation gives the best ergonomics."
+          },
+          {
+           "text": "180°",
+           "correct": false,
+           "feedback": "Not quite: Triangulation gives the best ergonomics."
+          },
+          {
+           "text": "10°",
+           "correct": false,
+           "feedback": "Not quite: Triangulation gives the best ergonomics."
+          }
+         ],
+         "id": "mis-201-m1-l4-q5"
         }
        ],
        "passScore": 70,
@@ -1410,6 +2229,145 @@
       }
      ],
      "id": "mis-201-m2"
+    },
+    {
+     "title": "Diagnostic laparoscopy",
+     "summary": "Looking inside to diagnose and treat in one operation: endometriosis as the example.",
+     "lessons": [
+      {
+       "title": "Video: diagnostic laparoscopy for endometriosis",
+       "kind": "Video",
+       "minutes": 6,
+       "summary": "A 3-minute patient-facing film from Children's Hospital Colorado, with notes.",
+       "content": "Watch on a phone or computer: youtube.com/watch?v=KJfQnlGgBgA (Children's Hospital Colorado, 3 min).\n\nWhy it is done: endometriosis is endometrial-type tissue growing outside the uterus, where it bleeds and inflames with each cycle and causes pelvic pain. Imaging (pelvic ultrasound or MRI) is used first to rule out other causes, but only looking inside confirms the diagnosis, so diagnostic laparoscopy is the reference test. It is usually a day case.\n\nThe operation: under general anaesthesia the surgeon makes two or three incisions of about 5 mm. One takes the camera with its light cable; the others take working instruments. The abdomen is insufflated with CO2 to lift the wall and give room and a clear view. The pelvis is inspected systematically (uterus, ovaries, pouch of Douglas, uterosacral ligaments, bladder peritoneum, bowel). Lesions found can be treated in the same operation: excised or ablated with laser or electrosurgery. The ports come out under vision and the small wounds are closed with absorbable subcuticular sutures that need no removal. It takes about 1–2 hours depending on the disease found.\n\nAfterwards: home the same day once recovered. Expect nausea from the anaesthetic, mild port-site pain, and shoulder-tip pain for 2–3 days from residual CO2 irritating the diaphragm. No shower for 24 hours, no bath or swimming for a week, most activities within a week. Findings are discussed at follow-up, often with hormonal treatment to limit recurrence.\n\nLink to this course: the same tower set-up, CO2 pneumoperitoneum and safe port placement you practise in the labs.",
+       "id": "mis-201-m3-l1"
+      },
+      {
+       "title": "Procedure lab: diagnostic laparoscopy",
+       "kind": "VrLab",
+       "minutes": 20,
+       "summary": "Set up, enter safely, survey the pelvis, recognise subtle endometriosis, biopsy and treat it, and close.",
+       "simulationId": "diagnostic-laparoscopy",
+       "passScore": 70,
+       "id": "mis-201-m3-l2"
+      },
+      {
+       "title": "Check: diagnostic laparoscopy",
+       "kind": "Quiz",
+       "minutes": 10,
+       "summary": "5 questions with feedback.",
+       "questions": [
+        {
+         "prompt": "Endometriosis is confirmed by…",
+         "options": [
+          {
+           "text": "Diagnostic laparoscopy",
+           "correct": true,
+           "feedback": "Only seeing (and biopsying) the lesions confirms it."
+          },
+          {
+           "text": "A blood test",
+           "correct": false,
+           "feedback": "Not quite: Only seeing (and biopsying) the lesions confirms it."
+          },
+          {
+           "text": "Ultrasound alone",
+           "correct": false,
+           "feedback": "Imaging rules out other causes but cannot confirm it."
+          }
+         ],
+         "id": "mis-201-m3-l3-q1"
+        },
+        {
+         "prompt": "The port incisions in a diagnostic laparoscopy are typically about…",
+         "options": [
+          {
+           "text": "5 mm",
+           "correct": true,
+           "feedback": "Two or three small ports: camera plus instruments."
+          },
+          {
+           "text": "5 cm",
+           "correct": false,
+           "feedback": "Not quite: Two or three small ports: camera plus instruments."
+          },
+          {
+           "text": "15 cm",
+           "correct": false,
+           "feedback": "Not quite: Two or three small ports: camera plus instruments."
+          }
+         ],
+         "id": "mis-201-m3-l3-q2"
+        },
+        {
+         "prompt": "Shoulder-tip pain for 2–3 days after laparoscopy is caused by…",
+         "options": [
+          {
+           "text": "Residual CO2 irritating the diaphragm",
+           "correct": true,
+           "feedback": "Diaphragmatic irritation is referred to the shoulder tip (C3–5)."
+          },
+          {
+           "text": "Arm positioning on the table",
+           "correct": false,
+           "feedback": "Not quite: Diaphragmatic irritation is referred to the shoulder tip (C3–5)."
+          },
+          {
+           "text": "Wound infection",
+           "correct": false,
+           "feedback": "Not quite: Diaphragmatic irritation is referred to the shoulder tip (C3–5)."
+          }
+         ],
+         "id": "mis-201-m3-l3-q3"
+        },
+        {
+         "prompt": "Endometriosis found at diagnostic laparoscopy can be…",
+         "options": [
+          {
+           "text": "Excised or ablated in the same operation",
+           "correct": true,
+           "feedback": "Diagnose and treat at one sitting where safe."
+          },
+          {
+           "text": "Only biopsied; treatment needs a second operation",
+           "correct": false,
+           "feedback": "Not quite: Diagnose and treat at one sitting where safe."
+          },
+          {
+           "text": "Left alone always",
+           "correct": false,
+           "feedback": "Not quite: Diagnose and treat at one sitting where safe."
+          }
+         ],
+         "id": "mis-201-m3-l3-q4"
+        },
+        {
+         "prompt": "Port sites are commonly closed with…",
+         "options": [
+          {
+           "text": "Absorbable subcuticular sutures",
+           "correct": true,
+           "feedback": "They dissolve and need no removal."
+          },
+          {
+           "text": "Steel wires",
+           "correct": false,
+           "feedback": "Not quite: They dissolve and need no removal."
+          },
+          {
+           "text": "Staples left for six weeks",
+           "correct": false,
+           "feedback": "Not quite: They dissolve and need no removal."
+          }
+         ],
+         "id": "mis-201-m3-l3-q5"
+        }
+       ],
+       "passScore": 70,
+       "id": "mis-201-m3-l3"
+      }
+     ],
+     "id": "mis-201-m3"
     }
    ]
   },
@@ -1519,8 +2477,8 @@
       {
        "title": "Check: CVS",
        "kind": "Quiz",
-       "minutes": 6,
-       "summary": "2 questions with feedback.",
+       "minutes": 10,
+       "summary": "5 questions with feedback.",
        "questions": [
         {
          "prompt": "How many structures should be seen entering the gallbladder for the critical view of safety?",
@@ -1563,6 +2521,69 @@
           }
          ],
          "id": "mis-203-m1-l2-q2"
+        },
+        {
+         "prompt": "The hepatocystic triangle is bounded by the cystic duct, the common hepatic duct and…",
+         "options": [
+          {
+           "text": "The inferior edge of the liver",
+           "correct": true,
+           "feedback": "This is the area cleared for the critical view."
+          },
+          {
+           "text": "The duodenum",
+           "correct": false,
+           "feedback": "Not quite: This is the area cleared for the critical view."
+          },
+          {
+           "text": "The portal vein",
+           "correct": false,
+           "feedback": "Not quite: This is the area cleared for the critical view."
+          }
+         ],
+         "id": "mis-203-m1-l2-q3"
+        },
+        {
+         "prompt": "The most feared complication of cholecystectomy is…",
+         "options": [
+          {
+           "text": "Bile duct injury",
+           "correct": true,
+           "feedback": "The critical view of safety exists to prevent it."
+          },
+          {
+           "text": "A port-site hernia",
+           "correct": false,
+           "feedback": "Not quite: The critical view of safety exists to prevent it."
+          },
+          {
+           "text": "Shoulder-tip pain",
+           "correct": false,
+           "feedback": "Not quite: The critical view of safety exists to prevent it."
+          }
+         ],
+         "id": "mis-203-m1-l2-q4"
+        },
+        {
+         "prompt": "The gallbladder is removed…",
+         "options": [
+          {
+           "text": "In a retrieval bag",
+           "correct": true,
+           "feedback": "A bag avoids spilling bile and stones into the wound and abdomen."
+          },
+          {
+           "text": "Through the port without protection",
+           "correct": false,
+           "feedback": "Not quite: A bag avoids spilling bile and stones into the wound and abdomen."
+          },
+          {
+           "text": "It is left in place",
+           "correct": false,
+           "feedback": "Not quite: A bag avoids spilling bile and stones into the wound and abdomen."
+          }
+         ],
+         "id": "mis-203-m1-l2-q5"
         }
        ],
        "passScore": 70,
@@ -1720,8 +2741,8 @@
       {
        "title": "Check: robotics",
        "kind": "Quiz",
-       "minutes": 6,
-       "summary": "1 questions with feedback.",
+       "minutes": 10,
+       "summary": "5 questions with feedback.",
        "questions": [
         {
          "prompt": "What is the main sensory limitation of most robotic systems?",
@@ -1743,6 +2764,90 @@
           }
          ],
          "id": "mis-205-m1-l3-q1"
+        },
+        {
+         "prompt": "In major bleeding the bedside team must be able to…",
+         "options": [
+          {
+           "text": "Undock the robot quickly and convert",
+           "correct": true,
+           "feedback": "Rapid undocking is a rehearsed emergency drill."
+          },
+          {
+           "text": "Wait for the console surgeon to finish",
+           "correct": false,
+           "feedback": "Not quite: Rapid undocking is a rehearsed emergency drill."
+          },
+          {
+           "text": "Switch off the vision cart",
+           "correct": false,
+           "feedback": "Not quite: Rapid undocking is a rehearsed emergency drill."
+          }
+         ],
+         "id": "mis-205-m1-l3-q2"
+        },
+        {
+         "prompt": "Wristed robotic instruments add…",
+         "options": [
+          {
+           "text": "Extra degrees of freedom at the tip",
+           "correct": true,
+           "feedback": "They restore wrist movement lost with straight instruments."
+          },
+          {
+           "text": "Force feedback",
+           "correct": false,
+           "feedback": "Most systems have none."
+          },
+          {
+           "text": "Lower cost",
+           "correct": false,
+           "feedback": "Not quite: They restore wrist movement lost with straight instruments."
+          }
+         ],
+         "id": "mis-205-m1-l3-q3"
+        },
+        {
+         "prompt": "Before docking, the patient must be…",
+         "options": [
+          {
+           "text": "Positioned and secured: the table usually cannot move once docked",
+           "correct": true,
+           "feedback": "Moving the table with instruments inside can injure the patient."
+          },
+          {
+           "text": "Left unsecured",
+           "correct": false,
+           "feedback": "Not quite: Moving the table with instruments inside can injure the patient."
+          },
+          {
+           "text": "Awake",
+           "correct": false,
+           "feedback": "Not quite: Moving the table with instruments inside can injure the patient."
+          }
+         ],
+         "id": "mis-205-m1-l3-q4"
+        },
+        {
+         "prompt": "Depth perception at the console comes from…",
+         "options": [
+          {
+           "text": "A stereoscopic 3D endoscope",
+           "correct": true,
+           "feedback": "Two cameras give a true 3D image."
+          },
+          {
+           "text": "Haptic feedback",
+           "correct": false,
+           "feedback": "Not quite: Two cameras give a true 3D image."
+          },
+          {
+           "text": "A larger monitor",
+           "correct": false,
+           "feedback": "Not quite: Two cameras give a true 3D image."
+          }
+         ],
+         "id": "mis-205-m1-l3-q5"
         }
        ],
        "passScore": 70,
@@ -1808,8 +2913,8 @@
       {
        "title": "Check: Open Appendicectomy",
        "kind": "Quiz",
-       "minutes": 6,
-       "summary": "2 questions with feedback.",
+       "minutes": 10,
+       "summary": "5 questions with feedback.",
        "questions": [
         {
          "prompt": "McBurney's point lies…",
@@ -1852,6 +2957,69 @@
           }
          ],
          "id": "gs-301-m1-l3-q2"
+        },
+        {
+         "prompt": "In a gridiron incision the abdominal wall muscles are…",
+         "options": [
+          {
+           "text": "Split in the line of their fibres",
+           "correct": true,
+           "feedback": "Splitting heals strongly and reduces hernia."
+          },
+          {
+           "text": "Cut across",
+           "correct": false,
+           "feedback": "Not quite: Splitting heals strongly and reduces hernia."
+          },
+          {
+           "text": "Left intact",
+           "correct": false,
+           "feedback": "Not quite: Splitting heals strongly and reduces hernia."
+          }
+         ],
+         "id": "gs-301-m1-l3-q3"
+        },
+        {
+         "prompt": "A perforated appendix with generalised peritonitis needs…",
+         "options": [
+          {
+           "text": "Resuscitation, antibiotics and urgent surgery",
+           "correct": true,
+           "feedback": "This is a surgical emergency."
+          },
+          {
+           "text": "Oral antibiotics and discharge",
+           "correct": false,
+           "feedback": "Not quite: This is a surgical emergency."
+          },
+          {
+           "text": "Observation only",
+           "correct": false,
+           "feedback": "Not quite: This is a surgical emergency."
+          }
+         ],
+         "id": "gs-301-m1-l3-q4"
+        },
+        {
+         "prompt": "The appendicular artery is a branch of…",
+         "options": [
+          {
+           "text": "The ileocolic artery",
+           "correct": true,
+           "feedback": "It runs in the mesoappendix, which is ligated."
+          },
+          {
+           "text": "The right colic artery",
+           "correct": false,
+           "feedback": "Not quite: It runs in the mesoappendix, which is ligated."
+          },
+          {
+           "text": "The inferior mesenteric artery",
+           "correct": false,
+           "feedback": "Not quite: It runs in the mesoappendix, which is ligated."
+          }
+         ],
+         "id": "gs-301-m1-l3-q5"
         }
        ],
        "passScore": 70,
@@ -1942,8 +3110,8 @@
       {
        "title": "Check: Inguinal Hernia Repair",
        "kind": "Quiz",
-       "minutes": 6,
-       "summary": "1 questions with feedback.",
+       "minutes": 10,
+       "summary": "5 questions with feedback.",
        "questions": [
         {
          "prompt": "An indirect inguinal hernia lies…",
@@ -1965,6 +3133,90 @@
           }
          ],
          "id": "gs-302-m1-l3-q1"
+        },
+        {
+         "prompt": "The ilioinguinal nerve should be…",
+         "options": [
+          {
+           "text": "Identified and protected",
+           "correct": true,
+           "feedback": "Nerve injury causes chronic groin pain."
+          },
+          {
+           "text": "Divided routinely",
+           "correct": false,
+           "feedback": "Not quite: Nerve injury causes chronic groin pain."
+          },
+          {
+           "text": "Ignored",
+           "correct": false,
+           "feedback": "Not quite: Nerve injury causes chronic groin pain."
+          }
+         ],
+         "id": "gs-302-m1-l3-q2"
+        },
+        {
+         "prompt": "Hesselbach's triangle: inferior epigastric vessels, lateral border of rectus and…",
+         "options": [
+          {
+           "text": "The inguinal ligament",
+           "correct": true,
+           "feedback": "Direct hernias bulge through it."
+          },
+          {
+           "text": "The umbilicus",
+           "correct": false,
+           "feedback": "Not quite: Direct hernias bulge through it."
+          },
+          {
+           "text": "The iliac crest",
+           "correct": false,
+           "feedback": "Not quite: Direct hernias bulge through it."
+          }
+         ],
+         "id": "gs-302-m1-l3-q3"
+        },
+        {
+         "prompt": "In a Lichtenstein repair the mesh is sutured inferiorly to…",
+         "options": [
+          {
+           "text": "The inguinal ligament",
+           "correct": true,
+           "feedback": "Medially the conjoint tendon, inferiorly the shelving edge of the inguinal ligament."
+          },
+          {
+           "text": "The skin",
+           "correct": false,
+           "feedback": "Not quite: Medially the conjoint tendon, inferiorly the shelving edge of the inguinal ligament."
+          },
+          {
+           "text": "The femoral vein",
+           "correct": false,
+           "feedback": "Not quite: Medially the conjoint tendon, inferiorly the shelving edge of the inguinal ligament."
+          }
+         ],
+         "id": "gs-302-m1-l3-q4"
+        },
+        {
+         "prompt": "A tender, irreducible groin hernia with vomiting suggests…",
+         "options": [
+          {
+           "text": "Obstruction or strangulation: urgent surgery",
+           "correct": true,
+           "feedback": "Strangulated bowel can die within hours."
+          },
+          {
+           "text": "A simple reducible hernia",
+           "correct": false,
+           "feedback": "Not quite: Strangulated bowel can die within hours."
+          },
+          {
+           "text": "Normal findings",
+           "correct": false,
+           "feedback": "Not quite: Strangulated bowel can die within hours."
+          }
+         ],
+         "id": "gs-302-m1-l3-q5"
         }
        ],
        "passScore": 70,
@@ -2056,8 +3308,8 @@
       {
        "title": "Check: Laparotomy: Opening and Closing",
        "kind": "Quiz",
-       "minutes": 6,
-       "summary": "1 questions with feedback.",
+       "minutes": 10,
+       "summary": "5 questions with feedback.",
        "questions": [
         {
          "prompt": "The recommended suture length to wound length ratio for midline closure is at least…",
@@ -2079,6 +3331,90 @@
           }
          ],
          "id": "gs-303-m1-l3-q1"
+        },
+        {
+         "prompt": "'Small bites' closure places bites about…",
+         "options": [
+          {
+           "text": "5 mm from the edge and 5 mm apart",
+           "correct": true,
+           "feedback": "Small bites lower incisional hernia rates."
+          },
+          {
+           "text": "1–2 cm from the edge",
+           "correct": false,
+           "feedback": "Not quite: Small bites lower incisional hernia rates."
+          },
+          {
+           "text": "Through the skin only",
+           "correct": false,
+           "feedback": "Not quite: Small bites lower incisional hernia rates."
+          }
+         ],
+         "id": "gs-303-m1-l3-q2"
+        },
+        {
+         "prompt": "A midline laparotomy goes through…",
+         "options": [
+          {
+           "text": "The linea alba",
+           "correct": true,
+           "feedback": "The linea alba is relatively avascular."
+          },
+          {
+           "text": "The rectus muscle belly",
+           "correct": false,
+           "feedback": "Not quite: The linea alba is relatively avascular."
+          },
+          {
+           "text": "The semilunar line",
+           "correct": false,
+           "feedback": "Not quite: The linea alba is relatively avascular."
+          }
+         ],
+         "id": "gs-303-m1-l3-q3"
+        },
+        {
+         "prompt": "The peritoneum is opened…",
+         "options": [
+          {
+           "text": "Between clips, lifted away from the bowel",
+           "correct": true,
+           "feedback": "Lifting it protects the bowel beneath."
+          },
+          {
+           "text": "With a deep stab incision",
+           "correct": false,
+           "feedback": "Not quite: Lifting it protects the bowel beneath."
+          },
+          {
+           "text": "With diathermy at full power",
+           "correct": false,
+           "feedback": "Not quite: Lifting it protects the bowel beneath."
+          }
+         ],
+         "id": "gs-303-m1-l3-q4"
+        },
+        {
+         "prompt": "Mass closure of the fascia uses…",
+         "options": [
+          {
+           "text": "A continuous slowly absorbable monofilament",
+           "correct": true,
+           "feedback": "It holds for the months the fascia needs to heal."
+          },
+          {
+           "text": "Interrupted fast-absorbing braided sutures",
+           "correct": false,
+           "feedback": "Not quite: It holds for the months the fascia needs to heal."
+          },
+          {
+           "text": "Silk",
+           "correct": false,
+           "feedback": "Not quite: It holds for the months the fascia needs to heal."
+          }
+         ],
+         "id": "gs-303-m1-l3-q5"
         }
        ],
        "passScore": 70,
@@ -2168,8 +3504,8 @@
       {
        "title": "Check: Bowel Anastomosis",
        "kind": "Quiz",
-       "minutes": 6,
-       "summary": "1 questions with feedback.",
+       "minutes": 10,
+       "summary": "5 questions with feedback.",
        "questions": [
         {
          "prompt": "After a circular stapled anastomosis you must check…",
@@ -2191,6 +3527,90 @@
           }
          ],
          "id": "gs-304-m1-l3-q1"
+        },
+        {
+         "prompt": "A healthy anastomosis needs…",
+         "options": [
+          {
+           "text": "A good blood supply and no tension",
+           "correct": true,
+           "feedback": "Perfusion and freedom from tension come first."
+          },
+          {
+           "text": "Sutures pulled tight to strangle the edges",
+           "correct": false,
+           "feedback": "Over-tight sutures cause ischaemia."
+          },
+          {
+           "text": "Distended bowel",
+           "correct": false,
+           "feedback": "Not quite: Perfusion and freedom from tension come first."
+          }
+         ],
+         "id": "gs-304-m1-l3-q2"
+        },
+        {
+         "prompt": "An anastomotic leak most often presents…",
+         "options": [
+          {
+           "text": "Between days 3 and 7",
+           "correct": true,
+           "feedback": "Watch the early post-operative days closely."
+          },
+          {
+           "text": "Within the first hour",
+           "correct": false,
+           "feedback": "Not quite: Watch the early post-operative days closely."
+          },
+          {
+           "text": "After six weeks",
+           "correct": false,
+           "feedback": "Not quite: Watch the early post-operative days closely."
+          }
+         ],
+         "id": "gs-304-m1-l3-q3"
+        },
+        {
+         "prompt": "Signs of an anastomotic leak include…",
+         "options": [
+          {
+           "text": "Tachycardia, fever, abdominal pain or failure to progress",
+           "correct": true,
+           "feedback": "An unexplained tachycardia is a leak until proven otherwise."
+          },
+          {
+           "text": "Bradycardia and hunger",
+           "correct": false,
+           "feedback": "Not quite: An unexplained tachycardia is a leak until proven otherwise."
+          },
+          {
+           "text": "Nothing: leaks are always silent",
+           "correct": false,
+           "feedback": "Not quite: An unexplained tachycardia is a leak until proven otherwise."
+          }
+         ],
+         "id": "gs-304-m1-l3-q4"
+        },
+        {
+         "prompt": "A single-layer hand-sewn anastomosis is usually…",
+         "options": [
+          {
+           "text": "Extramucosal",
+           "correct": true,
+           "feedback": "Extramucosal sutures hold the strong submucosa and invert the mucosa."
+          },
+          {
+           "text": "Through the mucosa only",
+           "correct": false,
+           "feedback": "Not quite: Extramucosal sutures hold the strong submucosa and invert the mucosa."
+          },
+          {
+           "text": "Glued",
+           "correct": false,
+           "feedback": "Not quite: Extramucosal sutures hold the strong submucosa and invert the mucosa."
+          }
+         ],
+         "id": "gs-304-m1-l3-q5"
         }
        ],
        "passScore": 70,
@@ -2283,8 +3703,8 @@
       {
        "title": "Check: Skin Lesions and Abscesses",
        "kind": "Quiz",
-       "minutes": 6,
-       "summary": "1 questions with feedback.",
+       "minutes": 10,
+       "summary": "5 questions with feedback.",
        "questions": [
         {
          "prompt": "An excision ellipse is usually about how long relative to its width?",
@@ -2306,6 +3726,90 @@
           }
          ],
          "id": "gs-305-m1-l3-q1"
+        },
+        {
+         "prompt": "An excision ellipse is orientated…",
+         "options": [
+          {
+           "text": "Along relaxed skin tension lines",
+           "correct": true,
+           "feedback": "Along the lines gives the neatest scar."
+          },
+          {
+           "text": "Across them",
+           "correct": false,
+           "feedback": "Not quite: Along the lines gives the neatest scar."
+          },
+          {
+           "text": "In any direction",
+           "correct": false,
+           "feedback": "Not quite: Along the lines gives the neatest scar."
+          }
+         ],
+         "id": "gs-305-m1-l3-q2"
+        },
+        {
+         "prompt": "The maximum dose of lidocaine with adrenaline is about…",
+         "options": [
+          {
+           "text": "7 mg/kg",
+           "correct": true,
+           "feedback": "3 mg/kg plain, 7 mg/kg with adrenaline."
+          },
+          {
+           "text": "1 mg/kg",
+           "correct": false,
+           "feedback": "Not quite: 3 mg/kg plain, 7 mg/kg with adrenaline."
+          },
+          {
+           "text": "20 mg/kg",
+           "correct": false,
+           "feedback": "Not quite: 3 mg/kg plain, 7 mg/kg with adrenaline."
+          }
+         ],
+         "id": "gs-305-m1-l3-q3"
+        },
+        {
+         "prompt": "1% lidocaine contains…",
+         "options": [
+          {
+           "text": "10 mg per ml",
+           "correct": true,
+           "feedback": "1% = 1 g in 100 ml = 10 mg/ml."
+          },
+          {
+           "text": "1 mg per ml",
+           "correct": false,
+           "feedback": "Not quite: 1% = 1 g in 100 ml = 10 mg/ml."
+          },
+          {
+           "text": "100 mg per ml",
+           "correct": false,
+           "feedback": "Not quite: 1% = 1 g in 100 ml = 10 mg/ml."
+          }
+         ],
+         "id": "gs-305-m1-l3-q4"
+        },
+        {
+         "prompt": "Pus from a drained abscess is sent…",
+         "options": [
+          {
+           "text": "For microscopy, culture and sensitivity",
+           "correct": true,
+           "feedback": "It guides antibiotics if they are needed."
+          },
+          {
+           "text": "Nowhere: discard it",
+           "correct": false,
+           "feedback": "Not quite: It guides antibiotics if they are needed."
+          },
+          {
+           "text": "For histology only",
+           "correct": false,
+           "feedback": "Not quite: It guides antibiotics if they are needed."
+          }
+         ],
+         "id": "gs-305-m1-l3-q5"
         }
        ],
        "passScore": 70,
@@ -2398,8 +3902,8 @@
       {
        "title": "Check: Primary Survey and Haemorrhage Control",
        "kind": "Quiz",
-       "minutes": 6,
-       "summary": "1 questions with feedback.",
+       "minutes": 10,
+       "summary": "5 questions with feedback.",
        "questions": [
         {
          "prompt": "Tranexamic acid in major trauma should be given…",
@@ -2421,6 +3925,90 @@
           }
          ],
          "id": "tr-401-m1-l3-q1"
+        },
+        {
+         "prompt": "In <C>ABCDE, <C> stands for…",
+         "options": [
+          {
+           "text": "Catastrophic external haemorrhage",
+           "correct": true,
+           "feedback": "Stop the bleeding that will kill first."
+          },
+          {
+           "text": "Cervical spine",
+           "correct": false,
+           "feedback": "That goes with the airway."
+          },
+          {
+           "text": "Circulation",
+           "correct": false,
+           "feedback": "Not quite: Stop the bleeding that will kill first."
+          }
+         ],
+         "id": "tr-401-m1-l3-q2"
+        },
+        {
+         "prompt": "When a tourniquet is applied you must record…",
+         "options": [
+          {
+           "text": "The time it went on",
+           "correct": true,
+           "feedback": "Tourniquet time guides surgery and limb survival."
+          },
+          {
+           "text": "The patient's weight",
+           "correct": false,
+           "feedback": "Not quite: Tourniquet time guides surgery and limb survival."
+          },
+          {
+           "text": "Nothing",
+           "correct": false,
+           "feedback": "Not quite: Tourniquet time guides surgery and limb survival."
+          }
+         ],
+         "id": "tr-401-m1-l3-q3"
+        },
+        {
+         "prompt": "A major haemorrhage protocol gives…",
+         "options": [
+          {
+           "text": "Blood products early, in a balanced ratio of red cells, plasma and platelets",
+           "correct": true,
+           "feedback": "Balanced resuscitation corrects coagulopathy."
+          },
+          {
+           "text": "Litres of crystalloid first",
+           "correct": false,
+           "feedback": "Not quite: Balanced resuscitation corrects coagulopathy."
+          },
+          {
+           "text": "Platelets only",
+           "correct": false,
+           "feedback": "Not quite: Balanced resuscitation corrects coagulopathy."
+          }
+         ],
+         "id": "tr-401-m1-l3-q4"
+        },
+        {
+         "prompt": "Before bleeding is controlled, fluids are titrated to…",
+         "options": [
+          {
+           "text": "A palpable radial pulse (permissive hypotension)",
+           "correct": true,
+           "feedback": "Raising pressure too far can dislodge clot (not for head injury)."
+          },
+          {
+           "text": "A normal blood pressure at all costs",
+           "correct": false,
+           "feedback": "Not quite: Raising pressure too far can dislodge clot (not for head injury)."
+          },
+          {
+           "text": "No fluids at all",
+           "correct": false,
+           "feedback": "Not quite: Raising pressure too far can dislodge clot (not for head injury)."
+          }
+         ],
+         "id": "tr-401-m1-l3-q5"
         }
        ],
        "passScore": 70,
@@ -2510,8 +4098,8 @@
       {
        "title": "Check: Chest Drain Insertion",
        "kind": "Quiz",
-       "minutes": 6,
-       "summary": "1 questions with feedback.",
+       "minutes": 10,
+       "summary": "5 questions with feedback.",
        "questions": [
         {
          "prompt": "Why is dissection done over the upper border of the rib?",
@@ -2533,6 +4121,90 @@
           }
          ],
          "id": "tr-402-m1-l3-q1"
+        },
+        {
+         "prompt": "The lower border of the safe triangle is at about…",
+         "options": [
+          {
+           "text": "The 5th intercostal space (nipple level)",
+           "correct": true,
+           "feedback": "Lower and the drain risks the diaphragm, liver or spleen."
+          },
+          {
+           "text": "The 2nd intercostal space",
+           "correct": false,
+           "feedback": "Not quite: Lower and the drain risks the diaphragm, liver or spleen."
+          },
+          {
+           "text": "The 10th rib",
+           "correct": false,
+           "feedback": "Not quite: Lower and the drain risks the diaphragm, liver or spleen."
+          }
+         ],
+         "id": "tr-402-m1-l3-q2"
+        },
+        {
+         "prompt": "A chest drain is connected to…",
+         "options": [
+          {
+           "text": "An underwater seal kept below the level of the chest",
+           "correct": true,
+           "feedback": "The seal lets air out and keeps it from coming back."
+          },
+          {
+           "text": "A bag held above the patient",
+           "correct": false,
+           "feedback": "Not quite: The seal lets air out and keeps it from coming back."
+          },
+          {
+           "text": "Full wall suction every time",
+           "correct": false,
+           "feedback": "Not quite: The seal lets air out and keeps it from coming back."
+          }
+         ],
+         "id": "tr-402-m1-l3-q3"
+        },
+        {
+         "prompt": "The water in the drain tubing swings with breathing. This means…",
+         "options": [
+          {
+           "text": "The drain is in the pleural space and patent",
+           "correct": true,
+           "feedback": "Swinging follows pleural pressure."
+          },
+          {
+           "text": "It is blocked",
+           "correct": false,
+           "feedback": "Not quite: Swinging follows pleural pressure."
+          },
+          {
+           "text": "There is a large air leak",
+           "correct": false,
+           "feedback": "Bubbling shows an air leak."
+          }
+         ],
+         "id": "tr-402-m1-l3-q4"
+        },
+        {
+         "prompt": "A sharp trocar to push the drain in is…",
+         "options": [
+          {
+           "text": "Avoided: use blunt dissection",
+           "correct": true,
+           "feedback": "Trocars cause organ injury."
+          },
+          {
+           "text": "Recommended",
+           "correct": false,
+           "feedback": "Not quite: Trocars cause organ injury."
+          },
+          {
+           "text": "Required for small drains",
+           "correct": false,
+           "feedback": "Not quite: Trocars cause organ injury."
+          }
+         ],
+         "id": "tr-402-m1-l3-q5"
         }
        ],
        "passScore": 70,
@@ -2619,8 +4291,8 @@
       {
        "title": "Check: Point-of-Care Ultrasound in Trauma (eFAST)",
        "kind": "Quiz",
-       "minutes": 6,
-       "summary": "1 questions with feedback.",
+       "minutes": 10,
+       "summary": "5 questions with feedback.",
        "questions": [
         {
          "prompt": "Free fluid on FAST appears…",
@@ -2642,6 +4314,90 @@
           }
          ],
          "id": "tr-403-m1-l3-q1"
+        },
+        {
+         "prompt": "The right upper quadrant view looks at…",
+         "options": [
+          {
+           "text": "The hepatorenal space (Morison's pouch)",
+           "correct": true,
+           "feedback": "A common place for free fluid to collect."
+          },
+          {
+           "text": "The spleen",
+           "correct": false,
+           "feedback": "Not quite: A common place for free fluid to collect."
+          },
+          {
+           "text": "The bladder",
+           "correct": false,
+           "feedback": "Not quite: A common place for free fluid to collect."
+          }
+         ],
+         "id": "tr-403-m1-l3-q2"
+        },
+        {
+         "prompt": "Absent lung sliding on the anterior chest suggests…",
+         "options": [
+          {
+           "text": "Pneumothorax",
+           "correct": true,
+           "feedback": "The pleural layers no longer slide on each other."
+          },
+          {
+           "text": "Normal lung",
+           "correct": false,
+           "feedback": "Not quite: The pleural layers no longer slide on each other."
+          },
+          {
+           "text": "Haemoperitoneum",
+           "correct": false,
+           "feedback": "Not quite: The pleural layers no longer slide on each other."
+          }
+         ],
+         "id": "tr-403-m1-l3-q3"
+        },
+        {
+         "prompt": "The subxiphoid view looks for…",
+         "options": [
+          {
+           "text": "Pericardial fluid",
+           "correct": true,
+           "feedback": "Tamponade can kill quickly."
+          },
+          {
+           "text": "Free fluid in the pelvis",
+           "correct": false,
+           "feedback": "Not quite: Tamponade can kill quickly."
+          },
+          {
+           "text": "A pneumothorax",
+           "correct": false,
+           "feedback": "Not quite: Tamponade can kill quickly."
+          }
+         ],
+         "id": "tr-403-m1-l3-q4"
+        },
+        {
+         "prompt": "A negative FAST in an unstable patient…",
+         "options": [
+          {
+           "text": "Does not exclude bleeding: look elsewhere and repeat",
+           "correct": true,
+           "feedback": "FAST misses retroperitoneal and small bleeds."
+          },
+          {
+           "text": "Excludes abdominal injury",
+           "correct": false,
+           "feedback": "Not quite: FAST misses retroperitoneal and small bleeds."
+          },
+          {
+           "text": "Means the patient can go home",
+           "correct": false,
+           "feedback": "Not quite: FAST misses retroperitoneal and small bleeds."
+          }
+         ],
+         "id": "tr-403-m1-l3-q5"
         }
        ],
        "passScore": 70,
@@ -2733,8 +4489,8 @@
       {
        "title": "Check: Vascular Access",
        "kind": "Quiz",
-       "minutes": 6,
-       "summary": "1 questions with feedback.",
+       "minutes": 10,
+       "summary": "5 questions with feedback.",
        "questions": [
         {
          "prompt": "During Seldinger insertion, the operator must…",
@@ -2756,6 +4512,90 @@
           }
          ],
          "id": "tr-404-m1-l3-q1"
+        },
+        {
+         "prompt": "Flow through a cannula depends most on…",
+         "options": [
+          {
+           "text": "Its internal diameter (flow rises with the radius to the fourth power)",
+           "correct": true,
+           "feedback": "Short and wide is fastest."
+          },
+          {
+           "text": "Its colour",
+           "correct": false,
+           "feedback": "Not quite: Short and wide is fastest."
+          },
+          {
+           "text": "Nothing: all cannulae flow the same",
+           "correct": false,
+           "feedback": "Not quite: Short and wide is fastest."
+          }
+         ],
+         "id": "tr-404-m1-l3-q2"
+        },
+        {
+         "prompt": "A 14G cannula is…",
+         "options": [
+          {
+           "text": "Wider than an 18G",
+           "correct": true,
+           "feedback": "Lower gauge means wider."
+          },
+          {
+           "text": "Narrower than a 22G",
+           "correct": false,
+           "feedback": "Not quite: Lower gauge means wider."
+          },
+          {
+           "text": "The same as a 20G",
+           "correct": false,
+           "feedback": "Not quite: Lower gauge means wider."
+          }
+         ],
+         "id": "tr-404-m1-l3-q3"
+        },
+        {
+         "prompt": "Central venous catheters are placed…",
+         "options": [
+          {
+           "text": "Under ultrasound guidance with full aseptic technique",
+           "correct": true,
+           "feedback": "Ultrasound reduces arterial puncture and pneumothorax."
+          },
+          {
+           "text": "Blind and non-sterile",
+           "correct": false,
+           "feedback": "Not quite: Ultrasound reduces arterial puncture and pneumothorax."
+          },
+          {
+           "text": "Only in theatre",
+           "correct": false,
+           "feedback": "Not quite: Ultrasound reduces arterial puncture and pneumothorax."
+          }
+         ],
+         "id": "tr-404-m1-l3-q4"
+        },
+        {
+         "prompt": "Intraosseous access is used…",
+         "options": [
+          {
+           "text": "When venous access fails in an emergency",
+           "correct": true,
+           "feedback": "It works in adults and children in under a minute."
+          },
+          {
+           "text": "First for routine blood tests",
+           "correct": false,
+           "feedback": "Not quite: It works in adults and children in under a minute."
+          },
+          {
+           "text": "Never in adults",
+           "correct": false,
+           "feedback": "Not quite: It works in adults and children in under a minute."
+          }
+         ],
+         "id": "tr-404-m1-l3-q5"
         }
        ],
        "passScore": 70,
@@ -2855,8 +4695,8 @@
       {
        "title": "Check: Orthopaedic Principles and Bone Instruments",
        "kind": "Quiz",
-       "minutes": 6,
-       "summary": "1 questions with feedback.",
+       "minutes": 10,
+       "summary": "5 questions with feedback.",
        "questions": [
         {
          "prompt": "Absolute stability of a fracture is achieved by…",
@@ -2878,6 +4718,90 @@
           }
          ],
          "id": "or-501-m1-l3-q1"
+        },
+        {
+         "prompt": "A fracture description includes…",
+         "options": [
+          {
+           "text": "Bone, location, pattern, displacement and soft-tissue state",
+           "correct": true,
+           "feedback": "A complete description guides treatment."
+          },
+          {
+           "text": "Only the bone",
+           "correct": false,
+           "feedback": "Not quite: A complete description guides treatment."
+          },
+          {
+           "text": "Only the patient's age",
+           "correct": false,
+           "feedback": "Not quite: A complete description guides treatment."
+          }
+         ],
+         "id": "or-501-m1-l3-q2"
+        },
+        {
+         "prompt": "Fracture treatment is: reduce, hold and…",
+         "options": [
+          {
+           "text": "Rehabilitate",
+           "correct": true,
+           "feedback": "Function is the goal."
+          },
+          {
+           "text": "Rest indefinitely",
+           "correct": false,
+           "feedback": "Not quite: Function is the goal."
+          },
+          {
+           "text": "Remove the bone",
+           "correct": false,
+           "feedback": "Not quite: Function is the goal."
+          }
+         ],
+         "id": "or-501-m1-l3-q3"
+        },
+        {
+         "prompt": "Tourniquet time should be…",
+         "options": [
+          {
+           "text": "Recorded and kept as short as possible",
+           "correct": true,
+           "feedback": "Prolonged ischaemia damages muscle and nerve."
+          },
+          {
+           "text": "Unlimited",
+           "correct": false,
+           "feedback": "Not quite: Prolonged ischaemia damages muscle and nerve."
+          },
+          {
+           "text": "Not recorded",
+           "correct": false,
+           "feedback": "Not quite: Prolonged ischaemia damages muscle and nerve."
+          }
+         ],
+         "id": "or-501-m1-l3-q4"
+        },
+        {
+         "prompt": "A bone rongeur is used to…",
+         "options": [
+          {
+           "text": "Bite away small pieces of bone",
+           "correct": true,
+           "feedback": "Its cupped jaws nibble bone."
+          },
+          {
+           "text": "Hold needles",
+           "correct": false,
+           "feedback": "Not quite: Its cupped jaws nibble bone."
+          },
+          {
+           "text": "Retract skin",
+           "correct": false,
+           "feedback": "Not quite: Its cupped jaws nibble bone."
+          }
+         ],
+         "id": "or-501-m1-l3-q5"
         }
        ],
        "passScore": 70,
@@ -2968,8 +4892,8 @@
       {
        "title": "Check: Vascular Surgery Basics",
        "kind": "Quiz",
-       "minutes": 6,
-       "summary": "1 questions with feedback.",
+       "minutes": 10,
+       "summary": "5 questions with feedback.",
        "questions": [
         {
          "prompt": "On the arterial side of an anastomosis the needle passes…",
@@ -2991,6 +4915,90 @@
           }
          ],
          "id": "vs-502-m1-l3-q1"
+        },
+        {
+         "prompt": "Before opening an artery you must have…",
+         "options": [
+          {
+           "text": "Proximal and distal control",
+           "correct": true,
+           "feedback": "Control before you cut."
+          },
+          {
+           "text": "Distal control only",
+           "correct": false,
+           "feedback": "Not quite: Control before you cut."
+          },
+          {
+           "text": "Nothing",
+           "correct": false,
+           "feedback": "Not quite: Control before you cut."
+          }
+         ],
+         "id": "vs-502-m1-l3-q2"
+        },
+        {
+         "prompt": "A vascular anastomosis is sewn with…",
+         "options": [
+          {
+           "text": "Fine non-absorbable monofilament (polypropylene)",
+           "correct": true,
+           "feedback": "It slides through the vessel wall and lasts."
+          },
+          {
+           "text": "Braided absorbable suture",
+           "correct": false,
+           "feedback": "Not quite: It slides through the vessel wall and lasts."
+          },
+          {
+           "text": "Silk",
+           "correct": false,
+           "feedback": "Not quite: It slides through the vessel wall and lasts."
+          }
+         ],
+         "id": "vs-502-m1-l3-q3"
+        },
+        {
+         "prompt": "Most varicose veins are now treated with…",
+         "options": [
+          {
+           "text": "Endovenous ablation",
+           "correct": true,
+           "feedback": "Stripping remains an option for selected patients."
+          },
+          {
+           "text": "Stripping in every case",
+           "correct": false,
+           "feedback": "Not quite: Stripping remains an option for selected patients."
+          },
+          {
+           "text": "Amputation",
+           "correct": false,
+           "feedback": "Not quite: Stripping remains an option for selected patients."
+          }
+         ],
+         "id": "vs-502-m1-l3-q4"
+        },
+        {
+         "prompt": "Heparin is given before clamping to…",
+         "options": [
+          {
+           "text": "Prevent thrombosis in the clamped vessels",
+           "correct": true,
+           "feedback": "Stagnant blood clots behind a clamp."
+          },
+          {
+           "text": "Speed clotting",
+           "correct": false,
+           "feedback": "Not quite: Stagnant blood clots behind a clamp."
+          },
+          {
+           "text": "Relieve pain",
+           "correct": false,
+           "feedback": "Not quite: Stagnant blood clots behind a clamp."
+          }
+         ],
+         "id": "vs-502-m1-l3-q5"
         }
        ],
        "passScore": 70,
@@ -3079,8 +5087,8 @@
       {
        "title": "Check: Plastic Surgery: Skin Grafts",
        "kind": "Quiz",
-       "minutes": 6,
-       "summary": "1 questions with feedback.",
+       "minutes": 10,
+       "summary": "5 questions with feedback.",
        "questions": [
         {
          "prompt": "Which graft contracts more after healing?",
@@ -3102,6 +5110,90 @@
           }
          ],
          "id": "pl-503-m1-l3-q1"
+        },
+        {
+         "prompt": "A graft takes best on…",
+         "options": [
+          {
+           "text": "A well-vascularised bed",
+           "correct": true,
+           "feedback": "The graft survives on the bed until it vascularises."
+          },
+          {
+           "text": "Bare bone without periosteum",
+           "correct": false,
+           "feedback": "Grafts need a blood supply."
+          },
+          {
+           "text": "Bare tendon without paratenon",
+           "correct": false,
+           "feedback": "Not quite: The graft survives on the bed until it vascularises."
+          }
+         ],
+         "id": "pl-503-m1-l3-q2"
+        },
+        {
+         "prompt": "Meshing a split-thickness graft…",
+         "options": [
+          {
+           "text": "Lets it cover a larger area and lets fluid escape",
+           "correct": true,
+           "feedback": "Useful in large burns."
+          },
+          {
+           "text": "Makes it thicker",
+           "correct": false,
+           "feedback": "Not quite: Useful in large burns."
+          },
+          {
+           "text": "Stops it taking",
+           "correct": false,
+           "feedback": "Not quite: Useful in large burns."
+          }
+         ],
+         "id": "pl-503-m1-l3-q3"
+        },
+        {
+         "prompt": "Full-thickness grafts are preferred for…",
+         "options": [
+          {
+           "text": "The face and hands",
+           "correct": true,
+           "feedback": "Better colour match and less contraction."
+          },
+          {
+           "text": "Large burns",
+           "correct": false,
+           "feedback": "Not quite: Better colour match and less contraction."
+          },
+          {
+           "text": "Bone",
+           "correct": false,
+           "feedback": "Not quite: Better colour match and less contraction."
+          }
+         ],
+         "id": "pl-503-m1-l3-q4"
+        },
+        {
+         "prompt": "A common cause of graft failure is…",
+         "options": [
+          {
+           "text": "Haematoma or seroma under the graft",
+           "correct": true,
+           "feedback": "Fluid lifts the graft off its bed."
+          },
+          {
+           "text": "A firm dressing",
+           "correct": false,
+           "feedback": "Not quite: Fluid lifts the graft off its bed."
+          },
+          {
+           "text": "A good blood supply",
+           "correct": false,
+           "feedback": "Not quite: Fluid lifts the graft off its bed."
+          }
+         ],
+         "id": "pl-503-m1-l3-q5"
         }
        ],
        "passScore": 70,
@@ -3192,8 +5284,8 @@
       {
        "title": "Check: ENT Examination and Emergencies",
        "kind": "Quiz",
-       "minutes": 6,
-       "summary": "1 questions with feedback.",
+       "minutes": 10,
+       "summary": "5 questions with feedback.",
        "questions": [
         {
          "prompt": "Most nosebleeds arise from…",
@@ -3215,6 +5307,90 @@
           }
          ],
          "id": "en-504-m1-l3-q1"
+        },
+        {
+         "prompt": "For otoscopy in an adult the pinna is pulled…",
+         "options": [
+          {
+           "text": "Up and back",
+           "correct": true,
+           "feedback": "It straightens the ear canal."
+          },
+          {
+           "text": "Down and back",
+           "correct": false,
+           "feedback": "That is for young children."
+          },
+          {
+           "text": "Forward",
+           "correct": false,
+           "feedback": "Not quite: It straightens the ear canal."
+          }
+         ],
+         "id": "en-504-m1-l3-q2"
+        },
+        {
+         "prompt": "First aid for an anterior nosebleed is…",
+         "options": [
+          {
+           "text": "Sit forward and pinch the soft part of the nose for 15 minutes",
+           "correct": true,
+           "feedback": "Leaning forward stops blood being swallowed or inhaled."
+          },
+          {
+           "text": "Lie flat with the head tipped back",
+           "correct": false,
+           "feedback": "Not quite: Leaning forward stops blood being swallowed or inhaled."
+          },
+          {
+           "text": "Ice on the forehead only",
+           "correct": false,
+           "feedback": "Not quite: Leaning forward stops blood being swallowed or inhaled."
+          }
+         ],
+         "id": "en-504-m1-l3-q3"
+        },
+        {
+         "prompt": "In a can't-intubate, can't-oxygenate emergency the standard front-of-neck access is…",
+         "options": [
+          {
+           "text": "Scalpel–bougie–tube cricothyroidotomy",
+           "correct": true,
+           "feedback": "DAS guidelines: scalpel, bougie, tube."
+          },
+          {
+           "text": "A nasal airway",
+           "correct": false,
+           "feedback": "Not quite: DAS guidelines: scalpel, bougie, tube."
+          },
+          {
+           "text": "Waiting for the anaesthetist to retry",
+           "correct": false,
+           "feedback": "Not quite: DAS guidelines: scalpel, bougie, tube."
+          }
+         ],
+         "id": "en-504-m1-l3-q4"
+        },
+        {
+         "prompt": "The cricothyroid membrane lies between…",
+         "options": [
+          {
+           "text": "The thyroid and cricoid cartilages",
+           "correct": true,
+           "feedback": "It is shallow and easy to feel in most adults."
+          },
+          {
+           "text": "The hyoid and thyroid cartilage",
+           "correct": false,
+           "feedback": "Not quite: It is shallow and easy to feel in most adults."
+          },
+          {
+           "text": "Below the cricoid",
+           "correct": false,
+           "feedback": "Not quite: It is shallow and easy to feel in most adults."
+          }
+         ],
+         "id": "en-504-m1-l3-q5"
         }
        ],
        "passScore": 70,
@@ -3305,8 +5481,8 @@
       {
        "title": "Check: Urinary Catheterisation and Endourology",
        "kind": "Quiz",
-       "minutes": 6,
-       "summary": "1 questions with feedback.",
+       "minutes": 10,
+       "summary": "5 questions with feedback.",
        "questions": [
         {
          "prompt": "When should the catheter balloon be inflated?",
@@ -3328,6 +5504,90 @@
           }
          ],
          "id": "ur-505-m1-l3-q1"
+        },
+        {
+         "prompt": "During male catheterisation the penis is held…",
+         "options": [
+          {
+           "text": "Upright, to straighten the urethra",
+           "correct": true,
+           "feedback": "It straightens the urethral curve."
+          },
+          {
+           "text": "Pointing down",
+           "correct": false,
+           "feedback": "Not quite: It straightens the urethral curve."
+          },
+          {
+           "text": "Any way",
+           "correct": false,
+           "feedback": "Not quite: It straightens the urethral curve."
+          }
+         ],
+         "id": "ur-505-m1-l3-q2"
+        },
+        {
+         "prompt": "Local anaesthetic gel is instilled…",
+         "options": [
+          {
+           "text": "Before insertion, and given a few minutes to work",
+           "correct": true,
+           "feedback": "It lubricates and numbs the urethra."
+          },
+          {
+           "text": "After insertion",
+           "correct": false,
+           "feedback": "Not quite: It lubricates and numbs the urethra."
+          },
+          {
+           "text": "Never",
+           "correct": false,
+           "feedback": "Not quite: It lubricates and numbs the urethra."
+          }
+         ],
+         "id": "ur-505-m1-l3-q3"
+        },
+        {
+         "prompt": "After catheterisation you document…",
+         "options": [
+          {
+           "text": "The residual volume",
+           "correct": true,
+           "feedback": "It confirms retention and guides treatment."
+          },
+          {
+           "text": "Nothing",
+           "correct": false,
+           "feedback": "Not quite: It confirms retention and guides treatment."
+          },
+          {
+           "text": "Only the time",
+           "correct": false,
+           "feedback": "Not quite: It confirms retention and guides treatment."
+          }
+         ],
+         "id": "ur-505-m1-l3-q4"
+        },
+        {
+         "prompt": "You meet resistance and the catheter will not pass. You…",
+         "options": [
+          {
+           "text": "Stop and ask for urology review",
+           "correct": true,
+           "feedback": "Forcing causes false passages."
+          },
+          {
+           "text": "Push harder",
+           "correct": false,
+           "feedback": "Not quite: Forcing causes false passages."
+          },
+          {
+           "text": "Inflate the balloon",
+           "correct": false,
+           "feedback": "Not quite: Forcing causes false passages."
+          }
+         ],
+         "id": "ur-505-m1-l3-q5"
         }
        ],
        "passScore": 70,
@@ -3418,8 +5678,8 @@
       {
        "title": "Check: Cardiothoracic Surgery Basics",
        "kind": "Quiz",
-       "minutes": 6,
-       "summary": "1 questions with feedback.",
+       "minutes": 10,
+       "summary": "5 questions with feedback.",
        "questions": [
         {
          "prompt": "Low BP, high CVP and a sudden fall in drain output after cardiac surgery suggest…",
@@ -3441,6 +5701,90 @@
           }
          ],
          "id": "ct-506-m1-l3-q1"
+        },
+        {
+         "prompt": "A median sternotomy is closed with…",
+         "options": [
+          {
+           "text": "Steel wires",
+           "correct": true,
+           "feedback": "Wires hold the sternum while it heals."
+          },
+          {
+           "text": "Skin staples only",
+           "correct": false,
+           "feedback": "Not quite: Wires hold the sternum while it heals."
+          },
+          {
+           "text": "Glue",
+           "correct": false,
+           "feedback": "Not quite: Wires hold the sternum while it heals."
+          }
+         ],
+         "id": "ct-506-m1-l3-q2"
+        },
+        {
+         "prompt": "On cardiopulmonary bypass the heart is stopped with…",
+         "options": [
+          {
+           "text": "Cardioplegia",
+           "correct": true,
+           "feedback": "A cold potassium-rich solution arrests the heart."
+          },
+          {
+           "text": "Adrenaline",
+           "correct": false,
+           "feedback": "Not quite: A cold potassium-rich solution arrests the heart."
+          },
+          {
+           "text": "Lidocaine",
+           "correct": false,
+           "feedback": "Not quite: A cold potassium-rich solution arrests the heart."
+          }
+         ],
+         "id": "ct-506-m1-l3-q3"
+        },
+        {
+         "prompt": "Beck's triad of tamponade is…",
+         "options": [
+          {
+           "text": "Hypotension, raised JVP and muffled heart sounds",
+           "correct": true,
+           "feedback": "The heart cannot fill."
+          },
+          {
+           "text": "Hypertension, bradycardia and irregular breathing",
+           "correct": false,
+           "feedback": "That is Cushing's triad."
+          },
+          {
+           "text": "Fever, rash and joint pain",
+           "correct": false,
+           "feedback": "Not quite: The heart cannot fill."
+          }
+         ],
+         "id": "ct-506-m1-l3-q4"
+        },
+        {
+         "prompt": "Tamponade after cardiac surgery is treated by…",
+         "options": [
+          {
+           "text": "Urgent re-exploration (re-opening the chest)",
+           "correct": true,
+           "feedback": "Release the blood around the heart."
+          },
+          {
+           "text": "Fluids and waiting",
+           "correct": false,
+           "feedback": "Not quite: Release the blood around the heart."
+          },
+          {
+           "text": "Diuretics",
+           "correct": false,
+           "feedback": "Not quite: Release the blood around the heart."
+          }
+         ],
+         "id": "ct-506-m1-l3-q5"
         }
        ],
        "passScore": 70,
@@ -3528,8 +5872,8 @@
       {
        "title": "Check: Neurosurgery Basics: Burr Holes",
        "kind": "Quiz",
-       "minutes": 6,
-       "summary": "1 questions with feedback.",
+       "minutes": 10,
+       "summary": "5 questions with feedback.",
        "questions": [
         {
          "prompt": "An extradural haematoma on CT is typically…",
@@ -3551,6 +5895,90 @@
           }
          ],
          "id": "ns-507-m1-l3-q1"
+        },
+        {
+         "prompt": "A lucid interval after head injury is classic of…",
+         "options": [
+          {
+           "text": "Extradural haematoma",
+           "correct": true,
+           "feedback": "Consciousness returns, then falls as the clot grows."
+          },
+          {
+           "text": "Subdural haematoma",
+           "correct": false,
+           "feedback": "Not quite: Consciousness returns, then falls as the clot grows."
+          },
+          {
+           "text": "Subarachnoid haemorrhage",
+           "correct": false,
+           "feedback": "Not quite: Consciousness returns, then falls as the clot grows."
+          }
+         ],
+         "id": "ns-507-m1-l3-q2"
+        },
+        {
+         "prompt": "An extradural haematoma usually comes from…",
+         "options": [
+          {
+           "text": "The middle meningeal artery",
+           "correct": true,
+           "feedback": "Often a temporal bone fracture tears it."
+          },
+          {
+           "text": "Bridging veins",
+           "correct": false,
+           "feedback": "That is subdural."
+          },
+          {
+           "text": "A berry aneurysm",
+           "correct": false,
+           "feedback": "Not quite: Often a temporal bone fracture tears it."
+          }
+         ],
+         "id": "ns-507-m1-l3-q3"
+        },
+        {
+         "prompt": "Signs of rising intracranial pressure include…",
+         "options": [
+          {
+           "text": "Falling GCS, a dilating pupil and Cushing's response",
+           "correct": true,
+           "feedback": "Act fast: these are late signs."
+          },
+          {
+           "text": "A rising GCS",
+           "correct": false,
+           "feedback": "Not quite: Act fast: these are late signs."
+          },
+          {
+           "text": "Small pupils and alertness",
+           "correct": false,
+           "feedback": "Not quite: Act fast: these are late signs."
+          }
+         ],
+         "id": "ns-507-m1-l3-q4"
+        },
+        {
+         "prompt": "Definitive treatment of an extradural haematoma is…",
+         "options": [
+          {
+           "text": "Craniotomy by a neurosurgeon",
+           "correct": true,
+           "feedback": "Burr holes are a last resort when transfer is impossible."
+          },
+          {
+           "text": "Burr holes in every case",
+           "correct": false,
+           "feedback": "Not quite: Burr holes are a last resort when transfer is impossible."
+          },
+          {
+           "text": "Observation",
+           "correct": false,
+           "feedback": "Not quite: Burr holes are a last resort when transfer is impossible."
+          }
+         ],
+         "id": "ns-507-m1-l3-q5"
         }
        ],
        "passScore": 70,
@@ -3641,8 +6069,8 @@
       {
        "title": "Check: Caesarean Section Fundamentals",
        "kind": "Quiz",
-       "minutes": 6,
-       "summary": "1 questions with feedback.",
+       "minutes": 10,
+       "summary": "5 questions with feedback.",
        "questions": [
         {
          "prompt": "The uterine incision in a standard caesarean section is…",
@@ -3664,6 +6092,90 @@
           }
          ],
          "id": "og-508-m1-l3-q1"
+        },
+        {
+         "prompt": "The usual skin incision is…",
+         "options": [
+          {
+           "text": "Pfannenstiel (transverse, suprapubic)",
+           "correct": true,
+           "feedback": "It heals well with a hidden scar."
+          },
+          {
+           "text": "Upper midline",
+           "correct": false,
+           "feedback": "Not quite: It heals well with a hidden scar."
+          },
+          {
+           "text": "Kocher (right subcostal)",
+           "correct": false,
+           "feedback": "Not quite: It heals well with a hidden scar."
+          }
+         ],
+         "id": "og-508-m1-l3-q2"
+        },
+        {
+         "prompt": "A category 1 caesarean section means…",
+         "options": [
+          {
+           "text": "Immediate threat to the life of the woman or baby",
+           "correct": true,
+           "feedback": "Aim to deliver as quickly as safely possible."
+          },
+          {
+           "text": "Planned, at a time to suit",
+           "correct": false,
+           "feedback": "Not quite: Aim to deliver as quickly as safely possible."
+          },
+          {
+           "text": "Maternal request only",
+           "correct": false,
+           "feedback": "Not quite: Aim to deliver as quickly as safely possible."
+          }
+         ],
+         "id": "og-508-m1-l3-q3"
+        },
+        {
+         "prompt": "First-line drug for postpartum haemorrhage is…",
+         "options": [
+          {
+           "text": "Oxytocin",
+           "correct": true,
+           "feedback": "It contracts the uterus."
+          },
+          {
+           "text": "Furosemide",
+           "correct": false,
+           "feedback": "Not quite: It contracts the uterus."
+          },
+          {
+           "text": "Insulin",
+           "correct": false,
+           "feedback": "Not quite: It contracts the uterus."
+          }
+         ],
+         "id": "og-508-m1-l3-q4"
+        },
+        {
+         "prompt": "The bladder is reflected down before the uterine incision to…",
+         "options": [
+          {
+           "text": "Protect it from injury",
+           "correct": true,
+           "feedback": "The bladder lies over the lower segment."
+          },
+          {
+           "text": "Drain urine",
+           "correct": false,
+           "feedback": "Not quite: The bladder lies over the lower segment."
+          },
+          {
+           "text": "See the placenta",
+           "correct": false,
+           "feedback": "Not quite: The bladder lies over the lower segment."
+          }
+         ],
+         "id": "og-508-m1-l3-q5"
         }
        ],
        "passScore": 70,
@@ -3777,8 +6289,8 @@
       {
        "title": "Check: scrub practice",
        "kind": "Quiz",
-       "minutes": 6,
-       "summary": "1 questions with feedback.",
+       "minutes": 10,
+       "summary": "5 questions with feedback.",
        "questions": [
         {
          "prompt": "A specimen label must include…",
@@ -3800,6 +6312,90 @@
           }
          ],
          "id": "pp-601-m1-l5-q1"
+        },
+        {
+         "prompt": "The Mayo stand holds…",
+         "options": [
+          {
+           "text": "What the surgeon will need next",
+           "correct": true,
+           "feedback": "The back table holds the rest."
+          },
+          {
+           "text": "Spare stock",
+           "correct": false,
+           "feedback": "Not quite: The back table holds the rest."
+          },
+          {
+           "text": "Used swabs",
+           "correct": false,
+           "feedback": "Not quite: The back table holds the rest."
+          }
+         ],
+         "id": "pp-601-m1-l5-q2"
+        },
+        {
+         "prompt": "Counts are done…",
+         "options": [
+          {
+           "text": "Before the case, before closing a cavity and at skin closure (and on staff changes)",
+           "correct": true,
+           "feedback": "Regular counts catch a missing item early."
+          },
+          {
+           "text": "Only at the end",
+           "correct": false,
+           "feedback": "Not quite: Regular counts catch a missing item early."
+          },
+          {
+           "text": "Only if something is missing",
+           "correct": false,
+           "feedback": "Not quite: Regular counts catch a missing item early."
+          }
+         ],
+         "id": "pp-601-m1-l5-q3"
+        },
+        {
+         "prompt": "If a count is incorrect…",
+         "options": [
+          {
+           "text": "Tell the surgeon at once, search, and X-ray if not found",
+           "correct": true,
+           "feedback": "Retained items are never events."
+          },
+          {
+           "text": "Ignore it",
+           "correct": false,
+           "feedback": "Not quite: Retained items are never events."
+          },
+          {
+           "text": "Correct the sheet",
+           "correct": false,
+           "feedback": "Not quite: Retained items are never events."
+          }
+         ],
+         "id": "pp-601-m1-l5-q4"
+        },
+        {
+         "prompt": "Before using a sterile tray, check…",
+         "options": [
+          {
+           "text": "The sterility indicator and that the wrap is intact and dry",
+           "correct": true,
+           "feedback": "A damp or torn wrap means it is not sterile."
+          },
+          {
+           "text": "Its colour",
+           "correct": false,
+           "feedback": "Not quite: A damp or torn wrap means it is not sterile."
+          },
+          {
+           "text": "Nothing",
+           "correct": false,
+           "feedback": "Not quite: A damp or torn wrap means it is not sterile."
+          }
+         ],
+         "id": "pp-601-m1-l5-q5"
         }
        ],
        "passScore": 70,
@@ -3874,8 +6470,8 @@
       {
        "title": "Check: devices",
        "kind": "Quiz",
-       "minutes": 6,
-       "summary": "1 questions with feedback.",
+       "minutes": 10,
+       "summary": "5 questions with feedback.",
        "questions": [
         {
          "prompt": "An infusion pump alarms 'occlusion downstream'. First you…",
@@ -3897,6 +6493,90 @@
           }
          ],
          "id": "pp-602-m1-l3-q1"
+        },
+        {
+         "prompt": "Drug libraries on infusion pumps…",
+         "options": [
+          {
+           "text": "Set safe dose limits and cut programming errors",
+           "correct": true,
+           "feedback": "Soft and hard limits catch mistakes."
+          },
+          {
+           "text": "Make infusions faster",
+           "correct": false,
+           "feedback": "Not quite: Soft and hard limits catch mistakes."
+          },
+          {
+           "text": "Replace the prescription",
+           "correct": false,
+           "feedback": "Not quite: Soft and hard limits catch mistakes."
+          }
+         ],
+         "id": "pp-602-m1-l3-q2"
+        },
+        {
+         "prompt": "A syringe driver is preferred for…",
+         "options": [
+          {
+           "text": "Small, precise volumes over time",
+           "correct": true,
+           "feedback": "It delivers tiny rates accurately."
+          },
+          {
+           "text": "Fast fluid boluses",
+           "correct": false,
+           "feedback": "Not quite: It delivers tiny rates accurately."
+          },
+          {
+           "text": "Litres of fluid",
+           "correct": false,
+           "feedback": "Not quite: It delivers tiny rates accurately."
+          }
+         ],
+         "id": "pp-602-m1-l3-q3"
+        },
+        {
+         "prompt": "An 'air in line' alarm sounds. You…",
+         "options": [
+          {
+           "text": "Stop, clear the air following the protocol and check the line before restarting",
+           "correct": true,
+           "feedback": "Air embolism is a preventable harm."
+          },
+          {
+           "text": "Silence it and carry on",
+           "correct": false,
+           "feedback": "Not quite: Air embolism is a preventable harm."
+          },
+          {
+           "text": "Speed up the infusion",
+           "correct": false,
+           "feedback": "Not quite: Air embolism is a preventable harm."
+          }
+         ],
+         "id": "pp-602-m1-l3-q4"
+        },
+        {
+         "prompt": "Before starting an infusion, check…",
+         "options": [
+          {
+           "text": "Drug, dose, rate, route and patient against the prescription",
+           "correct": true,
+           "feedback": "Independent checks prevent infusion errors."
+          },
+          {
+           "text": "Only the bag colour",
+           "correct": false,
+           "feedback": "Not quite: Independent checks prevent infusion errors."
+          },
+          {
+           "text": "Nothing",
+           "correct": false,
+           "feedback": "Not quite: Independent checks prevent infusion errors."
+          }
+         ],
+         "id": "pp-602-m1-l3-q5"
         }
        ],
        "passScore": 70,

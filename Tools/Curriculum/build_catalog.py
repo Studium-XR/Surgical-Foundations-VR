@@ -19,7 +19,7 @@ import re
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "Assets", "_Project", "Resources", "Curriculum", "catalog.json")
 # The API embeds the same file (GET /catalog), so the headset and the server never disagree about a course.
 API_OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "..", "Studium-XR-Backend", "src", "SurgicalFoundations.Api", "Catalog", "catalog.json")
-VERSION = 2
+VERSION = 3  # 3: five questions per quiz, diagnostic laparoscopy module in MIS-201
 
 
 def slug(s):
@@ -375,6 +375,27 @@ course("MIS-201", "Laparoscopic Fundamentals", "Equipment, pneumoperitoneum, saf
                     "with controlled force."),
                lab("Place the ports", "lap-access", "Mark the port sites and insert the trocars; angle, depth and force are measured."),
                assess("Assessment: safe access", "lap-access", "Mark and place all ports with no guidance; a deep trocar triggers a port-site bleed to manage.")),
+        module("Diagnostic laparoscopy", "Looking inside to diagnose and treat in one operation: endometriosis as the example.",
+               {"title": "Video: diagnostic laparoscopy for endometriosis", "kind": "Video", "minutes": 6,
+                "summary": "A 3-minute patient-facing film from Children's Hospital Colorado, with notes.",
+                "content":
+                    "Watch on a phone or computer: youtube.com/watch?v=KJfQnlGgBgA (Children's Hospital Colorado, 3 min).\n\n"
+                    "Why it is done: endometriosis is endometrial-type tissue growing outside the uterus, where it bleeds and inflames with each "
+                    "cycle and causes pelvic pain. Imaging (pelvic ultrasound or MRI) is used first to rule out other causes, but only looking "
+                    "inside confirms the diagnosis, so diagnostic laparoscopy is the reference test. It is usually a day case.\n\n"
+                    "The operation: under general anaesthesia the surgeon makes two or three incisions of about 5 mm. One takes the camera with "
+                    "its light cable; the others take working instruments. The abdomen is insufflated with CO2 to lift the wall and give room "
+                    "and a clear view. The pelvis is inspected systematically (uterus, ovaries, pouch of Douglas, uterosacral ligaments, "
+                    "bladder peritoneum, bowel). Lesions found can be treated in the same operation: excised or ablated with laser or "
+                    "electrosurgery. The ports come out under vision and the small wounds are closed with absorbable subcuticular sutures that "
+                    "need no removal. It takes about 1–2 hours depending on the disease found.\n\n"
+                    "Afterwards: home the same day once recovered. Expect nausea from the anaesthetic, mild port-site pain, and shoulder-tip "
+                    "pain for 2–3 days from residual CO2 irritating the diaphragm. No shower for 24 hours, no bath or swimming for a week, most "
+                    "activities within a week. Findings are discussed at follow-up, often with hormonal treatment to limit recurrence.\n\n"
+                    "Link to this course: the same tower set-up, CO2 pneumoperitoneum and safe port placement you practise in the labs."},
+               lab("Procedure lab: diagnostic laparoscopy", "diagnostic-laparoscopy",
+                   "Set up, enter safely, survey the pelvis, recognise subtle endometriosis, biopsy and treat it, and close.", minutes=20),
+               quiz("Check: diagnostic laparoscopy")),
         ], prereq=["SF-101", "SF-102"])
 
 course("MIS-202", "Laparoscopic Manual Skills", "Peg transfer, precision cutting, ligating loop and knot tying.",
@@ -696,6 +717,345 @@ course("PP-602", "Infusion Devices and Patient Equipment", "Infusion pumps, syri
         ])
 
 # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+# QUESTION BANK: extra questions appended to each quiz (keyed by course code and quiz title), so every knowledge check
+# has five questions. build() fails if a key no longer matches a quiz.
+# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+
+MORE_QUESTIONS = {
+    ("SF-101", "Check: theatre and team"): [
+        q("Theatre doors are kept closed during a case mainly to…", "Keep the positive-pressure airflow that pushes contaminated air out",
+          "Reduce noise", "Keep the room warm", why="Opening doors disrupts the ventilation that protects the sterile field."),
+        q("The circulating practitioner…", "Opens supplies, keeps records and supports the scrubbed team from outside the sterile field",
+          "Hands instruments to the surgeon|That is the scrub practitioner.", "Gives the anaesthetic",
+          why="The circulator is unscrubbed and links the sterile field to the rest of the theatre."),
+        q("If you are unsure whether an item is still sterile, you should…", "Treat it as unsterile and replace it", "Use it if it looks clean",
+          "Wipe it with alcohol and use it", why="When in doubt, it is not sterile."),
+    ],
+    ("SF-101", "Check: the checklist"): [
+        q("The three phases of the WHO Surgical Safety Checklist are…", "Sign In, Time Out, Sign Out", "Consent, Incision, Closure",
+          "Arrival, Anaesthesia, Recovery", why="Before induction, before incision and before the patient leaves theatre."),
+        q("Sign In takes place…", "Before induction of anaesthesia", "After the skin incision", "In the recovery room",
+          why="Identity, site, consent, allergies, airway and blood loss risk are confirmed while the patient can still answer."),
+        q("At Sign Out the team confirms…", "The procedure, that counts are complete, specimen labels and any equipment problems",
+          "Only the patient's name", "The next patient on the list", why="Sign Out closes the loop before the patient leaves."),
+    ],
+    ("SF-101", "Check: scrubbing"): [
+        q("At the first scrub of the day you should also…", "Clean under the nails with a nail pick", "Skip the forearms",
+          "Put gloves on before washing", why="Subungual spaces hold most of the hand's bacteria."),
+        q("In closed gloving…", "The hands stay inside the gown cuffs while the gloves go on", "The circulator puts your gloves on",
+          "Gloves go on before the gown", why="Bare hands never touch the outside of the gown or gloves."),
+        q("Your glove is punctured during the case. You…", "Step back and have the glove changed (and the sharp checked)",
+          "Carry on until the end", "Wipe the glove with alcohol", why="A puncture breaks the barrier for you and the patient."),
+    ],
+    ("SF-102", "Check: name the family"): [
+        q("Toothed dissecting forceps are best for…", "Skin and fascia", "Bowel and vessels|Teeth crush and tear delicate tissue.", "Nerves",
+          why="Teeth grip tough tissue securely; use non-toothed forceps on delicate tissue."),
+        q("Artery forceps (haemostats) are used to…", "Clamp bleeding vessels before tying or diathermy", "Cut sutures", "Hold the needle while suturing",
+          why="They crush and hold a vessel so it can be ligated or coagulated."),
+        q("Compared with Metzenbaum scissors, Mayo scissors are…", "Heavier, for tough tissue and sutures",
+          "Finer, for delicate dissection|That describes Metzenbaum.", "Used only for dressings",
+          why="Metzenbaum for fine dissection, Mayo for heavy tissue."),
+    ],
+    ("SF-102", "Check: handling"): [
+        q("Sharps are passed in theatre…", "Through a neutral zone such as a kidney dish, not hand to hand", "Hand to hand, point first",
+          "Dropped onto the Mayo stand", why="A neutral zone prevents sharps injuries to the team."),
+        q("A needle holder grips a curved needle…", "About a third of the way back from the swaged end",
+          "At the very tip|It will slip and blunt the point.", "On the swage|The swage is the weakest part.",
+          why="That point gives control without bending the needle."),
+        q("A pen grip on the scalpel suits…", "Short, fine incisions with a No. 15 blade",
+          "Long skin incisions with a No. 10 blade|Use the table-knife grip for those.", "Cutting sutures",
+          why="Fine control for small incisions; a table-knife grip for long ones."),
+        q("A needle is found loose on the floor. You…", "Pick it up with an instrument, put it in the sharps bin and reconcile the count",
+          "Leave it for the cleaners", "Pick it up with your fingers", why="Every sharp must be accounted for, safely."),
+    ],
+    ("SF-103", "Check: materials"): [
+        q("A round-bodied (taper) needle is chosen for…", "Bowel, vessels and other soft tissue that tears easily", "Skin", "Tough fascia only",
+          why="It parts tissue without cutting it."),
+        q("Which suture is absorbable?", "Polyglactin (Vicryl)", "Polypropylene (Prolene)", "Nylon", why="Polyglactin is absorbed by hydrolysis in weeks."),
+        q("Interrupted sutures on the face are usually removed after…", "3–5 days", "10–14 days|That suits the back or limbs.", "21 days",
+          why="The face heals fast; early removal avoids track marks."),
+    ],
+    ("SF-104", "Check: SSI"): [
+        q("For most operations, skin is prepared with…", "Alcohol-based chlorhexidine", "Soap and water",
+          "Aqueous iodine in every case|Alcohol-based chlorhexidine is preferred unless contraindicated.",
+          why="Alcohol-based chlorhexidine gives the lowest SSI rates in most surgery."),
+        q("Keeping the patient warm during surgery…", "Reduces surgical site infection", "Increases infection risk", "Has no effect on infection",
+          why="Hypothermia impairs immunity and wound perfusion."),
+        q("A 'dirty' wound is one…", "With established infection or a perforated viscus", "Through intact skin with no viscus opened|That is clean.",
+          "Entering the bowel under control|That is clean-contaminated.", why="Wound class predicts infection risk and guides antibiotics."),
+    ],
+    ("SF-105", "Check: consent and safety"): [
+        q("Consent should be taken by…", "Someone able to do the procedure, or trained to explain it and its risks", "Any member of staff",
+          "The patient's relative", why="The person consenting must be able to answer the patient's questions."),
+        q("An adult lacks capacity for an urgent operation and has no advance decision. The team…", "Acts in their best interests and documents why",
+          "Waits for a relative to sign", "Cancels the operation", why="Relatives are consulted but cannot consent for an adult in UK law."),
+        q("Wrong-site surgery is prevented by…", "Marking the site with the patient awake and confirming it at the Time Out",
+          "Marking after draping", "Relying on the theatre list", why="Marking and Time Out together catch site errors."),
+    ],
+    ("SF-106", "Check: energy"): [
+        q("In monopolar diathermy the current returns through…", "The patient return electrode (plate)",
+          "The other jaw of the forceps|That is bipolar.", "The operating table", why="Current passes through the patient to the plate."),
+        q("The return plate goes on…", "Clean, dry, well-perfused muscle such as the thigh, away from metal implants", "A bony prominence",
+          "Hairy skin without clipping", why="Good contact over a large area prevents plate burns."),
+        q("Surgical smoke (plume) should be…", "Removed with smoke evacuation", "Breathed in, it is harmless", "Cleared by opening the doors",
+          why="Plume contains toxic chemicals and particles."),
+    ],
+    ("SF-107", "Check: monitoring and drugs"): [
+        q("Normal end-tidal CO2 is about…", "4.5–6 kPa (35–45 mmHg)", "10–12 kPa", "1–2 kPa", why="A sudden change needs an explanation."),
+        q("Early signs of local anaesthetic toxicity include…", "Perioral tingling, tinnitus and confusion", "A rash only", "Pinpoint pupils",
+          why="CNS signs come first, then seizures and cardiovascular collapse."),
+        q("Severe local anaesthetic toxicity is treated with…", "Intravenous 20% lipid emulsion", "Naloxone", "Flumazenil",
+          why="Lipid emulsion with full resuscitation; naloxone and flumazenil reverse other drugs."),
+    ],
+    ("SF-108", "Check: NOTSS"): [
+        q("The four NOTSS categories are situation awareness, decision making, communication and teamwork, and…", "Leadership", "Dexterity", "Speed",
+          why="Non-technical skills complement technical skill."),
+        q("Situation awareness means gathering information, understanding it and…", "Projecting what will happen next", "Writing it down", "Delegating it",
+          why="Anticipation lets the team act before problems escalate."),
+        q("A junior sees a safety problem while the consultant is busy. Best is to…", "Speak up clearly, e.g. 'I'm concerned that…'", "Stay silent",
+          "Mention it after the case", why="Graded assertiveness: concern, uncomfortable, safety issue."),
+        q("A team brief before the list…", "Improves teamwork and catches problems early", "Wastes theatre time", "Is only for the surgeon",
+          why="Briefs and debriefs reduce errors and delays."),
+    ],
+    ("MIS-201", "Check: the tower"): [
+        q("CO2 is used for pneumoperitoneum because it is…", "Non-flammable and quickly absorbed and breathed out", "The cheapest gas",
+          "Better for image colour", why="It is safe with diathermy and clears quickly."),
+        q("Before the laparoscope goes in you should…", "White-balance and focus the camera and warm or defog the lens",
+          "Rest the lit scope on the drapes|The light cable tip can burn drapes and skin.", "Nothing: the tower does it",
+          why="A clear, true-colour image from the start."),
+        q("During insufflation the end-tidal CO2 falls suddenly with hypotension. Think…", "Gas embolism", "Light anaesthesia", "A normal response",
+          why="Stop insufflating, release the pneumoperitoneum and resuscitate."),
+        q("Working ports are placed so the instruments meet the target at about…", "60°", "180°", "10°",
+          why="Triangulation gives the best ergonomics."),
+    ],
+    ("MIS-201", "Check: diagnostic laparoscopy"): [
+        q("Endometriosis is confirmed by…", "Diagnostic laparoscopy", "A blood test",
+          "Ultrasound alone|Imaging rules out other causes but cannot confirm it.", why="Only seeing (and biopsying) the lesions confirms it."),
+        q("The port incisions in a diagnostic laparoscopy are typically about…", "5 mm", "5 cm", "15 cm", why="Two or three small ports: camera plus instruments."),
+        q("Shoulder-tip pain for 2–3 days after laparoscopy is caused by…", "Residual CO2 irritating the diaphragm", "Arm positioning on the table",
+          "Wound infection", why="Diaphragmatic irritation is referred to the shoulder tip (C3–5)."),
+        q("Endometriosis found at diagnostic laparoscopy can be…", "Excised or ablated in the same operation",
+          "Only biopsied; treatment needs a second operation", "Left alone always", why="Diagnose and treat at one sitting where safe."),
+        q("Port sites are commonly closed with…", "Absorbable subcuticular sutures", "Steel wires", "Staples left for six weeks",
+          why="They dissolve and need no removal."),
+    ],
+    ("MIS-203", "Check: CVS"): [
+        q("The hepatocystic triangle is bounded by the cystic duct, the common hepatic duct and…", "The inferior edge of the liver", "The duodenum",
+          "The portal vein", why="This is the area cleared for the critical view."),
+        q("The most feared complication of cholecystectomy is…", "Bile duct injury", "A port-site hernia", "Shoulder-tip pain",
+          why="The critical view of safety exists to prevent it."),
+        q("The gallbladder is removed…", "In a retrieval bag", "Through the port without protection", "It is left in place",
+          why="A bag avoids spilling bile and stones into the wound and abdomen."),
+    ],
+    ("MIS-205", "Check: robotics"): [
+        q("In major bleeding the bedside team must be able to…", "Undock the robot quickly and convert", "Wait for the console surgeon to finish",
+          "Switch off the vision cart", why="Rapid undocking is a rehearsed emergency drill."),
+        q("Wristed robotic instruments add…", "Extra degrees of freedom at the tip", "Force feedback|Most systems have none.", "Lower cost",
+          why="They restore wrist movement lost with straight instruments."),
+        q("Before docking, the patient must be…", "Positioned and secured: the table usually cannot move once docked", "Left unsecured", "Awake",
+          why="Moving the table with instruments inside can injure the patient."),
+        q("Depth perception at the console comes from…", "A stereoscopic 3D endoscope", "Haptic feedback", "A larger monitor",
+          why="Two cameras give a true 3D image."),
+    ],
+    ("GS-301", "Check: Open Appendicectomy"): [
+        q("In a gridiron incision the abdominal wall muscles are…", "Split in the line of their fibres", "Cut across", "Left intact",
+          why="Splitting heals strongly and reduces hernia."),
+        q("A perforated appendix with generalised peritonitis needs…", "Resuscitation, antibiotics and urgent surgery", "Oral antibiotics and discharge",
+          "Observation only", why="This is a surgical emergency."),
+        q("The appendicular artery is a branch of…", "The ileocolic artery", "The right colic artery", "The inferior mesenteric artery",
+          why="It runs in the mesoappendix, which is ligated."),
+    ],
+    ("GS-302", "Check: Inguinal Hernia Repair"): [
+        q("The ilioinguinal nerve should be…", "Identified and protected", "Divided routinely", "Ignored",
+          why="Nerve injury causes chronic groin pain."),
+        q("Hesselbach's triangle: inferior epigastric vessels, lateral border of rectus and…", "The inguinal ligament", "The umbilicus", "The iliac crest",
+          why="Direct hernias bulge through it."),
+        q("In a Lichtenstein repair the mesh is sutured inferiorly to…", "The inguinal ligament", "The skin", "The femoral vein",
+          why="Medially the conjoint tendon, inferiorly the shelving edge of the inguinal ligament."),
+        q("A tender, irreducible groin hernia with vomiting suggests…", "Obstruction or strangulation: urgent surgery", "A simple reducible hernia",
+          "Normal findings", why="Strangulated bowel can die within hours."),
+    ],
+    ("GS-303", "Check: Laparotomy: Opening and Closing"): [
+        q("'Small bites' closure places bites about…", "5 mm from the edge and 5 mm apart", "1–2 cm from the edge", "Through the skin only",
+          why="Small bites lower incisional hernia rates."),
+        q("A midline laparotomy goes through…", "The linea alba", "The rectus muscle belly", "The semilunar line", why="The linea alba is relatively avascular."),
+        q("The peritoneum is opened…", "Between clips, lifted away from the bowel", "With a deep stab incision", "With diathermy at full power",
+          why="Lifting it protects the bowel beneath."),
+        q("Mass closure of the fascia uses…", "A continuous slowly absorbable monofilament", "Interrupted fast-absorbing braided sutures", "Silk",
+          why="It holds for the months the fascia needs to heal."),
+    ],
+    ("GS-304", "Check: Bowel Anastomosis"): [
+        q("A healthy anastomosis needs…", "A good blood supply and no tension", "Sutures pulled tight to strangle the edges|Over-tight sutures cause ischaemia.",
+          "Distended bowel", why="Perfusion and freedom from tension come first."),
+        q("An anastomotic leak most often presents…", "Between days 3 and 7", "Within the first hour", "After six weeks",
+          why="Watch the early post-operative days closely."),
+        q("Signs of an anastomotic leak include…", "Tachycardia, fever, abdominal pain or failure to progress", "Bradycardia and hunger",
+          "Nothing: leaks are always silent", why="An unexplained tachycardia is a leak until proven otherwise."),
+        q("A single-layer hand-sewn anastomosis is usually…", "Extramucosal", "Through the mucosa only", "Glued",
+          why="Extramucosal sutures hold the strong submucosa and invert the mucosa."),
+    ],
+    ("GS-305", "Check: Skin Lesions and Abscesses"): [
+        q("An excision ellipse is orientated…", "Along relaxed skin tension lines", "Across them", "In any direction",
+          why="Along the lines gives the neatest scar."),
+        q("The maximum dose of lidocaine with adrenaline is about…", "7 mg/kg", "1 mg/kg", "20 mg/kg",
+          why="3 mg/kg plain, 7 mg/kg with adrenaline."),
+        q("1% lidocaine contains…", "10 mg per ml", "1 mg per ml", "100 mg per ml", why="1% = 1 g in 100 ml = 10 mg/ml."),
+        q("Pus from a drained abscess is sent…", "For microscopy, culture and sensitivity", "Nowhere: discard it", "For histology only",
+          why="It guides antibiotics if they are needed."),
+    ],
+    ("TR-401", "Check: Primary Survey and Haemorrhage Control"): [
+        q("In <C>ABCDE, <C> stands for…", "Catastrophic external haemorrhage", "Cervical spine|That goes with the airway.", "Circulation",
+          why="Stop the bleeding that will kill first."),
+        q("When a tourniquet is applied you must record…", "The time it went on", "The patient's weight", "Nothing",
+          why="Tourniquet time guides surgery and limb survival."),
+        q("A major haemorrhage protocol gives…", "Blood products early, in a balanced ratio of red cells, plasma and platelets", "Litres of crystalloid first",
+          "Platelets only", why="Balanced resuscitation corrects coagulopathy."),
+        q("Before bleeding is controlled, fluids are titrated to…", "A palpable radial pulse (permissive hypotension)", "A normal blood pressure at all costs",
+          "No fluids at all", why="Raising pressure too far can dislodge clot (not for head injury)."),
+    ],
+    ("TR-402", "Check: Chest Drain Insertion"): [
+        q("The lower border of the safe triangle is at about…", "The 5th intercostal space (nipple level)", "The 2nd intercostal space", "The 10th rib",
+          why="Lower and the drain risks the diaphragm, liver or spleen."),
+        q("A chest drain is connected to…", "An underwater seal kept below the level of the chest", "A bag held above the patient",
+          "Full wall suction every time", why="The seal lets air out and keeps it from coming back."),
+        q("The water in the drain tubing swings with breathing. This means…", "The drain is in the pleural space and patent", "It is blocked",
+          "There is a large air leak|Bubbling shows an air leak.", why="Swinging follows pleural pressure."),
+        q("A sharp trocar to push the drain in is…", "Avoided: use blunt dissection", "Recommended", "Required for small drains",
+          why="Trocars cause organ injury."),
+    ],
+    ("TR-403", "Check: Point-of-Care Ultrasound in Trauma (eFAST)"): [
+        q("The right upper quadrant view looks at…", "The hepatorenal space (Morison's pouch)", "The spleen", "The bladder",
+          why="A common place for free fluid to collect."),
+        q("Absent lung sliding on the anterior chest suggests…", "Pneumothorax", "Normal lung", "Haemoperitoneum",
+          why="The pleural layers no longer slide on each other."),
+        q("The subxiphoid view looks for…", "Pericardial fluid", "Free fluid in the pelvis", "A pneumothorax", why="Tamponade can kill quickly."),
+        q("A negative FAST in an unstable patient…", "Does not exclude bleeding: look elsewhere and repeat", "Excludes abdominal injury",
+          "Means the patient can go home", why="FAST misses retroperitoneal and small bleeds."),
+    ],
+    ("TR-404", "Check: Vascular Access"): [
+        q("Flow through a cannula depends most on…", "Its internal diameter (flow rises with the radius to the fourth power)", "Its colour",
+          "Nothing: all cannulae flow the same", why="Short and wide is fastest."),
+        q("A 14G cannula is…", "Wider than an 18G", "Narrower than a 22G", "The same as a 20G", why="Lower gauge means wider."),
+        q("Central venous catheters are placed…", "Under ultrasound guidance with full aseptic technique", "Blind and non-sterile", "Only in theatre",
+          why="Ultrasound reduces arterial puncture and pneumothorax."),
+        q("Intraosseous access is used…", "When venous access fails in an emergency", "First for routine blood tests", "Never in adults",
+          why="It works in adults and children in under a minute."),
+    ],
+    ("OR-501", "Check: Orthopaedic Principles and Bone Instruments"): [
+        q("A fracture description includes…", "Bone, location, pattern, displacement and soft-tissue state", "Only the bone", "Only the patient's age",
+          why="A complete description guides treatment."),
+        q("Fracture treatment is: reduce, hold and…", "Rehabilitate", "Rest indefinitely", "Remove the bone", why="Function is the goal."),
+        q("Tourniquet time should be…", "Recorded and kept as short as possible", "Unlimited", "Not recorded",
+          why="Prolonged ischaemia damages muscle and nerve."),
+        q("A bone rongeur is used to…", "Bite away small pieces of bone", "Hold needles", "Retract skin", why="Its cupped jaws nibble bone."),
+    ],
+    ("VS-502", "Check: Vascular Surgery Basics"): [
+        q("Before opening an artery you must have…", "Proximal and distal control", "Distal control only", "Nothing",
+          why="Control before you cut."),
+        q("A vascular anastomosis is sewn with…", "Fine non-absorbable monofilament (polypropylene)", "Braided absorbable suture", "Silk",
+          why="It slides through the vessel wall and lasts."),
+        q("Most varicose veins are now treated with…", "Endovenous ablation", "Stripping in every case", "Amputation",
+          why="Stripping remains an option for selected patients."),
+        q("Heparin is given before clamping to…", "Prevent thrombosis in the clamped vessels", "Speed clotting", "Relieve pain",
+          why="Stagnant blood clots behind a clamp."),
+    ],
+    ("PL-503", "Check: Plastic Surgery: Skin Grafts"): [
+        q("A graft takes best on…", "A well-vascularised bed", "Bare bone without periosteum|Grafts need a blood supply.",
+          "Bare tendon without paratenon", why="The graft survives on the bed until it vascularises."),
+        q("Meshing a split-thickness graft…", "Lets it cover a larger area and lets fluid escape", "Makes it thicker", "Stops it taking",
+          why="Useful in large burns."),
+        q("Full-thickness grafts are preferred for…", "The face and hands", "Large burns", "Bone", why="Better colour match and less contraction."),
+        q("A common cause of graft failure is…", "Haematoma or seroma under the graft", "A firm dressing", "A good blood supply",
+          why="Fluid lifts the graft off its bed."),
+    ],
+    ("EN-504", "Check: ENT Examination and Emergencies"): [
+        q("For otoscopy in an adult the pinna is pulled…", "Up and back", "Down and back|That is for young children.", "Forward",
+          why="It straightens the ear canal."),
+        q("First aid for an anterior nosebleed is…", "Sit forward and pinch the soft part of the nose for 15 minutes", "Lie flat with the head tipped back",
+          "Ice on the forehead only", why="Leaning forward stops blood being swallowed or inhaled."),
+        q("In a can't-intubate, can't-oxygenate emergency the standard front-of-neck access is…", "Scalpel–bougie–tube cricothyroidotomy",
+          "A nasal airway", "Waiting for the anaesthetist to retry", why="DAS guidelines: scalpel, bougie, tube."),
+        q("The cricothyroid membrane lies between…", "The thyroid and cricoid cartilages", "The hyoid and thyroid cartilage", "Below the cricoid",
+          why="It is shallow and easy to feel in most adults."),
+    ],
+    ("UR-505", "Check: Urinary Catheterisation and Endourology"): [
+        q("During male catheterisation the penis is held…", "Upright, to straighten the urethra", "Pointing down", "Any way",
+          why="It straightens the urethral curve."),
+        q("Local anaesthetic gel is instilled…", "Before insertion, and given a few minutes to work", "After insertion", "Never",
+          why="It lubricates and numbs the urethra."),
+        q("After catheterisation you document…", "The residual volume", "Nothing", "Only the time", why="It confirms retention and guides treatment."),
+        q("You meet resistance and the catheter will not pass. You…", "Stop and ask for urology review", "Push harder", "Inflate the balloon",
+          why="Forcing causes false passages."),
+    ],
+    ("CT-506", "Check: Cardiothoracic Surgery Basics"): [
+        q("A median sternotomy is closed with…", "Steel wires", "Skin staples only", "Glue", why="Wires hold the sternum while it heals."),
+        q("On cardiopulmonary bypass the heart is stopped with…", "Cardioplegia", "Adrenaline", "Lidocaine",
+          why="A cold potassium-rich solution arrests the heart."),
+        q("Beck's triad of tamponade is…", "Hypotension, raised JVP and muffled heart sounds",
+          "Hypertension, bradycardia and irregular breathing|That is Cushing's triad.", "Fever, rash and joint pain",
+          why="The heart cannot fill."),
+        q("Tamponade after cardiac surgery is treated by…", "Urgent re-exploration (re-opening the chest)", "Fluids and waiting", "Diuretics",
+          why="Release the blood around the heart."),
+    ],
+    ("NS-507", "Check: Neurosurgery Basics: Burr Holes"): [
+        q("A lucid interval after head injury is classic of…", "Extradural haematoma", "Subdural haematoma", "Subarachnoid haemorrhage",
+          why="Consciousness returns, then falls as the clot grows."),
+        q("An extradural haematoma usually comes from…", "The middle meningeal artery", "Bridging veins|That is subdural.", "A berry aneurysm",
+          why="Often a temporal bone fracture tears it."),
+        q("Signs of rising intracranial pressure include…", "Falling GCS, a dilating pupil and Cushing's response", "A rising GCS",
+          "Small pupils and alertness", why="Act fast: these are late signs."),
+        q("Definitive treatment of an extradural haematoma is…", "Craniotomy by a neurosurgeon", "Burr holes in every case", "Observation",
+          why="Burr holes are a last resort when transfer is impossible."),
+    ],
+    ("OG-508", "Check: Caesarean Section Fundamentals"): [
+        q("The usual skin incision is…", "Pfannenstiel (transverse, suprapubic)", "Upper midline", "Kocher (right subcostal)",
+          why="It heals well with a hidden scar."),
+        q("A category 1 caesarean section means…", "Immediate threat to the life of the woman or baby", "Planned, at a time to suit",
+          "Maternal request only", why="Aim to deliver as quickly as safely possible."),
+        q("First-line drug for postpartum haemorrhage is…", "Oxytocin", "Furosemide", "Insulin", why="It contracts the uterus."),
+        q("The bladder is reflected down before the uterine incision to…", "Protect it from injury", "Drain urine", "See the placenta",
+          why="The bladder lies over the lower segment."),
+    ],
+    ("PP-601", "Check: scrub practice"): [
+        q("The Mayo stand holds…", "What the surgeon will need next", "Spare stock", "Used swabs", why="The back table holds the rest."),
+        q("Counts are done…", "Before the case, before closing a cavity and at skin closure (and on staff changes)", "Only at the end",
+          "Only if something is missing", why="Regular counts catch a missing item early."),
+        q("If a count is incorrect…", "Tell the surgeon at once, search, and X-ray if not found", "Ignore it", "Correct the sheet",
+          why="Retained items are never events."),
+        q("Before using a sterile tray, check…", "The sterility indicator and that the wrap is intact and dry", "Its colour", "Nothing",
+          why="A damp or torn wrap means it is not sterile."),
+    ],
+    ("PP-602", "Check: devices"): [
+        q("Drug libraries on infusion pumps…", "Set safe dose limits and cut programming errors", "Make infusions faster", "Replace the prescription",
+          why="Soft and hard limits catch mistakes."),
+        q("A syringe driver is preferred for…", "Small, precise volumes over time", "Fast fluid boluses", "Litres of fluid",
+          why="It delivers tiny rates accurately."),
+        q("An 'air in line' alarm sounds. You…", "Stop, clear the air following the protocol and check the line before restarting",
+          "Silence it and carry on", "Speed up the infusion", why="Air embolism is a preventable harm."),
+        q("Before starting an infusion, check…", "Drug, dose, rate, route and patient against the prescription", "Only the bag colour", "Nothing",
+          why="Independent checks prevent infusion errors."),
+    ],
+}
+
+
+def add_question_bank():
+    by_key = {}
+    for c in COURSES:
+        for m in c["modules"]:
+            for l in m["lessons"]:
+                if l["kind"] == "Quiz":
+                    by_key[(c["code"], l["title"])] = l
+    for key, extra in MORE_QUESTIONS.items():
+        assert key in by_key, f"question bank key {key} matches no quiz"
+        l = by_key[key]
+        l["questions"].extend(extra)
+        l["summary"] = f"{len(l['questions'])} questions with feedback."
+        l["minutes"] = max(l["minutes"], len(l["questions"]) * 2)
+    thin = [k for k, l in by_key.items() if len(l["questions"]) < 5]
+    assert not thin, f"quizzes with fewer than five questions: {thin}"
+
+
+# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 # PROGRAMS
 # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 
@@ -716,6 +1076,7 @@ PROGRAMS = [
 
 
 def build():
+    add_question_bank()
     for c in COURSES:
         for mi, m in enumerate(c["modules"]):
             m["id"] = f"{c['id']}-m{mi + 1}"
